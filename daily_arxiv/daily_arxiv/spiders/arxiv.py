@@ -6,7 +6,7 @@ import re
 class ArxivSpider(scrapy.Spider):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        categories = os.environ.get("CATEGORIES", "cs.CV")
+        categories = os.environ.get("CATEGORIES", "astro-ph.GA")
         categories = categories.split(",")
         # 保存目标分类列表，用于后续验证
         self.target_categories = set(map(str.strip, categories))
@@ -54,7 +54,7 @@ class ArxivSpider(scrapy.Spider):
                 subjects_text = paper_dd.css(".list-subjects::text").get()
             
             if subjects_text:
-                # 解析分类信息，通常格式如 "Computer Vision and Pattern Recognition (cs.CV)"
+                # 解析分类信息，通常格式如 "Computer Vision and Pattern Recognition (astro-ph.GA)"
                 # 提取括号中的分类代码
                 categories_in_paper = re.findall(r'\(([^)]+)\)', subjects_text)
                 

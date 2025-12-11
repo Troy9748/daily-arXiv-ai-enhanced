@@ -17,10 +17,10 @@ class ArxivSpider(scrapy.Spider):
         # 爬虫会检查文章【标题】或【摘要】是否包含以下任意一个词（不区分大小写）
         # ==============================================================================
         self.my_keywords = [
-            "strong lens", "strong gravitational lens", "strong lensing" # 强透镜
+            "strong lens", "strong gravitational lens", "strong lensing", # 强透镜
             "lens model", "lensing",                    # 透镜建模
             "dark matter", "DM halo",                   # 暗物质
-            "ALMA", "SKA" ,"interferometer"             # ALMA,SKA
+            "ALMA", "SKA" ,"interferometer",             # ALMA,SKA
             "Dust", "dusty",                            # 尘埃
             "DSFGs", "submillimeter",                   # DSFGs/亚毫米
             "high-redshift", "z >", "z>",               # 高红移

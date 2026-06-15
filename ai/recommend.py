@@ -314,12 +314,11 @@ def score_paper(item: Dict, profile: Dict) -> Dict:
     topic_score, matched_topics = weighted_matches(text_parts, profile.get("keywords", []))
     author_score, matched_authors = weighted_matches(
         {"authors": text_parts["authors"]},
-        {"term": author["name"], "weight": author.get("weight", 1)} for author in profile.get("authors", [])],
+        [{"term": author["name"], "weight": author.get("weight", 1)} for author in profile.get("authors", [])],
     )
 
     raw_score = topic_score + author_score * 1.5
     
-    # 💡 核心修改点：将原先分母放大系数由 45 降低至 6.0，完美贴合现有对数匹配引擎的分数区间
     score = round(100 * raw_score / (raw_score + 6.0)) if raw_score > 0 else 0
     score = min(score, 96)
     

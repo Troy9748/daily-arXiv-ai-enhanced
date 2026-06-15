@@ -3,6 +3,8 @@
 
 Main category: {cate}
 
+Recommendation: {stars} ({score}/100) - {reason}
+
 TL;DR: {tldr}
 
 

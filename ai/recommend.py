@@ -20,6 +20,26 @@ STOPWORDS = {
     "by", "can", "for", "from", "has", "have", "in", "into", "is", "it",
     "its", "may", "of", "on", "or", "our", "that", "the", "their", "this",
     "through", "to", "using", "via", "was", "we", "were", "with", "within",
+    "across", "also", "both", "consistent", "eld", "elds", "find", "first",
+    "high", "large", "most", "new", "over", "present", "results", "review",
+    "study", "such", "than", "these", "total", "two", "which",
+}
+
+GENERIC_PROFILE_TERMS = {
+    "analysis", "data", "density", "distribution", "early", "evidence",
+    "evolution", "field", "fields", "formation", "function", "galactic",
+    "galaxies", "galaxy", "local", "mass", "massive", "medium", "model",
+    "models", "observations", "observed", "population", "properties",
+    "redshift", "redshifts", "sample", "scales", "simulations", "sources",
+    "star", "stars", "stellar", "structure", "survey", "surveys", "time",
+    "universe", "velocity", "years",
+}
+
+HIGH_SIGNAL_SINGLE_TERMS = {
+    "alma", "cii", "csst", "dsfgs", "dust", "dusty", "euclid", "halo",
+    "herschel", "interferometer", "ism", "jwst", "lens", "lensed",
+    "lensing", "magnetic", "molecular", "polarization", "polarized",
+    "polarised", "ska", "spt", "starburst", "submillimeter",
 }
 
 DEFAULT_KEYWORDS = [
@@ -60,6 +80,48 @@ def ngrams(tokens: List[str], min_n: int = 1, max_n: int = 3) -> Iterable[str]:
     for n in range(min_n, max_n + 1):
         for idx in range(0, max(0, len(tokens) - n + 1)):
             yield " ".join(tokens[idx : idx + n])
+
+
+def normalize_term(term: str) -> str:
+    term = re.sub(r"\s+", " ", term.lower()).strip()
+    term = term.replace("high redshift", "high-redshift")
+    return term
+
+
+def term_tokens(term: str) -> List[str]:
+    return re.findall(r"[a-zA-Z][a-zA-Z0-9+\-]{1,}", normalize_term(term))
+
+
+def is_informative_term(term: str) -> bool:
+    term = normalize_term(term)
+    tokens = term_tokens(term)
+    if not tokens:
+        return False
+    if term.startswith("astrophysics -"):
+        return False
+    if term in STOPWORDS or term in GENERIC_PROFILE_TERMS:
+        return False
+    if len(tokens) == 1:
+        return term in HIGH_SIGNAL_SINGLE_TERMS
+    generic_count = sum(1 for token in tokens if token in STOPWORDS or token in GENERIC_PROFILE_TERMS)
+    return generic_count < len(tokens)
+
+
+def term_multiplier(term: str) -> float:
+    term = normalize_term(term)
+    tokens = term_tokens(term)
+    if term in HIGH_SIGNAL_SINGLE_TERMS:
+        return 1.15
+    if len(tokens) >= 3:
+        return 1.35
+    if len(tokens) == 2:
+        return 1.0
+    return 0.35
+
+
+def term_pattern(term: str) -> re.Pattern:
+    escaped = re.escape(normalize_term(term))
+    return re.compile(rf"(?<![a-zA-Z0-9]){escaped}(?![a-zA-Z0-9])", re.IGNORECASE)
 
 
 def clean_author(author: Dict) -> str:
@@ -157,22 +219,27 @@ def build_profile(references: List[Dict]) -> Dict:
     for ref in references:
         title = normalize_text(ref.get("title"))
         abstract = normalize_text(ref.get("abstract"))
-        tags = [tag.lower() for tag in ref.get("tags", []) if tag]
+        tags = [normalize_term(tag) for tag in ref.get("tags", []) if tag]
         authors = [author.lower() for author in ref.get("authors", []) if author]
 
         for tag in tags:
-            keyword_scores[tag] += 12
+            if is_informative_term(tag):
+                keyword_scores[tag] += 12
         for term in ngrams(tokenize(title), 1, 3):
-            keyword_scores[term] += 5
+            term = normalize_term(term)
+            if is_informative_term(term):
+                keyword_scores[term] += 5 * term_multiplier(term)
         for term in ngrams(tokenize(abstract), 1, 3):
-            keyword_scores[term] += 1
+            term = normalize_term(term)
+            if is_informative_term(term):
+                keyword_scores[term] += 1 * term_multiplier(term)
         for author in authors:
             author_scores[author] += 1
 
     keywords = [
         {"term": term, "weight": round(weight, 3)}
         for term, weight in keyword_scores.most_common(120)
-        if len(term) >= 3
+        if len(term) >= 3 and is_informative_term(term)
     ]
     authors = [
         {"name": author, "weight": count}
@@ -215,15 +282,19 @@ def weighted_matches(text_parts: Dict[str, str], terms: List[Dict]) -> Tuple[flo
     }
     lowered_parts = {field: text.lower() for field, text in text_parts.items()}
     for term_info in terms:
-        term = term_info["term"].lower()
-        if len(term) < 3:
+        term = normalize_term(term_info["term"])
+        if len(term) < 3 or not is_informative_term(term):
             continue
-        base_weight = float(term_info.get("weight", 1.0))
+        base_weight = min(float(term_info.get("weight", 1.0)), 80.0)
+        pattern = term_pattern(term)
         term_score = 0.0
         for field, text in lowered_parts.items():
-            if term in text:
-                term_score += field_weights.get(field, 1.0) * math.log1p(base_weight)
+            normalized_text = normalize_term(text)
+            if pattern.search(normalized_text):
+                field_score = field_weights.get(field, 1.0) * math.log1p(base_weight)
+                term_score += min(field_score, 8.0)
         if term_score:
+            term_score *= term_multiplier(term)
             score += term_score
             matched[term] += term_score
     top_matches = [term for term, _ in sorted(matched.items(), key=lambda x: x[1], reverse=True)[:8]]
@@ -247,11 +318,12 @@ def score_paper(item: Dict, profile: Dict) -> Dict:
     )
 
     raw_score = topic_score + author_score * 1.5
-    score = min(100, round(raw_score * 3.2))
-    if matched_topics and score < 35:
-        score = 35
-    if matched_authors and score < 45:
-        score = 45
+    score = round(100 * raw_score / (raw_score + 45)) if raw_score > 0 else 0
+    score = min(score, 96)
+    if matched_topics and score < 25:
+        score = 25
+    if matched_authors and score < 40:
+        score = 40
 
     stars = max(1, min(5, math.ceil(score / 20))) if score else 1
     if matched_topics or matched_authors:

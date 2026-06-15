@@ -658,6 +658,43 @@ main {
   margin-bottom: 6px;
 }
 
+.recommendation-strip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 100%;
+  margin-bottom: 10px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-hover);
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.2;
+}
+
+.recommendation-strip.high {
+  border-color: rgba(212, 175, 55, 0.5);
+  background-color: rgba(255, 215, 0, 0.08);
+}
+
+.recommendation-strip.medium {
+  border-color: rgba(102, 126, 234, 0.35);
+  background-color: rgba(102, 126, 234, 0.06);
+}
+
+.recommendation-stars {
+  color: var(--gold-color);
+  white-space: nowrap;
+  letter-spacing: 0;
+}
+
+.recommendation-score {
+  color: var(--text-secondary);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
 .category-tag {
   font-size: 12px;
   padding: 2px 8px;
@@ -685,6 +722,13 @@ main {
   background-color: rgba(102, 126, 234, 0.05);
   padding: 12px;
   border-radius: 6px;
+}
+
+.recommendation-reason {
+  margin: -6px 0 16px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .paper-card-footer {
@@ -1383,6 +1427,26 @@ footer {
   margin-bottom: 8px;
   color: var(--primary-color);
   font-size: 16px;
+}
+
+.recommendation-panel {
+  margin-bottom: 18px;
+  padding: 14px 16px;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  background-color: rgba(255, 215, 0, 0.06);
+}
+
+.recommendation-panel p {
+  margin: 8px 0 0;
+}
+
+.recommendation-panel-score {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--text-primary);
+  font-weight: 700;
 }
 
 .original-abstract {

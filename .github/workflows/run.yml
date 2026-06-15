@@ -43,6 +43,8 @@ jobs:
         export LANGUAGE="${{ vars.LANGUAGE }}"
         export CATEGORIES="${{ vars.CATEGORIES }}"
         export MODEL_NAME="${{ vars.MODEL_NAME }}"
+        export ENABLE_KEYWORD_FILTER="${{ vars.ENABLE_KEYWORD_FILTER }}"
+        export ARXIV_KEYWORDS="${{ vars.ARXIV_KEYWORDS }}"
         
         # 使用Scrapy爬取
         # Use Scrapy to crawl
@@ -117,6 +119,32 @@ jobs:
             exit 1
         fi
         echo "AI增强处理完成 / AI enhancement processing completed"
+
+    - name: Zotero Personalized Recommendation
+      if: steps.dedup_check.outputs.has_new_content == 'true'
+      run: |
+        source .venv/bin/activate
+        today=${{ steps.crawl_step.outputs.crawl_date }}
+        echo "开始 Zotero 个性化推荐评分... / Starting Zotero personalized recommendation..."
+
+        cd ai
+        export ZOTERO_EMAIL="${{ vars.ZOTERO_EMAIL }}"
+        export ZOTERO_USER_ID="${{ vars.ZOTERO_USER_ID }}"
+        export ZOTERO_LIBRARY_TYPE="${{ vars.ZOTERO_LIBRARY_TYPE }}"
+        export ZOTERO_LIBRARY_ID="${{ vars.ZOTERO_LIBRARY_ID }}"
+        export ZOTERO_COLLECTION_KEY="${{ vars.ZOTERO_COLLECTION_KEY }}"
+        export ZOTERO_MAX_ITEMS="${{ vars.ZOTERO_MAX_ITEMS }}"
+        export ZOTERO_API_KEY="${{ secrets.ZOTERO_API_KEY }}"
+        export ZOTERO_FALLBACK_KEYWORDS="${{ vars.ZOTERO_FALLBACK_KEYWORDS }}"
+
+        AI_FILE="../data/${today}_AI_enhanced_${{ vars.LANGUAGE }}.jsonl"
+        python recommend.py --data "$AI_FILE"
+
+        if [ $? -ne 0 ]; then
+            echo "Zotero 推荐评分失败 / Zotero recommendation failed"
+            exit 1
+        fi
+        echo "Zotero 个性化推荐评分完成 / Zotero personalized recommendation completed"
         
     - name: Convert to Markdown
       if: steps.dedup_check.outputs.has_new_content == 'true'

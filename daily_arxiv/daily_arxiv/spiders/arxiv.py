@@ -12,11 +12,12 @@ class ArxivSpider(scrapy.Spider):
         categories = categories.split(",")
         self.target_categories = set(map(str.strip, categories))
         
-        # ==============================================================================
-        # 【自定义修改】在这里定义你的筛选关键词
-        # 爬虫会检查文章【标题】或【摘要】是否包含以下任意一个词（不区分大小写）
-        # ==============================================================================
-        self.my_keywords = [
+        self.enable_keyword_filter = (
+            os.environ.get("ENABLE_KEYWORD_FILTER", "false").strip().lower()
+            in {"1", "true", "yes", "on"}
+        )
+        custom_keywords = os.environ.get("ARXIV_KEYWORDS", "").strip()
+        fallback_keywords = [
             "strong lens", "strong gravitational lens", "strong lensing", # 强透镜
             "lens model", "lensing",                    # 透镜建模
             "dark matter", "DM halo",                   # 暗物质
@@ -27,6 +28,11 @@ class ArxivSpider(scrapy.Spider):
             "polarization", "polarized", "polarised",   #偏振
             "gas", "molecular", "molecular gas",        #气体/分子气体
             "SPT", "Herschel", "JWST", "Euclid", "CSST" #望远镜
+        ]
+        self.my_keywords = [
+            keyword.strip()
+            for keyword in (custom_keywords.split(",") if custom_keywords else fallback_keywords)
+            if keyword.strip()
         ]
         
         self.start_urls = [
@@ -85,6 +91,10 @@ class ArxivSpider(scrapy.Spider):
             if not paper_categories_set.intersection(self.target_categories) and subjects_text:
                 # 分类完全不沾边，直接跳过，不需要浪费资源检查摘要
                 self.logger.debug(f"Skipped paper {arxiv_id} (category mismatch)")
+                continue
+
+            if not self.enable_keyword_filter:
+                yield item_data
                 continue
 
             # ==========================================================================

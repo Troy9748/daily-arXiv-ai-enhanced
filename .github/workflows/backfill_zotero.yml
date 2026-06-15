@@ -37,12 +37,17 @@ jobs:
             echo "requirements.txt not found, skipping installation."
           fi
 
+  
+
       - name: Run Backfill Script
         env:
           LANGUAGE: ${{ github.event.inputs.language }}
         run: |
-          # 显式传入 --regenerate-md 确保重新生成 Markdown 文件
-          python ai/backfill_recommandations.py --regenerate-md
+          # 1. 跑你原有的历史补全
+          python ai/backfill_recommandations.py --data-dir data --profile data/zotero_profile.json --regenerate-md
+          
+          # 2. 紧接着运行 Top 100 生成脚本
+          python ai/generate_top100.py
 
       - name: Commit and Push changes
         run: |

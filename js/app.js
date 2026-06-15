@@ -15,6 +15,19 @@ let textSearchQuery = ''; // 实时文本搜索查询
 let previousActiveKeywords = null; // 文本搜索激活时，暂存之前的关键词激活集合
 let previousActiveAuthors = null; // 文本搜索激活时，暂存之前的作者激活集合
 
+function getRecommendationScore(paper) {
+  return paper && paper.recommendation ? Number(paper.recommendation.score || 0) : 0;
+}
+
+function renderStars(stars) {
+  const filled = Math.max(1, Math.min(5, Number(stars || 1)));
+  return `${'★'.repeat(filled)}${'☆'.repeat(5 - filled)}`;
+}
+
+function compareByRecommendation(a, b) {
+  return getRecommendationScore(b) - getRecommendationScore(a);
+}
+
 // 加载用户的关键词设置
 function loadUserKeywords() {
   const savedKeywords = localStorage.getItem('preferredKeywords');
@@ -740,7 +753,8 @@ function parseJsonlData(jsonlText, date) {
         motivation: paper.AI && paper.AI.motivation ? paper.AI.motivation : '',
         method: paper.AI && paper.AI.method ? paper.AI.method : '',
         result: paper.AI && paper.AI.result ? paper.AI.result : '',
-        conclusion: paper.AI && paper.AI.conclusion ? paper.AI.conclusion : ''
+        conclusion: paper.AI && paper.AI.conclusion ? paper.AI.conclusion : '',
+        recommendation: paper.recommendation || null
       });
     } catch (error) {
       console.error('解析JSON行失败:', error, line);
@@ -856,6 +870,7 @@ function renderPapers() {
   
   // 创建匹配论文的集合
   let filteredPapers = [...papers];
+  filteredPapers.sort(compareByRecommendation);
 
   // 重置所有论文的匹配状态，避免上次渲染的残留
   filteredPapers.forEach(p => {
@@ -1099,6 +1114,11 @@ function renderPapers() {
     const categoryTags = paper.allCategories ? 
       paper.allCategories.map(cat => `<span class="category-tag">${cat}</span>`).join('') : 
       `<span class="category-tag">${paper.category}</span>`;
+    const recommendation = paper.recommendation || {};
+    const recommendationScore = Number(recommendation.score || 0);
+    const recommendationStars = renderStars(recommendation.stars || 1);
+    const recommendationReason = recommendation.reason || '暂无个性化推荐说明。';
+    const recommendationClass = recommendationScore >= 80 ? 'high' : recommendationScore >= 50 ? 'medium' : 'low';
     
     // 组合需要高亮的词：关键词 + 文本搜索
     const titleSummaryTerms = [];
@@ -1129,6 +1149,10 @@ function renderPapers() {
       <div class="paper-card-index">${index + 1}</div>
       ${paper.isMatched ? '<div class="match-badge" title="匹配您的搜索条件"></div>' : ''}
       <div class="paper-card-header">
+        <div class="recommendation-strip ${recommendationClass}" title="${recommendationReason}">
+          <span class="recommendation-stars">${recommendationStars}</span>
+          <span class="recommendation-score">${recommendationScore}/100</span>
+        </div>
         <h3 class="paper-card-title">${highlightedTitle}</h3>
         <p class="paper-card-authors">${highlightedAuthors}</p>
         <div class="paper-card-categories">
@@ -1137,6 +1161,7 @@ function renderPapers() {
       </div>
       <div class="paper-card-body">
         <p class="paper-card-summary">${highlightedSummary}</p>
+        <p class="recommendation-reason">${recommendationReason}</p>
         <div class="paper-card-footer">
           <span class="paper-card-date">${formatDate(paper.date)}</span>
           <span class="paper-card-link">Details</span>
@@ -1222,9 +1247,28 @@ function showPaperDetails(paper, paperIndex) {
   
   // 添加匹配标记
   const matchedPaperClass = paper.isMatched ? 'matched-paper-details' : '';
+  const recommendation = paper.recommendation || {};
+  const recommendationScore = Number(recommendation.score || 0);
+  const recommendationStars = renderStars(recommendation.stars || 1);
+  const recommendationReason = recommendation.reason || '暂无个性化推荐说明。';
+  const matchedTopics = [
+    ...(recommendation.matched_topics || []),
+    ...(recommendation.matched_authors || [])
+  ];
+  const matchedTopicsHtml = matchedTopics.length > 0
+    ? `<p><strong>Matched profile: </strong>${matchedTopics.join(', ')}</p>`
+    : '';
   
   const modalContent = `
     <div class="paper-details ${matchedPaperClass}">
+      <div class="recommendation-panel">
+        <div class="recommendation-panel-score">
+          <span class="recommendation-stars">${recommendationStars}</span>
+          <span>${recommendationScore}/100</span>
+        </div>
+        <p>${recommendationReason}</p>
+        ${matchedTopicsHtml}
+      </div>
       <p><strong>Authors: </strong>${highlightedAuthors}</p>
       <p><strong>Categories: </strong>${categoryDisplay}</p>
       <p><strong>Date: </strong>${formatDate(paper.date)}</p>

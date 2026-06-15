@@ -1,6 +1,5 @@
 name: Backfill Zotero Recommendations
 
-
 on:
   workflow_dispatch:
     inputs:
@@ -13,7 +12,7 @@ jobs:
   backfill:
     runs-on: ubuntu-latest
     permissions:
-      contents: write  # 赋予工作流向仓库推送代码的权限
+      contents: write
 
     steps:
       - name: Checkout repository
@@ -25,28 +24,31 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: '3.10'
-          cache: 'pip' # 如果有 requirements.txt 可以开启缓存加速
+          cache: 'pip'
 
       - name: Install dependencies
         run: |
-          pip install python-dotenv
-          pip install requests
+          python -m pip install --upgrade pip
+          pip install python-dotenv requests
           if [ -f requirements.txt ]; then
             pip install -r requirements.txt
-          else
-            echo "requirements.txt not found, skipping installation."
           fi
-
-  
 
       - name: Run Backfill Script
         env:
           LANGUAGE: ${{ github.event.inputs.language }}
+          # 完美绑定你截图里的 3 个 Secrets
+          ZOTERO_API_KEY: ${{ secrets.ZOTERO_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_BASE_URL: ${{ secrets.OPENAI_BASE_URL }}
+          # 💡 显式声明大模型名称为 deepseek-v4-flash
+          OPENAI_MODEL_NAME: "deepseek-v4-flash"
+          
         run: |
-          # 1. 跑你原有的历史补全
+          # 1. 基础粗排
           python ai/backfill_recommandations.py --data-dir data --profile data/zotero_profile.json --regenerate-md
           
-          # 2. 紧接着运行 Top 100 生成脚本
+          # 2. 深度精排（由 DeepSeek 强力驱动）
           python ai/generate_top100.py
 
       - name: Commit and Push changes
@@ -54,12 +56,10 @@ jobs:
           git config --local user.name "github-actions[bot]"
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           
-          # 暂存所有被修改的 jsonl 和 md 文件
           git add .
           
-          # 检查是否有内容变更，避免无意义的空提交导致工作流报错
           if ! git diff --cached --exit-code; then
-            git commit -m "chore: manual backfill Zotero recommendations and regenerate md"
+            git commit -m "chore: manual backfill and DeepSeek top 100 rerank"
             git push origin HEAD:${{ github.ref }}
           else
             echo "No changes detected. Skipping commit."

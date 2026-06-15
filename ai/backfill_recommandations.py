@@ -13,12 +13,12 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument(
         "--data-dir",
-        default="../data",
+        default="data",
         help="Directory containing *_AI_enhanced_*.jsonl files",
     )
     parser.add_argument(
         "--profile",
-        default="../data/zotero_profile.json",
+        default="data/zotero_profile.json",
         help="Where to cache the Zotero interest profile",
     )
     parser.add_argument(

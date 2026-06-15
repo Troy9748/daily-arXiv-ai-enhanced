@@ -15,6 +15,17 @@ if __name__ == "__main__":
             return preference.index(cate)
         else:
             return len(preference)
+    def recommendation_score(item):
+        recommendation = item.get("recommendation", {})
+        if not isinstance(recommendation, dict):
+            return 0
+        return recommendation.get("score", 0) or 0
+    def stars(item):
+        recommendation = item.get("recommendation", {})
+        if not isinstance(recommendation, dict):
+            return "★☆☆☆☆"
+        filled = max(1, min(5, int(recommendation.get("stars", 1) or 1)))
+        return "★" * filled + "☆" * (5 - filled)
 
     with open(args.data, "r") as f:
         for line in f:
@@ -38,7 +49,11 @@ if __name__ == "__main__":
         markdown += f"\n\n<div id='{cate}'></div>\n\n"
         markdown += f"# {cate} [[Back]](#toc)\n\n"
         papers = []
-        for item in data:
+        category_items = [
+            item for item in data if item["categories"][0] == cate
+        ]
+        category_items.sort(key=recommendation_score, reverse=True)
+        for item in category_items:
             if item["categories"][0] == cate:
                 # Safely access AI fields with default values
                 ai_data = item.get('AI', {})
@@ -64,7 +79,10 @@ if __name__ == "__main__":
                         result=ai_data.get('result', ''),
                         conclusion=ai_data.get('conclusion', ''),
                         cate=item['categories'][0],
-                        idx=next(idx)
+                        idx=next(idx),
+                        stars=stars(item),
+                        score=recommendation_score(item),
+                        reason=item.get("recommendation", {}).get("reason", "No personalized recommendation available.")
                     )
                 )
         markdown += "\n\n".join(papers)

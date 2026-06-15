@@ -1,0 +1,726 @@
+{
+  "source": "zotero",
+  "email": "lxh9748@163.com",
+  "references_count": 380,
+  "keywords": [
+    {
+      "term": "galaxies",
+      "weight": 694
+    },
+    {
+      "term": "astrophysics - astrophysics of galaxies",
+      "weight": 672
+    },
+    {
+      "term": "galaxy",
+      "weight": 406
+    },
+    {
+      "term": "mass",
+      "weight": 258
+    },
+    {
+      "term": "formation",
+      "weight": 207
+    },
+    {
+      "term": "gas",
+      "weight": 191
+    },
+    {
+      "term": "stellar",
+      "weight": 179
+    },
+    {
+      "term": "astrophysics - cosmology and nongalactic astrophysics",
+      "weight": 168
+    },
+    {
+      "term": "lens",
+      "weight": 156
+    },
+    {
+      "term": "magnetic",
+      "weight": 153
+    },
+    {
+      "term": "observations",
+      "weight": 143
+    },
+    {
+      "term": "dark matter",
+      "weight": 136
+    },
+    {
+      "term": "dust",
+      "weight": 136
+    },
+    {
+      "term": "evolution",
+      "weight": 130
+    },
+    {
+      "term": "massive",
+      "weight": 126
+    },
+    {
+      "term": "dark",
+      "weight": 126
+    },
+    {
+      "term": "lensing",
+      "weight": 124
+    },
+    {
+      "term": "star",
+      "weight": 120
+    },
+    {
+      "term": "star-forming",
+      "weight": 119
+    },
+    {
+      "term": "emission",
+      "weight": 118
+    },
+    {
+      "term": "gravitational",
+      "weight": 117
+    },
+    {
+      "term": "properties",
+      "weight": 107
+    },
+    {
+      "term": "redshift",
+      "weight": 101
+    },
+    {
+      "term": "cosmic",
+      "weight": 98
+    },
+    {
+      "term": "star formation",
+      "weight": 96
+    },
+    {
+      "term": "strong",
+      "weight": 94
+    },
+    {
+      "term": "disk",
+      "weight": 92
+    },
+    {
+      "term": "matter",
+      "weight": 92
+    },
+    {
+      "term": "these",
+      "weight": 91
+    },
+    {
+      "term": "high",
+      "weight": 90
+    },
+    {
+      "term": "structure",
+      "weight": 89
+    },
+    {
+      "term": "early",
+      "weight": 89
+    },
+    {
+      "term": "universe",
+      "weight": 88
+    },
+    {
+      "term": "data",
+      "weight": 86
+    },
+    {
+      "term": "medium",
+      "weight": 86
+    },
+    {
+      "term": "jwst",
+      "weight": 85
+    },
+    {
+      "term": "density",
+      "weight": 85
+    },
+    {
+      "term": "galactic",
+      "weight": 85
+    },
+    {
+      "term": "results",
+      "weight": 80
+    },
+    {
+      "term": "stars",
+      "weight": 80
+    },
+    {
+      "term": "than",
+      "weight": 79
+    },
+    {
+      "term": "fields",
+      "weight": 79
+    },
+    {
+      "term": "analysis",
+      "weight": 76
+    },
+    {
+      "term": "sample",
+      "weight": 75
+    },
+    {
+      "term": "models",
+      "weight": 72
+    },
+    {
+      "term": "lensed",
+      "weight": 72
+    },
+    {
+      "term": "gravitational lensing: strong",
+      "weight": 72
+    },
+    {
+      "term": "observed",
+      "weight": 69
+    },
+    {
+      "term": "rotation",
+      "weight": 69
+    },
+    {
+      "term": "which",
+      "weight": 66
+    },
+    {
+      "term": "survey",
+      "weight": 66
+    },
+    {
+      "term": "magnetic fields",
+      "weight": 66
+    },
+    {
+      "term": "large",
+      "weight": 65
+    },
+    {
+      "term": "velocity",
+      "weight": 65
+    },
+    {
+      "term": "present",
+      "weight": 63
+    },
+    {
+      "term": "model",
+      "weight": 62
+    },
+    {
+      "term": "population",
+      "weight": 62
+    },
+    {
+      "term": "time",
+      "weight": 61
+    },
+    {
+      "term": "interstellar",
+      "weight": 61
+    },
+    {
+      "term": "early-type",
+      "weight": 61
+    },
+    {
+      "term": "alma",
+      "weight": 60
+    },
+    {
+      "term": "cold",
+      "weight": 60
+    },
+    {
+      "term": "galaxies: elliptical and lenticular",
+      "weight": 60
+    },
+    {
+      "term": "first",
+      "weight": 59
+    },
+    {
+      "term": "star-forming galaxies",
+      "weight": 56
+    },
+    {
+      "term": "dynamics",
+      "weight": 55
+    },
+    {
+      "term": "line",
+      "weight": 53
+    },
+    {
+      "term": "new",
+      "weight": 53
+    },
+    {
+      "term": "interstellar medium",
+      "weight": 53
+    },
+    {
+      "term": "distribution",
+      "weight": 52
+    },
+    {
+      "term": "dynamical",
+      "weight": 52
+    },
+    {
+      "term": "simulations",
+      "weight": 51
+    },
+    {
+      "term": "gravitational lensing",
+      "weight": 50
+    },
+    {
+      "term": "also",
+      "weight": 49
+    },
+    {
+      "term": "molecular",
+      "weight": 49
+    },
+    {
+      "term": "local",
+      "weight": 49
+    },
+    {
+      "term": "energy",
+      "weight": 48
+    },
+    {
+      "term": "total",
+      "weight": 48
+    },
+    {
+      "term": "elds",
+      "weight": 48
+    },
+    {
+      "term": "galaxies: structure",
+      "weight": 48
+    },
+    {
+      "term": "halo",
+      "weight": 47
+    },
+    {
+      "term": "find",
+      "weight": 47
+    },
+    {
+      "term": "over",
+      "weight": 47
+    },
+    {
+      "term": "field",
+      "weight": 47
+    },
+    {
+      "term": "ism",
+      "weight": 47
+    },
+    {
+      "term": "years",
+      "weight": 46
+    },
+    {
+      "term": "modelling",
+      "weight": 45
+    },
+    {
+      "term": "polarization",
+      "weight": 45
+    },
+    {
+      "term": "both",
+      "weight": 45
+    },
+    {
+      "term": "function",
+      "weight": 45
+    },
+    {
+      "term": "cii",
+      "weight": 45
+    },
+    {
+      "term": "gravitational lens",
+      "weight": 45
+    },
+    {
+      "term": "surveys",
+      "weight": 44
+    },
+    {
+      "term": "most",
+      "weight": 44
+    },
+    {
+      "term": "evidence",
+      "weight": 44
+    },
+    {
+      "term": "two",
+      "weight": 44
+    },
+    {
+      "term": "eld",
+      "weight": 44
+    },
+    {
+      "term": "rotating",
+      "weight": 43
+    },
+    {
+      "term": "scales",
+      "weight": 43
+    },
+    {
+      "term": "study",
+      "weight": 43
+    },
+    {
+      "term": "spiral",
+      "weight": 43
+    },
+    {
+      "term": "dusty",
+      "weight": 43
+    },
+    {
+      "term": "milky",
+      "weight": 43
+    },
+    {
+      "term": "shear",
+      "weight": 42
+    },
+    {
+      "term": "imaging",
+      "weight": 42
+    },
+    {
+      "term": "starburst",
+      "weight": 42
+    },
+    {
+      "term": "mass function",
+      "weight": 42
+    },
+    {
+      "term": "way",
+      "weight": 42
+    },
+    {
+      "term": "sfr",
+      "weight": 41
+    },
+    {
+      "term": "such",
+      "weight": 41
+    },
+    {
+      "term": "clumps",
+      "weight": 40
+    },
+    {
+      "term": "feedback",
+      "weight": 40
+    },
+    {
+      "term": "sources",
+      "weight": 40
+    },
+    {
+      "term": "high-redshift",
+      "weight": 40
+    },
+    {
+      "term": "redshifts",
+      "weight": 40
+    },
+    {
+      "term": "review",
+      "weight": 40
+    },
+    {
+      "term": "early-type galaxies",
+      "weight": 40
+    },
+    {
+      "term": "across",
+      "weight": 39
+    },
+    {
+      "term": "consistent",
+      "weight": 39
+    }
+  ],
+  "authors": [
+    {
+      "name": "tommaso treu",
+      "weight": 8
+    },
+    {
+      "name": "m. dessauges-zavadsky",
+      "weight": 6
+    },
+    {
+      "name": "s. fujimoto",
+      "weight": 5
+    },
+    {
+      "name": "a. m. koekemoer",
+      "weight": 5
+    },
+    {
+      "name": "f. rizzo",
+      "weight": 5
+    },
+    {
+      "name": "t. treu",
+      "weight": 5
+    },
+    {
+      "name": "g. c. jones",
+      "weight": 5
+    },
+    {
+      "name": "enrique lopez-rodriguez",
+      "weight": 5
+    },
+    {
+      "name": "l. v. e. koopmans",
+      "weight": 5
+    },
+    {
+      "name": "mark vogelsberger",
+      "weight": 4
+    },
+    {
+      "name": "seiji fujimoto",
+      "weight": 4
+    },
+    {
+      "name": "guido roberts-borsani",
+      "weight": 4
+    },
+    {
+      "name": "m. ouchi",
+      "weight": 4
+    },
+    {
+      "name": "k. kohno",
+      "weight": 4
+    },
+    {
+      "name": "f. valentino",
+      "weight": 4
+    },
+    {
+      "name": "c. giménez-arteaga",
+      "weight": 4
+    },
+    {
+      "name": "m. kohandel",
+      "weight": 4
+    },
+    {
+      "name": "a. pallottini",
+      "weight": 4
+    },
+    {
+      "name": "y. ao",
+      "weight": 4
+    },
+    {
+      "name": "d. espada",
+      "weight": 4
+    },
+    {
+      "name": "m. lee",
+      "weight": 4
+    },
+    {
+      "name": "g. e. magdis",
+      "weight": 4
+    },
+    {
+      "name": "yoshinobu fudamoto",
+      "weight": 4
+    },
+    {
+      "name": "rainer beck",
+      "weight": 4
+    },
+    {
+      "name": "m. aravena",
+      "weight": 4
+    },
+    {
+      "name": "desika narayanan",
+      "weight": 4
+    },
+    {
+      "name": "avishai dekel",
+      "weight": 4
+    },
+    {
+      "name": "christopher j. conselice",
+      "weight": 3
+    },
+    {
+      "name": "gabriel brammer",
+      "weight": 3
+    },
+    {
+      "name": "roberto maiolino",
+      "weight": 3
+    },
+    {
+      "name": "daniel p. stark",
+      "weight": 3
+    },
+    {
+      "name": "massimo stiavelli",
+      "weight": 3
+    },
+    {
+      "name": "g. b. brammer",
+      "weight": 3
+    },
+    {
+      "name": "j. richard",
+      "weight": 3
+    },
+    {
+      "name": "f. e. bauer",
+      "weight": 3
+    },
+    {
+      "name": "e. egami",
+      "weight": 3
+    },
+    {
+      "name": "s. l. finkelstein",
+      "weight": 3
+    },
+    {
+      "name": "g. b. caminha",
+      "weight": 3
+    },
+    {
+      "name": "k. i. caputi",
+      "weight": 3
+    },
+    {
+      "name": "y. fudamoto",
+      "weight": 3
+    },
+    {
+      "name": "j. gonzález-lópez",
+      "weight": 3
+    },
+    {
+      "name": "v. kokorev",
+      "weight": 3
+    },
+    {
+      "name": "n. laporte",
+      "weight": 3
+    },
+    {
+      "name": "y. ono",
+      "weight": 3
+    },
+    {
+      "name": "k. shimasaku",
+      "weight": 3
+    },
+    {
+      "name": "f. sun",
+      "weight": 3
+    },
+    {
+      "name": "s. toft",
+      "weight": 3
+    },
+    {
+      "name": "h. umehata",
+      "weight": 3
+    },
+    {
+      "name": "stefano carniani",
+      "weight": 3
+    },
+    {
+      "name": "carlos s. frenk",
+      "weight": 3
+    },
+    {
+      "name": "a. ferrara",
+      "weight": 3
+    },
+    {
+      "name": "jianhang chen",
+      "weight": 3
+    },
+    {
+      "name": "stephen serjeant",
+      "weight": 3
+    },
+    {
+      "name": "kandaswamy subramanian",
+      "weight": 3
+    },
+    {
+      "name": "evangelia ntormousi",
+      "weight": 3
+    },
+    {
+      "name": "sergio martin-alvarez",
+      "weight": 3
+    },
+    {
+      "name": "jingzhe ma",
+      "weight": 3
+    },
+    {
+      "name": "j. d. vieira",
+      "weight": 3
+    },
+    {
+      "name": "c. de breuck",
+      "weight": 3
+    },
+    {
+      "name": "s. c. chapman",
+      "weight": 3
+    }
+  ],
+  "summary": "Interest profile inferred from Zotero papers. Top topics: galaxies, astrophysics - astrophysics of galaxies, galaxy, mass, formation, gas, stellar, astrophysics - cosmology and nongalactic astrophysics, lens, magnetic, observations, dark matter"
+}

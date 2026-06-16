@@ -1,113 +1,730 @@
 {
-  "source": "fallback",
+  "source": "zotero",
   "email": "lxh9748@163.com",
-  "references_count": 0,
+  "references_count": 380,
   "keywords": [
     {
-      "term": "strong lens",
-      "weight": 10.0
+      "term": "lens",
+      "weight": 179.4
     },
     {
-      "term": "strong gravitational lens",
-      "weight": 10.0
-    },
-    {
-      "term": "strong lensing",
-      "weight": 10.0
-    },
-    {
-      "term": "lens model",
-      "weight": 10.0
-    },
-    {
-      "term": "lensing",
-      "weight": 10.0
-    },
-    {
-      "term": "dark matter",
-      "weight": 10.0
-    },
-    {
-      "term": "dm halo",
-      "weight": 10.0
-    },
-    {
-      "term": "alma",
-      "weight": 10.0
-    },
-    {
-      "term": "ska",
-      "weight": 10.0
-    },
-    {
-      "term": "interferometer",
-      "weight": 10.0
+      "term": "magnetic",
+      "weight": 175.95
     },
     {
       "term": "dust",
-      "weight": 10.0
+      "weight": 156.4
     },
     {
-      "term": "dusty",
-      "weight": 10.0
+      "term": "lensing",
+      "weight": 142.6
     },
     {
-      "term": "dsfgs",
-      "weight": 10.0
-    },
-    {
-      "term": "submillimeter",
-      "weight": 10.0
-    },
-    {
-      "term": "high-redshift",
-      "weight": 10.0
-    },
-    {
-      "term": "polarization",
-      "weight": 10.0
-    },
-    {
-      "term": "polarized",
-      "weight": 10.0
-    },
-    {
-      "term": "polarised",
-      "weight": 10.0
-    },
-    {
-      "term": "gas",
-      "weight": 10.0
-    },
-    {
-      "term": "molecular",
-      "weight": 10.0
-    },
-    {
-      "term": "molecular gas",
-      "weight": 10.0
-    },
-    {
-      "term": "spt",
-      "weight": 10.0
-    },
-    {
-      "term": "herschel",
-      "weight": 10.0
+      "term": "dark matter",
+      "weight": 136.0
     },
     {
       "term": "jwst",
-      "weight": 10.0
+      "weight": 97.75
+    },
+    {
+      "term": "lensed",
+      "weight": 82.8
+    },
+    {
+      "term": "gravitational lensing: strong",
+      "weight": 72
+    },
+    {
+      "term": "alma",
+      "weight": 69.0
+    },
+    {
+      "term": "magnetic fields",
+      "weight": 66.0
+    },
+    {
+      "term": "galaxies: elliptical and lenticular",
+      "weight": 60
+    },
+    {
+      "term": "molecular",
+      "weight": 56.35
+    },
+    {
+      "term": "star-forming galaxies",
+      "weight": 56.0
+    },
+    {
+      "term": "halo",
+      "weight": 54.05
+    },
+    {
+      "term": "ism",
+      "weight": 54.05
+    },
+    {
+      "term": "interstellar medium",
+      "weight": 53.0
+    },
+    {
+      "term": "polarization",
+      "weight": 51.75
+    },
+    {
+      "term": "cii",
+      "weight": 51.75
+    },
+    {
+      "term": "gravitational lensing",
+      "weight": 50.0
+    },
+    {
+      "term": "dusty",
+      "weight": 49.45
+    },
+    {
+      "term": "starburst",
+      "weight": 48.3
+    },
+    {
+      "term": "gravitational lens",
+      "weight": 45.0
+    },
+    {
+      "term": "early-type galaxies",
+      "weight": 40.0
+    },
+    {
+      "term": "initial mass function",
+      "weight": 39.15
+    },
+    {
+      "term": "billion years",
+      "weight": 35.0
+    },
+    {
+      "term": "strong gravitational",
+      "weight": 33.0
+    },
+    {
+      "term": "velocity dispersion",
+      "weight": 32.0
+    },
+    {
+      "term": "initial mass",
+      "weight": 29.0
+    },
+    {
+      "term": "milky way",
+      "weight": 29.0
+    },
+    {
+      "term": "dusty star-forming galaxies",
+      "weight": 28.35
+    },
+    {
+      "term": "molecular gas",
+      "weight": 27.0
     },
     {
       "term": "euclid",
-      "weight": 10.0
+      "weight": 26.45
     },
     {
-      "term": "csst",
-      "weight": 10.0
+      "term": "rotation curves",
+      "weight": 26.0
+    },
+    {
+      "term": "dusty star-forming",
+      "weight": 26.0
+    },
+    {
+      "term": "star formation rate",
+      "weight": 25.65
+    },
+    {
+      "term": "dwarf galaxies",
+      "weight": 25.0
+    },
+    {
+      "term": "star-forming galaxy",
+      "weight": 25.0
+    },
+    {
+      "term": "gravitational lensing stellar",
+      "weight": 24.3
+    },
+    {
+      "term": "magnetic field",
+      "weight": 24.0
+    },
+    {
+      "term": "galaxies: fundamental parameters",
+      "weight": 24
+    },
+    {
+      "term": "galaxies cosmic noon",
+      "weight": 22.95
+    },
+    {
+      "term": "lensing stellar dynamics",
+      "weight": 22.95
+    },
+    {
+      "term": "high-redshift galaxies",
+      "weight": 22.0
+    },
+    {
+      "term": "space telescope",
+      "weight": 22.0
+    },
+    {
+      "term": "scaling relations",
+      "weight": 22.0
+    },
+    {
+      "term": "polarized",
+      "weight": 21.85
+    },
+    {
+      "term": "strong gravitational lensing",
+      "weight": 21.6
+    },
+    {
+      "term": "rotating disk",
+      "weight": 21.0
+    },
+    {
+      "term": "dark energy",
+      "weight": 21.0
+    },
+    {
+      "term": "submillimeter",
+      "weight": 20.7
+    },
+    {
+      "term": "after big bang",
+      "weight": 20.25
+    },
+    {
+      "term": "strong gravitational lens",
+      "weight": 20.25
+    },
+    {
+      "term": "cosmic time",
+      "weight": 20.0
+    },
+    {
+      "term": "spiral galaxies",
+      "weight": 20.0
+    },
+    {
+      "term": "strongly lensed",
+      "weight": 20.0
+    },
+    {
+      "term": "spatially resolved",
+      "weight": 20.0
+    },
+    {
+      "term": "formation rate",
+      "weight": 19.0
+    },
+    {
+      "term": "starburst galaxies",
+      "weight": 19.0
+    },
+    {
+      "term": "lensed dusty",
+      "weight": 19.0
+    },
+    {
+      "term": "james webb space",
+      "weight": 18.9
+    },
+    {
+      "term": "webb space telescope",
+      "weight": 18.9
+    },
+    {
+      "term": "lensed dusty star-forming",
+      "weight": 18.9
+    },
+    {
+      "term": "per cent",
+      "weight": 18.0
+    },
+    {
+      "term": "dynamical mass",
+      "weight": 18.0
+    },
+    {
+      "term": "gravitationally lensed",
+      "weight": 18.0
+    },
+    {
+      "term": "galaxies cosmic",
+      "weight": 18.0
+    },
+    {
+      "term": "cosmic noon",
+      "weight": 18.0
+    },
+    {
+      "term": "massive early-type",
+      "weight": 18.0
+    },
+    {
+      "term": "lensing stellar",
+      "weight": 18.0
+    },
+    {
+      "term": "stellar dynamics",
+      "weight": 18.0
+    },
+    {
+      "term": "sloan lens acs",
+      "weight": 17.55
+    },
+    {
+      "term": "cosmic dawn",
+      "weight": 17.0
+    },
+    {
+      "term": "circumgalactic medium",
+      "weight": 17.0
+    },
+    {
+      "term": "extragalactic magnetism sofia",
+      "weight": 16.2
+    },
+    {
+      "term": "years after big",
+      "weight": 16.2
+    },
+    {
+      "term": "massive early-type galaxies",
+      "weight": 16.2
+    },
+    {
+      "term": "strong lensing",
+      "weight": 16.0
+    },
+    {
+      "term": "big bang",
+      "weight": 16.0
+    },
+    {
+      "term": "luminosity function",
+      "weight": 16.0
+    },
+    {
+      "term": "density profiles",
+      "weight": 16.0
+    },
+    {
+      "term": "gas discs",
+      "weight": 15.0
+    },
+    {
+      "term": "density profile",
+      "weight": 15.0
+    },
+    {
+      "term": "dust grains",
+      "weight": 15.0
+    },
+    {
+      "term": "emission lines",
+      "weight": 15.0
+    },
+    {
+      "term": "after big",
+      "weight": 15.0
+    },
+    {
+      "term": "intergalactic medium",
+      "weight": 15.0
+    },
+    {
+      "term": "cold gas",
+      "weight": 15.0
+    },
+    {
+      "term": "lens sample",
+      "weight": 15.0
+    },
+    {
+      "term": "slacs strong lenses",
+      "weight": 14.85
+    },
+    {
+      "term": "magnetism sofia salsa",
+      "weight": 14.85
+    },
+    {
+      "term": "sofia salsa legacy",
+      "weight": 14.85
+    },
+    {
+      "term": "salsa legacy program",
+      "weight": 14.85
+    },
+    {
+      "term": "magnetic fields galaxies",
+      "weight": 14.85
+    },
+    {
+      "term": "gravitational lens modelling",
+      "weight": 14.85
+    },
+    {
+      "term": "cold interstellar medium",
+      "weight": 14.85
+    },
+    {
+      "term": "star-forming galaxies cosmic",
+      "weight": 14.85
+    },
+    {
+      "term": "billion years after",
+      "weight": 14.85
+    },
+    {
+      "term": "atacama millimeter submillimeter",
+      "weight": 14.85
+    },
+    {
+      "term": "millimeter submillimeter array",
+      "weight": 14.85
+    },
+    {
+      "term": "sloan lens",
+      "weight": 14.0
+    },
+    {
+      "term": "lens model",
+      "weight": 14.0
+    },
+    {
+      "term": "hydrodynamical simulations",
+      "weight": 14.0
+    },
+    {
+      "term": "gas mass",
+      "weight": 14.0
+    },
+    {
+      "term": "atacama millimeter",
+      "weight": 14.0
+    },
+    {
+      "term": "dust continuum",
+      "weight": 14.0
+    },
+    {
+      "term": "james webb",
+      "weight": 14.0
+    },
+    {
+      "term": "webb space",
+      "weight": 14.0
+    },
+    {
+      "term": "dust attenuation",
+      "weight": 14.0
+    },
+    {
+      "term": "lensed galaxies",
+      "weight": 14.0
+    },
+    {
+      "term": "nearby galaxies",
+      "weight": 14.0
+    },
+    {
+      "term": "main-sequence galaxies",
+      "weight": 14.0
+    },
+    {
+      "term": "line-of-sight shear slacs",
+      "weight": 13.5
+    },
+    {
+      "term": "shear slacs strong",
+      "weight": 13.5
+    },
+    {
+      "term": "primordial rotating disk",
+      "weight": 13.5
+    },
+    {
+      "term": "rotating disk composed",
+      "weight": 13.5
+    },
+    {
+      "term": "dense star-forming clumps",
+      "weight": 13.5
+    },
+    {
+      "term": "star-forming clumps cosmic",
+      "weight": 13.5
+    },
+    {
+      "term": "clumps cosmic dawn",
+      "weight": 13.5
+    },
+    {
+      "term": "galaxies billion years",
+      "weight": 13.5
+    },
+    {
+      "term": "lensed star-forming galaxy",
+      "weight": 13.5
     }
   ],
-  "authors": [],
-  "summary": "Zotero is not configured yet; using fallback research keywords."
+  "authors": [
+    {
+      "name": "tommaso treu",
+      "weight": 8
+    },
+    {
+      "name": "m. dessauges-zavadsky",
+      "weight": 6
+    },
+    {
+      "name": "s. fujimoto",
+      "weight": 5
+    },
+    {
+      "name": "a. m. koekemoer",
+      "weight": 5
+    },
+    {
+      "name": "f. rizzo",
+      "weight": 5
+    },
+    {
+      "name": "t. treu",
+      "weight": 5
+    },
+    {
+      "name": "g. c. jones",
+      "weight": 5
+    },
+    {
+      "name": "enrique lopez-rodriguez",
+      "weight": 5
+    },
+    {
+      "name": "l. v. e. koopmans",
+      "weight": 5
+    },
+    {
+      "name": "mark vogelsberger",
+      "weight": 4
+    },
+    {
+      "name": "seiji fujimoto",
+      "weight": 4
+    },
+    {
+      "name": "guido roberts-borsani",
+      "weight": 4
+    },
+    {
+      "name": "m. ouchi",
+      "weight": 4
+    },
+    {
+      "name": "k. kohno",
+      "weight": 4
+    },
+    {
+      "name": "f. valentino",
+      "weight": 4
+    },
+    {
+      "name": "c. giménez-arteaga",
+      "weight": 4
+    },
+    {
+      "name": "m. kohandel",
+      "weight": 4
+    },
+    {
+      "name": "a. pallottini",
+      "weight": 4
+    },
+    {
+      "name": "y. ao",
+      "weight": 4
+    },
+    {
+      "name": "d. espada",
+      "weight": 4
+    },
+    {
+      "name": "m. lee",
+      "weight": 4
+    },
+    {
+      "name": "g. e. magdis",
+      "weight": 4
+    },
+    {
+      "name": "yoshinobu fudamoto",
+      "weight": 4
+    },
+    {
+      "name": "rainer beck",
+      "weight": 4
+    },
+    {
+      "name": "m. aravena",
+      "weight": 4
+    },
+    {
+      "name": "desika narayanan",
+      "weight": 4
+    },
+    {
+      "name": "avishai dekel",
+      "weight": 4
+    },
+    {
+      "name": "christopher j. conselice",
+      "weight": 3
+    },
+    {
+      "name": "gabriel brammer",
+      "weight": 3
+    },
+    {
+      "name": "roberto maiolino",
+      "weight": 3
+    },
+    {
+      "name": "daniel p. stark",
+      "weight": 3
+    },
+    {
+      "name": "massimo stiavelli",
+      "weight": 3
+    },
+    {
+      "name": "g. b. brammer",
+      "weight": 3
+    },
+    {
+      "name": "j. richard",
+      "weight": 3
+    },
+    {
+      "name": "f. e. bauer",
+      "weight": 3
+    },
+    {
+      "name": "e. egami",
+      "weight": 3
+    },
+    {
+      "name": "s. l. finkelstein",
+      "weight": 3
+    },
+    {
+      "name": "g. b. caminha",
+      "weight": 3
+    },
+    {
+      "name": "k. i. caputi",
+      "weight": 3
+    },
+    {
+      "name": "y. fudamoto",
+      "weight": 3
+    },
+    {
+      "name": "j. gonzález-lópez",
+      "weight": 3
+    },
+    {
+      "name": "v. kokorev",
+      "weight": 3
+    },
+    {
+      "name": "n. laporte",
+      "weight": 3
+    },
+    {
+      "name": "y. ono",
+      "weight": 3
+    },
+    {
+      "name": "k. shimasaku",
+      "weight": 3
+    },
+    {
+      "name": "f. sun",
+      "weight": 3
+    },
+    {
+      "name": "s. toft",
+      "weight": 3
+    },
+    {
+      "name": "h. umehata",
+      "weight": 3
+    },
+    {
+      "name": "stefano carniani",
+      "weight": 3
+    },
+    {
+      "name": "carlos s. frenk",
+      "weight": 3
+    },
+    {
+      "name": "a. ferrara",
+      "weight": 3
+    },
+    {
+      "name": "jianhang chen",
+      "weight": 3
+    },
+    {
+      "name": "stephen serjeant",
+      "weight": 3
+    },
+    {
+      "name": "kandaswamy subramanian",
+      "weight": 3
+    },
+    {
+      "name": "evangelia ntormousi",
+      "weight": 3
+    },
+    {
+      "name": "sergio martin-alvarez",
+      "weight": 3
+    },
+    {
+      "name": "jingzhe ma",
+      "weight": 3
+    },
+    {
+      "name": "j. d. vieira",
+      "weight": 3
+    },
+    {
+      "name": "c. de breuck",
+      "weight": 3
+    },
+    {
+      "name": "s. c. chapman",
+      "weight": 3
+    }
+  ],
+  "summary": "Interest profile inferred from Zotero papers. Top topics: lens, magnetic, dust, lensing, dark matter, jwst, lensed, gravitational lensing: strong, alma, magnetic fields, galaxies: elliptical and lenticular, molecular"
 }

@@ -247,7 +247,7 @@ jobs:
         export ENABLE_LLM_RECOMMENDATION="${{ vars.ENABLE_LLM_RECOMMENDATION }}"
         export ENABLE_PAPER_ARTIFACTS="${{ vars.ENABLE_PAPER_ARTIFACTS }}"
 
-        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files "${BACKFILL_MAX_FILES:-10}"
+        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files "${BACKFILL_MAX_FILES:-5}"
 
     - name: Generate Historical Top Lists
       if: steps.schedule_guard.outputs.should_run == 'true'

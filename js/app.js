@@ -10,6 +10,7 @@ let userKeywords = []; // 存储用户的关键词
 let activeAuthors = []; // 存储激活的作者
 let userAuthors = []; // 存储用户的作者
 let currentPaperIndex = 0; // 当前查看的论文索引
+let currentModalPaper = null; // 当前弹窗中的论文对象
 let currentFilteredPapers = []; // 当前过滤后的论文列表
 let textSearchQuery = ''; // 实时文本搜索查询
 let previousActiveKeywords = null; // 文本搜索激活时，暂存之前的关键词激活集合
@@ -97,7 +98,7 @@ function updateLikeButton(paper) {
 }
 
 function toggleCurrentPaperLike() {
-  const paper = currentFilteredPapers[currentPaperIndex];
+  const paper = currentModalPaper || currentFilteredPapers[currentPaperIndex];
   if (!paper) return;
   const id = paperLikeId(paper);
   const liked = getLikedPapers();
@@ -166,14 +167,24 @@ function normalizeFigureImageUrl(url) {
 }
 
 async function addCurrentPaperToZotero() {
-  const paper = currentFilteredPapers[currentPaperIndex];
+  const paper = currentModalPaper || currentFilteredPapers[currentPaperIndex];
   if (!paper) return;
+  if (!paper.id || !paper.title || !paper.url || !String(paper.url).includes('arxiv.org/abs/')) {
+    alert('当前弹窗没有有效的 arXiv 论文信息，未添加到 Zotero。');
+    return;
+  }
+
+  const confirmed = confirm(`将这篇 arXiv 论文添加到 Zotero？\n\n${paper.title}`);
+  if (!confirmed) return;
+
   let config = getZoteroConfig();
   if (!config.apiKey || !config.libraryId) {
     config = promptZoteroConfig();
   }
   if (!config) return;
 
+  const arxivId = paper.id || '';
+  const pdfUrl = paper.url ? paper.url.replace('/abs/', '/pdf/') : '';
   const item = {
     itemType: 'journalArticle',
     title: paper.title || '',
@@ -182,8 +193,8 @@ async function addCurrentPaperToZotero() {
     url: paper.url || '',
     publicationTitle: 'arXiv',
     archive: 'arXiv',
-    archiveLocation: paper.id || '',
-    extra: `arXiv: ${paper.id || ''}\nDaily arXiv score: ${getRecommendationScore(paper)}/100`,
+    archiveLocation: arxivId,
+    extra: `arXiv: ${arxivId}\nPDF: ${pdfUrl}\nDaily arXiv score: ${getRecommendationScore(paper)}/100`,
     tags: [
       { tag: 'daily_arxiv' },
       { tag: 'arXiv' }
@@ -194,6 +205,11 @@ async function addCurrentPaperToZotero() {
   }
 
   const endpoint = `https://api.zotero.org/${config.libraryType || 'users'}/${config.libraryId}/items`;
+  const button = document.getElementById('zoteroAddButton');
+  if (button) {
+    button.disabled = true;
+    button.classList.add('saving');
+  }
   try {
     const response = await fetch(endpoint, {
       method: 'POST',
@@ -207,10 +223,17 @@ async function addCurrentPaperToZotero() {
       const text = await response.text();
       throw new Error(`${response.status}: ${text}`);
     }
-    alert('已添加到 Zotero。');
+    const result = await response.json();
+    const createdKey = result && result.success ? Object.values(result.success)[0] : '';
+    alert(`已通过 Zotero Web API 添加论文。\n${createdKey ? `Item key: ${createdKey}` : ''}`);
   } catch (error) {
     console.error('添加 Zotero 失败:', error);
     alert(`添加 Zotero 失败：${error.message}`);
+  } finally {
+    if (button) {
+      button.disabled = false;
+      button.classList.remove('saving');
+    }
   }
 }
 
@@ -1263,6 +1286,7 @@ function renderPapers() {
 }
 
 function showPaperDetails(paper, paperIndex) {
+  currentModalPaper = paper;
   const modal = document.getElementById('paperModal');
   const modalTitle = document.getElementById('modalTitle');
   const modalBody = document.getElementById('modalBody');
@@ -1447,6 +1471,7 @@ function closeModal() {
   
   modalBody.scrollTop = 0;
   modal.classList.remove('active');
+  currentModalPaper = null;
   document.body.style.overflow = '';
 }
 

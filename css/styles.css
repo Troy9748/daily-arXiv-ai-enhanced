@@ -926,6 +926,15 @@ main {
   transform: translateY(-1px);
 }
 
+.paper-modal-footer .button.icon-button:disabled {
+  cursor: wait;
+  opacity: 0.55;
+}
+
+.paper-modal-footer .button.icon-button.saving {
+  background-color: rgba(102, 126, 234, 0.1);
+}
+
 .paper-modal-footer .button.icon-button.liked {
   background-color: rgba(164, 44, 37, 0.1);
 }

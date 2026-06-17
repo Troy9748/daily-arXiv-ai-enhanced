@@ -225,7 +225,7 @@ jobs:
         fi
         echo "Markdown转换完成 / Markdown conversion completed"
 
-    - name: Generate Historical Top Lists
+    - name: Backfill Historical Recommendation and Artifacts
       if: steps.schedule_guard.outputs.should_run == 'true'
       run: |
         source .venv/bin/activate
@@ -247,9 +247,15 @@ jobs:
         export ENABLE_LLM_RECOMMENDATION="${{ vars.ENABLE_LLM_RECOMMENDATION }}"
         export ENABLE_PAPER_ARTIFACTS="${{ vars.ENABLE_PAPER_ARTIFACTS }}"
 
-        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files "${BACKFILL_MAX_FILES:-100}"
+        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files "${BACKFILL_MAX_FILES:-10}"
 
+    - name: Generate Historical Top Lists
+      if: steps.schedule_guard.outputs.should_run == 'true'
+      run: |
+        source .venv/bin/activate
         echo "生成最近一年/月/周高推荐榜单... / Generating recent year/month/week top recommendation lists..."
+
+        export LANGUAGE="${{ vars.LANGUAGE }}"
 
         python ai/generate_top100.py
 

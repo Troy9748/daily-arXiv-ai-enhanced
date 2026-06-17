@@ -11,7 +11,8 @@
 import json
 import sys
 import os
-from datetime import datetime, timedelta
+import glob
+from datetime import datetime
 
 def load_papers_data(file_path):
     """
@@ -60,6 +61,28 @@ def save_papers_data(papers, file_path):
         print(f"Error saving {file_path}: {e}", file=sys.stderr)
         return False
 
+def collect_existing_ids(data_dir, current_file):
+    """
+    收集仓库中已经保存过的论文 ID。
+    Includes same-day AI-enhanced files so rerunning a workflow on the same day
+    does not spend tokens on papers that were already processed.
+    """
+    existing_ids = set()
+    scanned_files = 0
+    current_abs = os.path.abspath(current_file)
+
+    for path in glob.glob(os.path.join(data_dir, "*.jsonl")):
+        if os.path.abspath(path) == current_abs:
+            continue
+        name = os.path.basename(path)
+        if name.startswith("top_"):
+            continue
+        _, ids = load_papers_data(path)
+        if ids:
+            scanned_files += 1
+            existing_ids.update(ids)
+    return existing_ids, scanned_files
+
 def perform_deduplication():
     """
     执行多日去重：删除与历史多日重复的论文条目，保留新内容
@@ -75,7 +98,6 @@ def perform_deduplication():
 
     today = datetime.now().strftime("%Y-%m-%d")
     today_file = f"../data/{today}.jsonl"
-    history_days = 7  # 向前追溯几天的数据进行对比
 
     if not os.path.exists(today_file):
         print("今日数据文件不存在 / Today's data file does not exist", file=sys.stderr)
@@ -88,16 +110,13 @@ def perform_deduplication():
         if not today_papers:
             return "no_data"
 
-        # 收集历史多日 ID 集合
-        history_ids = set()
-        for i in range(1, history_days + 1):
-            date_str = (datetime.now() - timedelta(days=i)).strftime("%Y-%m-%d")
-            history_file = f"../data/{date_str}.jsonl"
-            _, past_ids = load_papers_data(history_file)
-            history_ids.update(past_ids)
+        history_ids, scanned_files = collect_existing_ids("../data", today_file)
 
-        print(f"历史{history_days}日去重库大小: {len(history_ids)} / History {history_days} days deduplication library size: {len(history_ids)}", file=sys.stderr)
-
+        print(
+            f"历史去重库大小: {len(history_ids)}，扫描文件数: {scanned_files} / "
+            f"Historical deduplication library size: {len(history_ids)}, scanned files: {scanned_files}",
+            file=sys.stderr,
+        )
         duplicate_ids = today_ids & history_ids
 
         if duplicate_ids:
@@ -162,4 +181,4 @@ def main():
         sys.exit(2)
 
 if __name__ == "__main__":
-    main() 
+    main()

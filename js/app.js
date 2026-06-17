@@ -156,6 +156,15 @@ function zoteroCreators(authors) {
   }));
 }
 
+function normalizeFigureImageUrl(url) {
+  const value = String(url || '');
+  const match = value.match(/^https:\/\/arxiv\.org\/(\d{4}\.\d+(?:v\d+)?)\/(.+)$/);
+  if (match) {
+    return `https://arxiv.org/html/${match[1]}/${match[2]}`;
+  }
+  return value;
+}
+
 async function addCurrentPaperToZotero() {
   const paper = currentFilteredPapers[currentPaperIndex];
   if (!paper) return;
@@ -1319,8 +1328,9 @@ function showPaperDetails(paper, paperIndex) {
         const label = figure.figure_label || `Figure ${idx + 1}`;
         const captionZh = figure.caption_zh || '';
         const captionEn = figure.caption_en || '';
-        const image = figure.image_url
-          ? `<img src="${figure.image_url}" alt="${label}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"><a class="figure-source-link" href="${figure.image_url}" target="_blank" style="display:none;">打开图片源</a>`
+        const imageUrl = normalizeFigureImageUrl(figure.image_url);
+        const image = imageUrl
+          ? `<img src="${imageUrl}" alt="${label}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"><a class="figure-source-link" href="${imageUrl}" target="_blank" style="display:none;">打开图片源</a>`
           : '';
         return `
           <div class="figure-item">

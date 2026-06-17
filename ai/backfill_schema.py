@@ -8,7 +8,7 @@ from typing import Dict, List
 
 
 RECOMMEND_PROMPT_VERSION = "recommend-v2-author-weighted"
-ARTIFACT_PROMPT_VERSION = "paper-artifacts-v2"
+ARTIFACT_PROMPT_VERSION = "paper-artifacts-v3"
 
 
 def parse_args() -> argparse.Namespace:

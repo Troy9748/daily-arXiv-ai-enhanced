@@ -22,7 +22,7 @@ if dotenv and os.path.exists(".env"):
     dotenv.load_dotenv()
 
 
-PROMPT_VERSION = "paper-artifacts-v2"
+PROMPT_VERSION = "paper-artifacts-v3"
 
 
 def parse_args() -> argparse.Namespace:
@@ -227,7 +227,11 @@ def extract_figures_from_html(html_text: str, base_url: str, max_figures: int) -
             continue
         image_url = ""
         if img_match:
-            image_url = urljoin(base_url or "https://arxiv.org/", html.unescape(img_match.group(1)))
+            src = html.unescape(img_match.group(1))
+            if base_url and "/html/" in base_url:
+                image_url = urljoin("https://arxiv.org/html/", src)
+            else:
+                image_url = urljoin(base_url or "https://arxiv.org/html/", src)
         label_match = re.search(r"(?i)\b(fig(?:ure)?\.?\s*\d+[a-z]?)", caption)
         label = label_match.group(1) if label_match else f"Figure {idx}"
         figures.append(

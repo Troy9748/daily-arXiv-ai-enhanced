@@ -18,7 +18,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--max-files",
         type=int,
-        default=int(os.environ.get("BACKFILL_MAX_FILES", "10") or "10"),
+        default=int(os.environ.get("BACKFILL_MAX_FILES", "5") or "5"),
         help="Maximum historical files to backfill. Use -1 for all outdated files.",
     )
     return parser.parse_args()

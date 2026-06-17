@@ -26,6 +26,26 @@ if __name__ == "__main__":
             return "★☆☆☆☆"
         filled = max(1, min(5, int(recommendation.get("stars", 1) or 1)))
         return "★" * filled + "☆" * (5 - filled)
+    def figures_markdown(item):
+        artifacts = item.get("artifacts", {}) if isinstance(item.get("artifacts"), dict) else {}
+        figures = artifacts.get("figures", []) if isinstance(artifacts.get("figures"), list) else []
+        blocks = []
+        for figure in figures:
+            if not isinstance(figure, dict):
+                continue
+            label = figure.get("figure_label", "Figure")
+            image_url = figure.get("image_url", "")
+            caption_zh = figure.get("caption_zh", "")
+            caption_en = figure.get("caption_en", "")
+            block = f"#### {label}\n"
+            if image_url:
+                block += f"![{label}]({image_url})\n\n"
+            if caption_zh:
+                block += f"{caption_zh}\n\n"
+            if caption_en:
+                block += f"<small>{caption_en}</small>\n"
+            blocks.append(block.strip())
+        return "\n\n".join(blocks)
 
     with open(args.data, "r") as f:
         for line in f:
@@ -82,7 +102,10 @@ if __name__ == "__main__":
                         idx=next(idx),
                         stars=stars(item),
                         score=recommendation_score(item),
-                        reason=item.get("recommendation", {}).get("reason", "No personalized recommendation available.")
+                        reason=item.get("recommendation", {}).get("reason", "No personalized recommendation available."),
+                        abstract_zh=item.get("artifacts", {}).get("abstract_zh", "") if isinstance(item.get("artifacts"), dict) else "",
+                        conclusion_zh=item.get("artifacts", {}).get("conclusion_zh", "") if isinstance(item.get("artifacts"), dict) else "",
+                        figures=figures_markdown(item)
                     )
                 )
         markdown += "\n\n".join(papers)

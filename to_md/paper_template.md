@@ -20,4 +20,14 @@ Conclusion: {conclusion}
 
 Abstract: {summary}
 
+Abstract Translation:
+{abstract_zh}
+
+Conclusion Translation:
+{conclusion_zh}
+
+Key Figures:
+
+{figures}
+
 </details>

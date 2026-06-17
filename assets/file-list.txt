@@ -259,3 +259,6 @@
 2026-06-16.jsonl
 2026-06-16_AI_enhanced_Chinese.jsonl
 top_100_AI_enhanced.jsonl
+top_month_20_AI_enhanced.jsonl
+top_week_10_AI_enhanced.jsonl
+top_year_100_AI_enhanced.jsonl

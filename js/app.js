@@ -14,7 +14,26 @@ let currentFilteredPapers = []; // 当前过滤后的论文列表
 let textSearchQuery = ''; // 实时文本搜索查询
 let previousActiveKeywords = null; // 文本搜索激活时，暂存之前的关键词激活集合
 let previousActiveAuthors = null; // 文本搜索激活时，暂存之前的作者激活集合
-let isTop100Mode = false; // 💡 新增：标记当前是否处于 Top 100 高分推荐模式
+let isTop100Mode = false; // 标记当前是否处于历史高分推荐模式
+let currentTopListMode = null; // 'year' | 'month' | 'week'
+
+const TOP_LISTS = {
+  year: {
+    label: '近一年 Top 100',
+    shortLabel: 'Year 100',
+    file: 'top_year_100_AI_enhanced.jsonl'
+  },
+  month: {
+    label: '近一月 Top 20',
+    shortLabel: 'Month 20',
+    file: 'top_month_20_AI_enhanced.jsonl'
+  },
+  week: {
+    label: '近一周 Top 10',
+    shortLabel: 'Week 10',
+    file: 'top_week_10_AI_enhanced.jsonl'
+  }
+};
 
 function getRecommendationScore(paper) {
   return paper && paper.recommendation ? Number(paper.recommendation.score || 0) : 0;
@@ -247,11 +266,9 @@ function initEventListeners() {
   document.getElementById('dateRangeMode').addEventListener('change', toggleRangeMode);
   document.getElementById('closeModal').addEventListener('click', closeModal);
   
-  // 💡 新增：初始化绑定 HTML 中已有的 Top 100 按钮点击事件
-  const initialTop100Btn = document.getElementById('top100Button');
-  if (initialTop100Btn) {
-    initialTop100Btn.addEventListener('click', loadTop100Papers);
-  }
+  document.querySelectorAll('[data-top-list]').forEach(button => {
+    button.addEventListener('click', () => loadTopPapers(button.dataset.topList || 'year'));
+  });
   
   document.querySelector('.paper-modal').addEventListener('click', (event) => {
     const modal = document.querySelector('.paper-modal');
@@ -571,6 +588,7 @@ function toggleRangeMode() {
 
 async function loadPapersByDate(date) {
   isTop100Mode = false; // 💡 切换回普通日期查看，关闭高分推荐模式
+  currentTopListMode = null;
   currentDate = date;
   document.getElementById('currentDate').textContent = formatDate(date);
   
@@ -629,22 +647,23 @@ async function loadPapersByDate(date) {
   }
 }
 
-// 💡 新增：加载历史推荐最高前100篇的高分榜单数据
-async function loadTop100Papers() {
-  isTop100Mode = true; // 激活高分推荐模式
-  currentCategory = 'all'; // 默认查看全部高分分类
-  document.getElementById('currentDate').textContent = "历史高分推荐 Top 100";
+async function loadTopPapers(mode = 'year') {
+  const config = TOP_LISTS[mode] || TOP_LISTS.year;
+  isTop100Mode = true;
+  currentTopListMode = mode;
+  currentCategory = 'all';
+  document.getElementById('currentDate').textContent = config.label;
   
   const container = document.getElementById('paperContainer');
   container.innerHTML = `
     <div class="loading-container">
       <div class="loading-spinner"></div>
-      <p>Loading Top 100 papers...</p>
+      <p>Loading ${config.label} papers...</p>
     </div>
   `;
   
   try {
-    const response = await fetch(`data/top_100_AI_enhanced.jsonl`);
+    const response = await fetch(`data/${config.file}`);
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -652,7 +671,7 @@ async function loadTop100Papers() {
     if (!text || text.trim() === '') {
       container.innerHTML = `
         <div class="loading-container">
-          <p>No Top 100 papers found.</p>
+          <p>No ${config.label} papers found.</p>
         </div>
       `;
       paperData = {};
@@ -660,20 +679,23 @@ async function loadTop100Papers() {
       return;
     }
     
-    // 解析高分文件，第二个参数作为备用日期
-    paperData = parseJsonlData(text, 'Top 100');
+    paperData = parseJsonlData(text, config.label);
     const categories = getAllCategories(paperData);
-    renderCategoryFilter(categories); // 动态重新渲染导航栏，会正确让 Top 100 高亮
+    renderCategoryFilter(categories);
     renderPapers();
   } catch (error) {
-    console.error('加载Top 100数据失败:', error);
+    console.error('加载历史榜单数据失败:', error);
     container.innerHTML = `
       <div class="loading-container">
-        <p>Loading Top 100 data fails. Please retry.</p>
+        <p>Loading ${config.label} data fails. Please retry.</p>
         <p>Error messages: ${error.message}</p>
       </div>
     `;
   }
+}
+
+function loadTop100Papers() {
+  return loadTopPapers('year');
 }
 
 function parseJsonlData(jsonlText, date) {
@@ -710,6 +732,9 @@ function parseJsonlData(jsonlText, date) {
         method: paper.AI && paper.AI.method ? paper.AI.method : '',
         result: paper.AI && paper.AI.result ? paper.AI.result : '',
         conclusion: paper.AI && paper.AI.conclusion ? paper.AI.conclusion : '',
+        abstractZh: paper.artifacts && paper.artifacts.abstract_zh ? paper.artifacts.abstract_zh : '',
+        conclusionZh: paper.artifacts && paper.artifacts.conclusion_zh ? paper.artifacts.conclusion_zh : '',
+        figures: paper.artifacts && Array.isArray(paper.artifacts.figures) ? paper.artifacts.figures : [],
         recommendation: paper.recommendation || null
       });
     } catch (error) {
@@ -746,14 +771,19 @@ function renderCategoryFilter(categories) {
     totalPapers += count;
   });
   
-  // 💡 修改：将 Top 100 按钮改写为动态拼接，当处于高分推荐模式时自动高亮，并实现相互排斥
+  const topButtons = Object.entries(TOP_LISTS).map(([mode, config]) => {
+    const active = isTop100Mode && currentTopListMode === mode ? 'active' : '';
+    return `<button class="category-button top-list-button ${active}" data-top-list="${mode}">🔥 ${config.shortLabel}</button>`;
+  }).join('');
+
   container.innerHTML = `
     <button class="category-button ${(!isTop100Mode && currentCategory === 'all') ? 'active' : ''}" data-category="all">All<span class="category-count">${totalPapers}</span></button>
-    <button class="category-button ${isTop100Mode ? 'active' : ''}" id="top100Button" style="color: #e67e22; font-weight: 600; border: 1px solid rgba(230, 126, 34, 0.2);">🔥 Top 100</button>
+    ${topButtons}
   `;
   
-  // 重新绑定动态拼接出来的 Top 100 按钮
-  document.getElementById('top100Button').addEventListener('click', loadTop100Papers);
+  container.querySelectorAll('[data-top-list]').forEach(button => {
+    button.addEventListener('click', () => loadTopPapers(button.dataset.topList || 'year'));
+  });
   
   sortedCategories.forEach(category => {
     const count = categoryCounts[category];
@@ -770,6 +800,7 @@ function renderCategoryFilter(categories) {
   
   document.querySelector('.category-button[data-category="all"]').addEventListener('click', () => {
     isTop100Mode = false; // 点击 All 恢复常规，交由 filterByCategory 处理
+    currentTopListMode = null;
     filterByCategory('all');
   });
 }
@@ -778,8 +809,8 @@ function filterByCategory(category) {
   currentCategory = category;
   
   document.querySelectorAll('.category-button').forEach(button => {
-    if (button.id === 'top100Button') {
-      button.classList.toggle('active', isTop100Mode);
+    if (button.dataset.topList) {
+      button.classList.toggle('active', isTop100Mode && button.dataset.topList === currentTopListMode);
     } else {
       // 如果是在高分模式下进行二级子分类检索，不取消高分按钮高亮
       button.classList.toggle('active', !isTop100Mode && button.dataset.category === category);
@@ -851,7 +882,10 @@ function renderPapers() {
         a.motivation || '',
         a.method || '',
         a.result || '',
-        a.conclusion || ''
+        a.conclusion || '',
+        a.abstractZh || '',
+        a.conclusionZh || '',
+        ...(a.figures || []).map(fig => `${fig.figure_label || ''} ${fig.caption_en || ''} ${fig.caption_zh || ''}`)
       ].join(' ').toLowerCase();
       const hayB = [
         b.title,
@@ -862,7 +896,10 @@ function renderPapers() {
         b.motivation || '',
         b.method || '',
         b.result || '',
-        b.conclusion || ''
+        b.conclusion || '',
+        b.abstractZh || '',
+        b.conclusionZh || '',
+        ...(b.figures || []).map(fig => `${fig.figure_label || ''} ${fig.caption_en || ''} ${fig.caption_zh || ''}`)
       ].join(' ').toLowerCase();
       const am = hayA.includes(q);
       const bm = hayB.includes(q);
@@ -881,7 +918,10 @@ function renderPapers() {
         p.motivation || '',
         p.method || '',
         p.result || '',
-        p.conclusion || ''
+        p.conclusion || '',
+        p.abstractZh || '',
+        p.conclusionZh || '',
+        ...(p.figures || []).map(fig => `${fig.figure_label || ''} ${fig.caption_en || ''} ${fig.caption_zh || ''}`)
       ].join(' ').toLowerCase();
       const matched = hay.includes(q);
       p.isMatched = matched;
@@ -1093,6 +1133,33 @@ function showPaperDetails(paper, paperIndex) {
   const highlightedConclusion = paper.conclusion && modalTitleTerms.length > 0 
     ? highlightMatches(paper.conclusion, modalTitleTerms, 'keyword-highlight') 
     : paper.conclusion;
+
+  const highlightedAbstractZh = paper.abstractZh && modalTitleTerms.length > 0
+    ? highlightMatches(paper.abstractZh, modalTitleTerms, 'keyword-highlight')
+    : paper.abstractZh;
+
+  const highlightedConclusionZh = paper.conclusionZh && modalTitleTerms.length > 0
+    ? highlightMatches(paper.conclusionZh, modalTitleTerms, 'keyword-highlight')
+    : paper.conclusionZh;
+
+  const figuresHtml = paper.figures && paper.figures.length > 0
+    ? paper.figures.map((figure, idx) => {
+        const label = figure.figure_label || `Figure ${idx + 1}`;
+        const captionZh = figure.caption_zh || '';
+        const captionEn = figure.caption_en || '';
+        const image = figure.image_url
+          ? `<img src="${figure.image_url}" alt="${label}" loading="lazy">`
+          : '';
+        return `
+          <div class="figure-item">
+            <h4>${label}</h4>
+            ${image}
+            ${captionZh ? `<p class="figure-caption-zh">${captionZh}</p>` : ''}
+            ${captionEn ? `<p class="figure-caption-en">${captionEn}</p>` : ''}
+          </div>
+        `;
+      }).join('')
+    : '';
   
   const matchedPaperClass = paper.isMatched ? 'matched-paper-details' : '';
   const recommendation = paper.recommendation || {};
@@ -1132,6 +1199,27 @@ function showPaperDetails(paper, paperIndex) {
       </div>
       
       ${highlightedAbstract ? `<h3>Abstract</h3><p class="original-abstract">${highlightedAbstract}</p>` : ''}
+
+      <div class="paper-extra-sections">
+        ${highlightedAbstractZh ? `
+          <details class="paper-extra" open>
+            <summary>摘要翻译</summary>
+            <p>${highlightedAbstractZh}</p>
+          </details>
+        ` : ''}
+        ${highlightedConclusionZh ? `
+          <details class="paper-extra">
+            <summary>结论翻译</summary>
+            <p>${highlightedConclusionZh}</p>
+          </details>
+        ` : ''}
+        ${figuresHtml ? `
+          <details class="paper-extra">
+            <summary>重点图片</summary>
+            <div class="figure-list">${figuresHtml}</div>
+          </details>
+        ` : ''}
+      </div>
       
       <div class="pdf-preview-section">
         <div class="pdf-header">
@@ -1263,6 +1351,7 @@ function formatDate(dateString) {
 
 async function loadPapersByDateRange(startDate, endDate) {
   isTop100Mode = false; // 切换回普通时间跨度检索，关闭高分模式
+  currentTopListMode = null;
   const validDatesInRange = availableDates.filter(date => {
     return date >= startDate && date <= endDate;
   });

@@ -498,6 +498,23 @@ header {
   box-shadow: var(--shadow-sm);
 }
 
+.top-list-button {
+  color: #b45309;
+  border: 1px solid rgba(180, 83, 9, 0.22);
+  background-color: rgba(245, 158, 11, 0.08);
+  font-weight: 600;
+}
+
+.top-list-button:hover {
+  background-color: rgba(245, 158, 11, 0.16);
+  color: #92400e;
+}
+
+.top-list-button.active {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+}
+
 /* 作者按钮样式 */
 .author-button {
   background-color: rgba(102, 126, 234, 0.08); /* primary tint */
@@ -1454,6 +1471,67 @@ footer {
   border-left: 3px solid var(--border-color);
   padding-left: 16px;
   color: var(--text-secondary);
+}
+
+.paper-extra-sections {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.paper-extra {
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 12px 14px;
+}
+
+.paper-extra summary {
+  cursor: pointer;
+  color: var(--primary-color);
+  font-weight: 650;
+}
+
+.paper-extra p {
+  margin-top: 10px;
+}
+
+.figure-list {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  margin-top: 12px;
+}
+
+.figure-item {
+  border-top: 1px solid var(--border-color);
+  padding-top: 14px;
+}
+
+.figure-item:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.figure-item img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  background: white;
+}
+
+.figure-caption-zh {
+  color: var(--text-color);
+  font-weight: 500;
+}
+
+.figure-caption-en {
+  color: var(--text-secondary);
+  font-size: 13px;
 }
 
 /* 在列表视图中调整索引显示 */

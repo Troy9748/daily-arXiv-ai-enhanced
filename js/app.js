@@ -35,6 +35,9 @@ const TOP_LISTS = {
   }
 };
 
+const LIKED_PAPERS_KEY = 'dailyArxivLikedPapers';
+const ZOTERO_CONFIG_KEY = 'dailyArxivZoteroConfig';
+
 function getRecommendationScore(paper) {
   return paper && paper.recommendation ? Number(paper.recommendation.score || 0) : 0;
 }
@@ -46,6 +49,160 @@ function renderStars(stars) {
 
 function compareByRecommendation(a, b) {
   return getRecommendationScore(b) - getRecommendationScore(a);
+}
+
+function getLikedPapers() {
+  try {
+    return JSON.parse(localStorage.getItem(LIKED_PAPERS_KEY) || '[]');
+  } catch (error) {
+    console.error('读取点赞论文失败:', error);
+    return [];
+  }
+}
+
+function saveLikedPapers(papers) {
+  localStorage.setItem(LIKED_PAPERS_KEY, JSON.stringify(papers));
+}
+
+function paperLikeId(paper) {
+  return paper && (paper.id || paper.url || paper.title);
+}
+
+function isPaperLiked(paper) {
+  const id = paperLikeId(paper);
+  return Boolean(id && getLikedPapers().some(item => paperLikeId(item) === id));
+}
+
+function paperToLikedPayload(paper) {
+  return {
+    id: paper.id,
+    title: paper.title,
+    url: paper.url,
+    pdf: paper.url ? paper.url.replace('abs', 'pdf') : '',
+    authors: Array.isArray(paper.authors) ? paper.authors : String(paper.authors || '').split(',').map(v => v.trim()).filter(Boolean),
+    category: paper.category,
+    summary: paper.summary,
+    details: paper.details,
+    date: paper.date,
+    liked_at: new Date().toISOString()
+  };
+}
+
+function updateLikeButton(paper) {
+  const button = document.getElementById('likePaperButton');
+  if (!button) return;
+  const liked = isPaperLiked(paper);
+  button.classList.toggle('liked', liked);
+  button.title = liked ? 'Unlike paper' : 'Like paper';
+}
+
+function toggleCurrentPaperLike() {
+  const paper = currentFilteredPapers[currentPaperIndex];
+  if (!paper) return;
+  const id = paperLikeId(paper);
+  const liked = getLikedPapers();
+  const existing = liked.findIndex(item => paperLikeId(item) === id);
+  if (existing >= 0) {
+    liked.splice(existing, 1);
+  } else {
+    liked.unshift(paperToLikedPayload(paper));
+  }
+  saveLikedPapers(liked);
+  updateLikeButton(paper);
+}
+
+function exportLikedPapers() {
+  const payload = {
+    version: 1,
+    exported_at: new Date().toISOString(),
+    papers: getLikedPapers()
+  };
+  const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = 'liked_papers.json';
+  document.body.appendChild(link);
+  link.click();
+  link.remove();
+  URL.revokeObjectURL(url);
+}
+
+function getZoteroConfig() {
+  try {
+    return JSON.parse(localStorage.getItem(ZOTERO_CONFIG_KEY) || '{}');
+  } catch (error) {
+    return {};
+  }
+}
+
+function promptZoteroConfig() {
+  const current = getZoteroConfig();
+  const apiKey = prompt('Zotero API Key（只保存在本浏览器 localStorage）', current.apiKey || '');
+  if (!apiKey) return null;
+  const libraryType = prompt('Zotero library type: users 或 groups', current.libraryType || 'users') || 'users';
+  const libraryId = prompt('Zotero user ID 或 group ID', current.libraryId || '');
+  if (!libraryId) return null;
+  const collectionKey = prompt('daily_arxiv collection key（可留空则保存到库根目录）', current.collectionKey || '') || '';
+  const config = { apiKey, libraryType, libraryId, collectionKey };
+  localStorage.setItem(ZOTERO_CONFIG_KEY, JSON.stringify(config));
+  return config;
+}
+
+function zoteroCreators(authors) {
+  return String(authors || '').split(',').map(name => name.trim()).filter(Boolean).map(name => ({
+    creatorType: 'author',
+    name
+  }));
+}
+
+async function addCurrentPaperToZotero() {
+  const paper = currentFilteredPapers[currentPaperIndex];
+  if (!paper) return;
+  let config = getZoteroConfig();
+  if (!config.apiKey || !config.libraryId) {
+    config = promptZoteroConfig();
+  }
+  if (!config) return;
+
+  const item = {
+    itemType: 'journalArticle',
+    title: paper.title || '',
+    creators: zoteroCreators(paper.authors),
+    abstractNote: paper.details || paper.summary || '',
+    url: paper.url || '',
+    publicationTitle: 'arXiv',
+    archive: 'arXiv',
+    archiveLocation: paper.id || '',
+    extra: `arXiv: ${paper.id || ''}\nDaily arXiv score: ${getRecommendationScore(paper)}/100`,
+    tags: [
+      { tag: 'daily_arxiv' },
+      { tag: 'arXiv' }
+    ]
+  };
+  if (config.collectionKey) {
+    item.collections = [config.collectionKey];
+  }
+
+  const endpoint = `https://api.zotero.org/${config.libraryType || 'users'}/${config.libraryId}/items`;
+  try {
+    const response = await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Zotero-API-Key': config.apiKey
+      },
+      body: JSON.stringify([item])
+    });
+    if (!response.ok) {
+      const text = await response.text();
+      throw new Error(`${response.status}: ${text}`);
+    }
+    alert('已添加到 Zotero。');
+  } catch (error) {
+    console.error('添加 Zotero 失败:', error);
+    alert(`添加 Zotero 失败：${error.message}`);
+  }
 }
 
 // 加载用户的关键词设置
@@ -269,6 +426,21 @@ function initEventListeners() {
   document.querySelectorAll('[data-top-list]').forEach(button => {
     button.addEventListener('click', () => loadTopPapers(button.dataset.topList || 'year'));
   });
+
+  const likeButton = document.getElementById('likePaperButton');
+  if (likeButton) {
+    likeButton.addEventListener('click', toggleCurrentPaperLike);
+  }
+
+  const exportLikesButton = document.getElementById('exportLikesButton');
+  if (exportLikesButton) {
+    exportLikesButton.addEventListener('click', exportLikedPapers);
+  }
+
+  const zoteroAddButton = document.getElementById('zoteroAddButton');
+  if (zoteroAddButton) {
+    zoteroAddButton.addEventListener('click', addCurrentPaperToZotero);
+  }
   
   document.querySelector('.paper-modal').addEventListener('click', (event) => {
     const modal = document.querySelector('.paper-modal');
@@ -1148,7 +1320,7 @@ function showPaperDetails(paper, paperIndex) {
         const captionZh = figure.caption_zh || '';
         const captionEn = figure.caption_en || '';
         const image = figure.image_url
-          ? `<img src="${figure.image_url}" alt="${label}" loading="lazy">`
+          ? `<img src="${figure.image_url}" alt="${label}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"><a class="figure-source-link" href="${figure.image_url}" target="_blank" style="display:none;">打开图片源</a>`
           : '';
         return `
           <div class="figure-item">
@@ -1252,6 +1424,8 @@ function showPaperDetails(paper, paperIndex) {
   if (paperPosition && currentFilteredPapers.length > 0) {
     paperPosition.textContent = `${currentPaperIndex + 1} / ${currentFilteredPapers.length}`;
   }
+
+  updateLikeButton(paper);
   
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';

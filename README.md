@@ -55,11 +55,16 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
    5. `NAME`: your name for push to GitHub
    6. `ENABLE_LLM_RECOMMENDATION` [optional]: set to `false` to disable LLM-based personalized recommendation scoring.
    7. `ENABLE_PAPER_ARTIFACTS` [optional]: set to `false` to disable abstract/conclusion translation and figure metadata extraction.
+   8. `BACKFILL_MAX_FILES` [optional]: number of historical AI-enhanced files to backfill per run when their recommendation/artifact schema is outdated. Default is `100`.
 8. Go to your-own-repo -> Actions -> arXiv-daily-ai-enhanced
 9. You can manually click **Run workflow** to test if it works well (it may take about one hour). By default, this action will automatically run every day. You can modify it in `.github/workflows/run.yml`
 10. Set up GitHub pages: Go to your own repo -> Settings -> Pages. In `Build and deployment`, set `Source="Deploy from a branch"`, `Branch="main", "/(root)"`. Wait for a few minutes, go to https://\<username\>.github.io/daily-arXiv-ai-enhanced/. Please see this [issue](https://github.com/dw-dengwei/daily-arXiv-ai-enhanced/issues/14) for more precise instructions.
 
 The daily workflow also refreshes historical recommendation lists for the recent year, month, and week. The web UI exposes these as Year 100, Month 20, and Week 10.
+
+Liked papers are stored in browser localStorage. Use the export button in the paper detail modal to download `liked_papers.json`; placing that file under `data/liked_papers.json` lets the daily recommender weight those liked papers in future scoring.
+
+The Zotero button in the paper detail modal calls the Zotero Web API from your browser. On first use, enter your Zotero API key, library type, library ID, and the `daily_arxiv` collection key. These values are stored only in browser localStorage.
 
 # Plans
 See https://github.com/users/dw-dengwei/projects/3

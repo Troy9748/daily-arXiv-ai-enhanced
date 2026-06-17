@@ -926,6 +926,14 @@ main {
   transform: translateY(-1px);
 }
 
+.paper-modal-footer .button.icon-button.liked {
+  background-color: rgba(164, 44, 37, 0.1);
+}
+
+.paper-modal-footer .button.icon-button.liked svg path {
+  fill: rgba(164, 44, 37, 0.2);
+}
+
 /* Tooltip styles */
 .paper-modal-footer .button.icon-button::after {
   content: attr(title);
@@ -1522,6 +1530,16 @@ footer {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-sm);
   background: white;
+}
+
+.figure-source-link {
+  align-items: center;
+  margin: 10px 0;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--primary-color);
+  background-color: var(--background-hover);
 }
 
 .figure-caption-zh {

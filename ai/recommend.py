@@ -74,6 +74,11 @@ def parse_args() -> argparse.Namespace:
         default="../data/llm_recommendation_cache.jsonl",
         help="LLM recommendation cache keyed by arXiv id and profile hash",
     )
+    parser.add_argument(
+        "--likes",
+        default="../data/liked_papers.json",
+        help="Optional liked papers exported from the web UI",
+    )
     return parser.parse_args()
 
 
@@ -287,6 +292,64 @@ def build_profile(references: List[Dict]) -> Dict:
         "core_authors": core_authors,
         "summary": summary,
     }
+
+
+def load_liked_references(path: str) -> List[Dict]:
+    if not path or not os.path.exists(path):
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            payload = json.load(f)
+    except Exception as exc:
+        print(f"Liked papers load failed: {exc}", file=sys.stderr)
+        return []
+    papers = payload.get("papers", payload if isinstance(payload, list) else [])
+    references = []
+    for paper in papers:
+        if not isinstance(paper, dict):
+            continue
+        references.append(
+            {
+                "title": paper.get("title", ""),
+                "authors": paper.get("authors", []),
+                "abstract": paper.get("summary") or paper.get("abstract") or paper.get("details", ""),
+                "tags": ["liked-paper", "daily-arxiv-like"],
+                "publication": "arXiv",
+                "date": paper.get("date", ""),
+            }
+        )
+    return references
+
+
+def merge_liked_profile(profile: Dict, liked_refs: List[Dict]) -> Dict:
+    if not liked_refs:
+        return profile
+    liked_profile = build_profile(liked_refs)
+    keyword_scores = Counter({item["term"]: float(item.get("weight", 0)) for item in profile.get("keywords", [])})
+    author_scores = Counter({item["name"]: float(item.get("weight", 0)) for item in profile.get("authors", [])})
+
+    for item in liked_profile.get("keywords", []):
+        keyword_scores[item["term"]] += float(item.get("weight", 0)) * 2.2
+    for item in liked_profile.get("authors", []):
+        author_scores[item["name"]] += float(item.get("weight", 0)) * 2.5
+
+    profile = dict(profile)
+    profile["keywords"] = [
+        {"term": term, "weight": round(weight, 3)}
+        for term, weight in keyword_scores.most_common(160)
+        if is_informative_term(term)
+    ]
+    profile["authors"] = [
+        {"name": name, "weight": round(weight, 3), "count": int(math.ceil(weight))}
+        for name, weight in author_scores.most_common(120)
+    ]
+    profile["core_authors"] = profile["authors"][:80]
+    profile["liked_papers_count"] = len(liked_refs)
+    profile["summary"] = (
+        profile.get("summary", "")
+        + f". Also weighted by {len(liked_refs)} papers liked in the web UI."
+    )
+    return profile
 
 
 def load_or_create_profile(profile_path: str) -> Dict:
@@ -582,6 +645,7 @@ def score_paper(item: Dict, profile: Dict, cache: Dict[str, Dict], cache_path: s
 def main() -> None:
     args = parse_args()
     profile = load_or_create_profile(args.profile)
+    profile = merge_liked_profile(profile, load_liked_references(args.likes))
     prof_hash = profile_hash(profile)
     cache = load_cache(args.cache)
 

@@ -22,7 +22,7 @@ if dotenv and os.path.exists(".env"):
     dotenv.load_dotenv()
 
 
-PROMPT_VERSION = "paper-artifacts-v1"
+PROMPT_VERSION = "paper-artifacts-v2"
 
 
 def parse_args() -> argparse.Namespace:
@@ -180,10 +180,10 @@ def call_llm_for_text(paper: Dict, conclusion_source: str, figures: List[Dict]) 
         return None
 
 
-def fetch_arxiv_html(paper: Dict) -> str:
+def fetch_arxiv_html(paper: Dict) -> Dict[str, str]:
     arxiv_id = paper.get("id")
     if not arxiv_id:
-        return ""
+        return {"url": "", "text": ""}
     candidates = [
         f"https://arxiv.org/html/{arxiv_id}",
         f"https://ar5iv.labs.arxiv.org/html/{arxiv_id}",
@@ -192,10 +192,10 @@ def fetch_arxiv_html(paper: Dict) -> str:
         try:
             response = requests.get(url, timeout=30)
             if response.ok and len(response.text) > 1000:
-                return response.text
+                return {"url": response.url or url, "text": response.text}
         except Exception:
             continue
-    return ""
+    return {"url": "", "text": ""}
 
 
 def extract_conclusion_from_html(html_text: str) -> str:
@@ -214,7 +214,7 @@ def extract_conclusion_from_html(html_text: str) -> str:
     return ""
 
 
-def extract_figures_from_html(html_text: str, max_figures: int) -> List[Dict]:
+def extract_figures_from_html(html_text: str, base_url: str, max_figures: int) -> List[Dict]:
     figures = []
     if not html_text:
         return figures
@@ -227,7 +227,7 @@ def extract_figures_from_html(html_text: str, max_figures: int) -> List[Dict]:
             continue
         image_url = ""
         if img_match:
-            image_url = urljoin("https://arxiv.org/", html.unescape(img_match.group(1)))
+            image_url = urljoin(base_url or "https://arxiv.org/", html.unescape(img_match.group(1)))
         label_match = re.search(r"(?i)\b(fig(?:ure)?\.?\s*\d+[a-z]?)", caption)
         label = label_match.group(1) if label_match else f"Figure {idx}"
         figures.append(
@@ -261,9 +261,11 @@ def enrich_paper(paper: Dict, cache: Dict[str, Dict], cache_path: str, max_figur
         paper["artifacts"] = cached["artifacts"]
         return paper
 
-    html_text = fetch_arxiv_html(paper)
+    html_payload = fetch_arxiv_html(paper)
+    html_text = html_payload.get("text", "")
+    html_url = html_payload.get("url", "")
     conclusion_source = extract_conclusion_from_html(html_text)
-    figures = extract_figures_from_html(html_text, max_figures)
+    figures = extract_figures_from_html(html_text, html_url, max_figures)
     artifacts = fallback_artifacts(paper, figures)
 
     if llm_enabled():

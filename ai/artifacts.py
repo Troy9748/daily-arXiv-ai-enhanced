@@ -258,21 +258,42 @@ def fallback_artifacts(paper: Dict, figures: List[Dict]) -> Dict:
     }
 
 
+def has_text_artifacts(artifacts: Dict) -> bool:
+    return bool(
+        isinstance(artifacts, dict)
+        and str(artifacts.get("abstract_zh", "")).strip()
+        and str(artifacts.get("conclusion_zh", "")).strip()
+    )
+
+
+def has_complete_artifacts(artifacts: Dict) -> bool:
+    return bool(has_text_artifacts(artifacts) and isinstance(artifacts.get("figures"), list))
+
+
 def enrich_paper(paper: Dict, cache: Dict[str, Dict], cache_path: str, max_figures: int) -> Dict:
+    existing_artifacts = paper.get("artifacts") if isinstance(paper.get("artifacts"), dict) else {}
+    if has_complete_artifacts(existing_artifacts):
+        return paper
+
     key = cache_key(paper)
     cached = cache.get(key)
     if cached and isinstance(cached.get("artifacts"), dict):
-        paper["artifacts"] = cached["artifacts"]
-        return paper
+        cached_artifacts = cached["artifacts"]
+        merged = {**existing_artifacts, **cached_artifacts}
+        if has_complete_artifacts(merged):
+            paper["artifacts"] = merged
+            return paper
 
     html_payload = fetch_arxiv_html(paper)
     html_text = html_payload.get("text", "")
     html_url = html_payload.get("url", "")
     conclusion_source = extract_conclusion_from_html(html_text)
     figures = extract_figures_from_html(html_text, html_url, max_figures)
-    artifacts = fallback_artifacts(paper, figures)
+    artifacts = {**fallback_artifacts(paper, figures), **existing_artifacts}
+    if "figures" not in existing_artifacts:
+        artifacts["figures"] = figures
 
-    if llm_enabled():
+    if llm_enabled() and not has_text_artifacts(existing_artifacts):
         llm_artifacts = call_llm_for_text(paper, conclusion_source, figures)
         if llm_artifacts:
             translated_figures = llm_artifacts.get("figures") if isinstance(llm_artifacts.get("figures"), list) else []
@@ -283,12 +304,14 @@ def enrich_paper(paper: Dict, cache: Dict[str, Dict], cache_path: str, max_figur
                     merged["caption_zh"] = translated_figures[idx].get("caption_zh", "")
                 merged_figures.append(merged)
             artifacts = {
-                "abstract_zh": str(llm_artifacts.get("abstract_zh", "")).strip() or artifacts["abstract_zh"],
-                "conclusion_zh": str(llm_artifacts.get("conclusion_zh", "")).strip() or artifacts["conclusion_zh"],
+                "abstract_zh": existing_artifacts.get("abstract_zh") or str(llm_artifacts.get("abstract_zh", "")).strip() or artifacts["abstract_zh"],
+                "conclusion_zh": existing_artifacts.get("conclusion_zh") or str(llm_artifacts.get("conclusion_zh", "")).strip() or artifacts["conclusion_zh"],
                 "figures": merged_figures,
                 "artifact_method": "llm_html",
                 "prompt_version": PROMPT_VERSION,
             }
+    else:
+        artifacts["prompt_version"] = PROMPT_VERSION
 
     paper["artifacts"] = artifacts
     cache_item = {

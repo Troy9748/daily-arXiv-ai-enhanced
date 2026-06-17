@@ -37,15 +37,7 @@ def read_jsonl(path: Path) -> List[Dict]:
 
 
 def needs_recommendation_backfill(rows: List[Dict]) -> bool:
-    for row in rows:
-        rec = row.get("recommendation")
-        if not isinstance(rec, dict):
-            return True
-        if rec.get("scoring_method") == "llm" and rec.get("prompt_version") != RECOMMEND_PROMPT_VERSION:
-            return True
-        if "rule_score" not in rec or "matched_authors" not in rec:
-            return True
-    return False
+    return bool(rows)
 
 
 def needs_artifact_backfill(rows: List[Dict]) -> bool:
@@ -53,9 +45,11 @@ def needs_artifact_backfill(rows: List[Dict]) -> bool:
         artifacts = row.get("artifacts")
         if not isinstance(artifacts, dict):
             return True
-        if artifacts.get("prompt_version") != ARTIFACT_PROMPT_VERSION:
+        if not str(artifacts.get("abstract_zh", "")).strip():
             return True
-        if "abstract_zh" not in artifacts or "conclusion_zh" not in artifacts or "figures" not in artifacts:
+        if not str(artifacts.get("conclusion_zh", "")).strip():
+            return True
+        if not isinstance(artifacts.get("figures"), list):
             return True
     return False
 

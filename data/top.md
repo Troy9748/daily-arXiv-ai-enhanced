@@ -1865,7 +1865,96 @@ Key Figures:
 </details>
 
 
-### [54] [COSMOS-Web: A Multi-wavelength Morphological Catalog of ~780,000 Galaxies](https://arxiv.org/abs/2606.14869)
+### [54] [Dust in the Average Galaxy: Attenuation, Emission, and Opacity from 0<z<7](https://arxiv.org/abs/2606.17270)
+*Caitlin M. Casey,Hollis B. Akins,Andrew J. Battisti,Jed McKinney,Ezequiel Treister,Jorge A. Zavala,Hiddo Algera,Manuel Aravena,Yingjie Cheng,Nicole E. Drakos,Andreas L. Faisst,Maximilien Franco,Seiji Fujimoto,Ghassem Gozaliasl,Ali Hadi,Santosh Harish,Michaela Hirschmann,Olivier Ilbert,Kohei Inayoshi,Jeyhan S. Kartaltepe,Anton M. Koekemoer,Claudia del P. Lagos,Erini Lambrides,Ronaldo Laishram,Daizhong Liu,Arianna S. Long,Georgios E. Magdis,Sinclaire M. Manning,Crystal L. Martin,Felix Martinez,Richard Massey,Jacqueline E. McCleary,Henry Joy McCracken,Lauro Moscardini,Desika Narayanan,Louise Paquereau,Jason Rhodes,Brant E. Robertson,Rasha M. Samir,Claudia Scarlata,Marko Shuntov,Laura Sommovigo,Aswin P. Vijayan,Wuji Wang,Can Xu,Dhruv Zimmerman*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★☆ (85/100) - 该论文利用JWST COSMOS-Web巡天结合多波段远红外/亚毫米数据，系统研究星系尘埃消光与发射特性，直接命中用户Zotero库中高权重的'dust'、'jwst'、'alma'、'star-forming galaxies'等主题，且作者列表包含seiji fujimoto、desika narayanan、manuel aravena等核心作者，与用户兴趣高度吻合。
+
+TL;DR: 利用JWST COSMOS-Web巡天结合多波段远红外/亚毫米数据，分析了超过50万个星系在0<z<7范围内的尘埃发射与消光特性。发现紫外/光学消光系统性地低估了红外光度约3倍（0.5<z<7），对大质量星系（M>10^10.5 M⊙）偏差可达一个数量级。测量到紫外与远红外尘埃吸收系数比（κ_UV/κ_FIR）从z~0到z~7下降了一个数量级以上，表明高红移星系中小尘埃颗粒缺失，可能与高恒星形成面密度产生的强烈辐射场有关。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 现有研究对星系尘埃特性的理解主要依赖紫外/光学消光，但这种方法可能系统性地低估尘埃对星系能量的影响，尤其是在高红移和大质量星系中。需要利用JWST等直接远红外观测来独立约束尘埃发射与消光的关系。
+
+Method: 分析JWST COSMOS-Web巡天中超过50万个星系的数据，结合Spitzer、Herschel、SCUBA-2、NIKA-2和ALMA的远红外/亚毫米数据。通过堆叠分析独立约束星系在静止系紫外/光学的消光特性以及远红外尘埃发射，直接比较两者结果。利用红外SED、紫外SED和尘埃质量面密度联合约束，分离恒星/尘埃几何效应与尘埃颗粒性质。
+
+Result: 紫外/光学消光系统性地低估红外光度约3倍（0.5<z<7），对大质量星系偏差达一个数量级。κ_UV/κ_FIR从z~0到z~7下降超过一个数量级，且与恒星形成面密度（Σ_SFR）存在红移不变的逆相关关系。尘埃与恒星质量比的大部分演化发生在z<1。
+
+Conclusion: 高红移星系中κ_UV/κ_FIR的显著降低表明小尘埃颗粒的缺失，可能由强烈的恒星形成辐射场导致。直接尘埃约束对于z<7的大多数恒星形成星系是不可替代的，而不仅仅针对极端恒星形成天体。
+
+Abstract: We present constraints on the dust emission and attenuation properties of galaxies across 0<z<7 using JWST imaging from the COSMOS-Web Survey combined with deep FIR/(sub)millimeter data from Spitzer, Herschel, SCUBA-2, NIKA-2 and ALMA. We analyze over 500,000 galaxies to independently constrain attenuation in the rest-frame UV/optical as well as dust emission from stacked FIR SEDs, enabling a direct comparison between the two. We find UV/optical attenuation systematically underpredicts IR luminosity by a factor of ~3x at 0.5<z<7 and up to an order of magnitude for $M_\star>10^{10.5}M_\odot$. We derive empirical relationships for the effective attenuation, dust temperature, fraction of star formation that is unobscured, and dust-to-stellar mass ratio as functions of redshift and stellar mass. We separate the first order effect of star/dust geometry from dust grain properties by combining constraints on the IR SED, UV SED, and dust mass surface density. Importantly, we measure over an order of magnitude decrease in $κ_{UV}/κ_{FIR}$--the ratio of dust mass absorption coefficients in the UV at 1600Å and FIR at 500$μ$m--from z~0 to z~7. A depressed $κ_{UV}/κ_{FIR}$ is consistent with a deficit of small dust grains, possibly attributable to the intense radiation fields of high-$z$ star formation; indeed, we find a redshift-invariant inverse relationship between $κ_{UV}/κ_{FIR}$ and $Σ_{SFR}$. Most evolution in the dust-to-stellar ratio is at $z<1$, the product of mild downward evolution in the dust-to-gas ratio combined with steep evolution in the gas-to-stellar ratio. The significant evolution and dynamic range of $κ_{UV}/κ_{FIR}$ and prevailing disconnect between the UV/optical and FIR regimes emphasize that direct dust constraints are irreplaceable for the majority of star-forming galaxies at z<7, not just the most extreme star-formers.
+
+Abstract Translation:
+我们利用JWST的COSMOS-Web巡天成像数据，结合Spitzer、Herschel、SCUBA-2、NIKA-2和ALMA的远红外/亚毫米数据，给出了0<z<7范围内星系的尘埃辐射和消光特性约束。我们分析了超过50万个星系，独立约束了静止系紫外/光学消光以及通过叠加远红外能谱分布得到的尘埃辐射，从而能够直接比较两者。我们发现，在0.5<z<7范围内，紫外/光学消光系统性地低估了红外光度约3倍，对于M_⋆>10^10.5 M_⊙的星系，低估可达一个数量级。我们推导了有效消光、尘埃温度、未被遮蔽的恒星形成比例以及尘埃-恒星质量比随红移和恒星质量变化的经验关系。通过结合红外能谱分布、紫外能谱分布和尘埃质量面密度的约束，我们将恒星/尘埃几何结构的一阶效应与尘埃颗粒性质分离开来。重要的是，我们测量到κ_UV/κ_FIR（1600Å紫外和500μm远红外处的尘埃质量吸收系数之比）从z~0到z~7下降了一个数量级以上。κ_UV/κ_FIR的降低与小尘埃颗粒的缺失一致，这可能归因于高红移恒星形成的强辐射场；事实上，我们发现κ_UV/κ_FIR与Σ_SFR之间存在红移不变的负相关关系。尘埃-恒星比的大部分演化发生在z<1，这是尘埃-气体比温和下降与气体-恒星比急剧演变的共同结果。κ_UV/κ_FIR的显著演化和动态范围，以及紫外/光学与远红外区域之间的普遍脱节，表明直接尘埃约束对于z<7的大多数恒星形成星系（而不仅仅是最极端的恒星形成天体）是不可替代的。
+
+Conclusion Translation:
+基于现有摘要总结：高红移星系中κ_UV/κ_FIR的显著降低表明小尘埃颗粒的缺失，可能由强烈的恒星形成辐射场导致。直接尘埃约束对于z<7的大多数恒星形成星系是不可替代的，而不仅仅针对极端恒星形成天体。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/2606.17270v1/stackable_sample.png)
+
+图1：本工作中使用的来自COSMOS天区的501,656个可叠加源的分布。等高线表示每单位Δz=0.05和Δlog(M)=0.05内超过>5个源的集中区域（等高线标记密度为5、10、20、50、100……个源/相同分箱）。用于叠加的分箱以绿色和橙色网格线显示，红移间隔Δz=0.5，恒星质量间隔Δlog(M_⋆/M_⊙)=0.25。具有收敛尘埃能谱分布（同时约束尘埃发射和消光）的分箱以橙色标出，而仅具有分箱消光特征（未推导尘埃发射）的分箱以绿色显示。
+
+<small>Figure 1: The distribution of the stackable 501,656 sources from the COSMOS field used in this work. Contours indicate concentrations of sources exceeding > > 5 per unit Δ ​ z = 0.05 \Delta z=0.05 and Δ ​ log ⁡ ( M ) = 0.05 \Delta\log(M)=0.05 (contours mark densities of 5, 10, 20, 50, 100, … sources per same binning). The bins used for stacking are shown with green and orange gridlines, every Δ ​ z = 0.5 \Delta z=0.5 in redshift and Δ ​ log ⁡ ( M ⋆ / M ⊙ ) = 0.25 \Delta\log(M_{\star}/M_{\odot})=0.25 . Bins with converged dust SEDs (constraints for both dust emission and attenuation) are outlined in orange while bins with binned attenuation characteristics only (no derived dust emission) are shown in green.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/2606.17270v1/master_seds_wnika.png)
+
+图2：针对恒星质量和红移选定样本，对叠加的（亚）毫米测光数据的最佳拟合尘埃能谱分布。每个面板显示了尘埃能谱分布的示意图（蓝色，浅蓝色能谱分布表示不确定性范围），叠加在测光数据上（黑色，灰色误差棒）。灰色背景的面板表示测光约束质量太差，无法拟合收敛的尘埃能谱分布（少于两个点高于3σ显著性）。每个面板左上角的数字表示叠加的源数量，分别来自（1）Spitzer、Herschel和SCUBA-2，（2）NIKA-2，（3）CHAMPS和（4）ExMORA（后三个覆盖的面积小于整个天区）。右上角插入了一个示例面板的细节，以显示波长和流量密度轴，每个子面板的轴是固定的。
+
+<small>Figure 2: The best-fit dust SEDs to stacked (sub)millimeter photometry for stellar mass and redshift selected samples. Each panel shows a schematic of the dust SED (blue, with light blue SEDs sampling the uncertainty) superimposed on the stacked photometry (black with gray error bars). Panels with gray backgrounds have photometric constraints of too poor quality to fit a converged dust SED (fewer than two points above 3 σ \sigma significance). The numbers in the upper left of each panel indicate the number of sources stacked across (1) Spitzer, Herschel and SCUBA-2, (2) NIKA-2, (3) CHAMPS, and (4) ExMORA (the latter three cover smaller areas than the full field). Inset to the top right is one example panel in finer detail to show the wavelength and flux density axis, which is fixed for every subpanel.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/2606.17270v1/bagpipes-compare.png)
+
+图3：来自LePhare（Shuntov等人，2025）的推导属性与基于相同模型测光的bagpipes推导量的比较。左侧，LePhare的光度红移及其不确定性被用作bagpipes的输入；结果一致性很好，σ_Δz/(1+z)=0.04。中间，恒星质量在不确定性范围内一致。右侧，从bagpipes推导的A_V与从更严格的LePhare能谱分布拟合推断的（量化）A_V值一致；为清晰起见，我们扰动了LePhare的A_V值（围绕其固定值）以显示底层分布的广度。
+
+<small>Figure 3: A comparison of derived properties from LePhare (Shuntov et al. , 2025 ) and our bagpipes -derived quantities based on the same model-based photometry. At left, LePhare photometric redshifts and their uncertainties were used as input to bagpipes ; the resulting agreement is tight with σ Δ ​ z / ( 1 + z ) = 0.04 \sigma_{\Delta z/(1+z)}=0.04 . Middle, the stellar masses agree within uncertainties. At right, the derived A V from bagpipes agrees with the (quantized) values of A V inferred from more rigid LePhare SED fits; for visual clarity, we have perturbed LePhare A V values about their fixed values to show the breadth of the underlying population.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/2606.17270v1/auvmstar_panel1.png)
+
+图4：我们分箱的A_UV-M_⋆关系（绿色/青色阴影）与文献汇编的比较，覆盖0<z<1.5（左）和1.5<z<3.5（右）。我们的点表示每个质量和红移分箱的中位A_UV，阴影区域显示相应分箱中测量A_UV分布的内部68%区间；中位数的误差大约与每个数据点的大小相当。在z~0时，我们与Garn和Best（2010）以及Salim等人（2016）进行了比较；在低质量端一致，但在10^10.5 M_⋆附近我们发现更高的A_UV（尽管我们仅展示了恒星形成子样本的分箱A_UV，而非静止星系）。我们在z≈0.7-4处与Herschel测量（Heinis等人，2014；Pannella等人，2015）以及z~2处的ALMA测量（McLure等人，2018）的比较在不确定性范围内基本一致。当与基于Balmer减缩的MOSDEF测量（Shapley等人，2022，此处转换为A_UV）比较时，我们的消光值在假设Calzetti消光曲线时是一致的（而对于更陡的SMC消光曲线则不太一致）；我们在§5.2中更详细地讨论了最佳拟合消光曲线的趋势。
+
+<small>Figure 4: A comparison of our binned A UV -M ⋆ relation (shades of green/cyan) compared to literature compilations spanning 0 < z < 1.5 0<z<1.5 (left) and 1.5 < z < 3.5 1.5<z<3.5 (right). Our points represent the median A UV per mass and redshift bin with shaded regions showing the inner 68%-ile on the spread of measured A UV in the corresponding bin; the errors on the median are of order the size of each data point. At z ∼ 0 z\sim 0 we compare to Garn and Best ( 2010 ) and Salim et al. ( 2016 ) ; while aligned at low masses, we find higher A UV around 10 10.5 M ⋆ (albeit we are only presenting binned A UV for the star-forming subset and not the quiescent systems). Our comparisons with Herschel measurements at z ≈ 0.7 − 4 z\approx 0.7-4 (Heinis et al. , 2014 ; Pannella et al. , 2015 ) and ALMA z ∼ 2 z\sim 2 (McLure et al. , 2018 ) are largely consistent within uncertainties. When comparing to MOSDEF measurements anchored to the Balmer decrement (Shapley et al. , 2022 ) , here translated to A UV , our attenuations are consistent assuming a Calzetti attenuation curve (and less consistent for the steeper SMC attenuation curve); we discuss trends in the best-fit attenuation curves more in § 5.2 .</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/2606.17270v1/auvevol.png)
+
+图5：我们在0<z<8范围内的质量和红移分箱的A_UV-M_⋆关系（左）和A_V-M_⋆关系（右）。注意图4中z<3.5的分箱与此处相同。阴影区域是每个分箱区间的68%置信区间。仅显示包含超过50个源的分箱。我们看到A_UV-M_⋆（A_V-M_⋆）关系随红移有轻微演化，这在左上和右上面板中三个固定质量分箱（覆盖我们数据的整个范围）中更为清晰。在所有质量上，我们通常看到平均A_UV（A_V）随红移增加到z~6时下降；在更高红移处，则出现增加。这个拐点与再电离结束的时间一致，但其起源需要进一步研究。附录中的两个图（图22和23）更详细地展示了该关系与我们拟合关系（方程11）的分解。
+
+<small>Figure 5: Our mass- and redshift-binned A UV -M ⋆ relation (left) and A V -M ⋆ relation (right) from 0 < z < 8 0<z<8 . Note bins shown on Figure 4 at z < 3.5 z<3.5 are the same as shown here. The shaded regions are the 68% confidence interval for each binned interval. Only bins containing more than 50 sources are shown. We see mild evolution in the A UV -M ⋆ (A V -M ⋆ ) relation with redshift, made more clear on the top-left and top-right panels at three fixed mass bins covered across the full range of our data. Across all masses, we generally see a decrease in the average A UV (A V ) with redshift to z ∼ 6 z\sim 6 ; at higher redshifts, there is then an increase. This inflection point coincides with the end of reionization but requires further investigation as to its origins. Two figures in the appendix (Fig. 22 & 23 ), show the breakdown of this relation against our fitted relation (Eq. 11 ) in more detail.</small>
+
+#### Figure 6
+![Figure 6](https://arxiv.org/2606.17270v1/z_delta.png)
+
+图6：描述消光曲线静止系紫外斜率的参数δ的红移演化。δ描述了与Calzetti消光曲线的偏差，其中δ=0恢复Calzetti曲线，负δ产生更陡的消光曲线。SMC消光曲线大致遵循δ=-0.4，这与Salim等人（2018，红色方块）和Conroy等人（2010，深红色方块）恢复的平均消光曲线一致。更高红移的文献测量来自Buat等人（2012，黄色方块）、Kriek和Conroy（2013，粉色方块）和Reddy等人（2016，橙色方块）。我们展示了按恒星质量分箱（ΔlogM=0.25分箱）的δ演化，用彩色点和星号表示，以及2<z<8范围内所有质量的平均δ（空心黑色圆圈，阴影区域显示每个质量分箱中所有测量δ的内部68%区间）。最佳拟合关系（黑线）在文本方程12中给出。
+
+<small>Figure 6: The redshift evolution of δ \delta , the parameter describing the rest-frame UV slope of the attenuation curve. δ \delta describes the deviation from a Calzetti attenuation curve, where δ \delta =0 recovers Calzetti, and a negative δ \delta produces a steeper attenuation curve. The SMC attenuation curve roughly follows δ \delta =-0.4, which is consistent with the average attenuation curve recovered by Salim et al. ( 2018 , red square) and Conroy et al. ( 2010 , dark red square) . Higher- z z literature measurements come from Buat et al. ( 2012 ) (yellow square), Kriek and Conroy ( 2013 , pink square) and Reddy et al. ( 2016 , orange square) . We show the evolution of δ \delta binned by stellar mass ( Δ ​ log ⁡ M = 0.25 \Delta\log M=0.25 bins) with colored points and stars, and the average δ \delta across all masses as open black circles between 2 < z < 8 2<z<8 (shaded regions show the inner 68% interval of all measured δ \delta per mass bin). The best-fit relationship (black line) is presented in the text in Eq 12 .</small>
+
+#### Figure 7
+![Figure 7](https://arxiv.org/2606.17270v1/lirz.png)
+
+图7：固定恒星质量分箱中L_IR（左）和M_尘埃（右）的红移演化。左侧的虚线表示如果100%的恒星形成被遮蔽时预期的总红外光度，恒星形成率取自恒星形成主序，即M_⋆-SFR关系（Speagle等人，2014）。在0<z<2之间，我们看到高于10^10 M_⊙的质量分箱中，平均L_IR增加了100倍，M_尘埃增加了5-10倍。在z~2之后，演化更为微妙；在高M_⋆处，z~6时的L_IR比z~2时高10倍，而低于10^10.5 M_⊙的质量分箱中L_IR没有演化或下降。最高质量星系中的尘埃质量没有演化，而有轻微证据表明中等质量星系的尘埃质量增加了三倍。
+
+<small>Figure 7: The redshift evolution of L IR (left) and M dust (right) in fixed stellar mass bins. Dashed lines at left denote the total IR luminosity that would be expected if 100% of star-formation were obscured, and the SFR is taken from the main-sequence of star formation, or the M ⋆ -SFR relation (Speagle et al. , 2014 ) . Between 0 < z < 2 0<z<2 , we see a 100 × \times increase in the average L IR and 5-10 × \times increase in M dust per mass bin above 10 10 10^{10} M ⊙ . Beyond z ∼ 2 z\sim 2 , evolution is more subtle; at high M ⋆ , there is a factor of 10 × \times higher L IR at z ∼ 6 z\sim 6 than at z ∼ 2 z\sim 2 , while masses below 10 10.5 10^{10.5} M ⊙ see no evolution or a dropoff in L IR . Dust masses in the highest mass galaxies show no evolution, while there is mild evidence suggesting a threefold increase in dust masses for intermediate masses.</small>
+
+#### Figure 8
+![Figure 8](https://arxiv.org/2606.17270v1/z_tdust.png)
+
+图8：在固定恒星质量分箱（范围8.6<log(M_⋆/M_⊙)<11.6）中，从叠加能谱分布推导的尘埃温度的红移演化。尘埃温度的下限由宇宙微波背景温度设定，该温度随T_CMB=2.73(1+z)演化（灰色填充区域）。叠加了三个文献关系。来自Drew和Casey（2022）显示了在给定恒星质量下，根据SFR-M_⋆关系的演化（其中SFR与L_IR成比例，T_尘埃与L_IR有直接关系）预期的T_尘埃演化；Drew和Casey的工作是针对0<z<2样本校准的。Viero等人（2022）使用Herschel数据推断来自COSMOS2020的叠加星系样本的T_尘埃，并发现了陡峭的T_尘埃(z)依赖关系。最后，我们展示了Jones和Stanway（2023）提出的经验关系，该关系使用荟萃分析来处理各种文献数据集中观察到的T_尘埃(z)依赖关系。我们的数据从低质量分箱（黄色）到高质量分箱（深蓝色）叠加显示。在质量低于log(M_⋆)~10.4时，我们看到z~2之后T_尘埃的演化相对较小，而更高质量分箱显示从z~2到z~6时T_尘埃显著增加。附录中的图24更详细地展示了这种演化，并与推导的关系（方程14）进行了比较。
+
+<small>Figure 8: The redshift evolution of dust temperature derived for stacked SEDs in fixed stellar mass bins ranging 8.6 < log ⁡ ( M ⋆ / M ⊙ ) < 11.6 8.6<\log(M_{\star}/M_{\odot})<11.6 . The floor on dust temperature is set by the temperature of the CMB which evolves as T CMB = 2.73 ​ ( 1 + z ) T_{\rm CMB}=2.73(1+z) (gray filled region). Three literature relations are overplotted. From Drew and Casey ( 2022 ) we show the expectation of the evolution of T dust at fixed stellar mass given the evolution in the SFR-M ⋆ relation, where SFR scales to L IR , and T dust has a direct relationship with L IR ; the Drew and Casey work was calibrated against 0 < z < 2 0<z<2 samples. Viero et al. ( 2022 ) uses Herschel data to infer T dust for stacked samples of galaxies drawn from COSMOS2020 and find a steep T dust ( z z ) dependence. Last we show the empirical relation presented in Jones and Stanway ( 2023 ) which uses a meta-analysis to address the T dust ( z z ) dependence observed in various literature datasets. Our data are shown from low-mass bins (yellow) through high-mass bins (dark blue) superimposed. Below masses log ⁡ ( M ⋆ ) ∼ \log(M_{\star})\sim 10.4, we see relatively little evolution in T dust beyond z ∼ 2 z\sim 2 while higher mass bins show a marked increase in T dust from z ∼ 2 z\sim 2 to z ∼ 6 z\sim 6 . Figure 24 in the Appendix show this evolution in more detail against the derived relation given in Eq. 14 .</small>
+
+</details>
+
+
+### [55] [COSMOS-Web: A Multi-wavelength Morphological Catalog of ~780,000 Galaxies](https://arxiv.org/abs/2606.14869)
 *Lilan Yang,Jeyhan S. Kartaltepe,Nicole E. Drakos,Andreas L. Faisst,Carter Flayhart,Maximilien Franco,Anton M. Koekemoer,Olivier Ilbert,Hollis B. Akins,Caitlin M. Casey,Xuheng Ding,Ali Hadi,Santosh Harish,Ronaldo Laishram,Daizhong Liu,Georgios E. Magdis,Felix Martinez,Henry Joy McCracken,Louise Paquereau,Jason Rhodes,Brant E. Robertson,Marko Shuntov,Greta Toni*
 
 Main category: astro-ph.GA
@@ -1900,7 +1989,7 @@ Key Figures:
 </details>
 
 
-### [55] [The Multi-phase Biconical Outflow in the local IR-Luminous Merger IRASF01364-1042](https://arxiv.org/abs/2606.06005)
+### [56] [The Multi-phase Biconical Outflow in the local IR-Luminous Merger IRASF01364-1042](https://arxiv.org/abs/2606.06005)
 *Y. Song,V. U,J. Kader,M. Bianchin,J. Agostino,L. Barcos-Muñoz,N. Torres-Albà,A. Medling,C. Ricci,L. Armus,T. Lai,L. Ghodsi,A. Evans,H. Inami,S. Stierwalt,T. Bohn,K. L. Emig,V. Buiten,G. Donnelly,E. Treister,A. Jimenez-Gallardo,T. Böker,D. Kakkad,S. Linden,P. van der Werf,V. Charmandaris,R. Remigio,L. Lenkic,C. Finlez,M. Sanchez-García,C. Lofaro,A. Saravia,I. Yoon,G. C. Privon,T. Gao,H. Aziz,R. McGurk,T. Díaz-Santos,D. Kunneriath,David B. Sanders*
 
 Main category: astro-ph.GA
@@ -1935,7 +2024,7 @@ Key Figures:
 </details>
 
 
-### [56] [A Steep-Extinction QSO at z=4.6: JWST Evidence for Abundant Small Dust Grains](https://arxiv.org/abs/2606.02685)
+### [57] [A Steep-Extinction QSO at z=4.6: JWST Evidence for Abundant Small Dust Grains](https://arxiv.org/abs/2606.02685)
 *Mingyu Li,Zheng Cai,Roberto Maiolino,Fengwu Sun,Xihan Ji,Qiao Duan,Bjorn H. C. Emonts,Xiaohui Fan,Ignas Juodžbalis,Xiaojing Lin,Yixiao Liu,Sandro Tacchella*
 
 Main category: astro-ph.GA
@@ -1970,7 +2059,7 @@ Key Figures:
 </details>
 
 
-### [57] [Survival of very small carbonaceous dust grains in the inner-CGM of NGC 891 from JWST/MIRI MRS](https://arxiv.org/abs/2605.26864)
+### [58] [Survival of very small carbonaceous dust grains in the inner-CGM of NGC 891 from JWST/MIRI MRS](https://arxiv.org/abs/2605.26864)
 *Jérémy Chastenet,Ilse De Looze,Karl D. Gordon,Suzanne C. Madden,Monica Relaño,Karin M. Sandstrom,Dries Van De Putte,Maarten Baes,Simone Bianchi,Alberto D. Bolatto,Viviana Casasola,Daniel A. Dale,Sara Duval,Jacopo Fritz,Frédéric Galliano,Simon C. O. Glover,Stavroula Katsioli,Vasileios Katsis,Florian Kirchschlager,Ralf S. Klessen,Rebecca C. Levy,Sharon E. Meidt,Aleksandr V. Mosenkov,Kentaro Nagamine,Lara Pantoni,Helena M. Richie,Stefanie Walch,Thomas G. Williams,Emanuele M. Xilouris*
 
 Main category: astro-ph.GA
@@ -2005,7 +2094,7 @@ Key Figures:
 </details>
 
 
-### [58] [MICONIC: The multiphase circumnuclear region of Centaurus A as seen with JWST/MIRI MRS observations. I. Spectral inventory and properties of the warm molecular disk](https://arxiv.org/abs/2605.22497)
+### [59] [MICONIC: The multiphase circumnuclear region of Centaurus A as seen with JWST/MIRI MRS observations. I. Spectral inventory and properties of the warm molecular disk](https://arxiv.org/abs/2605.22497)
 *L. Evangelista,P. Guillard,J. Martin,P. Salomé,A. Alonso Herrero,L. Pantoni,L. Hermosa Muñoz,V. Buiten,A. Labiano,M. García-Marín,L. Colina,T. Böker,D. Dicken,M. J. Ward,G. Wright,P. van der Werf,S. Garcia-Burillo,M. Baes,A. Eckart,G. Östlin,D. Rouan,F. Walter,R. A. Riffel,M. Güdel*
 
 Main category: astro-ph.GA
@@ -2040,7 +2129,7 @@ Key Figures:
 </details>
 
 
-### [59] [Resolved Maps of Gas and Dust in a Massive Quiescent Galaxy at z=2 from INQUEST-JWST: Evidence of Accretion and Rejuvenation](https://arxiv.org/abs/2604.26195)
+### [60] [Resolved Maps of Gas and Dust in a Massive Quiescent Galaxy at z=2 from INQUEST-JWST: Evidence of Accretion and Rejuvenation](https://arxiv.org/abs/2604.26195)
 *Sai Gangula,Andrew B. Newman,Meng Gu,Sirio Belli,Katherine E. Whitaker,Tania M. Barone,Aliza Beverage,Andrea Bolamperti,Letizia Bugiani,Richard S. Ellis,Mariska Kriek,Allison Matthews,Themiya Nanayakkara*
 
 Main category: astro-ph.GA
@@ -2075,7 +2164,7 @@ Key Figures:
 </details>
 
 
-### [60] [A quantum theory of the alignment and polarization of very small dust grains](https://arxiv.org/abs/2604.26001)
+### [61] [A quantum theory of the alignment and polarization of very small dust grains](https://arxiv.org/abs/2604.26001)
 *Boy Lankhaar*
 
 Main category: astro-ph.GA
@@ -2110,7 +2199,7 @@ Key Figures:
 </details>
 
 
-### [61] [Stellar Population Characterisations in nearby, dusty Early-Type Galaxies](https://arxiv.org/abs/2604.05680)
+### [62] [Stellar Population Characterisations in nearby, dusty Early-Type Galaxies](https://arxiv.org/abs/2604.05680)
 *Ron W. Savage,Anne E. Sansom,David H. W. Glass*
 
 Main category: astro-ph.GA
@@ -2145,7 +2234,7 @@ Key Figures:
 </details>
 
 
-### [62] [The ALMA-QUARKS Survey: Evidence of an Explosive Molecular Outflow in IRAS 15520--5234](https://arxiv.org/abs/2603.15040)
+### [63] [The ALMA-QUARKS Survey: Evidence of an Explosive Molecular Outflow in IRAS 15520--5234](https://arxiv.org/abs/2603.15040)
 *Ariful Hoque,Tapas Baug,Estrella Guzman,Manuel Fernandez Lopez,Tie Liu,Guido Garay,Paul F. Goldsmith,Fengwei Xu,Xindi Tang,Patricio Sanhueza,Lokesh K. Dewangan,Shivani Gupta,Sami Dib,Luis A. Zapata,Jihye Hwang,N. K. Bhadari,John Bally,Swagat Ranjan Das,Aiyuan Yang,Prasanta Gorai,Arup Kumar Maity,James O. Chibueze,Pablo García,Leonardo Bronfman,Xunchuan Liu,L. Viktor Tóth,Shehu Muhammad Usman,Kee-Tae Kim*
 
 Main category: astro-ph.GA
@@ -2180,7 +2269,7 @@ Key Figures:
 </details>
 
 
-### [63] [Euclid preparation. Far-infrared predictions for Euclid galaxy catalogues: cluster, protocluster, and field](https://arxiv.org/abs/2603.13195)
+### [64] [Euclid preparation. Far-infrared predictions for Euclid galaxy catalogues: cluster, protocluster, and field](https://arxiv.org/abs/2603.13195)
 *Euclid Collaboration,A. Parmar,D. L. Clements,M. Bolzonella,O. Cucciati,L. Pozzetti,H. Dannerbauer,G. Castignani,S. Serjeant,L. Wang,R. Hill,D. Scott,J. G. Sorce,M. Magliocchetti,F. Pace,T. T. Thai,N. Aghanim,B. Altieri,S. Andreon,N. Auricchio,C. Baccigalupi,M. Baldi,S. Bardelli,A. Biviano,W. Bon,E. Branchini,M. Brescia,J. Brinchmann,S. Camera,G. Cañas-Herrera,V. Capobianco,C. Carbone,J. Carretero,S. Casas,M. Castellano,S. Cavuoti,A. Cimatti,C. Colodro-Conde,G. Congedo,C. J. Conselice,L. Conversi,Y. Copin,F. Courbin,H. M. Courtois,A. Da Silva,H. Degaudenzi,G. De Lucia,H. Dole,M. Douspis,F. Dubath,F. Ducret,C. A. J. Duncan,X. Dupac,S. Escoffier,M. Farina,R. Farinelli,S. Ferriol,F. Finelli,S. Fotopoulou,M. Frailis,E. Franceschi,M. Fumana,S. Galeotta,K. George,B. Gillis,C. Giocoli,J. Gracia-Carpio,A. Grazian,F. Grupp,S. V. H. Haugan,W. Holmes,F. Hormuth,A. Hornstrup,K. Jahnke,M. Jhabvala,E. Keihänen,S. Kermiche,A. Kiessling,B. Kubik,M. Kümmel,M. Kunz,H. Kurki-Suonio,A. M. C. Le Brun,S. Ligori,P. B. Lilje,V. Lindholm,I. Lloro,G. Mainetti,D. Maino,E. Maiorano,O. Mansutti,S. Marcin,O. Marggraf,M. Martinelli,N. Martinet,F. Marulli,R. J. Massey,S. Maurogordato,E. Medinaceli,S. Mei,M. Melchior,Y. Mellier,M. Meneghetti,E. Merlin,G. Meylan,A. Mora,M. Moresco,L. Moscardini,R. Nakajima,C. Neissner,S. -M. Niemi,C. Padilla,S. Paltani,F. Pasian,K. Pedersen,V. Pettorino,S. Pires,G. Polenta,M. Poncet,L. A. Popa,F. Raison,R. Rebolo,A. Renzi,J. Rhodes,G. Riccio,E. Romelli,M. Roncarelli,R. Saglia,Z. Sakr,A. G. Sánchez,D. Sapone,B. Sartoris,P. Schneider,T. Schrabback,A. Secroun,E. Sefusatti,G. Seidel,M. Seiffert,S. Serrano,P. Simon,C. Sirignano,G. Sirri,L. Stanco,J. Steinwagner,P. Tallada-Crespí,A. N. Taylor,H. I. Teplitz,I. Tereno,N. Tessore,S. Toft,R. Toledo-Moreo,F. Torradeflot,I. Tutusaus,L. Valenziano,J. Valiviita,T. Vassallo,A. Veropalumbo,Y. Wang,J. Weller,G. Zamorani,F. M. Zerbi,E. Zucca,V. Allevato,M. Ballardini,E. Bozzo,C. Burigana,R. Cabanac,A. Cappi,D. Di Ferdinando,J. A. Escartin Vigo,L. Gabarra,W. G. Hartley,S. Matthew,M. Maturi,N. Mauri,R. B. Metcalf,A. Pezzotta,M. Pöntinen,C. Porciani,I. Risso,V. Scottez,M. Sereno,M. Tenti,M. Viel,M. Wiesmann,Y. Akrami,S. Anselmi,M. Archidiacono,F. Atrio-Barandela,P. Bergamini,D. Bertacca,M. Bethermin,A. Blanchard,L. Blot,H. Böhringer,M. Bonici,S. Borgani,M. L. Brown,S. Bruton,A. Calabro,B. Camacho Quevedo,F. Caro,C. S. Carvalho,T. Castro,F. Cogato,S. Conseil,A. R. Cooray,S. Davini,G. Desprez,A. Díaz-Sánchez,J. J. Diaz,S. Di Domizio,J. M. Diego,P. Dimauro,M. Y. Elkhashab,A. Enia,Y. Fang,A. G. Ferrari,A. Finoguenov,A. Fontana,F. Fontanot,A. Franco,K. Ganga,J. García-Bellido,T. Gasparetto,V. Gautard,E. Gaztanaga,F. Giacomini,F. Gianotti,G. Gozaliasl,M. Guidi,C. M. Gutierrez,A. Hall,S. Hemmati,H. Hildebrandt,J. Hjorth,J. J. E. Kajava,Y. Kang,V. Kansal,D. Karagiannis,K. Kiiveri,J. Kim,C. C. Kirkpatrick,S. Kruk,J. Le Graet,L. Legrand,M. Lembo,F. Lepori,G. Leroy,G. F. Lesci,J. Lesgourgues,T. I. Liaudat,A. Loureiro,J. Macias-Perez,G. Maggio,C. Mancini,F. Mannucci,R. Maoli,C. J. A. P. Martins,L. Maurin,M. Miluzio,P. Monaco,C. Moretti,G. Morgante,K. Naidoo,P. Natoli,A. Navarro-Alsina,S. Nesseris,D. Paoletti,F. Passalacqua,K. Paterson,L. Patrizii,A. Pisani,D. Potter,S. Quai,M. Radovich,P. -F. Rocci,G. Rodighiero,S. Sacquegna,M. Sahlén,D. B. Sanders,E. Sarpa,A. Schneider,D. Sciotti,E. Sellentin,F. Shankar,L. C. Smith,K. Tanidis,C. Tao,G. Testera,R. Teyssier,S. Tosi,A. Troja,M. Tucci,C. Valieri,A. Venhola,D. Vergani,G. Verza,P. Vielzeuf,N. A. Walton*
 
 Main category: astro-ph.GA
@@ -2215,7 +2304,7 @@ Key Figures:
 </details>
 
 
-### [64] [3D-Herschel: Constraining Dust Emission with Panchromatic Modeling of 3D-HST Galaxies](https://arxiv.org/abs/2602.22384)
+### [65] [3D-Herschel: Constraining Dust Emission with Panchromatic Modeling of 3D-HST Galaxies](https://arxiv.org/abs/2602.22384)
 *Seamus McNulty,Mimi Song,Katherine E. Whitaker,Joel Leja,Aubrey Medrano,Elijah P. Mathews,Mark Dickinson,Hanae Inami,Ivo Labbe,Danilo Marchesini,Alexandra Pope,Irene Shivaei*
 
 Main category: astro-ph.GA
@@ -2250,7 +2339,7 @@ Key Figures:
 </details>
 
 
-### [65] [Probing Large-scale Structure and the Multi-Phase IGM at the Cosmic Noon -- Insights from a Joint Survey with Euclid, CSST, JPCam, and JUST](https://arxiv.org/abs/2602.22004)
+### [66] [Probing Large-scale Structure and the Multi-Phase IGM at the Cosmic Noon -- Insights from a Joint Survey with Euclid, CSST, JPCam, and JUST](https://arxiv.org/abs/2602.22004)
 *Jiang-Tao Li,Renato A. Dupke,Yan Gong,Zhijie Qu,Weichen Wang,Xiaohu Yang,Xiaodi Yu*
 
 Main category: astro-ph.GA
@@ -2285,7 +2374,7 @@ Key Figures:
 </details>
 
 
-### [66] [FRESCO: Constraining Dust Attenuation and Star-Formation Rates of $z\sim 2$ Star-Forming Galaxies with JWST Paschen and Ground-Based Balmer Emission Line Observations](https://arxiv.org/abs/2602.21329)
+### [67] [FRESCO: Constraining Dust Attenuation and Star-Formation Rates of $z\sim 2$ Star-Forming Galaxies with JWST Paschen and Ground-Based Balmer Emission Line Observations](https://arxiv.org/abs/2602.21329)
 *Michael A. Wozniak,Naveen A. Reddy,Pascal A. Oesch,Ivan Kramarenko,Jorryt Matthee,Chloe Neufeld,Irene Shivaei,Bahram Mobasher,Alice E. Shapley,Brian Siana*
 
 Main category: astro-ph.GA
@@ -2320,7 +2409,7 @@ Key Figures:
 </details>
 
 
-### [67] [Evidence for Shallow Nebular Attenuation Curves and Patchy Dust Geometry at z~2 with Pa-beta/H-alpha Measurements from JWST-MegaScience Medium Band Photometry](https://arxiv.org/abs/2602.11418)
+### [68] [Evidence for Shallow Nebular Attenuation Curves and Patchy Dust Geometry at z~2 with Pa-beta/H-alpha Measurements from JWST-MegaScience Medium Band Photometry](https://arxiv.org/abs/2602.11418)
 *Brian Lorenz,Katherine A. Suess,Mariska Kriek,Sedona H. Price,Joel Leja,Hakim Atek,Abhiyan Barailee,Rachel Bezanson,Gabriel Brammer,Sam E. Cutler,Pratika Dayal,Anna de Graaf,Jenny E. Greene,Lukas J. Furtak,Ivo Labbe,Danilo Marchesini,Michael V. Maseda,Tim B. Miller,Abby Mintz,Ikki Mitsuhashi,Themiya Nanayakkara,Erica Nelson,Richard Pan,Natalia Porraz Barrera,Bingjie Wang,John R. Weaver,Christina C. Williams,Katherine E. Whitaker*
 
 Main category: astro-ph.GA
@@ -2355,7 +2444,7 @@ Key Figures:
 </details>
 
 
-### [68] [Detailed lens modeling and kinematics of the submillimeter galaxy G09v1.97. An analysis of CO, H2O, H2O+, and dust continuum emission](https://arxiv.org/abs/2601.14685)
+### [69] [Detailed lens modeling and kinematics of the submillimeter galaxy G09v1.97. An analysis of CO, H2O, H2O+, and dust continuum emission](https://arxiv.org/abs/2601.14685)
 *K. Kade,C. Yang,M. Yttergren,K. K. Knudsen,S. König,A. Amvrosiadis,S. Dye,J. Nightingale,L. Zhang,Z. Zhang,A. Cooray,P. Cox,R. Gavazzi,E. Ibar,M. J. Michałowski,P. van der Werf,R. Xue*
 
 Main category: astro-ph.GA
@@ -2390,7 +2479,7 @@ Key Figures:
 </details>
 
 
-### [69] [Fast rotations in galaxies at cosmic noon indicate central concentration of stars, dark matter or massive black holes](https://arxiv.org/abs/2601.03338)
+### [70] [Fast rotations in galaxies at cosmic noon indicate central concentration of stars, dark matter or massive black holes](https://arxiv.org/abs/2601.03338)
 *Fernanda Roman-Oliveira,Francesca Rizzo,Filippo Fraternali*
 
 Main category: astro-ph.GA
@@ -2425,7 +2514,7 @@ Key Figures:
 </details>
 
 
-### [70] [GATOS XI : Excess dust heating in the Narrow Line Regions of nearby AGN revealed with JWST/MIRI](https://arxiv.org/abs/2601.02865)
+### [71] [GATOS XI : Excess dust heating in the Narrow Line Regions of nearby AGN revealed with JWST/MIRI](https://arxiv.org/abs/2601.02865)
 *Houda Haidar,David J. Rosario,Ismael García-Bernete,Almudena Alonso-Herrero,Anelise Audibert,Steph Campbell,Chris M. Harrison,Tiago Costa,Laura Hermosa Muñoz,Françoise Combes,Dimitra Rigopoulou,Claudio Ricci,Cristina Ramos Almeida,Enrica Bellocchi,Peter Boorman,Andrew Bunker,Richard Davies,Daniel Delaney,Tanio Díaz Santos,Federico Esposito,Victoria A. Fawcett,Poshak Gandhi,Santiago García-Burillo,Omaira González-Martín,Erin K. S. Hicks,Sebastian F. Hönig,Alvaro Labiano,Nancy A. Levenson,Enrique Lopez-Rodriguez,Chris Packham,Miguel Pereira-Santaella,Rogemar A. Riffel,Alberto Rodríguez Ardila,John Schneider,T. Taro Shimizu,Marko Stalevski,Montserrat Villar Martín,Martin Ward,Lulu Zhang,Gillian Leeds,Fergus R. Donnan*
 
 Main category: astro-ph.GA
@@ -2460,7 +2549,7 @@ Key Figures:
 </details>
 
 
-### [71] [Strong environmental AGN enhancement among DSFGs in z > 2 protoclusters](https://arxiv.org/abs/2606.05283)
+### [72] [Strong environmental AGN enhancement among DSFGs in z > 2 protoclusters](https://arxiv.org/abs/2606.05283)
 *Monica Natalia Isla Llave,Fabio Vito,Alberto Traina,Cristian Vignali,Olga Cucciati,Benjamin Forrest,Gayathri Gururajan,Brian Lemaux,Sylvia Adscheid,Sebastiano Cantalupo,Kazuki Daikuhara,Marta Galbiati,Roberto Gilli,Tadayuki Kodama,Stefano Marchesi,Maurillio Pannella,Antonio Pensabene,Maria del Carmen Polletta,Rhythm Shimakawa,Paolo Tozzi*
 
 Main category: astro-ph.GA
@@ -2495,7 +2584,7 @@ Key Figures:
 </details>
 
 
-### [72] [Bar-driven gas redistribution suppresses star formation in spiral galaxies: Evidence from dust lanes in NGC 3351](https://arxiv.org/abs/2605.27663)
+### [73] [Bar-driven gas redistribution suppresses star formation in spiral galaxies: Evidence from dust lanes in NGC 3351](https://arxiv.org/abs/2605.27663)
 *Koshy George,Smitha Subramanian*
 
 Main category: astro-ph.GA
@@ -2530,7 +2619,7 @@ Key Figures:
 </details>
 
 
-### [73] [First Light and Reionization Epoch Simulations (FLARES) XXII: UV-dust spatial offsets at the Epoch of Reionisation](https://arxiv.org/abs/2605.27370)
+### [74] [First Light and Reionization Epoch Simulations (FLARES) XXII: UV-dust spatial offsets at the Epoch of Reionisation](https://arxiv.org/abs/2605.27370)
 *Paurush Punyasheel,Aswin P. Vijayan,William J. Roper,Thomas R. Greve,Hiddo Algera,Christopher C. Lovell,Steven Gillman,Bitten Gullberg,Shihong Liao,Robert M. Yates,Stephen M. Wilkins*
 
 Main category: astro-ph.GA
@@ -2565,7 +2654,7 @@ Key Figures:
 </details>
 
 
-### [74] [How galaxies acquire their stellar mass at high redshift: High star formation efficiencies and the relative roles of dust and initial mass function](https://arxiv.org/abs/2605.26209)
+### [75] [How galaxies acquire their stellar mass at high redshift: High star formation efficiencies and the relative roles of dust and initial mass function](https://arxiv.org/abs/2605.26209)
 *Hao Fu,Francesco Shankar,Fabio Fontanot,Andrea Lapi,Feng Yuan,Mohammadreza Ayromlou,Daniel Roberts,Lumen Boco,Nicola Menci,Emiliano Merlin,Laura Pentericci,Mengyuan Xiao*
 
 Main category: astro-ph.GA
@@ -2600,7 +2689,7 @@ Key Figures:
 </details>
 
 
-### [75] [Extending the ALMA survey of the SCUBA-2 CLS UDS field: Tracing the obscured formation of spheroids across z~1-4](https://arxiv.org/abs/2604.18700)
+### [76] [Extending the ALMA survey of the SCUBA-2 CLS UDS field: Tracing the obscured formation of spheroids across z~1-4](https://arxiv.org/abs/2604.18700)
 *Ian Smail,Steven Gillman,Ugne Dudzeviciute,A. M. Swinbank*
 
 Main category: astro-ph.GA
@@ -2635,7 +2724,7 @@ Key Figures:
 </details>
 
 
-### [76] [Characterization of molecular outflows at core-scale in the massive clump AGAL G345.0029-0.224](https://arxiv.org/abs/2603.17976)
+### [77] [Characterization of molecular outflows at core-scale in the massive clump AGAL G345.0029-0.224](https://arxiv.org/abs/2603.17976)
 *E. Cohen Arazi,M. E. Ortega,S. Paron,P. F. Velázquez,A. Rodríguez-González,E. Alquicira*
 
 Main category: astro-ph.GA
@@ -2670,7 +2759,7 @@ Key Figures:
 </details>
 
 
-### [77] [Uncovering the absorbed atomic Universe with the [OI]63um line](https://arxiv.org/abs/2602.22161)
+### [78] [Uncovering the absorbed atomic Universe with the [OI]63um line](https://arxiv.org/abs/2602.22161)
 *Carlos De Breuck,Kevin C. Harrington,Wout Hermans,Luke Maud,Aniket Bhagwat,Ilse De Looze,Bo Peng,Amit Vishwas,Benedetta Casavecchia,Andreas Lundgren*
 
 Main category: astro-ph.GA
@@ -2705,7 +2794,7 @@ Key Figures:
 </details>
 
 
-### [78] [Massive dusty multiphase outflow in local merger shows no sign of slowing on kiloparsec scales](https://arxiv.org/abs/2601.20489)
+### [79] [Massive dusty multiphase outflow in local merger shows no sign of slowing on kiloparsec scales](https://arxiv.org/abs/2601.20489)
 *B. Hagedorn,C. Cicone,M. Sarzi,P. Severgnini,C. Vignali*
 
 Main category: astro-ph.GA
@@ -2726,41 +2815,6 @@ Result: 发现巨大的分子外流（8×10^9 M⊙，占总分子气体40%），
 Conclusion: IRAS20100-4156的多相外流起源于合并的东南核，由该处的星暴活动驱动，辐射压力可能在加速过程中起重要作用，外流气体在观测范围内持续加速。
 
 Abstract: We use ALMA CO(1-0) observations and VLT/MUSE rest-frame optical data of the ultraluminous infrared galaxy (ULIRG) IRAS20100-4156 at $z=0.1297$ to characterize its powerful outflow in multiple phases using tracers of cold molecular, ionized, and neutral atomic gas and dust as well. Our analysis uses the correspondence with the stellar velocity field to split the complex emission line profiles of the CO(1-0) line into components in gravitational and non-gravitational motion. We find a massive ($8\times10^{9}\,M_\odot$) molecular outflow containing about 40% of the total molecular gas mass in the system. The outflow shows a bi-conical morphology centered on the brightest galaxy in the merger, oriented along its minor axis and extending to $\sim5\,\mathrm{kpc}$. This outflow has a characteristic velocity of $170\,\mathrm{km/s}$, an outflow mass rate of $700\,M_\odot/\mathrm{yr}$, a depletion time of $16\,\mathrm{Myr}$, and energetics consistent with star formation as a driver. The neutral atomic and ionized gas phases traced by NaI absorption and H$α$ emission show counterparts to the blueshifted cold molecular outflow but are only 15% and 3% as massive. None of the three gas phases show any signs of slowing down over the extent at which we detected the outflow, suggesting an acceleration mechanism acting on the outflowing gas at kiloparsec scales. We also detect $3.5\times 10^7\,M_\odot$ of dust, traced by optical extinction in the MUSE data, in the blueshifted outflowing cold molecular gas. The ionization state of the non-outflowing gas is consistent with star formation, while the outflowing component shows shock-like ionization. We conclude that the multiphase outflow in IRAS20100-4156 originates in the southeast nucleus of the merger and is driven by the starburst activity there, with radiation pressure likely playing a significant role in its acceleration.
-
-Abstract Translation:
-
-
-Conclusion Translation:
-
-
-Key Figures:
-
-
-
-</details>
-
-
-### [79] [Magnetic threads and gravity: ALMA Observations of IRDC G14.225-0.506](https://arxiv.org/abs/2601.16810)
-*Nacho Añez-López,Gemma Busquet,Josep Miquel Girart,Junhao Liu,Qizhou Zhang,Patrick Koch,Anaëlle Maury,Hauyu Baobab Liu,Zhi-Yun Li,Keping Qiu,Shanghuo Li,Huei-Ru,Vivien Chen,Ya-Wen Tang,Shih-Ping Lai,Ramprasad Rao,Paul Ho*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (83/100) - 与 Zotero 兴趣画像中的 alma, dust, polarized, molecular 等主题/作者匹配。
-
-TL;DR: 本研究通过ALMA观测红外暗云G14.225-0.506核心尺度的磁场，分析磁场在分子云碎裂过程中的作用，发现磁场强度与碎裂水平在两个枢纽区域相似，但磁场形态在不同区域存在差异，最致密的凝聚体显示出引力塌陷迹象。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 在恒星形成过程中，磁场、湍流和引力之间的相互作用至关重要，磁场似乎起到调节作用。然而，磁场相对于湍流和引力的决定性程度仍不确定。本研究旨在确定磁场在分子云碎裂过程中的作用。
-
-Method: 使用ALMA观测红外暗云G14.225-0.506核心尺度的磁场，重点关注3个具有相似物理条件的区域，并与先前在枢纽-丝状系统尺度上的观测结果进行对比分析。
-
-Result: 1) 两个枢纽区域的磁场强度和碎裂水平相似；2) 3个区域的磁场形态存在明显差异；3) 在区域N，大尺度垂直丝状结构的磁场在小尺度上持续存在，但在更致密的凝聚体附近变得扭曲；4) 这些凝聚体显示出超临界质量-磁通比值，表明即将发生塌陷；5) 在区域S，磁场在检测到的凝聚体之间非常不均匀，且形态与凝聚体密度无直接关联；6) 在北部枢纽南部丝状结构中的孤立尘埃团块，磁场与拉长发射平行，表明磁场几何形态发生转变。
-
-Conclusion: 磁场随空间尺度发生明显演化。北部枢纽中最致密的凝聚体正在经历引力塌陷，这通过磁场与引力势的相对重要性以及质量-磁通比值得以揭示。磁场的扭曲可能是对塌陷引起的物质流动的响应。
-
-Abstract: During the star formation process, the interplay between gravity, turbulence, and B-fields is significant, with B-fields apparently serving a regulatory function. However, the extent to which B-fields are decisive relative to turbulence and gravity remains uncertain. This study aims to ascertain the role of B-fields in the fragmentation of molecular clouds. We examine the B-field observed with ALMA at core scales towards the infrared dark cloud G14.225-0.506, focusing on 3 regions with shared physical conditions, and juxtapose it with prior observations at the Hub-filament system scale. Our findings indicate a similar B-field strength and fragmentation level between the 2 hubs. However, distinct B-field morphologies are identified across the 3 regions where polarized emission is detected. In the region N, the large-scale B-field, which is perpendicular to the filamentary structure, persists at smaller scales in the southern half but becomes distorted near the more massive condensations in the northern half. Notably, these condensations exhibit signs of impending collapse, as evidenced by supercritical mass-to-flux values. In the region S, the B-field is considerably inhomogeneous among the detected condensations, and we do not observe a direct correlation between the field morphology and the condensation density. Lastly, in an isolated dust clump located within a southern filament of the northern hub, the B-field aligns parallel to the elongated emission, suggesting a transition in the field geometry. The B-field shows a clear evolution with spatial scales. We propose that the most massive condensations detected in the northern Hub are undergoing gravitational collapse, as revealed by the relative significance of the magnetic field and gravitational potential and mass-to-flux ratio. The distortion of the B-field could be a response to the flow of material due to the collapse.
 
 Abstract Translation:
 

@@ -1,6 +1,7 @@
 import argparse
 import json
 import os
+import re
 import subprocess
 import sys
 from pathlib import Path
@@ -21,6 +22,18 @@ def parse_args() -> argparse.Namespace:
         help="Current daily JSONL filename to exclude from historical backfill.",
     )
     parser.add_argument(
+        "--max-papers",
+        type=int,
+        default=-1,
+        help="Optional per-file cap after pre-scoring. Default -1 keeps every paper above the score threshold.",
+    )
+    parser.add_argument(
+        "--min-score",
+        type=int,
+        default=int(os.environ.get("DAILY_RECOMMENDATION_MIN_SCORE", "35")),
+        help="Minimum pre-score for non-mandatory historical papers.",
+    )
+    parser.add_argument(
         "--state-file",
         default=os.environ.get("BACKFILL_STATE_FILE", "data/backfill_state.json"),
         help="Persistent progress file used to rotate through historical files.",
@@ -28,7 +41,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--max-files",
         type=int,
-        default=1,
+        default=int(os.environ.get("BACKFILL_MAX_FILES", "20")),
         help="Maximum historical files to backfill. Use -1 for all outdated files.",
     )
     return parser.parse_args()
@@ -103,6 +116,15 @@ def run_step(command: List[str], cwd: Path) -> None:
     subprocess.run(command, cwd=cwd, check=True)
 
 
+def backfill_output_paths(path: Path, data_dir: Path) -> tuple[Path, Path]:
+    match = re.match(r"(\d{4}-\d{2}-\d{2})", path.name)
+    date = match.group(1) if match else path.stem
+    return (
+        data_dir / f"{date}_archive.jsonl",
+        data_dir / f"{date}_backfill_selection_report.json",
+    )
+
+
 def main() -> None:
     args = parse_args()
     repo_root = Path(__file__).resolve().parents[1]
@@ -144,6 +166,29 @@ def main() -> None:
         print(
             f"Backfilling {path.name}: recommendation={rec_needed}, artifacts={artifact_needed}",
             file=sys.stderr,
+        )
+        archive_path, report_path = backfill_output_paths(path, data_dir)
+        run_step(
+            [
+                sys.executable,
+                "prefilter.py",
+                "--data",
+                rel_path,
+                "--archive",
+                os.path.relpath(archive_path, ai_dir),
+                "--report",
+                os.path.relpath(report_path, ai_dir),
+                "--profile",
+                os.path.relpath(data_dir / "zotero_profile.json", ai_dir),
+                "--max-papers",
+                str(args.max_papers),
+                "--min-score",
+                str(args.min_score),
+                "--ai-stages",
+                "2",
+                "--merge-existing-archive",
+            ],
+            ai_dir,
         )
         if rec_needed:
             run_step([sys.executable, "recommend.py", "--data", rel_path], ai_dir)

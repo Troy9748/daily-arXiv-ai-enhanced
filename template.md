@@ -20,8 +20,9 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
    3. `MODEL_NAME`: such as "deepseek-chat"
    4. `EMAIL`: your email for push to github
    5. `NAME`: your name for push to github
-   6. `DAILY_RECOMMENDATION_LIMIT` [optional]: normal daily AI-processing limit; default `24`. Mandatory strong-lensing papers are always retained.
+   6. `DAILY_RECOMMENDATION_LIMIT` [optional]: new daily-file paper limit; default `24`. Mandatory strong-lensing papers are always retained.
    7. `DAILY_RECOMMENDATION_MIN_SCORE` [optional]: normal-paper pre-score threshold; default `35`. It is acceptable for quiet days to return fewer papers.
+   8. `BACKFILL_MAX_FILES` [optional]: historical files processed per workflow run after pre-scoring; default `20`.
 7. Go to your-own-repo -> Actions -> arXiv-daily-ai-enhanced
 8. You can manually click **Run workflow** to test if it works well (it may takes about one hour). 
 By default, this action will automatically run every day

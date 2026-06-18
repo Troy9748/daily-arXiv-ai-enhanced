@@ -55,8 +55,8 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
    5. `NAME`: your name for push to GitHub
    6. `ENABLE_LLM_RECOMMENDATION` [optional]: set to `false` to disable LLM-based personalized recommendation scoring.
    7. `ENABLE_PAPER_ARTIFACTS` [optional]: set to `false` to disable abstract/conclusion translation and figure metadata extraction.
-   8. `BACKFILL_MAX_FILES` [optional]: number of historical AI-enhanced files to backfill per run when their recommendation/artifact schema is outdated. Default is `5`; set `-1` to backfill all outdated files.
-   9. `DAILY_RECOMMENDATION_LIMIT` [optional]: maximum normal papers sent to expensive AI processing each day. Default is `24`; mandatory strong-lensing papers are never removed by this limit.
+   8. `BACKFILL_MAX_FILES` [optional]: number of historical AI-enhanced files to backfill per run after per-file pre-scoring. Default is `20`; set `-1` to backfill all pending files.
+   9. `DAILY_RECOMMENDATION_LIMIT` [optional]: maximum normal papers sent to expensive AI processing for the newly crawled daily file. Default is `24`; mandatory strong-lensing papers are never removed by this limit.
    10. `DAILY_RECOMMENDATION_MIN_SCORE` [optional]: minimum pre-score for normal papers. Default is `35`; mandatory papers bypass it.
 8. Go to your-own-repo -> Actions -> arXiv-daily-ai-enhanced
 9. You can manually click **Run workflow** to test if it works well (it may take about one hour). By default, this action will automatically run every day. You can modify it in `.github/workflows/run.yml`
@@ -64,7 +64,7 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
 
 The daily workflow also refreshes historical recommendation lists for the recent year, month, and week. The web UI exposes these as Year 100, Month 20, and Week 10.
 
-Before AI enhancement, papers are divided into `must-read`, `recommended`, and `archive` tiers. Galaxy-galaxy strong lensing and strong-lensing studies of high-redshift galaxy dynamics are mandatory. Lower-priority candidates remain searchable in the low-cost archive without consuming summary, recommendation, or artifact LLM calls. Statistics provides recent-year/all-library topic pages, saved topic watches, version tracking, a weekly digest, and selection-cost reports.
+Before daily enhancement and historical backfill, papers are divided into `must-read`, `recommended`, and `archive` tiers. Galaxy-galaxy strong lensing and strong-lensing studies of high-redshift galaxy dynamics are mandatory. Backfill handles at most 20 historical daily files per run; within each file, every paper above the score threshold is retained without a paper-count cap. Lower-priority candidates remain searchable in the low-cost archive without consuming downstream recommendation or artifact LLM calls.
 
 Likes, reading status, personal ratings, not-interested feedback, and notes are stored in browser localStorage. When Zotero Web API settings are configured, positive and negative feedback is synchronized with `daily_arxiv_*` tags. The daily recommender increases positive topic weights and learns negative topic penalties without treating a disliked paper as a blanket author penalty. Notes stay local and are never sent to Zotero or the recommendation model. The export button remains available as a backup and produces `liked_papers.json`.
 

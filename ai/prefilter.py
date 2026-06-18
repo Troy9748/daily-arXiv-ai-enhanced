@@ -16,8 +16,9 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument("--archive")
     parser.add_argument("--report")
     parser.add_argument("--profile", default="../data/zotero_profile.json")
-    parser.add_argument("--max-papers", type=int, default=int(os.environ.get("DAILY_RECOMMENDATION_LIMIT", "24")))
+    parser.add_argument("--max-papers", type=int, default=int(os.environ.get("DAILY_RECOMMENDATION_LIMIT", "24")), help="Normal-paper limit; use -1 for no count limit.")
     parser.add_argument("--min-score", type=int, default=int(os.environ.get("DAILY_RECOMMENDATION_MIN_SCORE", "35")))
+    parser.add_argument("--ai-stages", type=int, default=3, help="Expensive AI stages avoided per archived paper.")
     parser.add_argument("--merge-existing-archive", action="store_true")
     return parser.parse_args()
 
@@ -89,7 +90,9 @@ def main() -> None:
         paper for paper in rows
         if not paper["selection"]["mandatory"] and paper["selection"]["score"] >= args.min_score
     ]
-    selected = mandatory + optional[:max(0, args.max_papers - len(mandatory))]
+    selected = mandatory + (
+        optional if args.max_papers < 0 else optional[:max(0, args.max_papers - len(mandatory))]
+    )
     selected_ids = {paper.get("id") for paper in selected}
     archived = [paper for paper in rows if paper.get("id") not in selected_ids]
     for paper in archived:
@@ -105,7 +108,7 @@ def main() -> None:
         "mandatory_count": len(mandatory),
         "limit": args.max_papers,
         "minimum_score": args.min_score,
-        "estimated_ai_calls_saved": len(archived) * 3,
+        "estimated_ai_calls_saved": len(archived) * max(0, args.ai_stages),
         "selected_ids": [paper.get("id") for paper in selected],
     }
     report_path.parent.mkdir(parents=True, exist_ok=True)

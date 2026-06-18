@@ -255,7 +255,12 @@ jobs:
         export ENABLE_PAPER_ARTIFACTS="${{ vars.ENABLE_PAPER_ARTIFACTS }}"
         export CURRENT_DAILY_FILE="${today}_AI_enhanced_${LANGUAGE}.jsonl"
 
-        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files 1 --current-file "${CURRENT_DAILY_FILE}"
+        python ai/backfill_schema.py \
+          --language "${LANGUAGE}" \
+          --max-files "${{ vars.BACKFILL_MAX_FILES || '20' }}" \
+          --max-papers -1 \
+          --min-score "${{ vars.DAILY_RECOMMENDATION_MIN_SCORE || '35' }}" \
+          --current-file "${CURRENT_DAILY_FILE}"
 
     - name: Generate Historical Top Lists
       if: steps.schedule_guard.outputs.should_run == 'true'

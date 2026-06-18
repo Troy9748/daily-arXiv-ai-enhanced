@@ -38,6 +38,19 @@ const TOP_LISTS = {
 
 const LIKED_PAPERS_KEY = 'dailyArxivLikedPapers';
 const ZOTERO_CONFIG_KEY = 'dailyArxivZoteroConfig';
+const TEX_MATHCHAR_MAP = {
+  314: '.',
+  28721: '1',
+  28727: '7',
+  28950: 'μ',
+  28955: 'σ',
+  28993: 'A',
+  29000: 'H',
+  29001: 'I',
+  29004: 'L',
+  29008: 'P',
+  29010: 'R'
+};
 
 function getRecommendationScore(paper) {
   return paper && paper.recommendation ? Number(paper.recommendation.score || 0) : 0;
@@ -164,6 +177,148 @@ function normalizeFigureImageUrl(url) {
     return `https://arxiv.org/html/${match[1]}/${match[2]}`;
   }
   return value;
+}
+
+function normalizeAcademicText(value) {
+  return String(value || '')
+    .replace(/\\mathchar\s+(\d+)\\relax/g, (match, rawCode) => {
+      const code = Number(rawCode);
+      if (TEX_MATHCHAR_MAP[code]) return TEX_MATHCHAR_MAP[code];
+      const lowByte = code & 0xFF;
+      const character = String.fromCharCode(lowByte);
+      return /[a-zA-Z0-9]/.test(character) ? character : '';
+    })
+    .replace(/\\delimiter\s+68408078/g, '/')
+    .replace(/\\(?:mathrm|rm)\s*/g, '')
+    .replace(/\\relax/g, '')
+    .replace(/μ\s+μ\s*m\b/g, 'μm')
+    .replace(/μ\s+m\b/g, 'μm')
+    .replace(/(\d)\s+σ/g, '$1σ')
+    .replace(/(1σ)(?:\s+\1)+/g, '$1')
+    .replace(/\bL\s+PAH\s*\/\s*L\s+IR\s+(?=L_\{PAH\}\/L_\{IR\})/gi, '')
+    .replace(/\bL\s+7\.7\s*\/\s*L\s+IR\s+(?=L_\{7\.7\}\/L_\{IR\})/gi, '')
+    .replace(/\s+_/g, '_')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function escapeAcademicText(value) {
+  return value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#039;');
+}
+
+function formatAcademicText(value) {
+  return escapeAcademicText(normalizeAcademicText(value))
+    .replace(/_\{([^{}]+)\}/g, '<sub>$1</sub>')
+    .replace(/\^\{([^{}]+)\}/g, '<sup>$1</sup>')
+    .replace(/_([a-zA-Z0-9]+)/g, '<sub>$1</sub>')
+    .replace(/\^([a-zA-Z0-9+-]+)/g, '<sup>$1</sup>');
+}
+
+function showFigureViewer(figureIndex) {
+  const figure = currentModalPaper && Array.isArray(currentModalPaper.figures)
+    ? currentModalPaper.figures[figureIndex]
+    : null;
+  if (!figure) return;
+
+  const viewer = document.getElementById('figureViewer');
+  const image = document.getElementById('figureViewerImage');
+  const source = document.getElementById('figureViewerSource');
+  const imageUrl = normalizeFigureImageUrl(figure.image_url);
+  const label = figure.figure_label || `Figure ${figureIndex + 1}`;
+
+  document.getElementById('figureViewerTitle').textContent = label;
+  document.getElementById('figureViewerCaptionZh').innerHTML = formatAcademicText(figure.caption_zh || '暂无中文图注');
+  document.getElementById('figureViewerCaptionEn').innerHTML = formatAcademicText(figure.caption_en || 'No English caption available.');
+  image.src = imageUrl;
+  image.alt = label;
+  source.href = imageUrl;
+  viewer.classList.add('active');
+  viewer.setAttribute('aria-hidden', 'false');
+}
+
+function closeFigureViewer() {
+  const viewer = document.getElementById('figureViewer');
+  const image = document.getElementById('figureViewerImage');
+  viewer.classList.remove('active');
+  viewer.setAttribute('aria-hidden', 'true');
+  image.removeAttribute('src');
+}
+
+async function downloadCurrentPaperPdf() {
+  const paper = currentModalPaper || currentFilteredPapers[currentPaperIndex];
+  if (!paper || !paper.url) return;
+
+  const button = document.getElementById('pdfDownloadButton');
+  const pdfUrl = paper.url.replace('/abs/', '/pdf/');
+  const filename = `${String(paper.id || 'arxiv-paper').replace(/[^a-zA-Z0-9._-]/g, '_')}.pdf`;
+  button.disabled = true;
+  button.classList.add('saving');
+
+  try {
+    const response = await fetch(pdfUrl);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const blob = await response.blob();
+    const blobUrl = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = blobUrl;
+    link.download = filename;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    setTimeout(() => URL.revokeObjectURL(blobUrl), 1000);
+  } catch (error) {
+    console.error('PDF download failed:', error);
+    const fallback = document.createElement('a');
+    fallback.href = pdfUrl;
+    fallback.download = filename;
+    fallback.target = '_blank';
+    fallback.rel = 'noopener';
+    fallback.click();
+  } finally {
+    button.disabled = false;
+    button.classList.remove('saving');
+  }
+}
+
+function initPaperModalDrag() {
+  const content = document.getElementById('paperModalContent');
+  const header = content.querySelector('.paper-modal-header');
+  let dragging = false;
+  let offsetX = 0;
+  let offsetY = 0;
+
+  header.addEventListener('pointerdown', event => {
+    if (window.innerWidth <= 768 || event.target.closest('button, a')) return;
+    const rect = content.getBoundingClientRect();
+    dragging = true;
+    offsetX = event.clientX - rect.left;
+    offsetY = event.clientY - rect.top;
+    content.style.transform = 'none';
+    content.style.left = `${rect.left}px`;
+    content.style.top = `${rect.top}px`;
+    header.setPointerCapture(event.pointerId);
+  });
+
+  header.addEventListener('pointermove', event => {
+    if (!dragging) return;
+    const maxLeft = Math.max(8, window.innerWidth - content.offsetWidth - 8);
+    const maxTop = Math.max(8, window.innerHeight - content.offsetHeight - 8);
+    content.style.left = `${Math.min(maxLeft, Math.max(8, event.clientX - offsetX))}px`;
+    content.style.top = `${Math.min(maxTop, Math.max(8, event.clientY - offsetY))}px`;
+  });
+
+  const stopDragging = event => {
+    if (!dragging) return;
+    dragging = false;
+    if (header.hasPointerCapture(event.pointerId)) header.releasePointerCapture(event.pointerId);
+  };
+  header.addEventListener('pointerup', stopDragging);
+  header.addEventListener('pointercancel', stopDragging);
 }
 
 async function addCurrentPaperToZotero() {
@@ -406,6 +561,7 @@ function toggleAuthorFilter(author) {
 
 document.addEventListener('DOMContentLoaded', () => {
   initEventListeners();
+  initPaperModalDrag();
   fetchGitHubStats();
   loadUserKeywords();
   loadUserAuthors();
@@ -473,6 +629,24 @@ function initEventListeners() {
   if (zoteroAddButton) {
     zoteroAddButton.addEventListener('click', addCurrentPaperToZotero);
   }
+
+  document.getElementById('pdfDownloadButton').addEventListener('click', downloadCurrentPaperPdf);
+
+  const modalBody = document.getElementById('modalBody');
+  const openFigureFromEvent = event => {
+    const image = event.target.closest('.figure-preview-image');
+    if (!image) return;
+    if (event.type === 'keydown' && event.key !== 'Enter' && event.key !== ' ') return;
+    event.preventDefault();
+    showFigureViewer(Number(image.dataset.figureIndex));
+  };
+  modalBody.addEventListener('click', openFigureFromEvent);
+  modalBody.addEventListener('keydown', openFigureFromEvent);
+
+  document.getElementById('closeFigureViewer').addEventListener('click', closeFigureViewer);
+  document.getElementById('figureViewer').addEventListener('click', event => {
+    if (event.target.id === 'figureViewer') closeFigureViewer();
+  });
   
   document.querySelector('.paper-modal').addEventListener('click', (event) => {
     const modal = document.querySelector('.paper-modal');
@@ -502,8 +676,11 @@ function initEventListeners() {
     if (event.key === 'Escape') {
       const paperModal = document.getElementById('paperModal');
       const datePickerModal = document.getElementById('datePickerModal');
+      const figureViewer = document.getElementById('figureViewer');
       
-      if (paperModal.classList.contains('active')) {
+      if (figureViewer.classList.contains('active')) {
+        closeFigureViewer();
+      } else if (paperModal.classList.contains('active')) {
         closeModal();
       } else if (datePickerModal.classList.contains('active')) {
         toggleDatePicker();
@@ -1354,14 +1531,14 @@ function showPaperDetails(paper, paperIndex) {
         const captionEn = figure.caption_en || '';
         const imageUrl = normalizeFigureImageUrl(figure.image_url);
         const image = imageUrl
-          ? `<img src="${imageUrl}" alt="${label}" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"><a class="figure-source-link" href="${imageUrl}" target="_blank" style="display:none;">打开图片源</a>`
+          ? `<img class="figure-preview-image" src="${imageUrl}" alt="${label}" data-figure-index="${idx}" role="button" tabindex="0" loading="lazy" onerror="this.style.display='none'; this.nextElementSibling.style.display='inline-flex';"><a class="figure-source-link" href="${imageUrl}" target="_blank" rel="noopener" style="display:none;">打开图片源</a>`
           : '';
         return `
           <div class="figure-item">
             <h4>${label}</h4>
             ${image}
-            ${captionZh ? `<p class="figure-caption-zh">${captionZh}</p>` : ''}
-            ${captionEn ? `<p class="figure-caption-en">${captionEn}</p>` : ''}
+            ${captionZh ? `<p class="figure-caption-zh">${formatAcademicText(captionZh)}</p>` : ''}
+            ${captionEn ? `<p class="figure-caption-en">${formatAcademicText(captionEn)}</p>` : ''}
           </div>
         `;
       }).join('')

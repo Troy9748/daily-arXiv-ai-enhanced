@@ -6,7 +6,7 @@ import os
 import re
 import sys
 from collections import Counter, defaultdict
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, Iterable, List, Optional, Tuple
 
 import requests
@@ -634,7 +634,7 @@ def score_paper(item: Dict, profile: Dict, cache: Dict[str, Dict], cache_path: s
         "paper_id": item.get("id"),
         "profile_hash": prof_hash,
         "prompt_version": PROMPT_VERSION,
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "recommendation": rec,
     }
     cache[key] = cache_item

@@ -5,7 +5,7 @@ import json
 import os
 import re
 import sys
-from datetime import datetime
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 from urllib.parse import urljoin
 
@@ -24,6 +24,20 @@ if dotenv and os.path.exists(".env"):
 
 PROMPT_VERSION = "paper-artifacts-v3"
 
+TEX_MATHCHAR_MAP = {
+    314: ".",
+    28721: "1",
+    28727: "7",
+    28950: "μ",
+    28955: "σ",
+    28993: "A",
+    29000: "H",
+    29001: "I",
+    29004: "L",
+    29008: "P",
+    29010: "R",
+}
+
 
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
@@ -37,9 +51,32 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def normalize_tex_artifacts(text: str) -> str:
+    def replace_mathchar(match: re.Match) -> str:
+        code = int(match.group(1))
+        if code in TEX_MATHCHAR_MAP:
+            return TEX_MATHCHAR_MAP[code]
+        low_byte = code & 0xFF
+        return chr(low_byte) if chr(low_byte).isalnum() else ""
+
+    text = re.sub(r"\\mathchar\s+(\d+)\\relax", replace_mathchar, text or "")
+    text = re.sub(r"\\delimiter\s+68408078", "/", text)
+    text = re.sub(r"\\(?:mathrm|rm)\s*", "", text)
+    text = text.replace("\\relax", "")
+    text = re.sub(r"μ\s+μ\s*m\b", "μm", text)
+    text = re.sub(r"μ\s+m\b", "μm", text)
+    text = re.sub(r"(\d)\s+σ\b", r"\1σ", text)
+    text = re.sub(r"(1σ)(?:\s+\1)+", r"\1", text)
+    text = re.sub(r"\bL\s+PAH\s*/\s*L\s+IR\s+(?=L_\{PAH\}/L_\{IR\})", "", text, flags=re.I)
+    text = re.sub(r"\bL\s+7\.7\s*/\s*L\s+IR\s+(?=L_\{7\.7\}/L_\{IR\})", "", text, flags=re.I)
+    text = re.sub(r"\s+_", "_", text)
+    return text
+
+
 def normalize_space(text: str) -> str:
     text = re.sub(r"<[^>]+>", " ", text or "")
     text = html.unescape(text)
+    text = normalize_tex_artifacts(text)
     return re.sub(r"\s+", " ", text).strip()
 
 
@@ -317,7 +354,7 @@ def enrich_paper(paper: Dict, cache: Dict[str, Dict], cache_path: str, max_figur
     cache_item = {
         "cache_key": key,
         "paper_id": paper.get("id"),
-        "created_at": datetime.utcnow().isoformat() + "Z",
+        "created_at": datetime.now(timezone.utc).isoformat().replace("+00:00", "Z"),
         "artifacts": artifacts,
     }
     cache[key] = cache_item

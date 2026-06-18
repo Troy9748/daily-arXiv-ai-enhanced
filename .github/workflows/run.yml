@@ -5,10 +5,9 @@ name: arXiv-daily-ai-enhanced
 
 on:
   schedule:
-    # arXiv daily announcements are at 20:00 America/New_York.
-    # Run 15 minutes later; two UTC entries cover daylight saving and standard time.
-    - cron: "15 0 * * 1-5"
-    - cron: "15 1 * * 1-5"
+    # arXiv announces new papers Sunday-Thursday at 20:00 New York time.
+    - cron: "15 20 * * 0-4"
+      timezone: "America/New_York"
   workflow_dispatch:
 
 
@@ -22,18 +21,8 @@ jobs:
     - name: Check arXiv announcement window
       id: schedule_guard
       run: |
-        if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
-          echo "should_run=true" >> $GITHUB_OUTPUT
-          exit 0
-        fi
-
-        ny_time=$(TZ=America/New_York date "+%H%M")
-        if [ "$ny_time" = "2015" ]; then
-          echo "should_run=true" >> $GITHUB_OUTPUT
-        else
-          echo "Skipping duplicate DST/standard-time schedule at New York time $ny_time"
-          echo "should_run=false" >> $GITHUB_OUTPUT
-        fi
+        echo "should_run=true" >> $GITHUB_OUTPUT
+        echo "Workflow accepted at $(TZ=America/New_York date '+%Y-%m-%d %H:%M:%S %Z')"
 
     - name: Install dependencies
       if: steps.schedule_guard.outputs.should_run == 'true'
@@ -231,6 +220,7 @@ jobs:
         source .venv/bin/activate
         echo "检查历史文件格式并补齐旧推荐/详情字段... / Backfilling outdated historical schemas..."
 
+        today=${{ steps.crawl_step.outputs.crawl_date }}
         export LANGUAGE="${{ vars.LANGUAGE }}"
         export BACKFILL_MAX_FILES="${{ vars.BACKFILL_MAX_FILES }}"
         export ZOTERO_EMAIL="${{ vars.ZOTERO_EMAIL }}"
@@ -246,8 +236,9 @@ jobs:
         export MODEL_NAME="${{ vars.MODEL_NAME }}"
         export ENABLE_LLM_RECOMMENDATION="${{ vars.ENABLE_LLM_RECOMMENDATION }}"
         export ENABLE_PAPER_ARTIFACTS="${{ vars.ENABLE_PAPER_ARTIFACTS }}"
+        export CURRENT_DAILY_FILE="${today}_AI_enhanced_${LANGUAGE}.jsonl"
 
-        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files "${BACKFILL_MAX_FILES:-5}"
+        python ai/backfill_schema.py --language "${LANGUAGE}" --max-files "${BACKFILL_MAX_FILES:-5}" --current-file "${CURRENT_DAILY_FILE}"
 
     - name: Generate Historical Top Lists
       if: steps.schedule_guard.outputs.should_run == 'true'

@@ -4,7 +4,7 @@ import os
 import subprocess
 import sys
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict, List, Set
 
 
 RECOMMEND_PROMPT_VERSION = "recommend-v2-author-weighted"
@@ -15,6 +15,16 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser()
     parser.add_argument("--data-dir", default="data")
     parser.add_argument("--language", default=os.environ.get("LANGUAGE", ""))
+    parser.add_argument(
+        "--current-file",
+        default=os.environ.get("CURRENT_DAILY_FILE", ""),
+        help="Current daily JSONL filename to exclude from historical backfill.",
+    )
+    parser.add_argument(
+        "--state-file",
+        default=os.environ.get("BACKFILL_STATE_FILE", "data/backfill_state.json"),
+        help="Persistent progress file used to rotate through historical files.",
+    )
     parser.add_argument(
         "--max-files",
         type=int,
@@ -54,12 +64,32 @@ def needs_artifact_backfill(rows: List[Dict]) -> bool:
     return False
 
 
-def iter_files(data_dir: Path, language: str):
+def iter_files(data_dir: Path, language: str, current_file: str):
     pattern = f"*_AI_enhanced_{language}.jsonl" if language else "*_AI_enhanced_*.jsonl"
-    for path in sorted(data_dir.glob(pattern), reverse=True):
+    current_name = Path(current_file).name if current_file else ""
+    for path in sorted(data_dir.glob(pattern)):
         if path.name.startswith("top_"):
             continue
+        if current_name and path.name == current_name:
+            continue
         yield path
+
+
+def load_state(path: Path, language: str) -> Dict:
+    try:
+        payload = json.loads(path.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        payload = {}
+    languages = payload.setdefault("languages", {})
+    state = languages.setdefault(language or "all", {"completed_files": []})
+    if not isinstance(state.get("completed_files"), list):
+        state["completed_files"] = []
+    return payload
+
+
+def save_state(path: Path, payload: Dict) -> None:
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(payload, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
 def run_step(command: List[str], cwd: Path) -> None:
@@ -71,10 +101,28 @@ def main() -> None:
     args = parse_args()
     repo_root = Path(__file__).resolve().parents[1]
     data_dir = (repo_root / args.data_dir).resolve() if not Path(args.data_dir).is_absolute() else Path(args.data_dir)
+    state_path = (repo_root / args.state_file).resolve() if not Path(args.state_file).is_absolute() else Path(args.state_file)
     ai_dir = repo_root / "ai"
     processed = 0
+    files = list(iter_files(data_dir, args.language, args.current_file))
+    payload = load_state(state_path, args.language)
+    state = payload["languages"][args.language or "all"]
+    completed: Set[str] = set(state["completed_files"])
+    current_name = Path(args.current_file).name if args.current_file else ""
+    if current_name:
+        completed.add(current_name)
+        state["completed_files"] = sorted(completed)
+        save_state(state_path, payload)
 
-    for path in iter_files(data_dir, args.language):
+    pending = [path for path in files if path.name not in completed]
+
+    print(
+        f"Historical backfill: {len(pending)} pending of {len(files)} files; "
+        f"current file excluded={Path(args.current_file).name or 'none'}.",
+        file=sys.stderr,
+    )
+
+    for path in pending:
         rows = read_jsonl(path)
         if not rows:
             continue
@@ -96,8 +144,14 @@ def main() -> None:
         if artifact_needed:
             run_step([sys.executable, "artifacts.py", "--data", rel_path], ai_dir)
         processed += 1
+        completed.add(path.name)
+        state["completed_files"] = sorted(completed)
+        save_state(state_path, payload)
 
-    print(f"Backfilled {processed} historical files with outdated schema.", file=sys.stderr)
+    if pending:
+        print(f"Backfilled {processed} historical files; progress saved to {state_path}.", file=sys.stderr)
+    else:
+        print("Historical backfill is complete; no files will be rescored again.", file=sys.stderr)
 
 
 if __name__ == "__main__":

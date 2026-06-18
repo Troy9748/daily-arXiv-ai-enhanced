@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Low-cost Paper Archive</title>
+  <link rel="stylesheet" href="css/styles.css"><link rel="stylesheet" href="css/statistic.css">
+  <script src="js/auth-config.js"></script><script src="js/auth.js"></script><script>Auth.requireAuth();</script>
+</head>
+<body>
+  <main class="topic-page">
+    <header class="topic-page-header">
+      <a class="back-button topic-back" href="statistic.html" aria-label="Back to statistics"><svg width="24" height="24" viewBox="0 0 24 24"><path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="currentColor"/></svg></a>
+      <div><p class="topic-eyebrow">Low-cost archive</p><h1>Unprocessed Candidates</h1><p id="archiveSummary">Loading...</p></div>
+    </header>
+    <section class="topic-toolbar"><input id="archiveSearch" type="search" placeholder="Search title, abstract, or author"><select id="archiveSort"><option value="score">Pre-score</option><option value="date">Newest first</option></select></section>
+    <section id="archivePapers" class="topic-paper-list"></section>
+  </main>
+  <script>window.MathJax = { tex: { inlineMath: [['\\(', '\\)'], ['$', '$']] } };</script>
+  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+  <script src="js/paper-detail.js?v=1.1.1"></script>
+  <script src="js/archive.js?v=1.1.0"></script>
+</body>
+</html>

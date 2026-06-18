@@ -46,6 +46,7 @@ jobs:
         else
             echo "📝 今日文件不存在，准备新建... / Today's file doesn't exist, ready to create new one..."
         fi
+        rm -f "data/${today}_archive.jsonl" "data/${today}_selection_report.json"
         
         cd daily_arxiv
         export OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
@@ -109,6 +110,23 @@ jobs:
                 ;;
         esac
         
+    - name: Preselect Daily Recommendation Pool
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.dedup_check.outputs.has_new_content == 'true'
+      run: |
+        source .venv/bin/activate
+        today=${{ steps.crawl_step.outputs.crawl_date }}
+        echo "在昂贵 AI 处理前筛选每日推荐池... / Selecting the daily pool before expensive AI work..."
+
+        cd ai
+        python prefilter.py \
+          --data "../data/${today}.jsonl" \
+          --archive "../data/${today}_archive.jsonl" \
+          --report "../data/${today}_selection_report.json" \
+          --max-papers "${{ vars.DAILY_RECOMMENDATION_LIMIT || '24' }}" \
+          --min-score "${{ vars.DAILY_RECOMMENDATION_MIN_SCORE || '35' }}"
+
+        echo "每日推荐池筛选完成 / Daily recommendation pool selected"
+
     - name: AI Enhancement Processing
       if: steps.schedule_guard.outputs.should_run == 'true' && steps.dedup_check.outputs.has_new_content == 'true'
       run: |
@@ -259,8 +277,15 @@ jobs:
       if: steps.schedule_guard.outputs.should_run == 'true'
       run: |
         echo "更新文件列表... / Updating file list..."
-        ls data/*.jsonl | sed 's|data/||' > assets/file-list.txt
+        find data -maxdepth 1 -name '*.jsonl' ! -name '*_archive.jsonl' -print | sed 's|data/||' | sort > assets/file-list.txt
         echo "文件列表更新完成 / File list updated"
+
+    - name: Generate Research Statistics and Weekly Digest
+      if: steps.schedule_guard.outputs.should_run == 'true'
+      run: |
+        source .venv/bin/activate
+        python ai/generate_statistics.py
+        echo "年度/全库统计与周报已生成 / Statistics and weekly digest generated"
 
     - name: Generate password hash and inject into config
       if: steps.schedule_guard.outputs.should_run == 'true'

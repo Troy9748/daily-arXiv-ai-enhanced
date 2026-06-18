@@ -1770,6 +1770,36 @@ footer {
   font-size: 13px;
 }
 
+.must-read-inline {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  padding: 3px 9px;
+  border-radius: 999px;
+  color: #8a2c0d;
+  background: #ffeadf;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.score-breakdown {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  margin-top: 12px;
+}
+
+.score-breakdown-item {
+  padding: 5px 9px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.score-breakdown-item.positive { color: #17643a; background: #e1f5e9; }
+.score-breakdown-item.negative { color: #8a2632; background: #fde7ea; }
+.personal-status-button.negative.active { color: white; border-color: #b63443; background: #b63443; }
+
 .figure-viewer {
   display: none;
   position: fixed;

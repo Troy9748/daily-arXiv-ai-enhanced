@@ -11,6 +11,8 @@ from typing import Dict, Iterable, List, Optional, Tuple
 
 import requests
 
+from interest_policy import POLICY_VERSION, evaluate_policy
+
 
 try:
     import dotenv
@@ -22,7 +24,7 @@ if dotenv and os.path.exists(".env"):
     dotenv.load_dotenv()
 
 
-PROMPT_VERSION = "recommend-v2-author-weighted"
+PROMPT_VERSION = "recommend-v3-explicit-research-policy"
 
 STOPWORDS = {
     "a", "an", "and", "are", "as", "at", "be", "been", "being", "between",
@@ -209,6 +211,8 @@ def item_to_reference(item: Dict) -> Dict:
         if isinstance(tag, dict) and tag.get("tag")
     ]
     feedback_weight = 1.0
+    if "daily_arxiv_not_interested" in tags:
+        feedback_weight = -2.5
     if "daily_arxiv_liked" in tags:
         feedback_weight = 3.0
     for tag in tags:
@@ -247,6 +251,7 @@ def fallback_profile() -> Dict:
 
 def build_profile(references: List[Dict]) -> Dict:
     keyword_scores = Counter()
+    negative_keyword_scores = Counter()
     author_scores = Counter()
     recent_author_scores = Counter()
 
@@ -259,7 +264,18 @@ def build_profile(references: List[Dict]) -> Dict:
         ]
         authors = [normalize_author(author) for author in ref.get("authors", []) if author]
         recency_weight = max(0.0, 1.0 - idx / 80.0)
-        feedback_weight = max(1.0, float(ref.get("feedback_weight", 1.0)))
+        feedback_weight = float(ref.get("feedback_weight", 1.0))
+
+        if feedback_weight < 0:
+            for term in ngrams(tokenize(title), 1, 3):
+                term = normalize_term(term)
+                if is_informative_term(term):
+                    negative_keyword_scores[term] += abs(feedback_weight) * 3
+            for term in ngrams(tokenize(abstract), 1, 2):
+                term = normalize_term(term)
+                if is_informative_term(term):
+                    negative_keyword_scores[term] += abs(feedback_weight) * 0.6
+            continue
 
         for tag in tags:
             if is_informative_term(tag):
@@ -300,6 +316,11 @@ def build_profile(references: List[Dict]) -> Dict:
         "email": os.environ.get("ZOTERO_EMAIL", "lxh9748@163.com"),
         "references_count": len(references),
         "keywords": keywords,
+        "negative_keywords": [
+            {"term": term, "weight": round(weight, 3)}
+            for term, weight in negative_keyword_scores.most_common(80)
+            if is_informative_term(term)
+        ],
         "authors": authors,
         "core_authors": core_authors,
         "summary": summary,
@@ -385,6 +406,7 @@ def profile_hash(profile: Dict) -> str:
         "source": profile.get("source"),
         "references_count": profile.get("references_count"),
         "keywords": profile.get("keywords", [])[:80],
+        "negative_keywords": profile.get("negative_keywords", [])[:80],
         "authors": profile.get("authors", [])[:80],
         "core_authors": profile.get("core_authors", [])[:80],
         "prompt_version": PROMPT_VERSION,
@@ -479,8 +501,9 @@ def rule_score_paper(item: Dict, profile: Dict) -> Dict:
         "categories": normalize_text(item.get("categories")),
     }
     topic_raw, matched_topics = weighted_matches(text_parts, profile.get("keywords", []))
+    negative_raw, matched_negative_topics = weighted_matches(text_parts, profile.get("negative_keywords", []))
     author_raw, matched_authors = author_matches(item, profile)
-    raw_score = topic_raw + author_raw * 1.8
+    raw_score = max(0.0, topic_raw + author_raw * 1.8 - negative_raw * 1.5)
 
     score = round(100 * raw_score / (raw_score + 32.0)) if raw_score > 0 else 0
     if matched_topics and not matched_authors:
@@ -490,6 +513,12 @@ def rule_score_paper(item: Dict, profile: Dict) -> Dict:
     elif matched_authors:
         score = min(max(score, 45), 82)
     score = min(score, 94)
+    policy = evaluate_policy(item)
+    if matched_negative_topics and not policy["mandatory"]:
+        policy["adjustments"].append({"label": "negative feedback topic", "points": -min(25, round(negative_raw))})
+    score = max(0, min(100, score + sum(entry["points"] for entry in policy["adjustments"])))
+    if policy["mandatory"]:
+        score = max(score, 92)
 
     if matched_topics or matched_authors:
         topic_text = ", ".join((matched_authors + matched_topics)[:5])
@@ -505,9 +534,14 @@ def rule_score_paper(item: Dict, profile: Dict) -> Dict:
         "reason": reason,
         "matched_topics": matched_topics,
         "matched_authors": matched_authors,
+        "matched_negative_topics": matched_negative_topics,
         "profile_source": profile.get("source", "unknown"),
         "scoring_method": "rules",
         "rule_score": score,
+        "tier": policy["tier"],
+        "mandatory": policy["mandatory"],
+        "score_breakdown": policy["adjustments"],
+        "policy_version": POLICY_VERSION,
     }
 
 
@@ -559,6 +593,7 @@ def call_llm_recommendation(item: Dict, profile: Dict, rule_rec: Dict) -> Option
     profile_payload = {
         "summary": profile.get("summary"),
         "top_keywords": profile.get("keywords", [])[:35],
+        "negative_keywords": profile.get("negative_keywords", [])[:25],
         "core_authors": profile.get("core_authors", [])[:35],
         "authors": profile.get("authors", [])[:50],
         "source": profile.get("source"),
@@ -575,7 +610,12 @@ def call_llm_recommendation(item: Dict, profile: Dict, rule_rec: Dict) -> Option
     system_prompt = (
         "You are a senior academic paper recommender. Score relevance to the user's Zotero library. "
         "Be strict: broad field overlap, telescope names, or generic keywords are not enough for a high score. "
-        "Give high scores only when the scientific question, method, data, or recurring/core authors are clearly aligned."
+        "Give high scores only when the scientific question, method, data, or recurring/core authors are clearly aligned. "
+        "The user's primary field is strong gravitational lensing, especially galaxy-galaxy strong lensing. "
+        "Never down-rank strong-lensing papers. Strongly prioritize lensing studies of high-redshift galaxy dynamics, "
+        "high-redshift galaxy kinematics, high-redshift polarization, and high-redshift multi-phase gas. "
+        "Down-rank stellar physics, pure cosmology, particle physics, neutrino physics, and Solar System research "
+        "unless a primary-interest topic is genuinely central to the paper."
     )
     user_prompt = (
         "Return only valid JSON with these keys: score, reason, topic_fit, method_fit, author_fit, "
@@ -643,6 +683,13 @@ def score_paper(item: Dict, profile: Dict, cache: Dict[str, Dict], cache_path: s
         return rec
 
     rec = call_llm_recommendation(item, profile, rule_rec) or rule_rec
+    rec["tier"] = rule_rec.get("tier", "recommended")
+    rec["mandatory"] = rule_rec.get("mandatory", False)
+    rec["score_breakdown"] = rule_rec.get("score_breakdown", [])
+    rec["policy_version"] = POLICY_VERSION
+    if rec["mandatory"]:
+        rec["score"] = max(92, int(rec.get("score", 0)))
+        rec["stars"] = score_to_stars(rec["score"])
     cache_item = {
         "cache_key": key,
         "paper_id": item.get("id"),

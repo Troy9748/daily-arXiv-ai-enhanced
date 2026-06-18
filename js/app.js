@@ -63,6 +63,17 @@ function renderStars(stars) {
   return `${'★'.repeat(filled)}${'☆'.repeat(5 - filled)}`;
 }
 
+function renderScoreBreakdown(recommendation) {
+  const entries = recommendation && Array.isArray(recommendation.score_breakdown)
+    ? recommendation.score_breakdown
+    : [];
+  if (!entries.length) return '';
+  return `<div class="score-breakdown">${entries.map(entry => {
+    const points = Number(entry.points || 0);
+    return `<span class="score-breakdown-item ${points >= 0 ? 'positive' : 'negative'}">${points >= 0 ? '+' : ''}${points} ${escapeAcademicText(entry.label || '')}</span>`;
+  }).join('')}</div>`;
+}
+
 function compareByRecommendation(a, b) {
   return getRecommendationScore(b) - getRecommendationScore(a);
 }
@@ -158,7 +169,7 @@ function updatePersonalEntry(paper, changes) {
   if (next.status === 'read') next.wantToRead = false;
   library[id] = next;
   savePersonalLibrary(library);
-  if (Object.prototype.hasOwnProperty.call(changes, 'liked') || Object.prototype.hasOwnProperty.call(changes, 'rating')) {
+  if (Object.prototype.hasOwnProperty.call(changes, 'liked') || Object.prototype.hasOwnProperty.call(changes, 'rating') || Object.prototype.hasOwnProperty.call(changes, 'notInterested')) {
     syncPersonalFeedbackToZotero(paper, next);
   }
   return next;
@@ -246,6 +257,13 @@ function togglePaperRead(paper) {
   updatePersonalControls(paper);
 }
 
+function togglePaperNotInterested(paper) {
+  const entry = getPersonalEntry(paper);
+  updatePersonalEntry(paper, { notInterested: !(entry && entry.notInterested) });
+  refreshPersonalViews();
+  updatePersonalControls(paper);
+}
+
 function ratePaper(paper, rating) {
   updatePersonalEntry(paper, { rating: Math.max(0, Math.min(5, Number(rating) || 0)) });
   refreshPersonalViews();
@@ -268,8 +286,10 @@ function updatePersonalControls(paper) {
   const entry = getPersonalEntry(paper) || {};
   const wantButton = document.getElementById('wantToReadButton');
   const readButton = document.getElementById('markReadButton');
+  const notInterestedButton = document.getElementById('notInterestedButton');
   if (wantButton) wantButton.classList.toggle('active', entry.status === 'want');
   if (readButton) readButton.classList.toggle('active', entry.status === 'read');
+  if (notInterestedButton) notInterestedButton.classList.toggle('active', Boolean(entry.notInterested));
   document.querySelectorAll('[data-paper-rating]').forEach(button => {
     button.classList.toggle('active', Number(button.dataset.paperRating) <= Number(entry.rating || 0));
   });
@@ -291,6 +311,7 @@ function renderPersonalPanel(paper) {
       <div class="personal-status-controls">
         <button id="wantToReadButton" type="button" class="personal-status-button ${entry.status === 'want' ? 'active' : ''}">想看</button>
         <button id="markReadButton" type="button" class="personal-status-button ${entry.status === 'read' ? 'active' : ''}">已看</button>
+        <button id="notInterestedButton" type="button" class="personal-status-button negative ${entry.notInterested ? 'active' : ''}">不感兴趣</button>
         <div class="personal-rating" aria-label="Personal rating">${stars}</div>
       </div>
       <label class="reading-note-label" for="paperReadingNote">阅读备注</label>
@@ -303,6 +324,7 @@ function renderPersonalPanel(paper) {
 function bindPersonalPanel(paper) {
   document.getElementById('wantToReadButton')?.addEventListener('click', () => togglePaperWant(paper));
   document.getElementById('markReadButton')?.addEventListener('click', () => togglePaperRead(paper));
+  document.getElementById('notInterestedButton')?.addEventListener('click', () => togglePaperNotInterested(paper));
   document.querySelectorAll('[data-paper-rating]').forEach(button => {
     button.addEventListener('click', () => ratePaper(paper, button.dataset.paperRating));
   });
@@ -317,6 +339,7 @@ function exportLikedPapers() {
       liked: Boolean(entry.liked),
       status: entry.status || '',
       rating: Number(entry.rating || 0),
+      notInterested: Boolean(entry.notInterested),
       updated_at: entry.updated_at || ''
     }));
   const positivePapers = feedback
@@ -430,6 +453,7 @@ function feedbackTagsForEntry(entry) {
   const tags = ['daily_arxiv_feedback'];
   if (entry.liked) tags.push('daily_arxiv_liked');
   if (Number(entry.rating || 0) >= 4) tags.push(`daily_arxiv_rating_${Number(entry.rating)}`);
+  if (entry.notInterested) tags.push('daily_arxiv_not_interested');
   return tags;
 }
 
@@ -462,11 +486,12 @@ async function syncPersonalFeedbackToZotero(paper, entry, silent = false) {
   const config = getZoteroConfig();
   if (!config.apiKey || !config.libraryId || !paper || !paper.id) return;
   const positive = Boolean(entry.liked || Number(entry.rating || 0) >= 4);
+  const actionable = positive || Boolean(entry.notInterested);
   const endpoint = `https://api.zotero.org/${config.libraryType || 'users'}/${config.libraryId}/items`;
   try {
     await verifyZoteroConfig(config);
     const existing = await findZoteroPaper(endpoint, config, paper);
-    if (!existing && !positive) return;
+    if (!existing && !actionable) return;
 
     let itemKey = existing && (existing.key || (existing.data && existing.data.key));
     if (!existing) {
@@ -483,9 +508,10 @@ async function syncPersonalFeedbackToZotero(paper, entry, silent = false) {
       const retainedTags = (data.tags || []).filter(tag =>
         tag && tag.tag && !String(tag.tag).startsWith('daily_arxiv_feedback') &&
         !String(tag.tag).startsWith('daily_arxiv_liked') &&
-        !String(tag.tag).startsWith('daily_arxiv_rating_')
+        !String(tag.tag).startsWith('daily_arxiv_rating_') &&
+        !String(tag.tag).startsWith('daily_arxiv_not_interested')
       );
-      const feedbackTags = positive ? feedbackTagsForEntry(entry).map(tag => ({ tag })) : [];
+      const feedbackTags = actionable ? feedbackTagsForEntry(entry).map(tag => ({ tag })) : [];
       const collections = Array.from(new Set([...(data.collections || []), ...(config.collectionKey ? [config.collectionKey] : [])]));
       const response = await fetch(`${endpoint}/${itemKey}`, {
         method: 'PATCH',
@@ -509,7 +535,7 @@ async function syncPendingPersonalFeedback() {
   const config = getZoteroConfig();
   if (!config.apiKey || !config.libraryId) return;
   const entries = Object.values(getPersonalLibrary()).filter(entry =>
-    entry && entry.paper && (entry.liked || Number(entry.rating || 0) >= 4)
+    entry && entry.paper && (entry.liked || Number(entry.rating || 0) >= 4 || entry.notInterested)
   );
   for (const entry of entries) {
     await syncPersonalFeedbackToZotero(entry.paper, entry, true);
@@ -1400,7 +1426,7 @@ async function loadPapersByDate(date) {
   
   try {
     const selectedLanguage = selectLanguageForDate(date);
-    const response = await fetch(`data/${date}_AI_enhanced_${selectedLanguage}.jsonl`);
+    const response = await fetch(`data/${date}_AI_enhanced_${selectedLanguage}.jsonl`, { cache: 'no-store' });
     if (!response.ok) {
       if (response.status === 404) {
         container.innerHTML = `
@@ -1457,7 +1483,7 @@ async function loadTopPapers(mode = 'year') {
   `;
   
   try {
-    const response = await fetch(`data/${config.file}`);
+    const response = await fetch(`data/${config.file}`, { cache: 'no-store' });
     if (!response.ok) {
       throw new Error(`HTTP ${response.status}`);
     }
@@ -1490,6 +1516,20 @@ async function loadTopPapers(mode = 'year') {
 
 function loadTop100Papers() {
   return loadTopPapers('year');
+}
+
+function normalizedRecommendation(paper) {
+  const recommendation = paper.recommendation && typeof paper.recommendation === 'object'
+    ? { ...paper.recommendation }
+    : {};
+  const selection = paper.selection && typeof paper.selection === 'object' ? paper.selection : {};
+  if (!recommendation.tier && selection.tier) recommendation.tier = selection.tier;
+  if (!recommendation.mandatory && selection.mandatory) recommendation.mandatory = true;
+  if ((!recommendation.score_breakdown || !recommendation.score_breakdown.length) && selection.adjustments) {
+    recommendation.score_breakdown = selection.adjustments;
+  }
+  if (!recommendation.score && selection.score) recommendation.score = selection.score;
+  return Object.keys(recommendation).length ? recommendation : null;
 }
 
 function parseJsonlData(jsonlText, date) {
@@ -1529,7 +1569,7 @@ function parseJsonlData(jsonlText, date) {
         abstractZh: paper.artifacts && paper.artifacts.abstract_zh ? paper.artifacts.abstract_zh : '',
         conclusionZh: paper.artifacts && paper.artifacts.conclusion_zh ? paper.artifacts.conclusion_zh : '',
         figures: paper.artifacts && Array.isArray(paper.artifacts.figures) ? paper.artifacts.figures : [],
-        recommendation: paper.recommendation || null
+        recommendation: normalizedRecommendation(paper)
       });
     } catch (error) {
       console.error('解析JSON行失败:', error, line);
@@ -1850,6 +1890,7 @@ function renderPapers() {
     const recommendationStars = renderStars(recommendation.stars || 1);
     const recommendationReason = recommendation.reason || '暂无个性化推荐说明。';
     const recommendationClass = recommendationScore >= 80 ? 'high' : recommendationScore >= 50 ? 'medium' : 'low';
+    const mandatoryBadge = recommendation.mandatory ? '<span class="must-read-inline">强透镜必读</span>' : '';
     const personalEntry = getPersonalEntry(paper) || {};
     const personalRating = Number(personalEntry.rating || 0);
     
@@ -1880,6 +1921,7 @@ function renderPapers() {
       ${paper.isMatched ? '<div class="match-badge" title="匹配您的搜索条件"></div>' : ''}
       <div class="paper-card-header">
         <div class="recommendation-strip ${recommendationClass}" title="${recommendationReason}">
+          ${mandatoryBadge}
           <span class="recommendation-stars">${recommendationStars}</span>
           <span class="recommendation-score">${recommendationScore}/100</span>
         </div>
@@ -2015,16 +2057,20 @@ function showPaperDetails(paper, paperIndex) {
   const matchedTopicsHtml = matchedTopics.length > 0
     ? `<p><strong>Matched profile: </strong>${matchedTopics.join(', ')}</p>`
     : '';
+  const scoreBreakdownHtml = renderScoreBreakdown(recommendation);
+  const mustReadHtml = recommendation.mandatory ? '<span class="must-read-inline">强透镜必读 · 永不被每日上限过滤</span>' : '';
   
   const modalContent = `
     <div class="paper-details ${matchedPaperClass}">
       <div class="recommendation-panel">
         <div class="recommendation-panel-score">
+          ${mustReadHtml}
           <span class="recommendation-stars">${recommendationStars}</span>
           <span>${recommendationScore}/100</span>
         </div>
         <p>${recommendationReason}</p>
         ${matchedTopicsHtml}
+        ${scoreBreakdownHtml}
       </div>
       ${renderPersonalPanel(paper)}
       <p><strong>Authors: </strong>${highlightedAuthors}</p>

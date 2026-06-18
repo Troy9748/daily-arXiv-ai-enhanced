@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Dict, List, Set
 
 
-RECOMMEND_PROMPT_VERSION = "recommend-v2-author-weighted"
+RECOMMEND_PROMPT_VERSION = "recommend-v3-explicit-research-policy"
 ARTIFACT_PROMPT_VERSION = "paper-artifacts-v4-caption-math"
 
 

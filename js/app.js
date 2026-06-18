@@ -17,6 +17,7 @@ let previousActiveKeywords = null; // 文本搜索激活时，暂存之前的关
 let previousActiveAuthors = null; // 文本搜索激活时，暂存之前的作者激活集合
 let isTop100Mode = false; // 标记当前是否处于历史高分推荐模式
 let currentTopListMode = null; // 'year' | 'month' | 'week'
+const cleanFigureCaptionCache = new Map();
 
 const TOP_LISTS = {
   year: {
@@ -38,6 +39,7 @@ const TOP_LISTS = {
 
 const LIKED_PAPERS_KEY = 'dailyArxivLikedPapers';
 const ZOTERO_CONFIG_KEY = 'dailyArxivZoteroConfig';
+const PERSONAL_LIBRARY_KEY = 'dailyArxivPersonalLibrary';
 const TEX_MATHCHAR_MAP = {
   314: '.',
   28721: '1',
@@ -82,9 +84,120 @@ function paperLikeId(paper) {
   return paper && (paper.id || paper.url || paper.title);
 }
 
-function isPaperLiked(paper) {
+function personalPaperSnapshot(paper) {
+  return {
+    id: paper.id,
+    title: paper.title,
+    url: paper.url,
+    authors: paper.authors,
+    category: paper.category,
+    allCategories: paper.allCategories,
+    summary: paper.summary,
+    details: paper.details,
+    date: paper.date,
+    motivation: paper.motivation,
+    method: paper.method,
+    result: paper.result,
+    conclusion: paper.conclusion,
+    abstractZh: paper.abstractZh,
+    conclusionZh: paper.conclusionZh,
+    figures: paper.figures,
+    recommendation: paper.recommendation
+  };
+}
+
+function getPersonalLibrary() {
+  let library = {};
+  try {
+    library = JSON.parse(localStorage.getItem(PERSONAL_LIBRARY_KEY) || '{}');
+  } catch (error) {
+    console.error('读取个人文献状态失败:', error);
+  }
+  if (!library || Array.isArray(library) || typeof library !== 'object') library = {};
+
+  let migrated = false;
+  getLikedPapers().forEach(paper => {
+    const id = paperLikeId(paper);
+    if (!id) return;
+    if (!library[id]) {
+      library[id] = { paper: personalPaperSnapshot(paper), liked: true, status: '', rating: 0, note: '' };
+      migrated = true;
+    } else if (!library[id].liked) {
+      library[id].liked = true;
+      migrated = true;
+    }
+  });
+  if (migrated) localStorage.setItem(PERSONAL_LIBRARY_KEY, JSON.stringify(library));
+  return library;
+}
+
+function savePersonalLibrary(library) {
+  localStorage.setItem(PERSONAL_LIBRARY_KEY, JSON.stringify(library));
+  const likedPapers = Object.values(library)
+    .filter(entry => entry && entry.liked && entry.paper)
+    .map(entry => ({ ...entry.paper, liked_at: entry.liked_at || entry.updated_at }));
+  saveLikedPapers(likedPapers);
+}
+
+function getPersonalEntry(paper) {
   const id = paperLikeId(paper);
-  return Boolean(id && getLikedPapers().some(item => paperLikeId(item) === id));
+  return id ? getPersonalLibrary()[id] || null : null;
+}
+
+function updatePersonalEntry(paper, changes) {
+  const id = paperLikeId(paper);
+  if (!id) return null;
+  const library = getPersonalLibrary();
+  const previous = library[id] || { liked: false, status: '', rating: 0, note: '' };
+  const next = {
+    ...previous,
+    ...changes,
+    paper: { ...(previous.paper || {}), ...personalPaperSnapshot(paper) },
+    updated_at: new Date().toISOString()
+  };
+  if (next.status === 'read') next.wantToRead = false;
+  library[id] = next;
+  savePersonalLibrary(library);
+  if (Object.prototype.hasOwnProperty.call(changes, 'liked') || Object.prototype.hasOwnProperty.call(changes, 'rating')) {
+    syncPersonalFeedbackToZotero(paper, next);
+  }
+  return next;
+}
+
+function getPersonalCategoryPapers(category) {
+  return Object.values(getPersonalLibrary())
+    .filter(entry => {
+      if (!entry || !entry.paper) return false;
+      if (category === 'liked') return Boolean(entry.liked);
+      if (category === 'want') return entry.status === 'want';
+      if (category === 'read') return entry.status === 'read';
+      if (category.startsWith('rating-')) return Number(entry.rating || 0) === Number(category.split('-')[1]);
+      return false;
+    })
+    .map(entry => ({
+      ...entry.paper,
+      authors: Array.isArray(entry.paper.authors) ? entry.paper.authors.join(', ') : entry.paper.authors,
+      category: entry.paper.category || entry.paper.allCategories || [],
+      personalState: entry
+    }));
+}
+
+function getPersonalCategoryCounts() {
+  const entries = Object.values(getPersonalLibrary()).filter(entry => entry && entry.paper);
+  const counts = {
+    liked: entries.filter(entry => entry.liked).length,
+    want: entries.filter(entry => entry.status === 'want').length,
+    read: entries.filter(entry => entry.status === 'read').length
+  };
+  for (let rating = 1; rating <= 5; rating += 1) {
+    counts[`rating-${rating}`] = entries.filter(entry => Number(entry.rating || 0) === rating).length;
+  }
+  return counts;
+}
+
+function isPaperLiked(paper) {
+  const entry = getPersonalEntry(paper);
+  return Boolean(entry && entry.liked);
 }
 
 function paperToLikedPayload(paper) {
@@ -113,23 +226,112 @@ function updateLikeButton(paper) {
 function toggleCurrentPaperLike() {
   const paper = currentModalPaper || currentFilteredPapers[currentPaperIndex];
   if (!paper) return;
-  const id = paperLikeId(paper);
-  const liked = getLikedPapers();
-  const existing = liked.findIndex(item => paperLikeId(item) === id);
-  if (existing >= 0) {
-    liked.splice(existing, 1);
-  } else {
-    liked.unshift(paperToLikedPayload(paper));
-  }
-  saveLikedPapers(liked);
+  const entry = getPersonalEntry(paper);
+  updatePersonalEntry(paper, { liked: !(entry && entry.liked), liked_at: new Date().toISOString() });
   updateLikeButton(paper);
+  refreshPersonalViews();
+}
+
+function togglePaperWant(paper) {
+  const entry = getPersonalEntry(paper);
+  updatePersonalEntry(paper, { status: entry && entry.status === 'want' ? '' : 'want' });
+  refreshPersonalViews();
+  updatePersonalControls(paper);
+}
+
+function togglePaperRead(paper) {
+  const entry = getPersonalEntry(paper);
+  updatePersonalEntry(paper, { status: entry && entry.status === 'read' ? '' : 'read' });
+  refreshPersonalViews();
+  updatePersonalControls(paper);
+}
+
+function ratePaper(paper, rating) {
+  updatePersonalEntry(paper, { rating: Math.max(0, Math.min(5, Number(rating) || 0)) });
+  refreshPersonalViews();
+  updatePersonalControls(paper);
+}
+
+function savePaperNote(paper) {
+  const note = document.getElementById('paperReadingNote');
+  if (!note) return;
+  updatePersonalEntry(paper, { note: note.value.trim() });
+  const button = document.getElementById('savePaperNote');
+  if (button) {
+    button.textContent = '已保存';
+    setTimeout(() => { button.textContent = '保存备注'; }, 1200);
+  }
+  refreshPersonalViews(false);
+}
+
+function updatePersonalControls(paper) {
+  const entry = getPersonalEntry(paper) || {};
+  const wantButton = document.getElementById('wantToReadButton');
+  const readButton = document.getElementById('markReadButton');
+  if (wantButton) wantButton.classList.toggle('active', entry.status === 'want');
+  if (readButton) readButton.classList.toggle('active', entry.status === 'read');
+  document.querySelectorAll('[data-paper-rating]').forEach(button => {
+    button.classList.toggle('active', Number(button.dataset.paperRating) <= Number(entry.rating || 0));
+  });
+}
+
+function refreshPersonalViews(refreshPapers = true) {
+  renderCategoryFilter(getAllCategories(paperData));
+  if (refreshPapers) renderPapers();
+}
+
+function renderPersonalPanel(paper) {
+  const entry = getPersonalEntry(paper) || {};
+  const rating = Number(entry.rating || 0);
+  const stars = [1, 2, 3, 4, 5].map(value =>
+    `<button type="button" class="personal-rating-star ${value <= rating ? 'active' : ''}" data-paper-rating="${value}" title="${value} star">★</button>`
+  ).join('');
+  return `
+    <section class="personal-paper-panel">
+      <div class="personal-status-controls">
+        <button id="wantToReadButton" type="button" class="personal-status-button ${entry.status === 'want' ? 'active' : ''}">想看</button>
+        <button id="markReadButton" type="button" class="personal-status-button ${entry.status === 'read' ? 'active' : ''}">已看</button>
+        <div class="personal-rating" aria-label="Personal rating">${stars}</div>
+      </div>
+      <label class="reading-note-label" for="paperReadingNote">阅读备注</label>
+      <textarea id="paperReadingNote" class="reading-note-input" rows="4">${escapeAcademicText(entry.note || '')}</textarea>
+      <button id="savePaperNote" type="button" class="save-note-button">保存备注</button>
+    </section>
+  `;
+}
+
+function bindPersonalPanel(paper) {
+  document.getElementById('wantToReadButton')?.addEventListener('click', () => togglePaperWant(paper));
+  document.getElementById('markReadButton')?.addEventListener('click', () => togglePaperRead(paper));
+  document.querySelectorAll('[data-paper-rating]').forEach(button => {
+    button.addEventListener('click', () => ratePaper(paper, button.dataset.paperRating));
+  });
+  document.getElementById('savePaperNote')?.addEventListener('click', () => savePaperNote(paper));
 }
 
 function exportLikedPapers() {
+  const feedback = Object.values(getPersonalLibrary())
+    .filter(entry => entry && entry.paper)
+    .map(entry => ({
+      paper: entry.paper,
+      liked: Boolean(entry.liked),
+      status: entry.status || '',
+      rating: Number(entry.rating || 0),
+      updated_at: entry.updated_at || ''
+    }));
+  const positivePapers = feedback
+    .filter(entry => entry.liked || entry.rating >= 4)
+    .map(entry => ({
+      ...entry.paper,
+      liked: entry.liked,
+      rating: entry.rating,
+      status: entry.status
+    }));
   const payload = {
-    version: 1,
+    version: 2,
     exported_at: new Date().toISOString(),
-    papers: getLikedPapers()
+    papers: positivePapers,
+    feedback
   };
   const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   const url = URL.createObjectURL(blob);
@@ -154,7 +356,8 @@ function promptZoteroConfig() {
   const current = getZoteroConfig();
   const apiKey = prompt('Zotero API Key（只保存在本浏览器 localStorage）', current.apiKey || '');
   if (!apiKey) return null;
-  const libraryType = prompt('Zotero library type: users 或 groups', current.libraryType || 'users') || 'users';
+  const libraryTypeInput = prompt('Zotero library type: users 或 groups', current.libraryType || 'users') || 'users';
+  const libraryType = libraryTypeInput.trim().toLowerCase() === 'groups' ? 'groups' : 'users';
   const libraryId = prompt('Zotero user ID 或 group ID', current.libraryId || '');
   if (!libraryId) return null;
   const collectionKey = prompt('daily_arxiv collection key（可留空则保存到库根目录）', current.collectionKey || '') || '';
@@ -163,11 +366,154 @@ function promptZoteroConfig() {
   return config;
 }
 
+function zoteroTargetLabel(config) {
+  return `${config.libraryType || 'users'}/${config.libraryId}` +
+    (config.collectionKey ? `，collection ${config.collectionKey}` : '，库根目录');
+}
+
+async function verifyZoteroConfig(config) {
+  const response = await fetch('https://api.zotero.org/keys/current', {
+    headers: { 'Zotero-API-Key': config.apiKey }
+  });
+  if (!response.ok) throw new Error(`API Key 验证失败（HTTP ${response.status}）`);
+  const keyInfo = await response.json();
+  if ((config.libraryType || 'users') === 'users' && String(keyInfo.userID || '') !== String(config.libraryId)) {
+    throw new Error(`配置的 user ID ${config.libraryId} 与该 API Key 所属 user ID ${keyInfo.userID || '未知'} 不一致`);
+  }
+  return keyInfo;
+}
+
+function zoteroFailureMessage(failure) {
+  if (!failure) return '';
+  if (typeof failure === 'string') return failure;
+  return failure.message || failure.error || JSON.stringify(failure);
+}
+
 function zoteroCreators(authors) {
   return String(authors || '').split(',').map(name => name.trim()).filter(Boolean).map(name => ({
     creatorType: 'author',
     name
   }));
+}
+
+function buildZoteroPaperItem(paper, config, extraTags = []) {
+  const arxivId = paper.id || '';
+  const pdfUrl = paper.url ? paper.url.replace('/abs/', '/pdf/') : '';
+  const item = {
+    itemType: 'journalArticle',
+    title: paper.title || '',
+    creators: zoteroCreators(paper.authors),
+    abstractNote: paper.details || paper.summary || '',
+    url: paper.url || '',
+    publicationTitle: 'arXiv',
+    archive: 'arXiv',
+    archiveLocation: arxivId,
+    extra: `arXiv: ${arxivId}\nPDF: ${pdfUrl}\nDaily arXiv score: ${getRecommendationScore(paper)}/100`,
+    tags: [{ tag: 'daily_arxiv' }, { tag: 'arXiv' }, ...extraTags.map(tag => ({ tag }))]
+  };
+  if (config.collectionKey) item.collections = [config.collectionKey];
+  return item;
+}
+
+function parseZoteroWriteResult(result) {
+  const failed = result && result.failed ? result.failed['0'] : null;
+  if (failed) throw new Error(`Zotero 拒绝创建条目：${zoteroFailureMessage(failed)}`);
+  const successful = result && result.successful ? result.successful['0'] : null;
+  const unchanged = result && result.unchanged ? result.unchanged['0'] : null;
+  const created = successful || unchanged;
+  const key = typeof created === 'string' ? created : created && created.key;
+  if (!key) throw new Error(`Zotero 未返回 item key：${JSON.stringify(result)}`);
+  return key;
+}
+
+function feedbackTagsForEntry(entry) {
+  const tags = ['daily_arxiv_feedback'];
+  if (entry.liked) tags.push('daily_arxiv_liked');
+  if (Number(entry.rating || 0) >= 4) tags.push(`daily_arxiv_rating_${Number(entry.rating)}`);
+  return tags;
+}
+
+function showFeedbackSyncStatus(message, isError = false) {
+  const existing = document.getElementById('feedbackSyncStatus');
+  if (existing) existing.remove();
+  const status = document.createElement('div');
+  status.id = 'feedbackSyncStatus';
+  status.className = `feedback-sync-status ${isError ? 'error' : ''}`;
+  status.textContent = message;
+  document.body.appendChild(status);
+  setTimeout(() => status.remove(), 3500);
+}
+
+async function findZoteroPaper(endpoint, config, paper) {
+  const query = encodeURIComponent(paper.id || paper.title || '');
+  const response = await fetch(`${endpoint}?format=json&q=${query}&qmode=everything&limit=25`, {
+    headers: { 'Zotero-API-Key': config.apiKey }
+  });
+  if (!response.ok) throw new Error(`Zotero 查询失败（HTTP ${response.status}）`);
+  const items = await response.json();
+  return items.find(item => {
+    const data = item.data || item;
+    return String(data.archiveLocation || '') === String(paper.id || '') ||
+      String(data.extra || '').includes(`arXiv: ${paper.id}`);
+  }) || null;
+}
+
+async function syncPersonalFeedbackToZotero(paper, entry, silent = false) {
+  const config = getZoteroConfig();
+  if (!config.apiKey || !config.libraryId || !paper || !paper.id) return;
+  const positive = Boolean(entry.liked || Number(entry.rating || 0) >= 4);
+  const endpoint = `https://api.zotero.org/${config.libraryType || 'users'}/${config.libraryId}/items`;
+  try {
+    await verifyZoteroConfig(config);
+    const existing = await findZoteroPaper(endpoint, config, paper);
+    if (!existing && !positive) return;
+
+    let itemKey = existing && (existing.key || (existing.data && existing.data.key));
+    if (!existing) {
+      const item = buildZoteroPaperItem(paper, config, feedbackTagsForEntry(entry));
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'Zotero-API-Key': config.apiKey },
+        body: JSON.stringify([item])
+      });
+      if (!response.ok) throw new Error(`Zotero 创建失败（HTTP ${response.status}）`);
+      itemKey = parseZoteroWriteResult(await response.json());
+    } else {
+      const data = existing.data || existing;
+      const retainedTags = (data.tags || []).filter(tag =>
+        tag && tag.tag && !String(tag.tag).startsWith('daily_arxiv_feedback') &&
+        !String(tag.tag).startsWith('daily_arxiv_liked') &&
+        !String(tag.tag).startsWith('daily_arxiv_rating_')
+      );
+      const feedbackTags = positive ? feedbackTagsForEntry(entry).map(tag => ({ tag })) : [];
+      const collections = Array.from(new Set([...(data.collections || []), ...(config.collectionKey ? [config.collectionKey] : [])]));
+      const response = await fetch(`${endpoint}/${itemKey}`, {
+        method: 'PATCH',
+        headers: {
+          'Content-Type': 'application/json',
+          'Zotero-API-Key': config.apiKey,
+          'If-Unmodified-Since-Version': String(existing.version || data.version || 0)
+        },
+        body: JSON.stringify({ tags: [...retainedTags, ...feedbackTags], collections })
+      });
+      if (!response.ok) throw new Error(`Zotero 反馈更新失败（HTTP ${response.status}）`);
+    }
+    if (!silent) showFeedbackSyncStatus('推荐反馈已同步到 Zotero');
+  } catch (error) {
+    console.error('Zotero feedback sync failed:', error);
+    if (!silent) showFeedbackSyncStatus(`Zotero 同步失败：${error.message}`, true);
+  }
+}
+
+async function syncPendingPersonalFeedback() {
+  const config = getZoteroConfig();
+  if (!config.apiKey || !config.libraryId) return;
+  const entries = Object.values(getPersonalLibrary()).filter(entry =>
+    entry && entry.paper && (entry.liked || Number(entry.rating || 0) >= 4)
+  );
+  for (const entry of entries) {
+    await syncPersonalFeedbackToZotero(entry.paper, entry, true);
+  }
 }
 
 function normalizeFigureImageUrl(url) {
@@ -180,7 +526,9 @@ function normalizeFigureImageUrl(url) {
 }
 
 function normalizeAcademicText(value) {
-  return String(value || '')
+  let text = String(value || '').replace(/[\u200B-\u200D\u2061]/g, ' ');
+  const hasLowLevelTex = /\\mathchar\s+\d+/.test(text);
+  text = text
     .replace(/\\mathchar\s+(\d+)\\relax/g, (match, rawCode) => {
       const code = Number(rawCode);
       if (TEX_MATHCHAR_MAP[code]) return TEX_MATHCHAR_MAP[code];
@@ -189,7 +537,6 @@ function normalizeAcademicText(value) {
       return /[a-zA-Z0-9]/.test(character) ? character : '';
     })
     .replace(/\\delimiter\s+68408078/g, '/')
-    .replace(/\\(?:mathrm|rm)\s*/g, '')
     .replace(/\\relax/g, '')
     .replace(/μ\s+μ\s*m\b/g, 'μm')
     .replace(/μ\s+m\b/g, 'μm')
@@ -198,8 +545,9 @@ function normalizeAcademicText(value) {
     .replace(/\bL\s+PAH\s*\/\s*L\s+IR\s+(?=L_\{PAH\}\/L_\{IR\})/gi, '')
     .replace(/\bL\s+7\.7\s*\/\s*L\s+IR\s+(?=L_\{7\.7\}\/L_\{IR\})/gi, '')
     .replace(/\s+_/g, '_')
-    .replace(/\s+/g, ' ')
-    .trim();
+    .replace(/\s+/g, ' ');
+  if (hasLowLevelTex) text = text.replace(/\\(?:mathrm|rm)\s*/g, '');
+  return text.trim();
 }
 
 function escapeAcademicText(value) {
@@ -211,12 +559,71 @@ function escapeAcademicText(value) {
     .replace(/'/g, '&#039;');
 }
 
-function formatAcademicText(value) {
-  return escapeAcademicText(normalizeAcademicText(value))
+function formatPlainAcademicText(value) {
+  const mathAtom = 'A-Za-z0-9\\u0370-\\u03FF⋆⊙';
+  const subscriptPattern = new RegExp(`_([${mathAtom}]+(?:\\.[${mathAtom}]+)*|[\\u4E00-\\u9FFF]+)`, 'g');
+  const superscriptPattern = new RegExp(`\\^([${mathAtom}+-]+(?:\\.[${mathAtom}+-]+)*|[\\u4E00-\\u9FFF]+)`, 'g');
+  return escapeAcademicText(value)
     .replace(/_\{([^{}]+)\}/g, '<sub>$1</sub>')
     .replace(/\^\{([^{}]+)\}/g, '<sup>$1</sup>')
-    .replace(/_([a-zA-Z0-9]+)/g, '<sub>$1</sub>')
-    .replace(/\^([a-zA-Z0-9+-]+)/g, '<sup>$1</sup>');
+    .replace(subscriptPattern, '<sub>$1</sub>')
+    .replace(superscriptPattern, '<sup>$1</sup>');
+}
+
+function formatAcademicText(value) {
+  const normalized = normalizeAcademicText(value);
+  const mathSegmentPattern = /(\\\([\s\S]*?\\\)|\\\[[\s\S]*?\\\]|\$\$[\s\S]*?\$\$|\$[^$\n]+?\$)/g;
+  return normalized
+    .split(mathSegmentPattern)
+    .map((segment, index) => index % 2 ? escapeAcademicText(segment) : formatPlainAcademicText(segment))
+    .join('');
+}
+
+function typesetAcademicMath(elements, attempt = 0) {
+  if (!window.MathJax || typeof window.MathJax.typesetPromise !== 'function') {
+    if (attempt < 20) setTimeout(() => typesetAcademicMath(elements, attempt + 1), 250);
+    return;
+  }
+  if (typeof window.MathJax.typesetClear === 'function') window.MathJax.typesetClear(elements);
+  window.MathJax.typesetPromise(elements).catch(error => console.error('MathJax rendering failed:', error));
+}
+
+function cleanCaptionFromElement(captionElement) {
+  const clone = captionElement.cloneNode(true);
+  clone.querySelectorAll('math').forEach(math => {
+    const tex = math.getAttribute('alttext') || math.textContent || '';
+    math.replaceWith(document.createTextNode(tex ? `\\(${tex}\\)` : ''));
+  });
+  return clone.textContent.replace(/\s+/g, ' ').trim();
+}
+
+async function refreshFigureCaptionsFromArxiv(paper) {
+  if (!paper || !paper.url || !Array.isArray(paper.figures) || paper.figures.length === 0) return;
+  const cacheKey = paper.id || paper.url;
+  let captions = cleanFigureCaptionCache.get(cacheKey);
+  if (!captions) {
+    try {
+      const htmlUrl = paper.url.replace('/abs/', '/html/');
+      const response = await fetch(htmlUrl);
+      if (!response.ok) return;
+      const doc = new DOMParser().parseFromString(await response.text(), 'text/html');
+      captions = Array.from(doc.querySelectorAll('figure figcaption')).map(cleanCaptionFromElement);
+      cleanFigureCaptionCache.set(cacheKey, captions);
+    } catch (error) {
+      console.warn('Unable to refresh arXiv figure captions:', error);
+      return;
+    }
+  }
+
+  captions.forEach((caption, index) => {
+    if (!paper.figures[index] || !caption) return;
+    paper.figures[index].caption_en = caption;
+    const element = document.querySelector(`.figure-caption-en[data-figure-caption-index="${index}"]`);
+    if (element) {
+      element.innerHTML = formatAcademicText(caption);
+      typesetAcademicMath([element]);
+    }
+  });
 }
 
 function showFigureViewer(figureIndex) {
@@ -239,6 +646,10 @@ function showFigureViewer(figureIndex) {
   source.href = imageUrl;
   viewer.classList.add('active');
   viewer.setAttribute('aria-hidden', 'false');
+  typesetAcademicMath([
+    document.getElementById('figureViewerCaptionZh'),
+    document.getElementById('figureViewerCaptionEn')
+  ]);
 }
 
 function closeFigureViewer() {
@@ -329,35 +740,24 @@ async function addCurrentPaperToZotero() {
     return;
   }
 
-  const confirmed = confirm(`将这篇 arXiv 论文添加到 Zotero？\n\n${paper.title}`);
-  if (!confirmed) return;
-
   let config = getZoteroConfig();
   if (!config.apiKey || !config.libraryId) {
     config = promptZoteroConfig();
   }
   if (!config) return;
 
-  const arxivId = paper.id || '';
-  const pdfUrl = paper.url ? paper.url.replace('/abs/', '/pdf/') : '';
-  const item = {
-    itemType: 'journalArticle',
-    title: paper.title || '',
-    creators: zoteroCreators(paper.authors),
-    abstractNote: paper.details || paper.summary || '',
-    url: paper.url || '',
-    publicationTitle: 'arXiv',
-    archive: 'arXiv',
-    archiveLocation: arxivId,
-    extra: `arXiv: ${arxivId}\nPDF: ${pdfUrl}\nDaily arXiv score: ${getRecommendationScore(paper)}/100`,
-    tags: [
-      { tag: 'daily_arxiv' },
-      { tag: 'arXiv' }
-    ]
-  };
-  if (config.collectionKey) {
-    item.collections = [config.collectionKey];
+  const useConfiguredTarget = confirm(
+    `Zotero 保存目标：${zoteroTargetLabel(config)}\n\n确定：继续添加\n取消：重新配置 Zotero`
+  );
+  if (!useConfiguredTarget) {
+    config = promptZoteroConfig();
+    if (!config) return;
   }
+
+  const confirmed = confirm(`将这篇 arXiv 论文添加到 ${zoteroTargetLabel(config)}？\n\n${paper.title}`);
+  if (!confirmed) return;
+
+  const item = buildZoteroPaperItem(paper, config);
 
   const endpoint = `https://api.zotero.org/${config.libraryType || 'users'}/${config.libraryId}/items`;
   const button = document.getElementById('zoteroAddButton');
@@ -366,6 +766,7 @@ async function addCurrentPaperToZotero() {
     button.classList.add('saving');
   }
   try {
+    await verifyZoteroConfig(config);
     const response = await fetch(endpoint, {
       method: 'POST',
       headers: {
@@ -379,8 +780,19 @@ async function addCurrentPaperToZotero() {
       throw new Error(`${response.status}: ${text}`);
     }
     const result = await response.json();
-    const createdKey = result && result.success ? Object.values(result.success)[0] : '';
-    alert(`已通过 Zotero Web API 添加论文。\n${createdKey ? `Item key: ${createdKey}` : ''}`);
+    const createdKey = parseZoteroWriteResult(result);
+
+    const verification = await fetch(`${endpoint}/${createdKey}`, {
+      headers: { 'Zotero-API-Key': config.apiKey }
+    });
+    if (!verification.ok) throw new Error(`条目创建后验证失败（HTTP ${verification.status}）`);
+
+    alert(
+      `已保存到 Zotero 云端。\n` +
+      `目标：${zoteroTargetLabel(config)}\n` +
+      `Item key：${createdKey}\n\n` +
+      `请在 Zotero 桌面端确认登录同一账号并执行同步。`
+    );
   } catch (error) {
     console.error('添加 Zotero 失败:', error);
     alert(`添加 Zotero 失败：${error.message}`);
@@ -565,6 +977,7 @@ document.addEventListener('DOMContentLoaded', () => {
   fetchGitHubStats();
   loadUserKeywords();
   loadUserAuthors();
+  syncPendingPersonalFeedback();
   
   fetchAvailableDates().then(() => {
     if (availableDates.length > 0) {
@@ -686,7 +1099,7 @@ function initEventListeners() {
         toggleDatePicker();
       }
     }
-    else if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
+    else if (!isInputFocused && (event.key === 'ArrowLeft' || event.key === 'ArrowRight')) {
       const paperModal = document.getElementById('paperModal');
       if (paperModal.classList.contains('active')) {
         event.preventDefault();
@@ -1156,14 +1569,33 @@ function renderCategoryFilter(categories) {
     const active = isTop100Mode && currentTopListMode === mode ? 'active' : '';
     return `<button class="category-button top-list-button ${active}" data-top-list="${mode}">🔥 ${config.shortLabel}</button>`;
   }).join('');
+  const personalCounts = getPersonalCategoryCounts();
+  const personalDefinitions = [
+    ['liked', '喜欢'],
+    ['want', '想看'],
+    ['read', '已看'],
+    ['rating-5', '5★'],
+    ['rating-4', '4★'],
+    ['rating-3', '3★'],
+    ['rating-2', '2★'],
+    ['rating-1', '1★']
+  ];
+  const personalButtons = personalDefinitions.map(([key, label]) => {
+    const active = currentCategory === `personal:${key}` ? 'active' : '';
+    return `<button class="category-button personal-category-button ${active}" data-personal-filter="${key}">${label}<span class="category-count">${personalCounts[key] || 0}</span></button>`;
+  }).join('');
 
   container.innerHTML = `
     <button class="category-button ${(!isTop100Mode && currentCategory === 'all') ? 'active' : ''}" data-category="all">All<span class="category-count">${totalPapers}</span></button>
     ${topButtons}
+    ${personalButtons}
   `;
   
   container.querySelectorAll('[data-top-list]').forEach(button => {
     button.addEventListener('click', () => loadTopPapers(button.dataset.topList || 'year'));
+  });
+  container.querySelectorAll('[data-personal-filter]').forEach(button => {
+    button.addEventListener('click', () => filterPersonalCategory(button.dataset.personalFilter));
   });
   
   sortedCategories.forEach(category => {
@@ -1184,6 +1616,16 @@ function renderCategoryFilter(categories) {
     currentTopListMode = null;
     filterByCategory('all');
   });
+}
+
+function filterPersonalCategory(category) {
+  isTop100Mode = false;
+  currentTopListMode = null;
+  currentCategory = `personal:${category}`;
+  renderCategoryFilter(getAllCategories(paperData));
+  renderFilterTags();
+  renderPapers();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
 function filterByCategory(category) {
@@ -1231,7 +1673,9 @@ function renderPapers() {
   container.className = `paper-container ${currentView === 'list' ? 'list-view' : ''}`;
   
   let papers = [];
-  if (currentCategory === 'all') {
+  if (currentCategory.startsWith('personal:')) {
+    papers = getPersonalCategoryPapers(currentCategory.slice('personal:'.length));
+  } else if (currentCategory === 'all') {
     const { sortedCategories } = getAllCategories(paperData);
     sortedCategories.forEach(category => {
       if (paperData[category]) {
@@ -1406,6 +1850,8 @@ function renderPapers() {
     const recommendationStars = renderStars(recommendation.stars || 1);
     const recommendationReason = recommendation.reason || '暂无个性化推荐说明。';
     const recommendationClass = recommendationScore >= 80 ? 'high' : recommendationScore >= 50 ? 'medium' : 'low';
+    const personalEntry = getPersonalEntry(paper) || {};
+    const personalRating = Number(personalEntry.rating || 0);
     
     const titleSummaryTerms = [];
     if (activeKeywords.length > 0) {
@@ -1448,6 +1894,11 @@ function renderPapers() {
         <p class="recommendation-reason">${recommendationReason}</p>
         <div class="paper-card-footer">
           <span class="paper-card-date">${formatDate(paper.date)}</span>
+          <div class="paper-card-personal-actions">
+            <button type="button" class="paper-card-action ${personalEntry.status === 'want' ? 'active' : ''}" data-card-action="want" title="想看">＋</button>
+            <button type="button" class="paper-card-action ${personalEntry.status === 'read' ? 'active' : ''}" data-card-action="read" title="已看">✓</button>
+            ${personalRating ? `<span class="paper-card-personal-rating" title="个人评分">${'★'.repeat(personalRating)}</span>` : ''}
+          </div>
           <span class="paper-card-link">Details</span>
         </div>
       </div>
@@ -1456,6 +1907,14 @@ function renderPapers() {
     paperCard.addEventListener('click', () => {
       currentPaperIndex = index;
       showPaperDetails(paper, index + 1);
+    });
+    paperCard.querySelector('[data-card-action="want"]').addEventListener('click', event => {
+      event.stopPropagation();
+      togglePaperWant(paper);
+    });
+    paperCard.querySelector('[data-card-action="read"]').addEventListener('click', event => {
+      event.stopPropagation();
+      togglePaperRead(paper);
     });
     
     container.appendChild(paperCard);
@@ -1538,7 +1997,7 @@ function showPaperDetails(paper, paperIndex) {
             <h4>${label}</h4>
             ${image}
             ${captionZh ? `<p class="figure-caption-zh">${formatAcademicText(captionZh)}</p>` : ''}
-            ${captionEn ? `<p class="figure-caption-en">${formatAcademicText(captionEn)}</p>` : ''}
+            ${captionEn ? `<p class="figure-caption-en" data-figure-caption-index="${idx}">${formatAcademicText(captionEn)}</p>` : ''}
           </div>
         `;
       }).join('')
@@ -1567,6 +2026,7 @@ function showPaperDetails(paper, paperIndex) {
         <p>${recommendationReason}</p>
         ${matchedTopicsHtml}
       </div>
+      ${renderPersonalPanel(paper)}
       <p><strong>Authors: </strong>${highlightedAuthors}</p>
       <p><strong>Categories: </strong>${categoryDisplay}</p>
       <p><strong>Date: </strong>${formatDate(paper.date)}</p>
@@ -1624,6 +2084,8 @@ function showPaperDetails(paper, paperIndex) {
   `;
   
   document.getElementById('modalBody').innerHTML = modalContent;
+  bindPersonalPanel(paper);
+  typesetAcademicMath([document.getElementById('modalBody')]);
   document.getElementById('paperLink').href = paper.url;
   document.getElementById('pdfLink').href = paper.url.replace('abs', 'pdf');
   document.getElementById('htmlLink').href = paper.url.replace('abs', 'html');
@@ -1640,6 +2102,7 @@ function showPaperDetails(paper, paperIndex) {
   
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
+  refreshFigureCaptionsFromArxiv(paper);
 }
 
 function closeModal() {

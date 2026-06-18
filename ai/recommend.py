@@ -208,6 +208,13 @@ def item_to_reference(item: Dict) -> Dict:
         for tag in item.get("tags", [])
         if isinstance(tag, dict) and tag.get("tag")
     ]
+    feedback_weight = 1.0
+    if "daily_arxiv_liked" in tags:
+        feedback_weight = 3.0
+    for tag in tags:
+        match = re.fullmatch(r"daily_arxiv_rating_([1-5])", tag)
+        if match and int(match.group(1)) >= 4:
+            feedback_weight = max(feedback_weight, 2.0 + (int(match.group(1)) - 3))
     return {
         "title": item.get("title", ""),
         "authors": authors,
@@ -216,6 +223,7 @@ def item_to_reference(item: Dict) -> Dict:
         "publication": item.get("publicationTitle", ""),
         "date": item.get("date", ""),
         "dateModified": item.get("dateModified", ""),
+        "feedback_weight": feedback_weight,
     }
 
 
@@ -245,24 +253,28 @@ def build_profile(references: List[Dict]) -> Dict:
     for idx, ref in enumerate(references):
         title = normalize_text(ref.get("title"))
         abstract = normalize_text(ref.get("abstract"))
-        tags = [normalize_term(tag) for tag in ref.get("tags", []) if tag]
+        tags = [
+            normalize_term(tag) for tag in ref.get("tags", [])
+            if tag and not normalize_term(tag).startswith("daily_arxiv_")
+        ]
         authors = [normalize_author(author) for author in ref.get("authors", []) if author]
         recency_weight = max(0.0, 1.0 - idx / 80.0)
+        feedback_weight = max(1.0, float(ref.get("feedback_weight", 1.0)))
 
         for tag in tags:
             if is_informative_term(tag):
-                keyword_scores[tag] += 14
+                keyword_scores[tag] += 14 * feedback_weight
         for term in ngrams(tokenize(title), 1, 3):
             term = normalize_term(term)
             if is_informative_term(term):
-                keyword_scores[term] += 5 * term_multiplier(term)
+                keyword_scores[term] += 5 * term_multiplier(term) * feedback_weight
         for term in ngrams(tokenize(abstract), 1, 3):
             term = normalize_term(term)
             if is_informative_term(term):
-                keyword_scores[term] += 1.0 * term_multiplier(term)
+                keyword_scores[term] += 1.0 * term_multiplier(term) * feedback_weight
         for author in authors:
-            author_scores[author] += 1
-            recent_author_scores[author] += recency_weight
+            author_scores[author] += feedback_weight
+            recent_author_scores[author] += recency_weight * feedback_weight
 
     keywords = [
         {"term": term, "weight": round(weight, 3)}
@@ -308,16 +320,18 @@ def load_liked_references(path: str) -> List[Dict]:
     for paper in papers:
         if not isinstance(paper, dict):
             continue
-        references.append(
-            {
-                "title": paper.get("title", ""),
-                "authors": paper.get("authors", []),
-                "abstract": paper.get("summary") or paper.get("abstract") or paper.get("details", ""),
-                "tags": ["liked-paper", "daily-arxiv-like"],
-                "publication": "arXiv",
-                "date": paper.get("date", ""),
-            }
-        )
+        liked = bool(paper.get("liked", True))
+        rating = int(paper.get("rating") or 0)
+        feedback_weight = 1 + int(liked) + max(0, rating - 3)
+        reference = {
+            "title": paper.get("title", ""),
+            "authors": paper.get("authors", []),
+            "abstract": paper.get("summary") or paper.get("abstract") or paper.get("details", ""),
+            "tags": ["liked-paper", "daily-arxiv-like", f"personal-rating-{rating}"],
+            "publication": "arXiv",
+            "date": paper.get("date", ""),
+        }
+        references.extend(dict(reference) for _ in range(feedback_weight))
     return references
 
 

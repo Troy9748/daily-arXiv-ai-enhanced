@@ -515,6 +515,22 @@ header {
   color: white;
 }
 
+.personal-category-button {
+  border: 1px solid rgba(15, 118, 110, 0.25);
+  background: rgba(15, 118, 110, 0.07);
+  color: #0f766e;
+}
+
+.personal-category-button:hover {
+  background: rgba(15, 118, 110, 0.14);
+}
+
+.personal-category-button.active {
+  border-color: #0f766e;
+  background: #0f766e;
+  color: white;
+}
+
 /* 作者按钮样式 */
 .author-button {
   background-color: rgba(102, 126, 234, 0.08); /* primary tint */
@@ -753,6 +769,41 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.paper-card-personal-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: auto;
+}
+
+.paper-card-action {
+  width: 28px;
+  height: 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: transparent;
+  color: var(--text-secondary);
+  cursor: pointer;
+}
+
+.paper-card-action:hover,
+.paper-card-action.active {
+  border-color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+  color: #0f766e;
+}
+
+.paper-card-personal-rating {
+  color: var(--gold-color);
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .paper-card-date {
@@ -1524,6 +1575,115 @@ footer {
   gap: 10px;
   color: var(--text-primary);
   font-weight: 700;
+}
+
+.personal-paper-panel {
+  margin: 0 0 20px;
+  padding: 16px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.personal-status-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 14px;
+}
+
+.personal-status-button,
+.save-note-button {
+  min-height: 34px;
+  padding: 6px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg-color);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.personal-status-button:hover,
+.personal-status-button.active {
+  border-color: #0f766e;
+  background: rgba(15, 118, 110, 0.1);
+  color: #0f766e;
+}
+
+.feedback-sync-status {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 1600;
+  max-width: min(420px, calc(100vw - 40px));
+  padding: 10px 14px;
+  border: 1px solid rgba(15, 118, 110, 0.35);
+  border-radius: 6px;
+  background: #ecfdf5;
+  color: #065f46;
+  box-shadow: var(--shadow-md);
+  font-size: 13px;
+}
+
+.feedback-sync-status.error {
+  border-color: rgba(185, 28, 28, 0.35);
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.personal-rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  margin-left: 6px;
+}
+
+.personal-rating-star {
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  color: #cbd5e1;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.personal-rating-star:hover,
+.personal-rating-star.active {
+  color: var(--gold-color);
+}
+
+.reading-note-label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--text-secondary);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.reading-note-input {
+  width: 100%;
+  min-height: 96px;
+  resize: vertical;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background: var(--card-bg-color);
+  color: var(--text-primary);
+  font: inherit;
+  line-height: 1.5;
+}
+
+.reading-note-input:focus {
+  outline: 2px solid rgba(15, 118, 110, 0.22);
+  border-color: #0f766e;
+}
+
+.save-note-button {
+  margin-top: 8px;
+  border-color: #0f766e;
+  color: #0f766e;
 }
 
 .original-abstract {

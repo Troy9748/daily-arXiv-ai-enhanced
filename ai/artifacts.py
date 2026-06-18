@@ -22,7 +22,7 @@ if dotenv and os.path.exists(".env"):
     dotenv.load_dotenv()
 
 
-PROMPT_VERSION = "paper-artifacts-v3"
+PROMPT_VERSION = "paper-artifacts-v4-caption-math"
 
 TEX_MATHCHAR_MAP = {
     314: ".",
@@ -74,6 +74,12 @@ def normalize_tex_artifacts(text: str) -> str:
 
 
 def normalize_space(text: str) -> str:
+    def replace_math(match: re.Match) -> str:
+        attributes = match.group(1)
+        alt_match = re.search(r'alttext=["\'](.*?)["\']', attributes, flags=re.I | re.S)
+        return f" \\({html.unescape(alt_match.group(1))}\\) " if alt_match else " "
+
+    text = re.sub(r"<math\b([^>]*)>.*?</math>", replace_math, text or "", flags=re.I | re.S)
     text = re.sub(r"<[^>]+>", " ", text or "")
     text = html.unescape(text)
     text = normalize_tex_artifacts(text)
@@ -182,13 +188,18 @@ def call_llm_for_text(paper: Dict, conclusion_source: str, figures: List[Dict]) 
     }
     system_prompt = (
         "You translate and normalize academic paper metadata for a Chinese research webpage. "
-        "Be faithful, formal, and concise. Do not invent details."
+        "Be faithful, formal, and concise. Do not invent details. "
+        "Treat every mathematical expression, variable, unit, subscript, and superscript as immutable markup."
     )
     user_prompt = (
         "Return only valid JSON with keys: abstract_zh, conclusion_zh, figures. "
         "abstract_zh must be a faithful Chinese translation of the abstract. "
         "conclusion_zh should translate the paper conclusion if provided; otherwise translate the AI conclusion and say it is based on available summary. "
         "figures is a list preserving figure_label and image_url if present, with caption_zh translated from caption_en. "
+        "In every caption_zh, copy all mathematical and physical notation from caption_en exactly, including "
+        "TeX delimiters, backslashes, braces, underscores, carets, symbols, subscripts, and superscripts; "
+        "translate only the surrounding prose. Never flatten notation such as M_{BH}, L_7.7/L_{IR}, "
+        "A_V, or 10^{-5} into ordinary baseline text. "
         f"\n\nInput:\n{json.dumps(prompt_payload, ensure_ascii=False)}"
     )
     payload = {
@@ -307,9 +318,18 @@ def has_complete_artifacts(artifacts: Dict) -> bool:
     return bool(has_text_artifacts(artifacts) and isinstance(artifacts.get("figures"), list))
 
 
+def needs_caption_refresh(artifacts: Dict) -> bool:
+    return any(
+        "\\" in str(figure.get("caption_en", "")) and "\\(" not in str(figure.get("caption_en", ""))
+        for figure in artifacts.get("figures", [])
+        if isinstance(figure, dict)
+    )
+
+
 def enrich_paper(paper: Dict, cache: Dict[str, Dict], cache_path: str, max_figures: int) -> Dict:
     existing_artifacts = paper.get("artifacts") if isinstance(paper.get("artifacts"), dict) else {}
-    if has_complete_artifacts(existing_artifacts):
+    refresh_captions = has_complete_artifacts(existing_artifacts) and needs_caption_refresh(existing_artifacts)
+    if has_complete_artifacts(existing_artifacts) and not refresh_captions:
         return paper
 
     key = cache_key(paper)
@@ -326,6 +346,15 @@ def enrich_paper(paper: Dict, cache: Dict[str, Dict], cache_path: str, max_figur
     html_url = html_payload.get("url", "")
     conclusion_source = extract_conclusion_from_html(html_text)
     figures = extract_figures_from_html(html_text, html_url, max_figures)
+    if refresh_captions and figures:
+        existing_figures = existing_artifacts.get("figures", [])
+        merged_figures = []
+        for idx, figure in enumerate(figures):
+            existing = existing_figures[idx] if idx < len(existing_figures) and isinstance(existing_figures[idx], dict) else {}
+            merged_figures.append({**existing, **figure, "caption_zh": existing.get("caption_zh", "")})
+        paper["artifacts"] = {**existing_artifacts, "figures": merged_figures, "prompt_version": PROMPT_VERSION}
+        return paper
+
     artifacts = {**fallback_artifacts(paper, figures), **existing_artifacts}
     if "figures" not in existing_artifacts:
         artifacts["figures"] = figures

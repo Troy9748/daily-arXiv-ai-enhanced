@@ -8,7 +8,7 @@ from typing import Dict, List, Set
 
 
 RECOMMEND_PROMPT_VERSION = "recommend-v2-author-weighted"
-ARTIFACT_PROMPT_VERSION = "paper-artifacts-v3"
+ARTIFACT_PROMPT_VERSION = "paper-artifacts-v4-caption-math"
 
 
 def parse_args() -> argparse.Namespace:
@@ -28,7 +28,7 @@ def parse_args() -> argparse.Namespace:
     parser.add_argument(
         "--max-files",
         type=int,
-        default=int(os.environ.get("BACKFILL_MAX_FILES", "2") or "2"),
+        default=1,
         help="Maximum historical files to backfill. Use -1 for all outdated files.",
     )
     return parser.parse_args()
@@ -60,6 +60,12 @@ def needs_artifact_backfill(rows: List[Dict]) -> bool:
         if not str(artifacts.get("conclusion_zh", "")).strip():
             return True
         if not isinstance(artifacts.get("figures"), list):
+            return True
+        if any(
+            "\\" in str(figure.get("caption_en", "")) and "\\(" not in str(figure.get("caption_en", ""))
+            for figure in artifacts.get("figures", [])
+            if isinstance(figure, dict)
+        ):
             return True
     return False
 

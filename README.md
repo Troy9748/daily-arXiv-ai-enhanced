@@ -62,7 +62,7 @@ Otherwise, you can directly use this repo in https://dw-dengwei.github.io/daily-
 
 The daily workflow also refreshes historical recommendation lists for the recent year, month, and week. The web UI exposes these as Year 100, Month 20, and Week 10.
 
-Liked papers are stored in browser localStorage. Use the export button in the paper detail modal to download `liked_papers.json`; placing that file under `data/liked_papers.json` lets the daily recommender weight those liked papers in future scoring.
+Likes, reading status, personal ratings, and notes are stored in browser localStorage. When Zotero Web API settings are configured, liked and 4-5 star papers are automatically synchronized to the configured Zotero library with `daily_arxiv_*` feedback tags. The daily recommender reads those tags through the existing Zotero profile and increases topic and author weights automatically. Notes stay local and are never sent to Zotero or the recommendation model. The export button remains available as a backup and produces `liked_papers.json`.
 
 The `Z+` button in the paper detail modal calls the Zotero Web API from your browser. On first use, enter your Zotero API key, library type, library ID, and the `daily_arxiv` collection key. These values are stored only in browser localStorage. Do not use the browser Zotero Connector button for this action; that connector saves the current web page instead of the selected arXiv paper.
 

@@ -25,7 +25,7 @@
     },
     {
       "term": "gravitational lensing: strong",
-      "weight": 84
+      "weight": 84.0
     },
     {
       "term": "jwst",
@@ -33,7 +33,7 @@
     },
     {
       "term": "galaxies: elliptical and lenticular",
-      "weight": 70
+      "weight": 70.0
     },
     {
       "term": "magnetic fields",
@@ -125,7 +125,7 @@
     },
     {
       "term": "galaxies: fundamental parameters",
-      "weight": 28
+      "weight": 28.0
     },
     {
       "term": "molecular gas",
@@ -505,7 +505,7 @@
     },
     {
       "term": "high energy physics - phenomenology",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "enhanced subkiloparsec-scale star",
@@ -533,7 +533,7 @@
     },
     {
       "term": "general relativity and quantum cosmology",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "lens acs survey",
@@ -541,23 +541,23 @@
     },
     {
       "term": "cosmology: observations",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "distance scale",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "methods: data analysis",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "elliptical and lentic-",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "fundamental parameters",
-      "weight": 14
+      "weight": 14.0
     },
     {
       "term": "sl2s galaxy-scale lens",
@@ -568,804 +568,804 @@
     {
       "name": "tommaso treu",
       "weight": 8.637,
-      "count": 8
+      "count": 8.0
     },
     {
       "name": "g c jones",
       "weight": 7.65,
-      "count": 6
+      "count": 6.0
     },
     {
       "name": "m dessauges-zavadsky",
       "weight": 6.6,
-      "count": 6
+      "count": 6.0
     },
     {
       "name": "s fujimoto",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "m kohandel",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "a pallottini",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "a m koekemoer",
       "weight": 6.062,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "f rizzo",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "t treu",
       "weight": 5.463,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "enrique lopez-rodriguez",
       "weight": 6.237,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "l v e koopmans",
       "weight": 5.0,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "manuel aravena",
       "weight": 5.775,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "mark vogelsberger",
       "weight": 4.65,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "seiji fujimoto",
       "weight": 5.263,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "guido roberts-borsani",
       "weight": 4.625,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "m ouchi",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "k kohno",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "f valentino",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "c giménez-arteaga",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "y ao",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "d espada",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "m lee",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "g e magdis",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "a ferrara",
       "weight": 4.463,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "yoshinobu fudamoto",
       "weight": 4.45,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "rainer beck",
       "weight": 5.287,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "m aravena",
       "weight": 4.287,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "christopher c hayward",
       "weight": 4.787,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "desika narayanan",
       "weight": 4.787,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "avishai dekel",
       "weight": 4.0,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "s carniani",
       "weight": 4.225,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "r maiolino",
       "weight": 4.225,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "pablo g pérez-gonzález",
       "weight": 5.15,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "christopher j conselice",
       "weight": 3.65,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "gabriel brammer",
       "weight": 3.625,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "roberto maiolino",
       "weight": 4.162,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "daniel p stark",
       "weight": 3.625,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "massimo stiavelli",
       "weight": 3.625,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "g b brammer",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "j richard",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "f e bauer",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "e egami",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "s l finkelstein",
       "weight": 4.062,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "g b caminha",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "k i caputi",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "y fudamoto",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "j gonzález-lópez",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "v kokorev",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "n laporte",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "y ono",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "k shimasaku",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "f sun",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "s toft",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "h umehata",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "stefano carniani",
       "weight": 3.987,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "carlos s frenk",
       "weight": 4.037,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "alexander j richings",
       "weight": 4.037,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "jianhang chen",
       "weight": 3.45,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "stephen serjeant",
       "weight": 3.45,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "r j ivison",
       "weight": 3.425,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "g j bendo",
       "weight": 3.425,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "kandaswamy subramanian",
       "weight": 4.037,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "evangelia ntormousi",
       "weight": 4.025,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "sergio martin-alvarez",
       "weight": 3.788,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "jingzhe ma",
       "weight": 3.812,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "j d vieira",
       "weight": 3.288,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "c de breuck",
       "weight": 3.288,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "s c chapman",
       "weight": 3.288,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "y hezaveh",
       "weight": 3.288,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "j s spilker",
       "weight": 3.288,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "daniel p marrone",
       "weight": 3.788,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "chian-chou chen",
       "weight": 3.525,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "carlos de breuck",
       "weight": 3.525,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "chenxing dong",
       "weight": 3.788,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "sreevani jarugula",
       "weight": 3.788,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "matthieu bethermin",
       "weight": 3.263,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "ellen g zweibel",
       "weight": 3.45,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "k k knudsen",
       "weight": 3.188,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "francesca rizzo",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "claude-andré faucher-giguère",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "filippo fraternali",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "s h suyu",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "xuejian shen",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "federico lelli",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "p j marshall",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "m w auger",
       "weight": 3.0,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "p g pérez-gonzález",
       "weight": 3.0,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "h übler",
       "weight": 3.0,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "m hamed",
       "weight": 3.0,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "e parlanti",
       "weight": 3.0,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "frédéric galliano",
       "weight": 2.987,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "hanae inami",
       "weight": 3.438,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "gergö popping",
       "weight": 2.987,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "fabian walter",
       "weight": 3.625,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "natalie b hogg",
       "weight": 3.15,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "daniel johnson",
       "weight": 3.15,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "anowar j shajib",
       "weight": 3.15,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "julien larena",
       "weight": 3.15,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "lars hernquist",
       "weight": 2.65,
-      "count": 2
+      "count": 2.0
     },
     {
       "name": "melanie habouzit",
       "weight": 3.263,
-      "count": 2
+      "count": 2.0
     }
   ],
   "core_authors": [
     {
       "name": "tommaso treu",
       "weight": 8.637,
-      "count": 8
+      "count": 8.0
     },
     {
       "name": "g c jones",
       "weight": 7.65,
-      "count": 6
+      "count": 6.0
     },
     {
       "name": "m dessauges-zavadsky",
       "weight": 6.6,
-      "count": 6
+      "count": 6.0
     },
     {
       "name": "s fujimoto",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "m kohandel",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "a pallottini",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "a m koekemoer",
       "weight": 6.062,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "f rizzo",
       "weight": 5.6,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "t treu",
       "weight": 5.463,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "enrique lopez-rodriguez",
       "weight": 6.237,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "l v e koopmans",
       "weight": 5.0,
-      "count": 5
+      "count": 5.0
     },
     {
       "name": "manuel aravena",
       "weight": 5.775,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "mark vogelsberger",
       "weight": 4.65,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "seiji fujimoto",
       "weight": 5.263,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "guido roberts-borsani",
       "weight": 4.625,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "m ouchi",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "k kohno",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "f valentino",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "c giménez-arteaga",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "y ao",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "d espada",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "m lee",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "g e magdis",
       "weight": 4.6,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "a ferrara",
       "weight": 4.463,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "yoshinobu fudamoto",
       "weight": 4.45,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "rainer beck",
       "weight": 5.287,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "m aravena",
       "weight": 4.287,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "christopher c hayward",
       "weight": 4.787,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "desika narayanan",
       "weight": 4.787,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "avishai dekel",
       "weight": 4.0,
-      "count": 4
+      "count": 4.0
     },
     {
       "name": "s carniani",
       "weight": 4.225,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "r maiolino",
       "weight": 4.225,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "pablo g pérez-gonzález",
       "weight": 5.15,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "christopher j conselice",
       "weight": 3.65,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "gabriel brammer",
       "weight": 3.625,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "roberto maiolino",
       "weight": 4.162,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "daniel p stark",
       "weight": 3.625,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "massimo stiavelli",
       "weight": 3.625,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "g b brammer",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "j richard",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "f e bauer",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "e egami",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "s l finkelstein",
       "weight": 4.062,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "g b caminha",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "k i caputi",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "y fudamoto",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "j gonzález-lópez",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "v kokorev",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "n laporte",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "y ono",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "k shimasaku",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "f sun",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "s toft",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "h umehata",
       "weight": 3.6,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "stefano carniani",
       "weight": 3.987,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "carlos s frenk",
       "weight": 4.037,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "alexander j richings",
       "weight": 4.037,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "jianhang chen",
       "weight": 3.45,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "stephen serjeant",
       "weight": 3.45,
-      "count": 3
+      "count": 3.0
     },
     {
       "name": "r j ivison",
       "weight": 3.425,
-      "count": 3
+      "count": 3.0
     }
   ],
   "summary": "Interest profile inferred from Zotero papers. Top topics: dark matter, lens, magnetic, dust, lensing, gravitational lensing: strong, jwst, galaxies: elliptical and lenticular, magnetic fields, lensed, star-forming galaxies, interstellar medium. Core authors: tommaso treu, g c jones, m dessauges-zavadsky, s fujimoto, m kohandel, a pallottini, a m koekemoer, f rizzo"

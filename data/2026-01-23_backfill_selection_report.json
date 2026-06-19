@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-06-19T05:29:57.639892Z",
+  "input_count": 22,
+  "selected_count": 5,
+  "archived_count": 17,
+  "mandatory_count": 1,
+  "limit": -1,
+  "minimum_score": 35,
+  "estimated_ai_calls_saved": 34,
+  "selected_ids": [
+    "2601.15585",
+    "2601.15964",
+    "2601.15955",
+    "2601.15935",
+    "2601.15374"
+  ]
+}

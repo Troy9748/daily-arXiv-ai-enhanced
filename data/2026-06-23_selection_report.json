@@ -1,11 +1,27 @@
 {
-  "generated_at": "2026-06-23T08:13:38.726943Z",
-  "input_count": 59,
-  "selected_count": 0,
-  "archived_count": 59,
-  "mandatory_count": 0,
+  "generated_at": "2026-06-23T09:18:20.057205Z",
+  "input_count": 75,
+  "selected_count": 15,
+  "archived_count": 60,
+  "mandatory_count": 2,
   "limit": 24,
   "minimum_score": 35,
-  "estimated_ai_calls_saved": 177,
-  "selected_ids": []
+  "estimated_ai_calls_saved": 180,
+  "selected_ids": [
+    "2606.21519",
+    "2606.20804",
+    "2606.23649",
+    "2606.21361",
+    "2606.20809",
+    "2606.20801",
+    "2606.20800",
+    "2606.21774",
+    "2606.21774",
+    "2606.21614",
+    "2606.21614",
+    "2606.21141",
+    "2606.21007",
+    "2606.23683",
+    "2606.23651"
+  ]
 }

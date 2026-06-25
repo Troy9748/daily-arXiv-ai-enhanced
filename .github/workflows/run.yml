@@ -11,7 +11,7 @@ on:
   workflow_dispatch:
     inputs:
       backfill_date:
-        description: 2026-06-18
+        description: eg: 2026-06-18
         required: false
         type: string
       force_backfill:

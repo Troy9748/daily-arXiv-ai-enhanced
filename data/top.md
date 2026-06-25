@@ -2,8 +2,8 @@
 
 # Table of Contents
 
-- [astro-ph.CO](#astro-ph.CO) [Total: 30]
-- [astro-ph.GA](#astro-ph.GA) [Total: 70]
+- [astro-ph.CO](#astro-ph.CO) [Total: 31]
+- [astro-ph.GA](#astro-ph.GA) [Total: 69]
 
 
 <div id='astro-ph.CO'></div>
@@ -2097,7 +2097,92 @@ Key Figures:
 </details>
 
 
-### [29] [Finite-Core Signatures in LISA-Band Wave-Optics Lensing by Low-Mass Dark Matter Halos](https://arxiv.org/abs/2606.19995)
+### [29] [A new $H_0$ measurement with SNe Requiem and Encore using Gravity.jl](https://arxiv.org/abs/2606.25205)
+*L. Bazzanini,G. Di Rosa,A. Acebron,P. Bergamini,M. Lombardi,P. Rosati,G. Angora,G. B. Caminha,S. Ertl,G. Granata,A. M. Koekemoer,S. H. Suyu,J. Pierel,A. B. Newman,C. Grillo,S. Schuldt,M. Bulla,S. Cha,M. D'Addona,J. M. Diego,M. Fogliardi,B. L. Frye,M. J. Jee,P. S. Kamieneski,M. Meneghetti,A. Mercurio,E. Vanzella*
+
+Main category: astro-ph.CO
+
+Recommendation: ★★★★★ (88/100) - 该论文聚焦于强引力透镜分析，利用星系团MACS J0138.0-2155中的多像Ia型超新星测量哈勃常数H0，核心主题与用户的主要研究领域（强引力透镜，特别是星系-星系强透镜）高度吻合。论文使用了Gravity.jl贝叶斯参数化透镜建模框架，涉及透镜建模方法，与用户兴趣画像中的'lens'、'lensing'等关键词匹配。作者列表中包含用户核心作者A. M. Koekemoer。论文还涉及JWST数据，与用户兴趣画像中的'jwst'关键词匹配。虽然论文主要目标是宇宙学参数测量，但强透镜分析是其核心方法，且用户兴趣画像明确包含'lens'和'lensing'，因此给予高分。
+
+TL;DR: 本文对星系团MACS J0138.0-2155进行强透镜分析，基于Gravity.jl贝叶斯参数化透镜建模框架，利用SN Encore和SN Requiem两个Ia型超新星的时间延迟，测量得到H0 = 67.0_{-7.8}^{+9.3} km/s/Mpc。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 利用首个同时拥有两个多像Ia型超新星（SN Requiem和SN Encore）的透镜星系团，通过强透镜分析测量哈勃常数H0。
+
+Method: 基于Gravity.jl贝叶斯参数化透镜建模框架，使用23个光谱证认的多重像（红移0.767-3.420），结合HST、JWST成像数据和VLT/MUSE光谱，构建新的强透镜模型，并利用时间延迟约束H0。
+
+Result: 参考模型像平面均方根残差0.24角秒；预测SN Encore下次出现时间Dt=3177天（2032年5-9月），SN Requiem为Dt=3938天（2027年2-7月）；测得H0=67.0_{-7.8}^{+9.3} km/s/Mpc。
+
+Conclusion: 该结果与独立透镜模型一致，SN Requiem即将在2027年重现，为显著提升H0约束精度提供了即时机遇，M0138成为高精度星团级时间延迟宇宙学测量的重要锚点。
+
+Abstract: We present a strong-lensing (SL) analysis of the galaxy cluster MACS J0138.0-2155 (z=0.336), the first known lens cluster discovered to host two distinct multiply imaged Type Ia supernovae (SNe): SN Requiem and SN Encore. Both transients are located in the massive, multiply imaged red galaxy MRG-M0138 at z=1.949. The projected total mass of this cluster has been investigated with several independent lens models (Suyu+26; Pierel+26), using a sample of 23 spectroscopically confirmed multiple images from 8 background sources (0.767<z<3.420), identified from the HST and the JWST imaging data, and VLT/MUSE spectroscopy. In this work, we develop a new SL model based on a novel Bayesian parametric lens-modelling framework Gravity.jl, exploiting the same SL dataset. Our reference mass model accurately reproduces the observed image positions, with an image-plane rms image position residual of 0.24''. Assuming H0 = 70 km/s/Mpc, we predict the future reappearances of highly delayed SNe counter-images, finding Dt(1d,1a) = 3177_{-59}^{+78} d (May-September, 2032) for SN Encore and Dt(2d,2a) = 3938_{-77}^{+90} d (February-July, 2027) for SN Requiem. By allowing H0 to vary, and using the measured time delays of both SN Encore and SN Requiem together with their statistical uncertainties as observables, we infer the value of H0 jointly with the other lens-model free parameters. From this analysis, we obtain a new measurement of H0 = 67.0_{-7.8}^{+9.3} km/s/Mpc, consistent with the value inferred from the aforementioned independent lens models. This error is currently dominated by the large relative uncertainty on the measured time delays (>10%). The forthcoming reappearance of SN Requiem offers an immediate opportunity to significantly improve constraints on H0, provided that lens-model systematics are controlled. These results establish M0138 as a premier anchor for high-precision cluster-scale TDC.
+
+Abstract Translation:
+我们提出了星系团MACS J0138.0-2155（z=0.336）的强透镜（SL）分析，这是已知第一个被发现拥有两个不同多重成像Ia型超新星（SNe）的透镜星系团：SN Requiem和SN Encore。这两个瞬变现象均位于z=1.949的大质量多重成像红色星系MRG-M0138中。该星系团的投影总质量已通过几个独立的透镜模型（Suyu+26; Pierel+26）进行研究，使用了来自8个背景源（0.767<z<3.420）的23个光谱确认的多重图像样本，这些图像来自HST和JWST成像数据以及VLT/MUSE光谱。在这项工作中，我们基于一个新的贝叶斯参数透镜建模框架Gravity.jl开发了一个新的SL模型，利用了相同的SL数据集。我们的参考质量模型准确地再现了观测到的图像位置，图像平面均方根位置残差为0.24角秒。假设H0 = 70 km/s/Mpc，我们预测了高度延迟的SNe对应像的未来重现，发现SN Encore的Dt(1d,1a) = 3177_{-59}^{+78} 天（2032年5月至9月），SN Requiem的Dt(2d,2a) = 3938_{-77}^{+90} 天（2027年2月至7月）。通过允许H0变化，并利用SN Encore和SN Requiem的测量时间延迟及其统计不确定性作为观测量，我们联合推断H0的值以及其他透镜模型自由参数。从这一分析中，我们获得了H0 = 67.0_{-7.8}^{+9.3} km/s/Mpc的新测量值，与上述独立透镜模型推断的值一致。该误差目前由测量时间延迟的大相对不确定性（>10%）主导。SN Requiem即将到来的重现为显著改善H0约束提供了即时机遇，前提是透镜模型系统误差得到控制。这些结果确立了M0138作为高精度星团级TDC的首要锚点。
+
+Conclusion Translation:
+基于可用摘要，该结果与独立透镜模型一致，SN Requiem即将在2027年重现，为显著提升H0约束精度提供了即时机遇，M0138成为高精度星团级时间延迟宇宙学测量的重要锚点。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2606.25205v1/x1.png)
+
+图1：使用JWST观测的M0138。彩色合成图由以下滤光片组合构建：F115W \(+\) F150W（蓝色），F200W \(+\) F277W（绿色），以及F356W \(+\) F444W（红色）。“金色”多重图像系统的位置用圆圈标记（Ertl等人，2025；Suyu等人，2026）。SN Encore对应系统1，而SN Requiem对应系统2。前景（FG）和背景（BG）星系用绿色圆圈表示。三个水母星系用青色圆圈标记，并标注为JF1、JF2和JF3。
+
+<small>Figure 1 : M0138 observed with the JWST. The colour composite is constructed from the following filter combinations: F115W \(+\) F150W in blue, F200W \(+\) F277W in green, and F356W \(+\) F444W in red. The locations of the “gold” multiple-image systems are marked with circles (Ertl et al., 2025 ; Suyu et al., 2026 ) . SN Encore corresponds to System 1, while SN Requiem corresponds to System 2. The foreground (FG) and background (BG) galaxies are indicated by green circles. The three jellyfish galaxies are marked with cyan circles and labelled JF1, JF2, and JF3.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2606.25205v1/x2.png)
+
+图2：来自Acebron等人（2025）的星系团成员Faber–Jackson关系校准。圆圈显示了14个明亮星系团星系的测量恒星速度弥散度，作为其总HST F160W星等的函数。点根据Granata等人（2025）报告的平均光谱信噪比进行颜色编码。标度关系中使用的参考星系是BCG（\(\sigma_{{BCG}}=322^{+16}_{-16}\,{km}\,{s}^{-1}\)，\(m_{{F160W}}=15.30\)）。橙色线和阴影区域显示了根据恒星运动学测量得出的中位数\(\sigma_{0}\) – \({F160W}\)关系及其\(68\%\)置信区间，遵循第3.4.2节描述的程序。蓝色线和阴影区域显示了SL模型预测的相应关系。
+
+<small>Figure 2 : Calibration of the Faber–Jackson relation for cluster members from Acebron et al. ( 2025 ) . The circles show the measured stellar velocity dispersions of 14 bright cluster galaxies as a function of their total HST F160W magnitude. Points are colour-coded by the average spectral signal-to-noise ratio reported by Granata et al. ( 2025 ) . The reference galaxy used in the scaling relation is the BCG ( \(\sigma_{{BCG}}=322^{+16}_{-16}\,{km}\,{s}^{-1}\) , \(m_{{F160W}}=15.30\) ). The orange line and shaded region show the median \(\sigma_{0}\) – \({F160W}\) relation and its \(68\%\) confidence interval derived from the stellar kinematic measurements, following the procedure described in Sect. 3.4.2 . The blue line and shaded region show the corresponding relation predicted by the SL model.</small>
+
+#### Figure 3
+表1：M0138的最佳拟合SL模型总结。4 4 4 SL模型及其整体性能总结。列报告了模型名称、透镜模型中显式变化的自由参数数量\(N_{par}\)、观测约束数量\(N_{const}\)、自由度数量d.o.f.、最小总卡方值\(\chi^{2}_{{min,\,tot}}=\chi_{{min,\,pos}}^{2}+\chi_{{min,\,td}}^{2}\)、总卡方中的位置贡献\(\chi_{{min,\,pos}}^{2}\)、总卡方中的时间延迟贡献\(\chi_{{min,\,td}}^{2}=\chi_{{min,\,td\,(E)}}^{2}+\chi_{{min,\,td\,(R)}}^{2}\)（其中两项分别表示来自SN Encore和SN Requiem的贡献）、每自由度最小卡方值\(\tilde{\chi}^{2}_{{min}}\)、\(\Delta_{{rms}}\)值以及MCMC链的平均Gelman–Rubin收敛统计量\(\langle\hat{R}\rangle\)。自由度计算为\({d.o.f.}=N_{const}-N_{par}-2N_{src}\)，其中\(N_{src}=8\)是独立源族的数量，每个源族贡献两个作为 nuisance 参数被边缘化的源平面坐标。
+
+<small>Table 1: Summary of the best-fit SL models for M0138. 4 4 4 Summary of the SL models and their overall performance. The columns report the model name, the number of free parameters explicitly varied in the lens model, \(N_{par}\) , the number of observational constraints, \(N_{const}\) , the number of degrees of freedom, d.o.f., the minimum total chi-square value, \(\chi^{2}_{{min,\,tot}}=\chi_{{min,\,pos}}^{2}+\chi_{{min,\,td}}^{2}\) , the positional contribution to the total chi-square, \(\chi_{{min,\,pos}}^{2}\) , the time-delay contribution to the total chi-square, \(\chi_{{min,\,td}}^{2}=\chi_{{min,\,td\,(E)}}^{2}+\chi_{{min,\,td\,(R)}}^{2}\) (where the two terms denote the contributions from SN Encore and SN Requiem, respectively), the minimum chi-square value per degree-of-freedom \(\tilde{\chi}^{2}_{{min}}\) , the \(\Delta_{{rms}}\) value, and the mean Gelman–Rubin convergence statistic, \(\langle\hat{R}\rangle\) , of the MCMC chains. The number of degrees of freedom is computed as \({d.o.f.}=N_{const}-N_{par}-2N_{src}\) , where \(N_{src}=8\) is the number of independent source families, each contributing two source-plane coordinates that are marginalised over as nuisance parameters.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2606.25205v1/x3.png)
+
+图3：MACS J0138中观测到的与模型预测的多重图像之间的位置偏移。圆圈标记观测到的图像位置，箭头指示朝向相应模型预测位置的偏移方向和大小。为视觉清晰起见，箭头长度相对于真实位置偏移放大了十倍。\((0,0)\)点对应BCG的位置。背景等高线显示了从最佳拟合透镜模型获得的总投影质量分布。
+
+<small>Figure 3 : Positional offsets between the observed and model-predicted multiple images in MACS J0138. The circles mark the observed image positions, while the arrows indicate the direction and magnitude of the offsets toward the corresponding model-predicted positions. For visual clarity, the arrow lengths have been magnified by a factor of ten relative to the true positional offsets. The \((0,0)\) point corresponds to the position of the BCG. The background contours show the total projected mass distribution obtained from the best-fitting lens model.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2606.25205v1/x4.png)
+
+图4：多重成像宿主星系MRG-M0138的观测与模型预测表面亮度分布比较。左图显示了观测到的BCG减除后的JWST F200W图像，而右图显示了通过将背景源的最佳拟合Sérsic模型通过参考H0_fixed质量模型进行透镜成像得到的图像平面预测。Sérsic源光参数使用与包含多重图像3c的弧相关联的像素进行优化，而其余对应像是事后预测的，未包含在光分布优化中。右图的两个插图显示了归一化残差，裁剪到\([-20\,\sigma,+20\,\sigma]\)范围，对应模型预测面板中虚线蓝色框突出的两个区域。由于BCG的污染，省略了与宿主星系图像3d和3e相关的残差。红色圆圈标记了MRG-M0138的观测多重图像（左图），列于Ertl等人（2025）的表4中，而右图中的红色方框对应预测位置。右图中的蓝色十字显示了宿主星系在源平面中的预测位置。坐标以相对于BCG的角秒给出（\({RA}=24.51570318\)度，\({Dec}=-21.92547911\)度）。
+
+<small>Figure 4 : Comparison between the observed and model-predicted SB distribution of the multiply imaged host galaxy MRG-M0138. The left panel shows the observed BCG-subtracted JWST F200W image, while the right panel shows the image-plane prediction obtained by lensing the best-fitting Sérsic model of the background source through the reference H0_fixed mass model. The Sérsic source-light parameters were optimised using the pixels associated with the arc hosting multiple image 3c, while the remaining counter-images were predicted a posteriori and were not included in the light-profile optimisation. The two insets on the right show the normalised residuals, clipped to the range \([-20\,\sigma,+20\,\sigma]\) , for the two regions highlighted by the dashed blue boxes in the model-prediction panel. Residuals associated with host-galaxy images 3d and 3e are omitted because of the contamination from the BCG. Red circles mark the observed multiple images of MRG-M0138 (left panel), listed in Table 4 in Ertl et al. ( 2025 ) , while the red boxes in the right panel correspond to the predicted positions. The blue cross in the right panel shows the predicted position of the host galaxy in the source plane. Coordinates are given in arcseconds relative to the BCG ( \({RA}=24.51570318\) deg, \({Dec}=-21.92547911\) deg).</small>
+
+#### Figure 6
+表2：SN Encore和SN Requiem多重图像的预测时间延迟和放大率（H0_fixed质量模型）。5 5 5 值报告为来自\(1000\)个采样链的中位数，不确定性对应\(16\)和\(84\)百分位数。标记*的图像是迄今为止尚未检测到的模型预测图像，要么是因为其暗淡（如图像1c），要么是因为其预测的时间延迟较长（如图像1d、1e、2d和2e）。SN Encore的图像1e和SN Requiem的图像2e（标记†）分别在后验样本的\(47\%\)和\(34\%\)中被预测；所有其他图像在所有样本中都被预测。参考锚定历元\(t=0\)对于SN Requiem的图像2a设置为2016-07-18（Rodney等人，2021），对于SN Encore的图像1a设置为2023-11-17（Pierel等人，2024）。
+
+<small>Table 2 : Predicted time delays and magnifications of multiple images of SN Encore and SN Requiem ( H0_fixed mass model). 5 5 5 Values are reported as the median from the \(1000\) sampled chains, with uncertainties corresponding to the \(16\) th and \(84\) th percentiles. Images marked with * are model-predicted images that have not been detected to date, either because of their faintness, as for image 1c, or because of their long predicted time delays, as for images 1d, 1e, 2d, and 2e. Image 1e of SN Encore and image 2e of SN Requiem, marked with † , are predicted in \(47\%\) and \(34\%\) of the posterior samples, respectively; all other images are predicted in all samples. The reference anchor epoch \(t=0\) is set to 2016-07-18 for image 2a of SN Requiem (Rodney et al., 2021 ) , and to 2023-11-17 for image 1a of SN Encore (Pierel et al., 2024 ) .</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2606.25205v1/x5.png)
+
+图5：SN Requiem图像2d的预测重现时间，表示为相对于图像2a的时间延迟\(\Delta t_{2d,2a}\)。蓝点显示了本文提出的Gravity.jl模型的预测，而其他点显示了Suyu等人（2026）分析的独立透镜模型的预测。水平误差条表示相应的\(68\%\)置信区间。对于我们的模型，该区间来自从H0_fixed MCMC链中随机抽取的\(1000\)个后验样本。
+
+<small>Figure 5 : Predicted reappearance time of image 2d of SN Requiem, expressed as the time delay relative to image 2a, \(\Delta t_{2d,2a}\) . The blue point shows the prediction from the Gravity.jl model presented in this work, while the other points show the predictions from the independent lens models analysed by Suyu et al. ( 2026 ) . Horizontal error bars indicate the corresponding \(68\%\) credible intervals. For our model, the interval is derived from \(1000\) posterior samples randomly drawn from the H0_fixed MCMC chains.</small>
+
+#### Figure 6
+![Figure 6](https://arxiv.org/html/2606.25205v1/x6.png)
+
+图6：来自Gravity.jl模型的SN Encore多重图像预测位置与Suyu等人（2026）分析的独立透镜模型获得的预测位置比较。每个面板显示SN Encore的一个图像：观测到的图像1a和1b，以及模型预测的图像1c和1d。不同的符号和颜色对应不同的透镜模型，如图例所示。Gravity.jl的预测以蓝色显示。阴影带显示了与Gravity.jl预测相关的投影不确定性区域。灰色圆圈表示观测到的测量值（Pierel等人，2024）。
+
+<small>Figure 6 : Comparison of the predicted positions of the multiple images of SN Encore from the Gravity.jl model with those obtained from the independent lens models analysed by Suyu et al. ( 2026 ) . Each panel shows one image of SN Encore: the observed images 1a and 1b, and the model-predicted images 1c and 1d. Different symbols and colours correspond to different lens models, as indicated in the legend. The Gravity.jl predictions are shown in blue. The shaded bands show the projected uncertainty region associated with the Gravity.jl prediction. Grey circles denote the observed measured values (Pierel et al., 2024 ) .</small>
+
+</details>
+
+
+### [30] [Finite-Core Signatures in LISA-Band Wave-Optics Lensing by Low-Mass Dark Matter Halos](https://arxiv.org/abs/2606.19995)
 *Dejiang Li,Tonghua Liu,Kai Liao,Beining Xia,Cuihong Wen,Jieci Wang*
 
 Main category: astro-ph.CO
@@ -2186,7 +2271,7 @@ Key Figures:
 </details>
 
 
-### [30] [The Quadruply Lensed Supernova SN 2025wny: Implications for LSST](https://arxiv.org/abs/2605.11090)
+### [31] [The Quadruply Lensed Supernova SN 2025wny: Implications for LSST](https://arxiv.org/abs/2605.11090)
 *Paul L. Schechter,Michael Zeng Lu,Christopher Hernández*
 
 Main category: astro-ph.CO
@@ -2240,7 +2325,7 @@ Key Figures:
 
 # astro-ph.GA [[Back]](#toc)
 
-### [31] [A Strongly Lensed Ultra-faint Arc at $z \approx 10$ with an F200W excess in Abell S1063](https://arxiv.org/abs/2606.23869)
+### [32] [A Strongly Lensed Ultra-faint Arc at $z \approx 10$ with an F200W excess in Abell S1063](https://arxiv.org/abs/2606.23869)
 *Fujiang Yu,Mingyu Li,Zheng Cai,Yuduo Guo,Hao Zhang,Jose M. Diego,Sijia Cai*
 
 Main category: astro-ph.GA
@@ -2306,7 +2391,7 @@ Key Figures:
 </details>
 
 
-### [32] [NOEMA$^\rm{3D}$: A deep view of cold gas flows in a barred spiral galaxy at $z\sim1$](https://arxiv.org/abs/2606.02688)
+### [33] [NOEMA$^\rm{3D}$: A deep view of cold gas flows in a barred spiral galaxy at $z\sim1$](https://arxiv.org/abs/2606.02688)
 *Stavros Pastras,Reinhard Genzel,Linda J. Tacconi,Thorsten Naab,Natascha M. Förster Schreiber,Karl Schuster,Roberto Neri,Jianhang Chen,Giulia Tozzi,Jean-Baptiste Jolly,Letizia Scaloni,Capucine Barfety,Andreas Burkert,Yixian Cao,Françoise Combes,Ric Davies,Frank Eisenhauer,Juan M. Espejo Salcedo,Simon Flesch,Santiago García-Burillo,Rodrigo Herrera-Camus,Lilian L. Lee,Minju M. Lee,Daizhong Liu,Dieter Lutz,Giovanni Mazzolari,Amit Nestor Shachar,Meghana Pannikkote,Eleonora Parlanti,Panos A. Patsis,Sedona H. Price,Claudia Pulsoni,Alvio Renzini,Taro T. Shimizu,Amiel Sternberg,Eckhard Sturm,Stijn Wuyts,Hannah Übler*
 
 Main category: astro-ph.GA
@@ -2341,7 +2426,7 @@ Key Figures:
 </details>
 
 
-### [33] [Detection of a dark matter subhalo in the strongly lensed system PJ011646](https://arxiv.org/abs/2605.21212)
+### [34] [Detection of a dark matter subhalo in the strongly lensed system PJ011646](https://arxiv.org/abs/2605.21212)
 *Aristeidis Amvrosiadis,James W. Nightingale,Qiuhan He,Andrew Robertson,Shaun Cole,Carlos S. Frenk,Samuel Lange,Richard Massey,Maximilian von Wietersheim-Kramsta,Xiaoyue Cao,Ran Li,Shubo Li,Kaihao Wang,Xianghao Ma,Leo W. H. Fung*
 
 Main category: astro-ph.GA
@@ -2421,7 +2506,7 @@ Key Figures:
 </details>
 
 
-### [34] [NOEMA3D: Resolving radial gas flows in disk galaxies at z~1.1-1.6 with high-resolution CO observations](https://arxiv.org/abs/2604.18503)
+### [35] [NOEMA3D: Resolving radial gas flows in disk galaxies at z~1.1-1.6 with high-resolution CO observations](https://arxiv.org/abs/2604.18503)
 *Jean-Baptiste Jolly,Linda J. Tacconi,Reinhard Genzel,Roberto Neri,Karl Schuster,Jianhang Chen,Natascha M. Förster Schreiber,Stavros Pastras,Letizia Scaloni,Giulia Tozzi,Capucine Barféty,Alberto Bolatto,Andreas Burker,Françoise Combes,Pierre Cox,Ric Davies,Frank Eisenhauer,Juan Manuel Espejo Salcedo,Rodrigo Herrera-Camu,Santi García-Burillo,Tadayuki Kodama,Lilian Lee,Minju M. Lee,Daizhong Liu,Dieter Lutz,Giovanni Mazzolari,Thorsten Naab,Amit Nestor Shachar,Claudia Pulsoni,Alvio Renzini,Monica Rubio,Taro T. Shimizu,Amiel Sternberg,Eckhard Sturm,Hannah Übler,Antonio Usero,Stijn Wuyts*
 
 Main category: astro-ph.GA
@@ -2502,7 +2587,7 @@ Key Figures:
 </details>
 
 
-### [35] [ALMA Band 2 line survey of a $z = 3.44$ clumpy strongly-lensed submillimetre galaxy](https://arxiv.org/abs/2604.01089)
+### [36] [ALMA Band 2 line survey of a $z = 3.44$ clumpy strongly-lensed submillimetre galaxy](https://arxiv.org/abs/2604.01089)
 *Tom J. L. C. Bakx*
 
 Main category: astro-ph.GA
@@ -2587,7 +2672,7 @@ Figure 6: ALMA探测到的谱线的等效宽度可作为诊断工具，特别是
 </details>
 
 
-### [36] [Euclid Quick Data Release (Q1). The Strong Lensing Discovery Engine F -- Bright and low-redshift strong lenses](https://arxiv.org/abs/2603.28580)
+### [37] [Euclid Quick Data Release (Q1). The Strong Lensing Discovery Engine F -- Bright and low-redshift strong lenses](https://arxiv.org/abs/2603.28580)
 *Euclid Collaboration,L. R. Ecker,M. Fabricius,S. Seitz,R. Saglia,N. E. P. Lines,P. Holloway,T. Li,A. Verma,F. Balzer,Q. Jin,A. Manjón-García,S. H. Vincken,J. Wilde,J. A. Acevedo Barroso,J. W. Nightingale,K. Rojas,S. Schuldt,M. Walmsley,T. E. Collett,G. Despali,A. Sonnenfeld,C. Tortora,R. B. Metcalf,R. Bender,C. Saulder,E. Baeten,C. Cornen,D. Delley,K. Finner,A. Galan,R. Gavazzi,L. C. Johnson,L. Leuzzi,C. Macmillan,P. J. Marshall,M. Millon,A. More,L. A. Moustakas,J. Pearson,J. -N. Pippert,C. Scarlata,D. Sluse,C. Spiniello,T. T. Thai,L. Ulivi,Han. Wang,X. Xu,F. Courbin,M. Meneghetti,N. Aghanim,B. Altieri,S. Andreon,N. Auricchio,C. Baccigalupi,M. Baldi,A. Balestra,S. Bardelli,P. Battaglia,A. Biviano,E. Branchini,M. Brescia,S. Camera,G. Cañas-Herrera,V. Capobianco,C. Carbone,J. Carretero,S. Casas,M. Castellano,G. Castignani,S. Cavuoti,K. C. Chambers,A. Cimatti,C. Colodro-Conde,G. Congedo,C. J. Conselice,L. Conversi,Y. Copin,A. Costille,H. M. Courtois,M. Cropper,A. Da Silva,H. Degaudenzi,G. De Lucia,C. Dolding,H. Dole,F. Dubath,X. Dupac,S. Dusini,A. Ealet,S. Escoffier,M. Farina,R. Farinelli,F. Faustini,S. Ferriol,F. Finelli,P. Fosalba,S. Fotopoulou,M. Frailis,E. Franceschi,M. Fumana,S. Galeotta,K. George,W. Gillard,B. Gillis,C. Giocoli,P. Gómez-Alvarez,J. Gracia-Carpio,A. Grazian,F. Grupp,L. Guzzo,S. V. H. Haugan,H. Hoekstra,W. Holmes,F. Hormuth,A. Hornstrup,K. Jahnke,M. Jhabvala,B. Joachimi,E. Keihänen,S. Kermiche,A. Kiessling,B. Kubik,M. Kümmel,M. Kunz,H. Kurki-Suonio,A. M. C. Le Brun,D. Le Mignant,S. Ligori,P. B. Lilje,V. Lindholm,I. Lloro,G. Mainetti,D. Maino,E. Maiorano,O. Mansutti,S. Marcin,O. Marggraf,M. Martinelli,N. Martinet,F. Marulli,R. J. Massey,E. Medinaceli,S. Mei,Y. Mellier,E. Merlin,G. Meylan,A. Mora,M. Moresco,L. Moscardini,R. Nakajima,C. Neissner,R. C. Nichol,S. -M. Niemi,C. Padilla,S. Paltani,F. Pasian,K. Pedersen,W. J. Percival,V. Pettorino,S. Pires,G. Polenta,M. Poncet,L. Pozzetti,F. Raison,A. Renzi,J. Rhodes,G. Riccio,H. -W. Rix,E. Romelli,M. Roncarelli,E. Rossetti,Z. Sakr,A. G. Sánchez,D. Sapone,B. Sartoris,P. Schneider,T. Schrabback,A. Secroun,G. Seidel,S. Serrano,P. Simon,C. Sirignano,G. Sirri,L. Stanco,J. Steinwagner,P. Tallada-Crespí,A. N. Taylor,H. I. Teplitz,I. Tereno,N. Tessore,S. Toft,R. Toledo-Moreo,F. Torradeflot,I. Tutusaus,L. Valenziano,J. Valiviita,T. Vassallo,Y. Wang,J. Weller,A. Zacchei,G. Zamorani,F. M. Zerbi,E. Zucca,M. Ballardini,M. Bolzonella,E. Bozzo,C. Burigana,R. Cabanac,A. Cappi,T. Castro,B. Clément,J. A. Escartin Vigo,L. Gabarra,J. García-Bellido,V. Gautard,S. Hemmati,M. Huertas-Company,J. Macias-Perez,R. Maoli,J. Martín-Fleitas,M. Maturi,N. Mauri,P. Monaco,A. Pezzotta,M. Pöntinen,C. Porciani,I. Risso,V. Scottez,M. Sereno,M. Tenti,M. Tucci,M. Viel,M. Wiesmann,Y. Akrami,I. T. Andika,G. Angora,S. Anselmi,M. Archidiacono,F. Atrio-Barandela,L. Bazzanini,P. Bergamini,D. Bertacca,M. Bethermin,F. Beutler,A. Blanchard,L. Blot,M. Bonici,S. Borgani,M. L. Brown,S. Bruton,A. Calabro,B. Camacho Quevedo,F. Caro,C. S. Carvalho,Y. Charles,F. Cogato,S. Conseil,A. R. Cooray,O. Cucciati,S. Davini,F. De Paolis,G. Desprez,A. Díaz-Sánchez,S. Di Domizio,J. M. Diego,P. -A. Duc,V. Duret,M. Y. Elkhashab,A. Enia,Y. Fang,A. Finoguenov,A. Fontana,A. Franco,K. Ganga,T. Gasparetto,E. Gaztanaga,F. Giacomini,F. Gianotti,G. Gozaliasl,A. Gruppuso,M. Guidi,C. M. Gutierrez,A. Hall,H. Hildebrandt,J. Hjorth,L. K. Hunt,J. J. E. Kajava,Y. Kang,V. Kansal,D. Karagiannis,K. Kiiveri,J. Kim,C. C. Kirkpatrick,S. Kruk,M. Lattanzi,L. Legrand,F. Lepori,G. Leroy,G. F. Lesci,J. Lesgourgues,T. I. Liaudat,A. Loureiro,M. Magliocchetti,F. Mannucci,C. J. A. P. Martins,L. Maurin,M. Miluzio,C. Moretti,G. Morgante,K. Naidoo,P. Natoli,A. Navarro-Alsina,S. Nesseris,D. Paoletti,F. Passalacqua,K. Paterson,L. Patrizii,A. Pisani,D. Potter,G. W. Pratt,S. Quai,M. Radovich,G. Rodighiero,W. Roster,S. Sacquegna,M. Sahlén,D. B. Sanders,E. Sarpa,A. Schneider,D. Sciotti,E. Sellentin,L. C. Smith,J. G. Sorce,K. Tanidis,C. Tao,F. Tarsitano,G. Testera,R. Teyssier,S. Tosi,A. Troja,A. Venhola,D. Vergani,G. Vernardos,G. Verza,P. Vielzeuf,S. Vinciguerra,N. A. Walton,A. H. Wright*
 
 Main category: astro-ph.GA
@@ -2676,7 +2761,7 @@ Key Figures:
 </details>
 
 
-### [37] [Testing Screened Modified Gravity with Strongly Lensed Gravitational Waves](https://arxiv.org/abs/2603.09340)
+### [38] [Testing Screened Modified Gravity with Strongly Lensed Gravitational Waves](https://arxiv.org/abs/2603.09340)
 *Chengsheng Mu,Shuo Cao,Shuxun Tian,Xinyue Jiang,Chenfa Zheng,Dadian Cheng*
 
 Main category: astro-ph.GA
@@ -2751,7 +2836,7 @@ Key Figures:
 </details>
 
 
-### [38] [VENUS: Two Faint Little Red Dots Separated by $\sim70\,\mathrm{pc}$ Hidden in a Single Lensed Galaxy at $z\sim7$](https://arxiv.org/abs/2601.06015)
+### [39] [VENUS: Two Faint Little Red Dots Separated by $\sim70\,\mathrm{pc}$ Hidden in a Single Lensed Galaxy at $z\sim7$](https://arxiv.org/abs/2601.06015)
 *Hiroto Yanagisawa,Masami Ouchi,Miriam Golubchik,Masamune Oguri,Seiji Fujimoto,Vasily Kokorev,Gabriel Brammer,Fengwu Sun,Minami Nakane,Yuichi Harikane,Hiroya Umeda,Hollis B. Akins,Hakim Atek,Franz E. Bauer,Maruša Bradač,John Chisholm,Dan Coe,Jose M. Diego,Henry C. Ferguson,Steven L. Finkelstein,Lukas J. Furtak,Kohei Inayoshi,Anton M. Koekemoer,Jorryt Matthee,Rohan P. Naidu,Yoshiaki Ono,Richard Pan,Johan Richard,Luke Robbins,Chris Willott,Adi Zitrin,Ricardo O. Amorín,Larry D. Bradley,Volker Bromm,Christopher J. Conselice,Pratika Dayal,Jeyhan S. Kartaltepe,Paulo A. A. Lopes,Ray A. Lucas,Georgios E. Magdis,Nicholas S. Martis,Casey Papovich,Daniel Schaerer,Francesco Valentino,Eros Vanzella,Joseph F. V. Allingham,Norman A. Grogin,Mauro González-Otero,Massimo Ricotti,Rogier A. Windhorst*
 
 Main category: astro-ph.GA
@@ -2840,7 +2925,7 @@ Key Figures:
 </details>
 
 
-### [39] [Across the Universe: GW231123 as a magnified and diffracted black hole merger](https://arxiv.org/abs/2512.17631)
+### [40] [Across the Universe: GW231123 as a magnified and diffracted black hole merger](https://arxiv.org/abs/2512.17631)
 *Srashti Goyal,Hector Villarrubia-Rojo,Miguel Zumalacarregui*
 
 Main category: astro-ph.GA
@@ -2927,7 +3012,7 @@ Key Figures:
 </details>
 
 
-### [40] [Spectroscopic Redshifts for 461 Euclid Q1 Strong Gravitational Lenses from NISP Slitless Spectroscopy](https://arxiv.org/abs/2604.02726)
+### [41] [Spectroscopic Redshifts for 461 Euclid Q1 Strong Gravitational Lenses from NISP Slitless Spectroscopy](https://arxiv.org/abs/2604.02726)
 *R. Tata*
 
 Main category: astro-ph.GA
@@ -2975,7 +3060,7 @@ Key Figures:
 </details>
 
 
-### [41] [Cosmic Duets I. High-spatial resolution spectroscopy of dual and lensed AGN with MUSE](https://arxiv.org/abs/2512.11960)
+### [42] [Cosmic Duets I. High-spatial resolution spectroscopy of dual and lensed AGN with MUSE](https://arxiv.org/abs/2512.11960)
 *M. Scialpi,F. Mannucci,Q. D'Amato,C. Marconcini,G. Cresci,A. Marconi,L. Ulivi,M. Fumagalli,P. Rosati,G. Tozzi,M. V. Zanchettin,E. Cataldi,L. Battistini,E. Bertola,C. Bracci,S. Carniani,M. Ceci,A. Chakraborty,C. Cicone,A. Ciurlo,A. De Rosa,G. Di Rosa,A. Feltre,M. Ginolfi,I. Lamperti,E. Lusso,B. Moreschini,E. Nardini,M. Parvatikar,M. Perna,K. Rubinur,P. Severgnini,J. Singh,C. Spingola,G. Venturi,C. Vignali,M. Volonteri*
 
 Main category: astro-ph.GA
@@ -3062,7 +3147,7 @@ Key Figures:
 </details>
 
 
-### [42] [First measurement of narrow-line flux ratios for a lensed quasar with JWST/NIRSpec IFS](https://arxiv.org/abs/2606.23808)
+### [43] [First measurement of narrow-line flux ratios for a lensed quasar with JWST/NIRSpec IFS](https://arxiv.org/abs/2606.23808)
 *Hadrien Paugnat,Tommaso Treu,Anna M. Nierenberg,Anowar J. Shajib,Shawn Knabel,Daniel Gilman*
 
 Main category: astro-ph.GA
@@ -3147,7 +3232,7 @@ Key Figures:
 </details>
 
 
-### [43] [Constraints on the Gas Geometry Surrounding Little Red Dots through Narrow-Line Diagnostics](https://arxiv.org/abs/2606.23778)
+### [44] [Constraints on the Gas Geometry Surrounding Little Red Dots through Narrow-Line Diagnostics](https://arxiv.org/abs/2606.23778)
 *Visal Sok,Erica J. Nelson,Mitchell C. Begelman,Jason Dexter,Francesco D'Eugenio,Jenny E. Greene,Joel Leja,Katherine E. Whitaker,Andrew J. Bunker,Pablo G. Pérez-González,Pierluigi Rinaldi,Alberto Torralba,Hannah Übler*
 
 Main category: astro-ph.GA
@@ -3220,7 +3305,7 @@ Key Figures:
 </details>
 
 
-### [44] [Direct detection of cool molecular gas in a star-forming galaxy at $z=7.31$](https://arxiv.org/abs/2606.13393)
+### [45] [Direct detection of cool molecular gas in a star-forming galaxy at $z=7.31$](https://arxiv.org/abs/2606.13393)
 *Karin Cescon,Jacqueline A. Hodge,Leindert A. Boogaard,Hiddo S. B. Algera,Lucie E. Rowland,Dominik A. Riechers,Renske Smit,Ilse De Looze,Rychard Bouwens,Paul van der Werf,Manuel Aravena,Elisabete da Cunha,Pratika Dayal,Andrea Ferrara,Rebecca Fisher,Hanae Inami,Pavel E. Mancera Piña,Pascal A. Oesch,Andrea Pallottini,Matus Rybak,Sander Schouws,Laura Sommovigo,Mauro Stefanon,Livia Vallini*
 
 Main category: astro-ph.GA
@@ -3305,7 +3390,7 @@ Key Figures:
 </details>
 
 
-### [45] [SIDM and CDM interpretations of the million-solar-mass lensing perturber JVAS B1938+666-$\mathcal{V}$](https://arxiv.org/abs/2606.12909)
+### [46] [SIDM and CDM interpretations of the million-solar-mass lensing perturber JVAS B1938+666-$\mathcal{V}$](https://arxiv.org/abs/2606.12909)
 *Xingyu Zhang,Hai-Bo Yu*
 
 Main category: astro-ph.GA
@@ -3359,7 +3444,7 @@ Key Figures:
 </details>
 
 
-### [46] [High-Resolution ALMA Imaging for a Gravitationally-lensed Quasar at $z=6.5$: Constraining the AGN Contribution to Galactic-Scale Dust Heating](https://arxiv.org/abs/2606.11084)
+### [47] [High-Resolution ALMA Imaging for a Gravitationally-lensed Quasar at $z=6.5$: Constraining the AGN Contribution to Galactic-Scale Dust Heating](https://arxiv.org/abs/2606.11084)
 *Minghao Yue,Xiaohui Fan,Anna-Christina Eilers,Jinyi Yang,Feige Wang,Jianwei Lyu,James W. Nightingale,Ann Zabludoff,Ran Wang*
 
 Main category: astro-ph.GA
@@ -3425,7 +3510,7 @@ Key Figures:
 </details>
 
 
-### [47] [Multiphase images of a powerful supernova-driven wind in the early Universe](https://arxiv.org/abs/2606.10271)
+### [48] [Multiphase images of a powerful supernova-driven wind in the early Universe](https://arxiv.org/abs/2606.10271)
 *Rebecca L. Davies,D. B. Fisher,R. Herrera-Camus,A. Faisst,J. Spilker,J. González-López,S. Fujimoto,R. Amorín,M. Aravena,R. J. Assef,L. Barcos-Muñoz,M. Boquien,M. Dessauges-Zavadsky,A. Ferrara,N. M. Förster Schreiber,M. Ginolfi,D. Gómez-Espinoza,E. Ibar,R. Ikeda,H. Inami,G. C. Jones,A. Koekemoer,L. L. Lee,J. Li,D. Liu,Z. Liu,I. De Looze,I. Mitsuhashi,J. Molina,A. Nanni,M. Relano,M. Romano,P. Sawant,M. Solimano,L. Sommovigo,K. Tadaki,K. Telikova,H. Übler,V. Villanueva,W. Wang,G. Zamorani*
 
 Main category: astro-ph.GA
@@ -3460,7 +3545,7 @@ Key Figures:
 </details>
 
 
-### [48] [JWST absorption line spectroscopy with SPURS: ISM covering fractions and kinematics in individual galaxies at $z=5-9$](https://arxiv.org/abs/2606.06609)
+### [49] [JWST absorption line spectroscopy with SPURS: ISM covering fractions and kinematics in individual galaxies at $z=5-9$](https://arxiv.org/abs/2606.06609)
 *Keerthi Vasan G. C.,Peter Senchyna,Charlotte A. Mason,Zuyi Chen,Daniel P. Stark,Tucker Jones,Lily Whitler,Kelsey S. Glazer,Manuel Aravena,Jorge Gonzalez-Lopez,Ryan Endsley,Viola Gelli,Mengtao Tang,Michael W. Topping*
 
 Main category: astro-ph.GA
@@ -3495,7 +3580,7 @@ Key Figures:
 </details>
 
 
-### [49] [A Cosmic Archipelago of lensed metal-poor galaxies at $z\sim6$](https://arxiv.org/abs/2606.02720)
+### [50] [A Cosmic Archipelago of lensed metal-poor galaxies at $z\sim6$](https://arxiv.org/abs/2606.02720)
 *A. Bolamperti,M. Messa,A. Zanella,E. Vanzella,P. Bergamini,F. Loiacono,A. M. Koekemoer,J. Vernet,R. A. Windhorst,A. Adamo,F. Annibali,F. Calura,M. Castellano,J. M. Diego,C. Grillo,M. Gronke,E. Iani,M. Meneghetti,A. Mercurio,K. Nakajima,S. Ravindranath,M. Ricotti,P. Rosati,H. Yan*
 
 Main category: astro-ph.GA
@@ -3580,7 +3665,7 @@ Key Figures:
 </details>
 
 
-### [50] [Chaotic Molecular Gas in Five Dusty Star-forming Galaxies in the Spiderweb Protocluster at $z = 2.16$](https://arxiv.org/abs/2604.27071)
+### [51] [Chaotic Molecular Gas in Five Dusty Star-forming Galaxies in the Spiderweb Protocluster at $z = 2.16$](https://arxiv.org/abs/2604.27071)
 *Jaclyn B. Champagne,Helmut Dannerbauer,Jose Manuel Perez-Martinez,Caitlin M. Casey,Shuowen Jin,Matthew Lehnert,Jorge A. Zavala*
 
 Main category: astro-ph.GA
@@ -3615,7 +3700,7 @@ Key Figures:
 </details>
 
 
-### [51] [LensAgent: A Self Evolving Agent for Autonomous Physical Inference of Sub-galactic Structure](https://arxiv.org/abs/2604.03691)
+### [52] [LensAgent: A Self Evolving Agent for Autonomous Physical Inference of Sub-galactic Structure](https://arxiv.org/abs/2604.03691)
 *Xiaotang Feng,Zihan Wang,Zilang Shu,Jean-Paul Kneib,Philip Torr*
 
 Main category: astro-ph.GA
@@ -3682,7 +3767,7 @@ Key Figures:
 </details>
 
 
-### [52] [The Stellar IMF and Dark Matter Halo of ESO0286: Constraints from Strong Lensing and Dynamics](https://arxiv.org/abs/2603.26894)
+### [53] [The Stellar IMF and Dark Matter Halo of ESO0286: Constraints from Strong Lensing and Dynamics](https://arxiv.org/abs/2603.26894)
 *Han Wang,Jens Thomas,Mathias Lipka,Sherry H. Suyu,Aymeric Galan,Stefano de Nicola,Tian Li*
 
 Main category: astro-ph.GA
@@ -3767,7 +3852,7 @@ Key Figures:
 </details>
 
 
-### [53] [The velocity dispersion function of red galaxies in four Hubble Frontier Fields galaxy clusters](https://arxiv.org/abs/2603.26869)
+### [54] [The velocity dispersion function of red galaxies in four Hubble Frontier Fields galaxy clusters](https://arxiv.org/abs/2603.26869)
 *G. Granata,L. Tortorelli,C. Grillo,P. Rosati,M. D'Addona,A. Mercurio,G. Angora,P. Bergamini,G. B. Caminha*
 
 Main category: astro-ph.GA
@@ -3852,7 +3937,7 @@ Key Figures:
 </details>
 
 
-### [54] [Spectroscopical Confirmation and Lens Modeling of a Complex Strong Lensing System Produced by a Close Galaxy Pair at $z_d=0.79$](https://arxiv.org/abs/2603.12790)
+### [55] [Spectroscopical Confirmation and Lens Modeling of a Complex Strong Lensing System Produced by a Close Galaxy Pair at $z_d=0.79$](https://arxiv.org/abs/2603.12790)
 *Zizhao He,Limeng Deng,Qihang Chen,Yiping Shu,Nan Li,Di Wu*
 
 Main category: astro-ph.GA
@@ -3933,7 +4018,7 @@ Key Figures:
 </details>
 
 
-### [55] [Varstrometry for Off-nucleus and Dual Subkiloparsec AGN (VODKA): Three Quadruply Lensed Quasars at Cosmic Noon in HST and JWST](https://arxiv.org/abs/2602.16995)
+### [56] [Varstrometry for Off-nucleus and Dual Subkiloparsec AGN (VODKA): Three Quadruply Lensed Quasars at Cosmic Noon in HST and JWST](https://arxiv.org/abs/2602.16995)
 *Mingrui Liu,Yu-Ching Chen,Nadia L. Zakamska,Xin Liu,Yue Shen,Xuheng Ding,Arran Gross,Hsiang-Chih Hwang,Yuzo Ishikawa,Kedar A. Phadke*
 
 Main category: astro-ph.GA
@@ -4020,7 +4105,7 @@ Key Figures:
 </details>
 
 
-### [56] [New Dynamical Measurements from a Lensed Quasar Sample: Joint Analysis Constrains the Mass Profile Evolution of Lens Galaxies](https://arxiv.org/abs/2602.13578)
+### [57] [New Dynamical Measurements from a Lensed Quasar Sample: Joint Analysis Constrains the Mass Profile Evolution of Lens Galaxies](https://arxiv.org/abs/2602.13578)
 *Ziyu Guo,Yun Chen,Yiping Shu,Jiaze Gao,Hui Li,Zizhao He,Jun Wang*
 
 Main category: astro-ph.GA
@@ -4098,7 +4183,7 @@ Key Figures:
 </details>
 
 
-### [57] [MeerKAT discovery of a high-redshift strongly-lensed hydroxyl gigamaser](https://arxiv.org/abs/2602.13396)
+### [58] [MeerKAT discovery of a high-redshift strongly-lensed hydroxyl gigamaser](https://arxiv.org/abs/2602.13396)
 *Thato E. Manamela,Roger P. Deane,Tariq Blecher,Ian Heywood,Athol J. Kemball,Danail Obreschkow*
 
 Main category: astro-ph.GA
@@ -4171,7 +4256,7 @@ Key Figures:
 </details>
 
 
-### [58] [Multi-band Reconstruction of Sixteen Gravitational Lens Systems using PISCO data](https://arxiv.org/abs/2601.15585)
+### [59] [Multi-band Reconstruction of Sixteen Gravitational Lens Systems using PISCO data](https://arxiv.org/abs/2601.15585)
 *Huimin Qu,Daniel J. Ballard,Geraint F. Lewis,Karl Glazebrook,Antony Stark,Sarah M. Sweet,Colin Jacobs,Kim-Vy Tran,Brian Stalder,Tania M. Barone,Tucker Jones,Keerthi Vasan G. C.,Thomas E. Collett,Glenn G. Kacprzak,Dorota Bayer*
 
 Main category: astro-ph.GA
@@ -4252,7 +4337,7 @@ Key Figures:
 </details>
 
 
-### [59] [Detailed lens modeling and kinematics of the submillimeter galaxy G09v1.97. An analysis of CO, H2O, H2O+, and dust continuum emission](https://arxiv.org/abs/2601.14685)
+### [60] [Detailed lens modeling and kinematics of the submillimeter galaxy G09v1.97. An analysis of CO, H2O, H2O+, and dust continuum emission](https://arxiv.org/abs/2601.14685)
 *K. Kade,C. Yang,M. Yttergren,K. K. Knudsen,S. König,A. Amvrosiadis,S. Dye,J. Nightingale,L. Zhang,Z. Zhang,A. Cooray,P. Cox,R. Gavazzi,E. Ibar,M. J. Michałowski,P. van der Werf,R. Xue*
 
 Main category: astro-ph.GA
@@ -4287,7 +4372,7 @@ Key Figures:
 </details>
 
 
-### [60] [Mirror images of lensed star clusters with mismatched spectral energy distributions: A possible signature of top-heavy stellar initial mass functions and extreme stars in high-redshift star clusters](https://arxiv.org/abs/2601.14385)
+### [61] [Mirror images of lensed star clusters with mismatched spectral energy distributions: A possible signature of top-heavy stellar initial mass functions and extreme stars in high-redshift star clusters](https://arxiv.org/abs/2601.14385)
 *Erik Zackrisson,Jose M. Diego,Jose M. Palencia,Francesco Gabrielli,Armin Nabizadeh,Angela Adamo,Guglielmo Costa*
 
 Main category: astro-ph.GA
@@ -4376,7 +4461,7 @@ Key Figures:
 </details>
 
 
-### [61] [MUSE-ALMA Haloes XIII. Molecular gas in $z \sim 0.5$ HI-selected galaxies](https://arxiv.org/abs/2601.08633)
+### [62] [MUSE-ALMA Haloes XIII. Molecular gas in $z \sim 0.5$ HI-selected galaxies](https://arxiv.org/abs/2601.08633)
 *Victoria Bollo,Celine Peroux,Martin Zwaan,Jianhang Chen,Varsha Kulkarni,Capucine Barfety,Simon Weng,Natascha Forster Schreiber,Linda Tacconi,Benedetta Casavecchia,Tamsyn O'Beirne,Laurent Chemin,Ramona Augustin,Mitchell Halley*
 
 Main category: astro-ph.GA
@@ -4463,7 +4548,7 @@ Key Figures:
 </details>
 
 
-### [62] [Fast rotations in galaxies at cosmic noon indicate central concentration of stars, dark matter or massive black holes](https://arxiv.org/abs/2601.03338)
+### [63] [Fast rotations in galaxies at cosmic noon indicate central concentration of stars, dark matter or massive black holes](https://arxiv.org/abs/2601.03338)
 *Fernanda Roman-Oliveira,Francesca Rizzo,Filippo Fraternali*
 
 Main category: astro-ph.GA
@@ -4544,7 +4629,7 @@ Key Figures:
 </details>
 
 
-### [63] [A first systematic study of [OIII] 88$μ$m at $z>8$: two luminous oxygen lines and a powerful ionized outflow in the first 600 million years](https://arxiv.org/abs/2512.14486)
+### [64] [A first systematic study of [OIII] 88$μ$m at $z>8$: two luminous oxygen lines and a powerful ionized outflow in the first 600 million years](https://arxiv.org/abs/2512.14486)
 *Hiddo S. B. Algera,John R. Weaver,Tom J. L. C. Bakx,Manuel Aravena,Rychard J. Bouwens,Karin Cescon,Chian-Chou Chen,Elisabete da Cunha,Pratika Dayal,Andreas Faisst,Andrea Ferrara,Seiji Fujimoto,Takuya Hashimoto,Kasper Heintz,Rodrigo Herrera-Camus,Jacqueline Hodge,Hanae Inami,Akio K. Inoue,Jorryt Matthee,Romain Meyer,Shoichiro Mizukoshi,Chayan Mondal,Themiya Nanayakkara,Pascal A. Oesch,Andrea Pallottini,Huub Röttgering,Lucie E. Rowland,Sander Schouws,Renske Smit,Laura Sommovigo,Daniel P. Stark,Yuma Sugahara,Livia Vallini,Bovornpratch Vijarnwannaluk,Paul van der Werf,Norbert Werner,Joris Witstok,Mengyuan Xiao*
 
 Main category: astro-ph.GA
@@ -4627,7 +4712,7 @@ Key Figures:
 </details>
 
 
-### [64] [AtLAST -- A five fold increase in the number of identified Strongly Lensed Galaxies in the sub-millimetre and its consequences](https://arxiv.org/abs/2512.13896)
+### [65] [AtLAST -- A five fold increase in the number of identified Strongly Lensed Galaxies in the sub-millimetre and its consequences](https://arxiv.org/abs/2512.13896)
 *Joaquín González-Nuevo,Laura Bonavera,Juan Alberto Cano,David Crespo,Rebeca Fernández-Fernández,Valentina Franco,Marcos M. Cueli,José Manuel Casas,Tom J. L. C. Bakx*
 
 Main category: astro-ph.GA
@@ -4667,7 +4752,7 @@ Key Figures:
 </details>
 
 
-### [65] [MUSE-DARK-II: 3D morpho-kinematic modelling of lensed galaxies. Tully-Fisher relation of $z \sim 1$ star-forming galaxies](https://arxiv.org/abs/2603.28856)
+### [66] [MUSE-DARK-II: 3D morpho-kinematic modelling of lensed galaxies. Tully-Fisher relation of $z \sim 1$ star-forming galaxies](https://arxiv.org/abs/2603.28856)
 *Alexandre Jeanneau,Johan Richard,Nicolas F. Bouché,Davor Krajnović,Bianca-Iulia Ciocan,Jonathan Freundlich,Benoît Epinat,Thierry Contini*
 
 Main category: astro-ph.GA
@@ -4752,7 +4837,7 @@ Key Figures:
 </details>
 
 
-### [66] [Origins of the UV continuum and Balmer emission lines in Little Red Dots: observational validation of dense gas envelope models enshrouding the AGN](https://arxiv.org/abs/2601.10573)
+### [67] [Origins of the UV continuum and Balmer emission lines in Little Red Dots: observational validation of dense gas envelope models enshrouding the AGN](https://arxiv.org/abs/2601.10573)
 *Yoshihisa Asada,Kohei Inayoshi,Qinyue Fei,Seiji Fujimoto,Chris Willott*
 
 Main category: astro-ph.GA
@@ -4837,7 +4922,7 @@ Key Figures:
 </details>
 
 
-### [67] [Suppression of star formation at the centre of barred AGN galaxies](https://arxiv.org/abs/2605.23269)
+### [68] [Suppression of star formation at the centre of barred AGN galaxies](https://arxiv.org/abs/2605.23269)
 *Takashi Yamamoto,Nario Kuno,Daisuke Iono,Takuya Hashimoto,Sophia K. Stuber,Daizhong Liu,Thomas G. Williams,Akio K. Inoue*
 
 Main category: astro-ph.GA
@@ -4922,7 +5007,7 @@ Key Figures:
 </details>
 
 
-### [68] [Baryonic mass budgets in the central regions of the Bullet Cluster and their consistency with strong lensing in MOND](https://arxiv.org/abs/2606.19454)
+### [69] [Baryonic mass budgets in the central regions of the Bullet Cluster and their consistency with strong lensing in MOND](https://arxiv.org/abs/2606.19454)
 *Dong Zhang,Hosein Haghi,Elena Asencio,Indranil Banik,Akram Hasani Zonoozi,Sangjun Cha,Boseong Young Cho,Hyungjin Joo,Pavel Kroupa,Anastasia Lazutkina,Eda Gjergo*
 
 Main category: astro-ph.GA
@@ -4957,7 +5042,7 @@ Key Figures:
 </details>
 
 
-### [69] [Dust in the Average Galaxy: Attenuation, Emission, and Opacity from 0<z<7](https://arxiv.org/abs/2606.17270)
+### [70] [Dust in the Average Galaxy: Attenuation, Emission, and Opacity from 0<z<7](https://arxiv.org/abs/2606.17270)
 *Caitlin M. Casey,Hollis B. Akins,Andrew J. Battisti,Jed McKinney,Ezequiel Treister,Jorge A. Zavala,Hiddo Algera,Manuel Aravena,Yingjie Cheng,Nicole E. Drakos,Andreas L. Faisst,Maximilien Franco,Seiji Fujimoto,Ghassem Gozaliasl,Ali Hadi,Santosh Harish,Michaela Hirschmann,Olivier Ilbert,Kohei Inayoshi,Jeyhan S. Kartaltepe,Anton M. Koekemoer,Claudia del P. Lagos,Erini Lambrides,Ronaldo Laishram,Daizhong Liu,Arianna S. Long,Georgios E. Magdis,Sinclaire M. Manning,Crystal L. Martin,Felix Martinez,Richard Massey,Jacqueline E. McCleary,Henry Joy McCracken,Lauro Moscardini,Desika Narayanan,Louise Paquereau,Jason Rhodes,Brant E. Robertson,Rasha M. Samir,Claudia Scarlata,Marko Shuntov,Laura Sommovigo,Aswin P. Vijayan,Wuji Wang,Can Xu,Dhruv Zimmerman*
 
 Main category: astro-ph.GA
@@ -5046,7 +5131,7 @@ Key Figures:
 </details>
 
 
-### [70] [Dynamical models of cluster members to probe the total mass properties of cluster subhalos. I. A comparison with parametric strong lensing models](https://arxiv.org/abs/2606.05298)
+### [71] [Dynamical models of cluster members to probe the total mass properties of cluster subhalos. I. A comparison with parametric strong lensing models](https://arxiv.org/abs/2606.05298)
 *Nicola Bianchetti,Claudio Grillo,Giovanni Granata,Pietro Bergamini,Massimo Meneghetti,Amata Mercurio,Piero Rosati,Eros Vanzella,Gabriel B. Caminha*
 
 Main category: astro-ph.GA
@@ -5133,7 +5218,7 @@ Key Figures:
 </details>
 
 
-### [71] [Resolving the Multiphase Outflow, Shock Signatures, and PAHs in the AGN-Starburst Composite ULIRG F10565+2448 with JWST MIRI/MRS](https://arxiv.org/abs/2605.03016)
+### [72] [Resolving the Multiphase Outflow, Shock Signatures, and PAHs in the AGN-Starburst Composite ULIRG F10565+2448 with JWST MIRI/MRS](https://arxiv.org/abs/2605.03016)
 *Kylie Yui Dan,Jerome Seebeck,Sylvain Veilleux,David Rupke,Eduardo Gonzalez-Alfonso,Ismael Garcia-Bernete,Weizhe Liu,Dieter Lutz,Marcio Melendez,Miguel Pereira Santaella,Eckhard Sturm,Francesco Tombesi*
 
 Main category: astro-ph.GA
@@ -5218,7 +5303,7 @@ Key Figures:
 </details>
 
 
-### [72] [Hamilton's Object Revisited: A challenging source redshift of a strong lensing configuration](https://arxiv.org/abs/2604.19867)
+### [73] [Hamilton's Object Revisited: A challenging source redshift of a strong lensing configuration](https://arxiv.org/abs/2604.19867)
 *Jenny Wagner,Richard E. Griffiths,Emilio E. Falco*
 
 Main category: astro-ph.GA
@@ -5303,7 +5388,7 @@ Key Figures:
 </details>
 
 
-### [73] [Revealing the nature of the starburst galaxies in the $z=2.4$ overdensity HATLAS J0849](https://arxiv.org/abs/2603.23608)
+### [74] [Revealing the nature of the starburst galaxies in the $z=2.4$ overdensity HATLAS J0849](https://arxiv.org/abs/2603.23608)
 *Melanie Kaasinen,Francesca Rizzo,Francesco Valentino,Cecilia Bacchini,Jianhang Chen,Takafumi Tsukui,Aristeidis Amvrosiadis*
 
 Main category: astro-ph.GA
@@ -5388,7 +5473,7 @@ Key Figures:
 </details>
 
 
-### [74] [The ALPINE-CRISTAL-JWST Survey: Gas-phase abundance gradients of main sequence star-forming galaxies and their kinematics at $4 < z < 6$](https://arxiv.org/abs/2603.13493)
+### [75] [The ALPINE-CRISTAL-JWST Survey: Gas-phase abundance gradients of main sequence star-forming galaxies and their kinematics at $4 < z < 6$](https://arxiv.org/abs/2603.13493)
 *Lilian L. Lee,Natascha M. Förster Schreiber,Seiji Fujimoto,Andreas L. Faisst,Rodrigo Herrera-Camus,Reinhard Genzel,Linda J. Tacconi,Dieter Lutz,Alvio Renzini,Ryan Sanders,Emily Wisnioski,Stijn Wuyts,Eleonora Parlanti,Gareth Jones,Hannah Übler,Daizhong Liu,Jianhang Chen,Ric I. Davies,Giulia Tozzi,Andreas Burkert,Sedona H. Price,Manuel Aravena,Médéric Boquien,Matthieu Béthermin,Elisabete da Cunha,Rebecca L. Davies,Ilse De Looze,Miroslava Dessauges-Zavadsky,Andrea Ferrara,Deanne B. Fisher,Steven Gillman,Michele Ginolfi,Edo Ibar,Anton M. Koekemoer,Juan Molina,Thorsten Naab,Mónica Relaño,Dominik A. Riechers,David B. Sanders,Justin S. Spilker,Livia Vallini,Giovanni Zamorani,Ambra Nanni,Poulomi Dam,Tanio Diaz-Santos,Diego Gómez-Espinoza,Ali Hadi,Ryota Ikeda,Ana Posses,Michael Romano,Amiel Sternberg,Vicente Villanueva,Wuji Wang*
 
 Main category: astro-ph.GA
@@ -5471,7 +5556,7 @@ Key Figures:
 </details>
 
 
-### [75] [Mature but Still Growing: JWST Detection of the Earliest Intracluster Light at z ~ 2](https://arxiv.org/abs/2603.03427)
+### [76] [Mature but Still Growing: JWST Detection of the Earliest Intracluster Light at z ~ 2](https://arxiv.org/abs/2603.03427)
 *Hyungjin Joo,M. James Jee,Kyle Finner,Zachary P. Scofield,Sangjun Cha,Jinhyub Kim,Ranga-Ram Chary,Andreas Faisst,Bomee Lee*
 
 Main category: astro-ph.GA
@@ -5553,7 +5638,7 @@ Key Figures:
 </details>
 
 
-### [76] [The ionised interstellar medium of DSFGs revealed by JWST/NIRSpec and ALMA: Super-solar metallicity, low ionisation parameters and, typical electron densities](https://arxiv.org/abs/2602.18558)
+### [77] [The ionised interstellar medium of DSFGs revealed by JWST/NIRSpec and ALMA: Super-solar metallicity, low ionisation parameters and, typical electron densities](https://arxiv.org/abs/2602.18558)
 *Steven Gillman,Kei Ito,Francesco Valentino,Gabe Brammer,Pablo Araya Araya,Georgios Magdis,Ugnė Dudzevičiūtė,Aswin P. Vijayan,Minju Lee,Bitten Gullberg,Daniel Ceverino,Andreas L. Faisst,Seiji Fujimoto,Thomas R. Greve,Rashmi Gottumukkala,Chandana Hegde,Michaela Hirschmann,Shuowen Jin,Christian Kragh Jespersen,Takumi Kakimoto,Mariko Kubo,Peter Laursen,Masato Onodera,Antonio Pensabene,Francesca Rizzo,John R. Weaver,Po-Feng Wu*
 
 Main category: astro-ph.GA
@@ -5640,7 +5725,7 @@ Key Figures:
 </details>
 
 
-### [77] [Searching for Galaxy Cluster-Scale Strong lenses from the DESI Legacy Imaging Surveys](https://arxiv.org/abs/2601.11054)
+### [78] [Searching for Galaxy Cluster-Scale Strong lenses from the DESI Legacy Imaging Surveys](https://arxiv.org/abs/2601.11054)
 *Zhejian Zhang,Nan Li,Shude Mao,Hu Zou,Zizhao He,Mingxiang Fu,Shenzhe Cui*
 
 Main category: astro-ph.GA
@@ -5725,7 +5810,96 @@ Key Figures:
 </details>
 
 
-### [78] [An extreme ram-pressure stripping event in a protocluster at redshift 4.3](https://arxiv.org/abs/2606.18229)
+### [79] [Cosmological Galaxy Formation Modelling in the Era of the Square Kilometre Array](https://arxiv.org/abs/2606.25359)
+*Claudia del P. Lagos,Carlton M. Baugh,Connor Bottrell,Romeel Dave,Gabriella De Lucia,Jindra Gensior,Filip Huško,Cedric G. Lacey,Danail Obreschkow,Kyle Oman,Chris Power,Nicole Thomas,Ruby J. Wright,Lizhi Xie*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★★ (91/100) - 该论文与用户Zotero兴趣画像高度匹配：核心作者Claudia del P. Lagos在用户作者列表中权重很高；论文主题聚焦于星系形成模拟中的分子气体、冷气体和星际介质，与用户画像中的'molecular gas'、'cold gas'、'ISM'等关键词高度吻合；论文方法涉及宇宙学流体动力学模拟和半解析模型，与用户关注的星系气体性质研究一致。虽然论文不直接涉及强引力透镜，但作为星系形成和气体研究的前沿综述，对用户研究高红移星系气体和动力学有重要参考价值。
+
+TL;DR: 本文综述了为准备SKA而发展的宇宙学星系形成模拟现状，强调了跨尺度模拟、前向建模和AI驱动仿真器等策略的重要性。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: SKA将绘制宇宙时间尺度上星系的冷气体和射电连续谱，需要能够将物理真实性与宇宙学尺度相结合的模型来解读数据。
+
+Method: 综述了宇宙学流体动力学模拟和半解析模型在模拟原子氢、分子气体以及来自恒星形成和AGN的射电连续谱方面的进展，提出了“婚礼蛋糕”式多尺度联合模拟策略。
+
+Result: 这些模拟模型已能联合再现许多观测到的气体性质，但仍需进一步整合不同尺度的模拟。
+
+Conclusion: 通过协调的多尺度模拟、前向建模和AI技术，理论模型将从被动的解释者转变为SKA科学的主动发现引擎。
+
+Abstract: Over the past decade, galaxy formation simulations have advanced dramatically, transforming our ability to model the interstellar medium (ISM) and predict galaxies' radio emission. Yet the challenge of bridging physical scales--from sub-parsec star formation to gigaparsec cosmic structure--remains. The Square Kilometre Array (SKA) will map the cold gas and radio continuum of galaxies across cosmic time, demanding models that couple physical realism with cosmological reach. This chapter reviews the state-of-the-art in cosmological galaxy formation modelling in preparation for the SKA. We outline progress in simulating atomic hydrogen (HI), molecular gas, and radio continuum emission from both star formation and active galactic nuclei, highlighting how cosmological hydrodynamical simulations and semi-analytic models now jointly reproduce many observed gas properties. We emphasise the need for a coordinated, ``wedding-cake'' strategy that unites simulations of different scales, for forward modelling of observables to ensure fair comparison with data, and for the integration of new technologies such as AI-driven emulators to accelerate progress. Together, these efforts will enable theoretical models to both interpret and guide SKA science, turning simulations from passive interpreters into active engines for discovery.
+
+Abstract Translation:
+在过去的十年中，星系形成模拟取得了显著进展，极大地提升了我们对星际介质（ISM）建模以及预测星系射电辐射的能力。然而，连接物理尺度——从亚秒差距的恒星形成到吉秒差距的宇宙结构——的挑战依然存在。平方公里阵列（SKA）将绘制宇宙时间尺度上星系的冷气体和射电连续谱，这要求模型能够将物理真实性与宇宙学尺度相结合。本章回顾了为准备SKA而进行的宇宙学星系形成建模的最新进展。我们概述了在模拟原子氢（HI）、分子气体以及来自恒星形成和活动星系核的射电连续谱辐射方面的进展，强调了宇宙学流体动力学模拟和半解析模型如何共同再现许多观测到的气体性质。我们强调需要一种协调的“婚礼蛋糕”策略，该策略将不同尺度的模拟统一起来，对可观测物理量进行前向建模以确保与数据公平比较，并整合人工智能驱动的模拟器等技术以加速进展。这些努力将共同使理论模型能够解释和指导SKA科学，将模拟从被动的解释者转变为主动的发现引擎。
+
+Conclusion Translation:
+基于现有总结：通过协调的多尺度模拟、前向建模和AI技术，理论模型将从被动的解释者转变为SKA科学的主动发现引擎。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2606.25359v1/x1.png)
+
+图1：修改自Crain and van de Voort (2023)，以展示在不同尺度上发生的过程，并将其置于直接模拟的内容和通过所谓的“子网格物理模型”建模的内容的背景下。从直接模拟过渡到建模的确切点取决于可用的工具。顶部的箭头显示了基于最新模型和模拟的不同技术中通常直接模拟的区域。
+
+<small>Figure 1: Modified from Crain and van de Voort ( 2023 ) to show the processes that are happening at different scales and place them into the context of what is directly simulated and what is modelled via so called “subgrid physics models”. The exact transition of when one goes from directly simulating to modelling depends on the tools at hand. The arrows at the top show the regions that are typically directly simulated in different techniques based on the latest models and simulations.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2606.25359v1/x2.png)
+
+图2：在三种不同的宇宙学流体动力学模拟中，\(z=0\) 时气体粒子或细胞在温度-密度平面上的分布。Eagle（左图）(Crain et al., 2017) 缺乏明确的ISM模型，而是施加了一个状态方程。这里，像素按质量分数着色，显示\(z=0\) 宇宙中大部分气体质量以热、低密度气体的形式存在。FIREbox（中图）(Feldmann et al., 2023) 使用冷却表使气体冷却到\(10\) K，并在后处理中考虑HII、HI、H\(_2\) 的分配。这里，像素按HII（红色）、HI（绿色）和H\(_2\)（蓝色）质量的比例着色。Colibre（右图）(Schaye et al., 2026) 包括显式的即时非平衡化学和冷却，明确追踪HII、HI和H\(_2\) 物种。这里，像素按HII（蓝色）、HI（红色）和H\(_2\)（绿色）质量的比例着色。中图和右图是该领域近期进展的例子。
+
+<small>Figure 2: The distribution of gas particles or cells in the temperature vs density plane at \(z=0\) in three different cosmological hydrodynamical simulations. Eagle (left panel) (Crain et al. , 2017 ) lacked an explicit model of the ISM and instead imposed an equation of state. Here, pixels are coloured by the mass fraction, showing that most of the gas mass in the \(z=0\) universe is in the form of hot, low-density gas. FIREbox (middle panel) (Feldmann et al. , 2023 ) uses cooling tables to allow the gas to cool down to \(10\) K and account for the HII, HI, H 2 partition in post-processing. Here, pixels are coloured by the fraction of HII (red), HI (green) and H 2 (blue) mass. Colibre (right panel) (Schaye et al. , 2026 ) includes explicit on-the-fly non-equilibrium chemistry and cooling that explicitly tracks the HII, HI and H 2 species. Here, pixels are coloured by the fraction of HII (blue), HI (red) and H 2 (green) mass. The middle and right panel are examples of the recent progress in the field.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2606.25359v1/Figs/Marasco25_consolidated.png)
+
+图3：左图：HI柱密度 (\(N_{{HI}}\)) 与速度弥散 (\(\sigma\)) 的联合分布。数值对取自使用MeerKAT（左列）对\(5\)个\({L}_{\star}\) 星系样本获得的高分辨率（\(\sim 25^{\)；上行 – HR）和低分辨率（\(\sim 65^{\)；下行 – LR）谱立方体的\(0^{{th}}\) 和\(2^{{nd}}\) 矩图中的对应像素。中列和右列分别显示了来自TNG50和FIRE-2模拟套件的相似质量星系样本的相同测量结果。模拟星系已在与相应MeerKAT观测相同的分辨率和灵敏度下被“观测”。这些模拟在低柱密度 (\(N_{{HI}} 30\,{km}\,{s}^{-1}\)) 的高柱密度 (\(N_{{HI}}>10^{19}\,{cm}^{-2}\)) 区域有更多气体，这也是未观测到的。（复制自Marasco et al., 2025 的图5。）右图：MeerKAT星系的累积HI通量作为投影距离的函数，与选定的TNG50和FIRE-2星系进行比较（复制自Marasco et al. 2025 的图7）。
+
+<small>Figure 3: Left panels: Joint distribution of HI column density ( \(N_{{HI}}\) ) and velocity dispersion ( \(\sigma\) ). Pairs of values are drawn from corresponding pixels in the \(0^{{th}}\) and \(2^{{nd}}\) moment maps of high- ( \(\sim 25^{\) ; top row – HR) and low-resolution ( \(\sim 65^{\) ; bottom row – LR) spectral cubes obtained with MeerKAT (left column) for a sample of \(5\) \({L}_{\star}\) galaxies. The centre and right columns show the same measurement for samples of galaxies of similar mass drawn from the TNG50 and FIRE-2 simulation suites, respectively. Simulated galaxies have been ‘observed’ at the same resolution and sensitivity as the corresponding MeerKAT observations. These simulations have much more gas at low column density ( \(N_{{HI}} 30\,{km}\,{s}^{-1}\) ) at higher column ( \(N_{{HI}}>10^{19}\,{cm}^{-2}\) ) that is also not observed. (Reproduced from Fig. 5 in Marasco et al. , 2025 .) Right panel: Cumulative HI flux as a function of projected distance for MeerKAT galaxies, compared with selected TNG50 and FIRE-2 galaxies (Reproduced from Fig. 7 in Marasco et al. 2025 ).</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2606.25359v1/x3.png)
+
+图4：Santos-Santos et al. (2020) 收集的观测星系在\(\eta_{{rot}}\) 和\(\eta_{{bar}}\) 空间中的汇编。\(\eta_{{rot}}\) 参数是在适当选择的“内部”半径 (\(V_{{fid}}\)) 处的旋转曲线幅度与其最大值 (\(V_{{max}}\)) 之比，作为旋转曲线形状的代理：\(\eta_{{rot}}\) 值较高（较低）暗示暗物质尖点（核）。水平灰线标记了NFW晕模型的预期。\(\eta_{{bar}}\) 参数是星系的重子（恒星和气体）成分在同一内部孔径内对其运动学影响的度量。\(\eta_{{bar}}\) 值越高对应中心越受重子主导的星系。点按\(V_{{max}}\) 着色。对于低质量星系 (\(V_{{max}}\lesssim 100\,{km}\,{s}^{-1}\)；黑-橙色点)，\(\eta_{{rot}}\) 和\(\eta_{{bar}}\) 之间出现了具有显著离散度的反相关。这一趋势难以解释，并为解决尖点-核差异的理论提供了严格检验。（复制自Santos-Santos et al., 2020 的图4。）
+
+<small>Figure 4: A compilation of observed galaxies collected by Santos-Santos et al. ( 2020 ) in the space of \(\eta_{{rot}}\) and \(\eta_{{bar}}\) . The \(\eta_{{rot}}\) parameter is the ratio of the rotation curve amplitude at a suitably chosen ‘inner’ radius ( \(V_{{fid}}\) ) and its maximum ( \(V_{{max}}\) ), and serves as a proxy for the rotation curve shape: a higher (lower) value of \(\eta_{{rot}}\) is suggestive of a dark matter cusp (core). The horizontal grey line marks the expectation for an NFW halo model. The \(\eta_{{bar}}\) parameter is a measure of the influence of the baryonic (stellar & gas) components of the galaxy on its kinematics within the same inner aperture. Higher \(\eta_{{bar}}\) values correspond to more centrally baryon-dominated galaxies. Points are coloured by \(V_{{max}}\) . For low mass galaxies ( \(V_{{max}}\lesssim 100\,{km}\,{s}^{-1}\) ;black-orange points) an anti-correlation with substantial scatter between \(\eta_{{rot}}\) and \(\eta_{{bar}}\) emerges. This trend is challenging to explain and provides a stringent test of theories proposed to resolve the cusp-core discrepancy. (Reproduced from Fig. 4 in Santos-Santos et al. , 2020 .)</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2606.25359v1/x4.png)
+
+图5：HI速度宽度函数是对富气星系晕质量函数的强约束，因此是宇宙学模型的潜在检验，但忠实地模拟HI质量 (\(M_{{HI}}\)) 和线宽 (\(w_{50}\)) 中的星系分布需要捕捉冷气体动力学的复杂性。GALFORM半解析模型中星系光谱的详细前向模型（绿线，改编自Brooks et al., 2023 的图4）大大高估（低估）了ALFALFA巡天（开放十字；Haynes et al., 2018）中低\(w_{{50}}\)（高\(w_{50}\)）星系的计数。然而，应用于不同半解析模型（Shark；Chauhan et al. 2019，显示为两个\(N\) 体盒子medi和micro，分别代表较低和较高分辨率）的类似前向建模与数据吻合得更好，显示了这对底层重子物理的敏感性。像Eagle（紫线，复制自Oman et al., 2024 图4中的‘EAGLE25’曲线）这样的流体动力学模型更准确地捕捉了晕质量与\(w_{50}\) 之间的非线性关系——尤其是其离散度（见Oman et al., 2024 的图7）。
+
+<small>Figure 5: The HI velocity width function is a strong constraint on the halo mass function of gas rich galaxies and therefore a potential test of cosmological models, but faithfully modelling the galaxy distribution in HI mass ( \(M_{{HI}}\) ) and line width ( \(w_{50}\) ) requires capturing the complexity of cold gas dynamics. A detailed forward model of the spectra of galaxies in the GALFORM semi-analytic model (green line, adapted from fig. 4 in Brooks et al. , 2023 ) greatly overpredicts (underpredicts) the number counts of low- \(w_{{50}}\) (high- \(w_{50}\) ) galaxies in the ALFALFA survey (open crosses; Haynes et al. , 2018 ) . However, a similar forward modelling applied to a different semi-analytic model ( Shark ; Chauhan et al. 2019 , shown for two \(N\) -body boxes medi and micro, representing lower and higher resolution, respectively) is in much better agreement with the data, showing how sensitive this is to the underlying baryon physics. Hydrodynamical models like Eagle (purple line, reproduced from ‘EAGLE25’ curve in fig. 4 of Oman et al. , 2024 ) capture the non-linear relationship between halo mass and \(w_{50}\) – and especially its scatter – arguably more accurately (see fig. 7 in Oman et al. , 2024 ) .</small>
+
+#### Figure 6
+![Figure 6](https://arxiv.org/html/2606.25359v1/Figs/Gensior24.png)
+
+图6：取自Gensior et al. (2024) 的图4和图7。左侧的图显示了EMP-Pathfinder模拟中四个示例星系采用恒定恒星形成效率（上）和依赖于ISM湍流的效率（下）时的HI面密度正面投影。右侧的图显示了模拟星系HI盘标高径向轮廓，表明采用恒定恒星形成效率的EMP-Pathfinder模拟产生的HI盘比近邻宇宙中观测到的（带误差棒的黑点）厚得多。
+
+<small>Figure 6: Taken from Figures 4 and 7 in Gensior et al. ( 2024 ) . The maps on the left show face-on projection of the HI surface density for four example galaxies in the EMP- Pathfinder simulations employing a constant star formation efficiency (top) and an efficiency that depends on the turbulence of the ISM (bottom). The plot on the right shows radial profiles of the HI disc scale heights of the simulated galaxies, showing that the EMP- Pathfinder simulations employing a constant star formation efficiency produces HI discs that are substantially thicker than those observed in the nearby universe (black symbols with errorbars).</small>
+
+#### Figure 7
+![Figure 7](https://arxiv.org/html/2606.25359v1/x5.png)
+
+图7：Stevens et al. (2019b) 的图1，显示了TNG中质量\(1.7\times 10^{14}\,M_{\odot}\) 的星系团在\(z=0\) 时的投影HI柱密度。圆圈表示用于测量HI质量的等效物理波束大小，考虑了xGASS巡天 (Catinella et al., 2018)。圆圈按其所中心星系的恒星质量着色。星系团的中心星系由红色圆圈表示。
+
+<small>Figure 7: Figure 1 in Stevens et al. ( 2019b ) , showing the projected HI column density of a galaxy cluster of mass \(1.7\times 10^{14}\,M_{\odot}\) in TNG at \(z=0\) . Circles indicate the equivalent physical beam size used to measure HI masses considering the xGASS survey (Catinella et al. , 2018 ) . Circles are coloured by the stellar mass of the galaxy they are centred on. The central galaxy of the cluster is indicated by red circle.</small>
+
+#### Figure 8
+![Figure 8](https://arxiv.org/html/2606.25359v1/x6.png)
+
+图8：\(z=0\)（实线）、\(z=1\)（虚线）和\(z=2\)（点线）处的HI质量函数，来自\(3\)个半解析模型（Shark、GAEA、GALFORM）和\(3\)个宇宙学流体动力学模拟（Eagle、TNG和Simba），如每个面板中所标注。来自Zwaan et al. (2005) 和Jones et al. (2018) 的\(z\approx 0\) 观测分别显示为灰色圆圈和十字；而通过将堆叠光谱与\(z\approx 1\) 处测量的光学光度函数卷积推断出的\(z\approx 1\) 处HI质量函数 (Chowdhury et al., 2024) 显示为灰色带。Eagle和Simba预测星系数密度随红移增加而增加，而其他模拟预测相反的趋势。没有一个模拟似乎能再现从\(z\approx 1\) 观测推断出的数密度增加水平。
+
+<small>Figure 8: The HI mass function at \(z=0\) (solid lines), \(z=1\) (dashed lines), and \(z=2\) (dotted lines) in \(3\) semi-analytic models ( Shark , GAEA, GALFORM) and \(3\) cosmological hydrodynamical simulations ( Eagle , TNG and Simba), as labelled in each panel. Observations at \(z\approx 0\) from Zwaan et al. ( 2005 ) and Jones et al. ( 2018 ) are shown as grey circles and crosses, respectively; while the inferred HI mass function at \(z\approx 1\) from convolving stacked spectra with measured optical luminosity functions at \(z\approx 1\) (Chowdhury et al. , 2024 ) are shown as a grey band. Eagle and Simba predict the number densities of galaxies to increase with increasing redshift, while the other simulations predict the opposite trend. None of the simulations appear to reproduce the level of increase in number density inferred from the \(z\approx 1\) observations.</small>
+
+</details>
+
+
+### [80] [An extreme ram-pressure stripping event in a protocluster at redshift 4.3](https://arxiv.org/abs/2606.18229)
 *Dazhi Zhou,Scott C. Chapman,Manuel Aravena,Roger Deane,Anthony H. Gonzalez,Ryley Hill,Nicholas LeVar,Matthew A. Malkan,Adam Muzzin,Nan Zhang,Kedar A. Phadke,Vismaya R. Pillai,Manuel Solimano,Justin S. Spilker,Nikolaus Sulzenauer,Joaquin D. Vieira,David Vizgan,George C. P. Wang,Axel Weiss*
 
 Main category: astro-ph.GA
@@ -5814,7 +5988,7 @@ Key Figures:
 </details>
 
 
-### [79] [The Early Maturity of High-Redshift Galaxies: Insights from sSFR, M/L and SFHs at z~7-14](https://arxiv.org/abs/2512.09139)
+### [81] [The Early Maturity of High-Redshift Galaxies: Insights from sSFR, M/L and SFHs at z~7-14](https://arxiv.org/abs/2512.09139)
 *P. Santini,M. Castellano,A. Calabrò,A. Fontana,E. Merlin,D. Bevacqua,P. Bergamini,S. Cantarella,L. Ciesla,A. Ferrara,S. L. Finkelstein,F. Fortuni,G. Gandolfi,T. Gasparetto,E. Giallongo,N. A. Grogin,S. T. Guida,A. M. Koekemoer,N. Menci,L. Napolitano,D. Paris,L. Pentericci,B. Perez-Diaz,B. Stoyanova,T. Treu*
 
 Main category: astro-ph.GA
@@ -5903,7 +6077,7 @@ Key Figures:
 </details>
 
 
-### [80] [Probing Infrared eXcess to Investigate Early-Universe Dust (PIXIEDust)](https://arxiv.org/abs/2512.07964)
+### [82] [Probing Infrared eXcess to Investigate Early-Universe Dust (PIXIEDust)](https://arxiv.org/abs/2512.07964)
 *Tom J. L. C. Bakx,Hiddo S. B. Algera,Jean-Baptiste Jolly,Clarke Esmerian,Kirsten Knudsen,Laura Sommovigo,Joris Witstok,Stefano Carniani,Jianhang Chen,Stephen Eales,Andrea Ferrara,Yoshinobu Fudamoto,Masato Hagimoto,Takuya Hashimoto,Hanae Inami,Akio K. Inoue,Theo Khouri,Ikki Mitsuhashi,Gunnar Nyman,Gustav Olander,Stephen Serjeant,Renske Smit,Ilsang Yoon,Jorge Zavala,Susanne Aalto,Caitlin M. Casey,Yoichi Tamura,Wouter Vlemmings*
 
 Main category: astro-ph.GA
@@ -5984,7 +6158,7 @@ Key Figures:
 </details>
 
 
-### [81] [Spatially Resolved Physical Properties of Young Star Clusters and Star-forming Clumps in the Brightest z>6 Galaxy, the Strongly Lensed Cosmic Spear at z=6.2](https://arxiv.org/abs/2512.08054)
+### [83] [Spatially Resolved Physical Properties of Young Star Clusters and Star-forming Clumps in the Brightest z>6 Galaxy, the Strongly Lensed Cosmic Spear at z=6.2](https://arxiv.org/abs/2512.08054)
 *Abdurro'uf,Dan Coe,Tom Resseguier,Calla Murphy,Xinfeng Xu,Angela Adamo,Namrata Roy,Alaina Henry,Vasily Kokorev,Gabriel Brammer,Seiji Fujimoto,Henry C. Ferguson,Amanda Pagul,Rogier A. Windhorst,Timothy Heckman,Jose M. Diego,Hollis B. Akins,Joseph Allingham,Ricardo O. Amorín,Danielle A. Berg,Maruša Bradač,Larry D. Bradley,Wenlei Chen,John Chisholm,Christopher J. Conselice,Pratika Dayal,Miroslava Dessauges-Zavadsky,Andreas L. Faisst,Steven L. Finkelstein,Yoshinobu Fudamoto,Lukas J. Furtak,Yuichi Harikane,Tiger Yu-Yang Hsiao,Yolanda Jimenez-Teja,Anton M. Koekemoer,Rebecca L. Larson,Ray A. Lucas,Matteo Messa,Lamiya Mowla,Minami Nakane,Gaël Noirot,Richard Pan,Massimo Pascale,Johan Richard,Massimo Ricotti,Luke Robbins,Daniel Schaerer,Fengwu Sun,Eros Vanzella,Brian Welch,Chris Willott,Adi Zitrin*
 
 Main category: astro-ph.GA
@@ -6071,7 +6245,7 @@ Key Figures:
 </details>
 
 
-### [82] [Early Results from GLASS-JWST. XXVI. Spatially Resolved Star Formation and Balmer Decrements at $1.1<z<2.3$ from NIRISS Slitless Spectroscopy](https://arxiv.org/abs/2606.05887)
+### [84] [Early Results from GLASS-JWST. XXVI. Spatially Resolved Star Formation and Balmer Decrements at $1.1<z<2.3$ from NIRISS Slitless Spectroscopy](https://arxiv.org/abs/2606.05887)
 *Pengfei Ren,Xin Wang,Yuxuan Pang,Mengting Ju,Tucker Jones,Karl Glazebrook,Matthew A. Malkan,Gabriel Brammer,Victoria Strait,Themiya Nanayakkara,Tommaso Treu,Benedetta Vulcani,Peter J. Watson*
 
 Main category: astro-ph.GA
@@ -6137,7 +6311,7 @@ Key Figures:
 </details>
 
 
-### [83] [Massive Galaxies Form Early and Gray: Stellar Assembly and Dust Attenuation at $\mathbf{z>3.5}$ from CAPERS](https://arxiv.org/abs/2605.13966)
+### [85] [Massive Galaxies Form Early and Gray: Stellar Assembly and Dust Attenuation at $\mathbf{z>3.5}$ from CAPERS](https://arxiv.org/abs/2605.13966)
 *Katherine Chworowsky,Steven L. Finkelstein,Anthony J. Taylor,Alexa M. Morales,Mark Dickinson,L. Y. Aaron Yung,Pablo Arrabal Haro,Bren E. Backhaus,Davide Bevacqua,Óscar Chávez Ortiz,Adam C. Carnall,Callum T. Donnan,Mauro Giavalisco,Michaela Hirschmann,Kartheik G. Iyer,Anton M. Koekemoer,Rebecca L. Larson,Ray A. Lucas,Jed McKinney,Derek J. McLeod,Casey Papovich,Pablo G. Pérez-González,Lu Shen,Rachel S. Somerville,Laura Sommovigo,Thomas M. Stanton,Xin Wang,Stephen M. Wilkins,Jorge A. Zavala,the CAPERS Collaboration*
 
 Main category: astro-ph.GA
@@ -6224,7 +6398,7 @@ Key Figures:
 </details>
 
 
-### [84] [The galaxy-halo connection and the dynamical evolution of a giant disc in a massive node of the Cosmic Web at z~3](https://arxiv.org/abs/2605.04144)
+### [86] [The galaxy-halo connection and the dynamical evolution of a giant disc in a massive node of the Cosmic Web at z~3](https://arxiv.org/abs/2605.04144)
 *G. Quadri,S. Cantalupo,C. Bacchini,A. Pensabene,A. Lupi,G. Pezzulli,W. Wang,M. Galbiati,T. Lazeyras,N. Ledos,H. Mao,A. Travascio*
 
 Main category: astro-ph.GA
@@ -6309,7 +6483,7 @@ Key Figures:
 </details>
 
 
-### [85] [Resolved Maps of Gas and Dust in a Massive Quiescent Galaxy at z=2 from INQUEST-JWST: Evidence of Accretion and Rejuvenation](https://arxiv.org/abs/2604.26195)
+### [87] [Resolved Maps of Gas and Dust in a Massive Quiescent Galaxy at z=2 from INQUEST-JWST: Evidence of Accretion and Rejuvenation](https://arxiv.org/abs/2604.26195)
 *Sai Gangula,Andrew B. Newman,Meng Gu,Sirio Belli,Katherine E. Whitaker,Tania M. Barone,Aliza Beverage,Andrea Bolamperti,Letizia Bugiani,Richard S. Ellis,Mariska Kriek,Allison Matthews,Themiya Nanayakkara*
 
 Main category: astro-ph.GA
@@ -6398,7 +6572,7 @@ Key Figures:
 </details>
 
 
-### [86] [Metal Mayhem at $\rm z \sim 7-10$: Diversity and Evolution of Gas-Phase Metallicity Gradients](https://arxiv.org/abs/2604.07076)
+### [88] [Metal Mayhem at $\rm z \sim 7-10$: Diversity and Evolution of Gas-Phase Metallicity Gradients](https://arxiv.org/abs/2604.07076)
 *Maria Koller,Roberto Maiolino,Hannah Übler,Qiao Duan,Jan Scholtz,Santiago Arribas,William M. Baker,Stefano Carniani,Stephane Charlot,Mirko Curti,Luca Graziani,Gareth Jones,William McClymont,Michele Perna,Bruno Rodríguez Del Pino,Sandro Tacchella,Alessandra Venditti,Giacomo Venturi,Joris Witstok*
 
 Main category: astro-ph.GA
@@ -6483,7 +6657,7 @@ Key Figures:
 </details>
 
 
-### [87] [Survival of the most compact: the life and death of satellite halos in self-interacting dark matter](https://arxiv.org/abs/2603.19362)
+### [89] [Survival of the most compact: the life and death of satellite halos in self-interacting dark matter](https://arxiv.org/abs/2603.19362)
 *David Klemmer,Moritz S. Fischer,Kimberly K. Boddy,Manoj Kaplinghat,Laura Sagunski*
 
 Main category: astro-ph.GA
@@ -6570,7 +6744,7 @@ Key Figures:
 </details>
 
 
-### [88] [JWST's PEARLS: A clumpy ring galaxy at $z = 4.0148$](https://arxiv.org/abs/2603.11575)
+### [90] [JWST's PEARLS: A clumpy ring galaxy at $z = 4.0148$](https://arxiv.org/abs/2603.11575)
 *David Vizgan,Ming-Yang Zhuang,Ian Smail,Rogier Windhorst,Gibson Bowling,Cheng Cheng,Seth Cohen,Christopher Conselice,Jose Diego,Brenda Frye,Norman Grogin,Rolf Jansen,Patrick Kamieneski,Anton Koekemoer,Rafael Ortiz,Massimo Ricotti,Bangzheng Sun,Hayley Williams,S. P. Willner,Aadya Agrawal,Manuel Solimano,Zachary Stone,Joaquin Vieira,Chentao Yang*
 
 Main category: astro-ph.GA
@@ -6657,7 +6831,7 @@ Key Figures:
 </details>
 
 
-### [89] [AGN Feedback and the Development of Dusty Multiphase Gas in X-ray Emitting Elliptical Galaxies](https://arxiv.org/abs/2602.22415)
+### [91] [AGN Feedback and the Development of Dusty Multiphase Gas in X-ray Emitting Elliptical Galaxies](https://arxiv.org/abs/2602.22415)
 *Pasquale Temi,Francesco Ubertosi,Fabrizio Brighenti,Alexandros Maragkoudakis,Valeria Olivares,Alexandre Amblard,Massimo Gaspari,Myriam Gitti,Pamela M. Marcum,Kevin Fogarty,Alejandro S. Borlaff,William G. Mathews*
 
 Main category: astro-ph.GA
@@ -6742,7 +6916,7 @@ Key Figures:
 </details>
 
 
-### [90] [A tight relation between the distribution of globular clusters and dark matter in AS1063](https://arxiv.org/abs/2602.12332)
+### [92] [A tight relation between the distribution of globular clusters and dark matter in AS1063](https://arxiv.org/abs/2602.12332)
 *J. M. Diego,C. Goolsby,C. J. Conselice,J. M. Palencia*
 
 Main category: astro-ph.GA
@@ -6824,7 +6998,7 @@ Key Figures:
 </details>
 
 
-### [91] [Characterising Ly$α$ damping wings at the onset of reionisation: Evidence for highly efficient star formation driven by dense, neutral gas in UV-bright galaxies at $z>9$](https://arxiv.org/abs/2602.11783)
+### [93] [Characterising Ly$α$ damping wings at the onset of reionisation: Evidence for highly efficient star formation driven by dense, neutral gas in UV-bright galaxies at $z>9$](https://arxiv.org/abs/2602.11783)
 *Clara L. Pollock,Kasper E. Heintz,Joris Witstok,Rashmi Gottumukkala,Gabriel Brammer,Sownak Bose,Alex J. Cameron,Pratika Dayal,Pieter van Dokkum,Johan Fynbo,Viola Gelli,Matthew J. Hayes,Akio K. Inoue,Claudia del P. Lagos,Peter Laursen,Romain A. Meyer,Rohan Naidu,Pascal Oesch,Lucie E. Rowland,Nial R. Tanvir,Sandro Tacchella,Chamilla Terp,Francesco Valentino,Fabian Walter,John Weaver,Callum Witten*
 
 Main category: astro-ph.GA
@@ -6913,7 +7087,7 @@ Key Figures:
 </details>
 
 
-### [92] [Connecting the Dots: UV-Bright Companions of Little Red Dots as Lyman-Werner Sources Enabling Direct Collapse Black Hole Formation](https://arxiv.org/abs/2602.02702)
+### [94] [Connecting the Dots: UV-Bright Companions of Little Red Dots as Lyman-Werner Sources Enabling Direct Collapse Black Hole Formation](https://arxiv.org/abs/2602.02702)
 *Josephine F. W. Baggen,Matthew T. Scoggins,Pieter van Dokkum,Zoltán Haiman,Alberto Torralba,Jorryt Matthee*
 
 Main category: astro-ph.GA
@@ -6998,7 +7172,7 @@ Key Figures:
 </details>
 
 
-### [93] [A GLIMPSE into the UV Continuum Slopes of the Faintest Galaxies in the Epoch of Reionization](https://arxiv.org/abs/2601.19995)
+### [95] [A GLIMPSE into the UV Continuum Slopes of the Faintest Galaxies in the Epoch of Reionization](https://arxiv.org/abs/2601.19995)
 *Michelle C. Jecmen,John Chisholm,Hakim Atek,Vasily Kokorev,Ryan Endsley,Iryna Chemerynska,Lukas J. Furtak,Richard Pan,Seiji Fujimoto,Rohan P. Naidu,Julian B. Muñoz,Angela Adamo,Yoshihisa Asada,Arghyadeep Basu,Danielle A. Berg,Jeremy Blaizot,Miroslava Dessauges-Zavadsky,Emma Giovinazzo,Tiger Yu-Yang Hsiao,Harley Katz,Damien Korber,Jed McKinney,Kristen. B. W. McQuinn,Pascal A. Oesch,Daniel Schaerer*
 
 Main category: astro-ph.GA
@@ -7081,7 +7255,7 @@ Key Figures:
 </details>
 
 
-### [94] [Small scale turbulence alongside with large scale turbulence in a z~sim 2 star Forming Galaxy with outflowing wind, revealed by Multi-point structure functions](https://arxiv.org/abs/2601.14887)
+### [96] [Small scale turbulence alongside with large scale turbulence in a z~sim 2 star Forming Galaxy with outflowing wind, revealed by Multi-point structure functions](https://arxiv.org/abs/2601.14887)
 *Itzhak Goldman*
 
 Main category: astro-ph.GA
@@ -7142,7 +7316,7 @@ Key Figures:
 </details>
 
 
-### [95] [The Carousel Lens I: A Spectroscopic Survey of the Carousel Lens Field](https://arxiv.org/abs/2601.14422)
+### [97] [The Carousel Lens I: A Spectroscopic Survey of the Carousel Lens Field](https://arxiv.org/abs/2601.14422)
 *Jackson H. O'Donnell,Demetrius Y. Williams,Tesla E. Jeltema,William Sheu,Felipe Urcelay,Xiaosheng Huang,Tucker Jones,Karl Glazebrook,Tania M. Barone,Aleksandar Cikota,Fuyan Bian,Christopher J. Storfer,Daniel J. Ballard,Gabriel Caminha,Glenn G. Kacprzak,Themiya Nanayakkara,Nandini Sahu,Hannah Skobe,Anowar J. Shajib,Sherry Suyu,Kim-Vy Tran,Keerthi Vasan G. C.*
 
 Main category: astro-ph.GA
@@ -7227,7 +7401,7 @@ Key Figures:
 </details>
 
 
-### [96] [Grain-size evolution and rapid dust growth in high-redshift galaxies](https://arxiv.org/abs/2606.06108)
+### [98] [Grain-size evolution and rapid dust growth in high-redshift galaxies](https://arxiv.org/abs/2606.06108)
 *Daisuke Toyouchi,Andrea Ferrara,Yurina Nakazato,Kosei Matsumoto,Raffaella Schneider,Koki Otaki*
 
 Main category: astro-ph.GA
@@ -7312,7 +7486,7 @@ Key Figures:
 </details>
 
 
-### [97] [Water absorption confirms cool atmospheres in two little red dots](https://arxiv.org/abs/2602.06024)
+### [99] [Water absorption confirms cool atmospheres in two little red dots](https://arxiv.org/abs/2602.06024)
 *Bingjie Wang,Joel Leja,Ivo Labbe,Jenny E. Greene,Hanpu Liu,Anna de Graaff,Raphael E. Hviding,Jorryt Matthee,Eliot Quataert,Rachel Bezanson,Leindert A. Boogaard,Gabriel Brammer,Adam J. Burgasser,Yi-Xian Chen,Nikko J. Cleri,Sam E. Cutler,Pratika Dayal,Lukas J. Furtak,Seiji Fujimoto,Karl Glazebrook,Andy D. Goulding,Jakob M. Helton,Michaela Hirschmann,Yan-Fei Jiang,Vasily Kokorev,Yilun Ma,Tim B. Miller,Rohan P. Naidu,Pascal Oesch,Richard Pan,Casey Papovich,Sedona H. Price,Hans-Walter Rix,David J. Setton,Wendy Q. Sun,John R. Weaver,Katherine E. Whitaker,Adi Zitrin*
 
 Main category: astro-ph.GA
@@ -7401,7 +7575,7 @@ Key Figures:
 </details>
 
 
-### [98] [First Light and Reionization Epoch Simulations (FLARES) XXII: UV-dust spatial offsets at the Epoch of Reionisation](https://arxiv.org/abs/2605.27370)
+### [100] [First Light and Reionization Epoch Simulations (FLARES) XXII: UV-dust spatial offsets at the Epoch of Reionisation](https://arxiv.org/abs/2605.27370)
 *Paurush Punyasheel,Aswin P. Vijayan,William J. Roper,Thomas R. Greve,Hiddo Algera,Christopher C. Lovell,Steven Gillman,Bitten Gullberg,Shihong Liao,Robert M. Yates,Stephen M. Wilkins*
 
 Main category: astro-ph.GA
@@ -7482,177 +7656,5 @@ Key Figures:
 图6：左：固有UV（1500 Å）光度（y轴）与辐射转移计算的尘埃遮蔽光度（x轴）的关系图。右：样本绘制在IRX- \(\beta\) 平面（分别为y轴和x轴）上。顶行按UV-IR偏移着色，而底行按UV Sérsic残差中5 \(\sigma\) 团块的数量着色。左侧面板上的绿色虚线显示1:1关系，而黑色曲线显示尘埃消光曲线。还显示了SMC（Pettini）和Calzetti（Calzetti；1997AJ....114.1834C）以及Reddy的尘埃屏幕模型的经验关系。
 
 <small>Figure 6 : Left: The intrinsic UV (1500 Å) luminosity (y-axis) is plotted against the dust-attenuated luminosity (x-axis) calculated by radiative transfer. Right: The sample is plotted on the IRX- \(\beta\) plane (y and x-axis respectively). The top row is coloured by the UV-IR offset, while the bottom row is coloured according to the number of 5 \(\sigma\) clumps in UV Sérsic residual. The green dotted line on the left panes shows the 1:1 relation while the black curves show the dust attenuation curves. Empirical relation for dust screen models for SMC ( Pettini ) and Calzetti ( Calzetti ; 1997AJ....114.1834C ) , and from Reddy are also shown.</small>
-
-</details>
-
-
-### [99] [GATOS XI : Excess dust heating in the Narrow Line Regions of nearby AGN revealed with JWST/MIRI](https://arxiv.org/abs/2601.02865)
-*Houda Haidar,David J. Rosario,Ismael García-Bernete,Almudena Alonso-Herrero,Anelise Audibert,Steph Campbell,Chris M. Harrison,Tiago Costa,Laura Hermosa Muñoz,Françoise Combes,Dimitra Rigopoulou,Claudio Ricci,Cristina Ramos Almeida,Enrica Bellocchi,Peter Boorman,Andrew Bunker,Richard Davies,Daniel Delaney,Tanio Díaz Santos,Federico Esposito,Victoria A. Fawcett,Poshak Gandhi,Santiago García-Burillo,Omaira González-Martín,Erin K. S. Hicks,Sebastian F. Hönig,Alvaro Labiano,Nancy A. Levenson,Enrique Lopez-Rodriguez,Chris Packham,Miguel Pereira-Santaella,Rogemar A. Riffel,Alberto Rodríguez Ardila,John Schneider,T. Taro Shimizu,Marko Stalevski,Montserrat Villar Martín,Martin Ward,Lulu Zhang,Gillian Leeds,Fergus R. Donnan*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★☆ (86/100) - 该论文使用JWST/MIRI研究邻近AGN窄线区尘埃的物理条件，与用户Zotero画像中的JWST、尘埃、稠密气体、空间分辨等主题高度匹配，且作者Enrique Lopez-Rodriguez在核心作者列表中。论文聚焦于尘埃加热机制和激波作用，虽非直接涉及强引力透镜，但属于用户明确优先的高红移星系多相气体相关研究，且规则评分已给出86分。
-
-TL;DR: JWST/MIRI观测发现AGN窄线区存在延伸100-200pc的尘埃结构，其形态与射电喷流和[Si VI]发射相关。尘埃温度150-220K，光谱斜率比恒星形成区更陡，无法仅用AGN辐射解释，需要激波加热机制。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 研究活动星系核窄线区中延伸尘埃的物理条件，探索尘埃形态与射电喷流、日冕发射的关系，以及尘埃加热机制是否超出AGN辐射的预期。
-
-Method: 使用JWST/MIRI对GATOS巡天中的8个邻近AGN进行成像观测，通过空间分辨光谱能量分布分析尘埃特性，建立简单模型比较AGN辐射加热与激波加热的效果。
-
-Result: 在4个星系中探测到100-200pc尺度的尘埃结构，尘埃温度150-220K，光谱斜率比恒星形成团块更陡。模型显示AGN辐射无法完全解释中红外超量发射，需要激波加热机制（速度200-400km/s）来补充。
-
-Conclusion: AGN窄线区延伸尘埃的加热机制不能仅用AGN辐射解释，激波在其中起关键作用。激波可能是AGN中心数百秒差距范围内延伸尘埃发射的重要驱动因素。
-
-Abstract: We present JWST/MIRI imaging of eight nearby Active Galactic Nuclei (AGN) from the GATOS survey to investigate the physical conditions of extended dust in their narrow line regions (NLRs). In four galaxies (ESO 428-G14, NGC 4388, NGC 3081, and NGC 5728), we detect spatially resolved dust structures extending ~100-200 pc along the NLR. In these systems, we find a strong link between the morphology of the dust, the radio ejecta, and the coronal [Si VI] emission, implying that dust carries imprints of the processes shaping the NLR. Using spatially resolved spectral energy distributions, we show that dust in the NLR has systematically steeper slopes than star forming clumps. This dust emits at temperatures in the range 150 - 220 K, at a distance of ~150 pc from the nucleus. Using simple models, we show that, even under optimistic assumptions of grain size and AGN luminosity, the excess MIR emission cannot be explained by AGN illumination alone. We interpret this excess heating as in-situ. We show that shocks with velocities of $v_{\rm shock} \sim 200- 400 \, \rm km/s$ in dense gas can close this gap, and in some cases even account for the total observed emission. This, combined with multiple lines of evidence for shocks in these regions, supports a scenario in which shocks not only coexist with dust but may be playing a key role in heating it. Our findings reveal shocks may be an important and previously overlooked driver of extended dust emission in the central hundreds of parsecs in AGN.
-
-Abstract Translation:
-我们利用JWST/MIRI对GATOS巡天中八个邻近活动星系核（AGN）的成像，研究其窄线区（NLR）中延伸尘埃的物理条件。在四个星系（ESO 428-G14、NGC 4388、NGC 3081和NGC 5728）中，我们探测到沿NLR延伸约100-200 pc的空间分辨尘埃结构。在这些系统中，我们发现尘埃形态、射电喷流和冕[Si VI]发射之间存在强关联，表明尘埃携带着塑造NLR过程的印记。利用空间分辨的能谱分布，我们显示NLR中的尘埃斜率系统性地陡于恒星形成团块。这些尘埃在距核心约150 pc处，以150-220 K的温度范围发射。使用简单模型，我们表明即使在尘埃尺寸和AGN光度的乐观假设下，过剩的中红外发射也无法仅由AGN辐照解释。我们将这种过剩加热解释为原位加热。我们显示，在稠密气体中速度约为$v_{\rm shock} \sim 200-400 \, \rm km/s$的激波可以弥合这一差距，在某些情况下甚至能解释总观测发射。这结合这些区域中激波的多重证据，支持了一个场景：激波不仅与尘埃共存，而且可能在加热尘埃中起关键作用。我们的发现揭示，激波可能是AGN中心数百秒差距范围内延伸尘埃发射的一个重要且此前被忽视的驱动因素。
-
-Conclusion Translation:
-基于可用摘要：AGN窄线区延伸尘埃的加热机制不能仅用AGN辐射解释，激波在其中起关键作用。激波可能是AGN中心数百秒差距范围内延伸尘埃发射的重要驱动因素。
-
-Key Figures:
-
-#### Figure 1
-表1：样本性质。
-
-<small>Table 1: Sample Properties.</small>
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/x1.png)
-
-图1：四个星系（ESO 428 \(-\) G14、NGC 4388、NGC 3081和NGC 5728）中心区域的JWST/MIRI F1000W图像。北向上，东向左。图像已扣除PSF并去除发射线污染。每个主面板以对数尺度显示纯尘埃连续谱发射，突出延伸结构。放大图显示用SINFONI观测到的[ Si vi ]发射的通量图，匹配到\(\sim 4^{\prime\prime}\times 4^{\prime\prime}\)视场。叠加的等高线显示主面板中的延伸尘埃发射。在相关位置，箭头标记基于[ Fe ii ]增强而激波普遍存在的区域。
-
-<small>Figure 1: JWST/MIRI F1000W images of the central regions of four galaxies (ESO 428 \(-\) G14, NGC 4388, NGC 3081, and NGC 5728). North is up and East is to the left. The images have been PSF subtracted and decontaminated from emission lines. Each main panel shows the pure dust continuum emission in logarithmic scale, highlighting extended structures. The zoom-ins display the flux maps of [ Si vi ] emission observed with SINFONI, matched to a \(\sim 4^{\prime\prime}\times 4^{\prime\prime}\) field of view. Overlaid contours show the extended dust emission as the main panels. Where relevant, arrows mark regions where shocks are prevalent, based on [ Fe ii ] enhancement.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/x2.png)
-
-图2：与图1类似，但针对NGC 7172、NGC 2992、NGC 3227和NGC 5135。
-
-<small>Figure 2: Similar to Fig. 1 but for NGC 7172, NGC 2992, NGC 3227, and NGC 5135.</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/x3.png)
-
-图3：左：在五个滤光片（F560W、F1000W、F1500W、F1800W、F2100W）上获取的能谱分布，按F1500W滤光片归一化。不同颜色代表不同星系。每条曲线显示该星系所有ROI的中位SED。对于每个星系，虚线代表恒星形成区域的中位SED。在相关位置，我们绘制覆盖NLR中尘埃的区域的中位值，以实线表示。后者已在Y轴上向上移动以便清晰显示。阴影区域代表16-84百分位。右：星系NLR中尘埃（实线）和恒星形成团块（虚线）的中位SED。
-
-<small>Figure 3: Left: Spectral energy distributions taken over five filters (F560W, F1000W, F1500W, F1800W, F2100W) normalised by the F1500W filter. Different colours represent different galaxies. Each curve shows the median SED of all ROIs for that galaxy. For each galaxy, the dashed lines represent the median SED of star forming regions. Where relevant, we plot the median for regions covering dust in the NLR, represented as solid lines. The latter have been shifted up in the Y-axis for clarity. The shaded area represents the 16-84 percentile. Right: Galaxy median SEDs for dust in the NLR (solid) and for star-forming clumps (dashed).</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/x4.png)
-
-图4：ESO 428-G14、NGC 4388（上行）、NGC 3081和NGC 5728（下行）的尘埃NLR的蒙特卡罗黑体拟合。每个面板显示在距核心\(\sim\) 150 pc处、激波主导的区域（见图1），以孔径直径\(0\aas@@fstack{\prime\prime}7\)提取的SED。孔径在每个面板左上角以橙色圆圈标记。红色星号为测光点。实线代表拟合的中位值，阴影带显示16-84百分位。对于每个星系，我们显示中位温度\(T_{med}\)，以及16-84百分位值（\(T_{low}\)，\(T_{high}\)）。
-
-<small>Figure 4: Monte Carlo blackbody fits for the dusty NLRs of ESO 428-G14, NGC 4388 (top row), NGC 3081, and NGC 5728 (bottom row). Each panel shows an SED extracted with an aperture diameter of \(0\aas@@fstack{\prime\prime}7\) at \(\sim\) 150 pc from the nucleus, where shocks dominate (see Fig. 1 ). Apertures are marked as orange circles in the upper left of each panel. Red stars are the photometric points. The solid lines represent the median of the fits and the shaded bands show the 16–84th percentiles. For each galaxy, we show the median temperature \(T_{med}\) , and the 16–84th values ( \(T_{low}\) , \(T_{high}\) ).</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/x5.png)
-
-图5：JWST/MIRI“风中尘埃”样本。（左：）JWST/MIRI F1000W图像揭示的延伸尘埃发射，显示在PSF扣除和去污染之后。（中：）VLA观测的射电连续谱发射。（右：）尘埃形态（图像）与射电发射（以白色等高线显示）的比较。放大的\(4^{\prime\prime}\times 4^{\prime\prime}\)区域显示来自SINFONI的[ Si vi ]冕线发射。
-
-<small>Figure 5: JWST/MIRI ”Dust in the Wind” sample. ( Left: ) Extended dust emission revealed by the JWST/MIRI F1000W image, shown after PSF subtraction and decontamination. ( Middle: ) Radio continuum emission from VLA observations. ( Right: ) Comparison between the dust morphology (image) and the radio emission (shown as white contours). The zoomed-in \(4^{\prime\prime}\times 4^{\prime\prime}\) region displays the [ Si vi ] coronal line emission from SINFONI.</small>
-
-#### Figure 7
-表2：在距核心\(d_{AGN}=150\,{pc}\)处推导的预期AGN辐射场\(U_{AGN}\)和尘埃温度（假设经典ISM尘埃尺寸）。
-
-<small>Table 2: Expected AGN radiation field \(U_{AGN}\) and dust temperatures (assuming classical ISM grain sizes) derived at a distance \(d_{AGN}=150\,{pc}\) from the nucleus.</small>
-
-#### Figure 6
-![Figure 6](https://arxiv.org/html/x9.png)
-
-图6：来自MC BB拟合的中位尘埃温度（橙色星）与AGN辐照预测温度（蓝色条）的比较。橙色阴影区域代表四个星系中可能的最小和最大尘埃温度。每个蓝色条内的颜色梯度代表由于假设尘埃尺寸\(a=[0.005,0.25]\,\micron\)变化导致的预测温度范围。对于所有四个星系，必须存在额外的加热机制，因为仅AGN辐照无法解释观测到的尘埃温度。
-
-<small>Figure 6: Comparison between the median dust temperatures from MC BB fits (orange stars) and predicted temperatures from AGN illumination (blue bars). The shaded orange area represents the minimum and maximum possible dust temperatures across the four galaxies. The colour gradient within each blue bar represents the range of predicted temperatures resulting from variations in the assumed grain size \(a=[0.005,0.25]\,\micron\) . For all four galaxies, additional heating mechanisms must be present, as AGN illumination alone cannot account for the observed dust temperatures.</small>
-
-</details>
-
-
-### [100] [GA-NIFS: Understanding the ionization nature of EGSY8p7/CEERS-1019. Evidence for a star formation-driven outflow at z = 8.6](https://arxiv.org/abs/2512.09022)
-*Sandra Zamora,Stefano Carniani,Elena Bertola,Eleonora Parlanti,Pablo G. Pérez-González,Santiago Arribas,Torsten Böker,Andrew J. Bunker,Francesco D'Eugenio,Roberto Maiolino,Michele Perna,Bruno Rodríguez Del Pino,Hannah Übler,Giovanni Cresci,Gareth C. Jones,Isabella Lamperti,Jan Scholtz,Bartolomeo Trefoloni,Giacomo Venturi*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★☆ (86/100) - 论文聚焦于z=8.6早期大质量星系EGSY8p7/CEERS-1019的恒星反馈驱动外流，与用户Zotero库中高权重的JWST、早期星系、恒星形成星系、星际介质等主题高度吻合；作者列表中包含用户核心作者Pablo G. Pérez-González、Roberto Maiolino、Stefano Carniani、Hannah Übler，且Gareth C. Jones与用户核心作者G C Jones匹配；方法上使用JWST/NIRSpec空间分辨光谱，与用户对JWST和空间分辨观测的偏好一致。
-
-TL;DR: JWST观测揭示z=8.6早期大质量星系EGSY8p7/CEERS-1019中存在宽发射线成分，这些成分源于恒星反馈驱动的外流气体而非活动星系核，表明恒星反馈足以驱动外流，辐射压可能提供所需动量转移。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 研究早期大质量星系的物理条件和反馈机制对于理解宇宙最初十亿年内星系的形成和演化至关重要。星系EGSY8p7/CEERS-1019在z=8.6时具有较高恒星质量和亚太阳金属丰度下的高N/O丰度，为研究提供了理想基准。
-
-Method: 使用JWST/NIRSpec进行新的空间分辨光谱观测，获得比以往研究更高的灵敏度和光谱分辨率。通过分析宽发射线成分的形态和运动学特征，结合诊断发射线比率与光致电离和激波模型的比较，评估恒星反馈机制。
-
-Result: 识别出FWHM=650km/s的宽Hβ和[OIII]发射成分，位于星系两个静止紫外团块之间，延伸约1kpc。这些成分源于外流气体而非活动星系核宽线区。恒星反馈的动能注入率比外流高一个数量级，辐射压率与外流动量率相当。获得低质量加载因子(η=0.16)和低电离光子逃逸分数(f_esc=0.021±0.014)，高电子密度(n_e=2200cm^{-3})表明大部分气体仍被限制在星系内。
-
-Conclusion: 恒星反馈足以驱动观测到的外流，辐射压可能提供所需的动量转移。发射线比率分析支持恒星形成驱动的电离场景，排除了活动星系核辐射的激发。未检测到沃尔夫-拉叶特征表明需要其他机制来解释该星系的高N/O比。
-
-Abstract: Understanding the physical conditions and feedback mechanisms in early massive galaxies is essential to uncover how they formed and evolved during the first billion years of the Universe. In this context, the galaxy EGSY8p7/CEERS-1019 at z=8.6 provides an excellent benchmark, given its stellar mass of $10^{9.3}M_\odot$ and elevated N/O abundance despite its sub-solar metallicity. In this study, we present new JWST/NIRSpec observations offering the first spatially resolved spectroscopy of this galaxy, with higher sensitivity and spectral resolution than previous studies. We identify broad (FWHM=650km/s) H$β$ and [OIII] emission components whose emission is located between the two rest-frame UV clumps of the galaxy and extended over a distance of $\sim1kpc$. The morphology and kinematics of these components indicate that the broad emission arises from outflowing gas rather than from an AGN broad-line region. The kinetic energy injection rate from stellar feedback is an order of magnitude higher than that of the outflow, while the radiation pressure rate is comparable to the outflow momentum rate. These results suggest that stellar feedback alone can drive the outflow, with radiation pressure potentially providing the required momentum transfer. We derive a low mass-loading factor ($η=0.16$) and ionizing photon escape fraction ($f_{esc}=0.021\pm0.014$). Together with the high electron density measured ($n_e=2200cm^{-3}$), these results support the interpretation that most of the gas remains confined within the galaxy. Comparisons of diagnostic emission-line ratios with photoionization and shock models support a star-formation-driven ionization scenario, ruling out any excitation by AGN radiation. Finally, the absence of detectable Wolf-Rayet features suggests that alternative mechanisms must be considered to explain the high N/O ratio in this galaxy.
-
-Abstract Translation:
-理解早期大质量星系的物理条件和反馈机制对于揭示它们在宇宙最初十亿年内如何形成和演化至关重要。在此背景下，红移z=8.6的星系EGSY8p7/CEERS-1019提供了一个极好的基准，其恒星质量为10^9.3太阳质量，尽管金属丰度低于太阳，但具有较高的N/O丰度比。在本研究中，我们展示了新的JWST/NIRSpec观测数据，首次提供了该星系的空间分辨光谱，其灵敏度和光谱分辨率均高于以往研究。我们识别出宽（FWHM=650 km/s）的Hβ和[OIII]发射成分，其发射位于星系两个静止框架紫外团块之间，并延伸约1千秒差距。这些成分的形态和运动学表明，宽发射来自外流气体，而非活动星系核的宽线区。恒星反馈的动能注入率比外流高一个数量级，而辐射压速率与外流动量率相当。这些结果表明，仅恒星反馈就能驱动外流，辐射压可能提供了所需的动量转移。我们推导出低质量负载因子（η=0.16）和电离光子逃逸分数（f_esc=0.021±0.014）。结合测得的高电子密度（n_e=2200 cm^{-3}），这些结果支持大部分气体仍被限制在星系内的解释。发射线比率诊断与光致电离和激波模型的比较支持恒星形成驱动的电离场景，排除了活动星系核辐射的任何激发。最后，未检测到沃尔夫-拉叶特征表明，必须考虑其他机制来解释该星系的高N/O比。
-
-Conclusion Translation:
-基于现有摘要的结论：恒星反馈足以驱动观测到的外流，辐射压可能提供所需的动量转移。发射线比率分析支持恒星形成驱动的电离场景，排除了活动星系核辐射的激发。未检测到沃尔夫-拉叶特征表明需要其他机制来解释该星系的高N/O比。
-
-Key Figures:
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/Figure/shutter_on_ifs_cont_PRISM.png)
-
-图1：上图：来自低分辨率PRISM数据立方体中连续谱发射（2.2微米<λ<2.4微米）的JWST NIRSpec图像。来自Larson2023和Marques-Chaves2024使用的ERS 1345项目的中央NIRSpec/MOS快门以红色实线矩形叠加，而JWST/NIRCam F150W等值线以蓝色实线显示。后续章节中使用的提取孔径中心点以黑色十字标记。下图：从与MOS快门大小相同的矩形区域提取的NIRSpec/MOS数据（蓝色）和NIRSpec/IFS光谱（黑色）。底部面板显示了每条线的最佳IFS拟合模型，包含两个成分（速度和速度色散绑定）。
-
-<small>Figure 1: Top: JWST NIRSpec images from collapsed continuum emission (2.2 μ \mu m ¡ λ \lambda ¡ 2.4 μ \mu m) in the low-resolution PRISM data cube. The central NIRSpec/MOS shutter from program ERS 1345 used by Larson2023 and Marques-Chaves2024 is overlaid as a red solid rectangle, while the JWST/NIRCam F150W contours are shown with blue solid lines. The central point of the extraction aperture used in the following sections is marked with a black cross. Bottom: NIRSpec/MOS data (blue) and NIRSpec/IFS spectrum (black) extracted from a rectangle region as large as the MOS shutter (see text). A best IFS fit-model with two component (tied in velocity and velocity dispersion) for each line is shown in the bottom panel.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/Figure/Integrated_spectrum_PRISM.png)
-
-图2：从半径为0.25角秒的孔径提取的星系JWST/NIRSpec PRISM和G395H/F290LP光谱（分别位于上图和下图）。在上图中，灰色阴影区域是连续谱拟合中排除的部分（见正文），红色虚线显示为再现连续谱发射而拟合的幂律连续谱模型，橙色实线是Marques-Chaves2024提出的模型。最亮的星云线已标记。
-
-<small>Figure 2: JWST/NIRSpec PRISM and G395H/F290LP spectra of the galaxy (top and bottom panels respectively) extracted from an aperture of R= 0.25 arcsec. In the top panel, the gray shading areas are those excluded in the continuum fitting (see text), the red dashed line shows the power-law continuum model fitted to reproduce the continuum emission, and the solid orange line is the one proposed by Marques-Chaves2024 . The brightest nebular lines are marked.</small>
-
-#### Figure 3
-表1：从星系高光谱分辨率积分光谱（G395H光栅）得到的发射线通量和速度色散。
-
-<small>Table 1: Emission line fluxes and velocity dispersions from the high spectral resolution integrated spectrum of the galaxy (G395H grating).</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/Figure/shutter_on_ifs_oiii5007_narrow.png)
-
-图3：高分辨率数据立方体（G395H）中[OIII] λ5007埃发射线的空间分辨拟合。窄和宽发射线通量图分别显示在上图和下图。JWST/NIRCam F150W和发射图显示的等值线分别以蓝色和白色实线表示。
-
-<small>Figure 3: Spatially resolved fitting of the [OIII] λ \lambda 5007 Å emission line in the high-resolution data cube (G395H). The narrow and broad emission line flux maps are shown in the top and bottom panels, respectively. The JWST/NIRCam F150W and the emmision map shown contours are shown with blue and white solid lines respectively.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/Figure/Legend.png)
-
-图4：发射线诊断图，以及专门针对该源星云性质计算的理论模型。采用Salpeter1955和顶重IMF（Kauffmann2024）的光致电离模型分别以蓝点和粉红三角形显示，对应两个电离参数。两种不同磁场的激波模型以紫色菱形显示。在恒星形成和激波模型中，颜色透明度分别随年龄和速度增加而降低。最后，不同幂律和吸收AGN的电离模型以黄色和灰色符号显示。来自Backhaus2022和Mazzolari2024的AGN与恒星形成光致电离的分界线在各面板中以虚线显示。
-
-<small>Figure 4: Emission-line diagnostic diagrams together with theoretical models specifically computed for the nebular properties derived for this source. Photoionization models with a salpeter1955 and a top-heavy IMF ( kauffmann2024 ) are shown with blue dots and pink triangles, respectively, for two ionization parameters. Shock models for two different magnetic fields are shown with purple diamonds. The transparency of the colors decreases with age and velocity in the SF and shock models, respectively. Finally, different ionization models with power laws and absorbed AGNs are shown with yellow and grey symbols. Division lines between AGN and SF photoionization from Backhaus2022 and Mazzolari2024 are shown with dashed lines in the panels.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/Figure/z-ne.png)
-
-图5：电子密度n_e随红移的变化。虚线和点线分别表示n_e∼(1+z)^1和∼(1+z)^2。为比较，显示了JWST/NIRSpec GLASS、早期释放观测和CEERS项目观测的红移z=4–9的恒星形成星系样本（Isobe2023）。还显示了Kaasinen2017和Sanders2016在较低红移的平均值。最后，显示了GA-NIFS恒星形成星系样本（Scholtz2025；Lamperti2024；Marconcini2024；delpino2024）。
-
-<small>Figure 5: Electron density n e n_{e} as a function of redshift. The dotted and dashed curves represent n e n_{e} ∼ \sim (1+z) 1 and ∼ \sim (1+z) 2 respectively. A sample of star-forming galaxies at z = 4–9 observed by the JWST/NIRSpec GLASS, Early Release Observations, and CEERS programs are shown for comparison purposes ( Isobe2023 ) . Also the means values from Kaasinen2017 and Sanders2016 at lower redshifts. Finally, a sample of GA-NIFS star-forming galaxies is shown ( Scholtz2025 ; Lamperti2024 ; Marconcini2024 ; delpino2024 ) .</small>
-
-#### Figure 6
-![Figure 6](https://arxiv.org/html/Figure/Curti-data.png)
-
-图6：激发图。作为比较，展示了高红移星系样本，这些星系具有极光[OIII] λ4364埃发射线的直接测量，且丰度与我们的源相似（Curti2023；Schaerer2024；arellano-cordova2022；Topping2024；cameron2023；Heintz2024；Curti2025；sanders2024）。还显示了本地低金属HII星系、绿豌豆和EELG样本（Izotov2006；Jaskot2013；Amorin2015）。Lamareille2004在本地宇宙中定义的区分恒星形成星系和AGN的经验分界线，以及Flury2022提出的LyC泄漏阈值，分别以灰色虚线和点线表示。
-
-<small>Figure 6: Excitation diagrams. A compilation of high redshift galaxies with direct measurements of the auroral [OIII] λ \lambda 4364 Å emission line and similar abundances as our source are presented as a comparison ( Curti2023 ; Schaerer2024 ; arellano-cordova2022 ; Topping2024 ; cameron2023 ; Heintz2024 ; Curti2025 ; sanders2024 ) . Samples of local low-metal HII galaxies, Green peas and EELGs ( Izotov2006 ; Jaskot2013 ; Amorin2015 ) are also shown. The empirical divisions defined by Lamareille2004 in the local Universe to separate star-forming galaxies from AGNs, as well as the LyC leakage threshold proposed by Flury2022 , are shown with grey dashed and dotted lines, respectively.</small>
-
-#### Figure 7
-![Figure 7](https://arxiv.org/html/Figure/12_logOH_M.png)
-
-图7：上图显示了不同红移校准下的质量-金属丰度关系（berg2022；Curti2024；Curti2020；Langeroodi2023）。下图显示了低红移和高红移的恒星形成率与恒星质量关系（Clarke2024；berg2022）。图6中使用的高红移星系编译也以相同符号显示。我们星系中单个团块的值（空心星）及其恒星质量取自Marques-Chaves2024。
-
-<small>Figure 7: The upper panel shows the mass metallicity relation with calibrations at different redshifts ( berg2022 ; Curti2024 ; Curti2020 ; Langeroodi2023 ) . The lower panel shows the SFR versus stellar mass relations found at low and high redshift ( Clarke2024 ; berg2022 ) . The high-redshift galaxy compilation used in Fig. 6 is also shown using the same symbols. The values for the individual clumps in our galaxy (open stars), as well as their stellar masses, are taken from Marques-Chaves2024 .</small>
 
 </details>

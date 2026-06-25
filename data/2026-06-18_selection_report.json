@@ -1,11 +1,18 @@
 {
-  "generated_at": "2026-06-18T09:03:50.386894Z",
-  "input_count": 34,
-  "selected_count": 0,
-  "archived_count": 34,
-  "mandatory_count": 0,
+  "generated_at": "2026-06-25T09:00:00.321002Z",
+  "input_count": 42,
+  "selected_count": 6,
+  "archived_count": 36,
+  "mandatory_count": 1,
   "limit": 24,
   "minimum_score": 35,
-  "estimated_ai_calls_saved": 102,
-  "selected_ids": []
+  "estimated_ai_calls_saved": 108,
+  "selected_ids": [
+    "2606.20804",
+    "2606.19995",
+    "2606.20809",
+    "2606.20801",
+    "2606.20800",
+    "2606.19837"
+  ]
 }

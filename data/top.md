@@ -2,8 +2,8 @@
 
 # Table of Contents
 
-- [astro-ph.GA](#astro-ph.GA) [Total: 70]
-- [astro-ph.CO](#astro-ph.CO) [Total: 30]
+- [astro-ph.GA](#astro-ph.GA) [Total: 69]
+- [astro-ph.CO](#astro-ph.CO) [Total: 31]
 
 
 <div id='astro-ph.GA'></div>
@@ -5341,96 +5341,94 @@ Key Figures:
 </details>
 
 
-### [70] [GA-NIFS: Understanding the ionization nature of EGSY8p7/CEERS-1019. Evidence for a star formation-driven outflow at z = 8.6](https://arxiv.org/abs/2512.09022)
-*Sandra Zamora,Stefano Carniani,Elena Bertola,Eleonora Parlanti,Pablo G. Pérez-González,Santiago Arribas,Torsten Böker,Andrew J. Bunker,Francesco D'Eugenio,Roberto Maiolino,Michele Perna,Bruno Rodríguez Del Pino,Hannah Übler,Giovanni Cresci,Gareth C. Jones,Isabella Lamperti,Jan Scholtz,Bartolomeo Trefoloni,Giacomo Venturi*
+<div id='astro-ph.CO'></div>
 
-Main category: astro-ph.GA
+# astro-ph.CO [[Back]](#toc)
 
-Recommendation: ★★★★☆ (86/100) - 论文聚焦于z=8.6早期大质量星系EGSY8p7/CEERS-1019的恒星反馈驱动外流，与用户Zotero库中高权重的JWST、早期星系、恒星形成星系、星际介质等主题高度吻合；作者列表中包含用户核心作者Pablo G. Pérez-González、Roberto Maiolino、Stefano Carniani、Hannah Übler，且Gareth C. Jones与用户核心作者G C Jones匹配；方法上使用JWST/NIRSpec空间分辨光谱，与用户对JWST和空间分辨观测的偏好一致。
+### [70] [A new $H_0$ measurement with SNe Requiem and Encore using Gravity.jl](https://arxiv.org/abs/2606.25205)
+*L. Bazzanini,G. Di Rosa,A. Acebron,P. Bergamini,M. Lombardi,P. Rosati,G. Angora,G. B. Caminha,S. Ertl,G. Granata,A. M. Koekemoer,S. H. Suyu,J. Pierel,A. B. Newman,C. Grillo,S. Schuldt,M. Bulla,S. Cha,M. D'Addona,J. M. Diego,M. Fogliardi,B. L. Frye,M. J. Jee,P. S. Kamieneski,M. Meneghetti,A. Mercurio,E. Vanzella*
 
-TL;DR: JWST观测揭示z=8.6早期大质量星系EGSY8p7/CEERS-1019中存在宽发射线成分，这些成分源于恒星反馈驱动的外流气体而非活动星系核，表明恒星反馈足以驱动外流，辐射压可能提供所需动量转移。
+Main category: astro-ph.CO
+
+Recommendation: ★★★★★ (100/100) - 该论文聚焦于星系团强引力透镜分析，利用多重像Ia型超新星的时间延迟测量哈勃常数，与用户的主要研究领域（强引力透镜，特别是星系-星系强透镜）高度吻合。论文涉及透镜建模、高红移星系（z=1.949）以及JWST数据，这些均与用户兴趣画像中的核心主题（如lens、JWST）和核心作者（A. M. Koekemoer）匹配。用户明确要求优先考虑强透镜研究，且论文内容完全符合这一优先级。
+
+TL;DR: 本文利用新开发的贝叶斯参数透镜建模框架Gravity.jl，对星系团MACS J0138.0-2155进行强透镜分析，基于该团簇中两个多像Ia型超新星（SN Requiem和SN Encore）的观测数据，预测了它们未来的重现时间，并联合时间延迟测量约束哈勃常数H0=67.0_{-7.8}^{+9.3} km/s/Mpc。
 
 
 <details>
   <summary>Details</summary>
-Motivation: 研究早期大质量星系的物理条件和反馈机制对于理解宇宙最初十亿年内星系的形成和演化至关重要。星系EGSY8p7/CEERS-1019在z=8.6时具有较高恒星质量和亚太阳金属丰度下的高N/O丰度，为研究提供了理想基准。
+Motivation: 星系团MACS J0138.0-2155是首个被发现宿主两个不同多像Ia型超新星（SN Requiem和SN Encore）的透镜团簇，这为利用时间延迟宇宙学（TDC）精确测量哈勃常数提供了独特机遇。此前已有若干独立透镜模型，但本研究旨在通过新的建模框架进一步提高精度并预测未来超新星重现事件。
 
-Method: 使用JWST/NIRSpec进行新的空间分辨光谱观测，获得比以往研究更高的灵敏度和光谱分辨率。通过分析宽发射线成分的形态和运动学特征，结合诊断发射线比率与光致电离和激波模型的比较，评估恒星反馈机制。
+Method: 基于Gravity.jl这一新颖的贝叶斯参数透镜建模框架，利用23个光谱确认的多重像（来自8个背景源，红移范围0.767<z<3.420）构建参考质量模型，该模型在图像平面上的均方根位置残差为0.24角秒。结合SN Encore和SN Requiem的实测时间延迟及其统计不确定性，联合推断H0及其他透镜模型自由参数。
 
-Result: 识别出FWHM=650km/s的宽Hβ和[OIII]发射成分，位于星系两个静止紫外团块之间，延伸约1kpc。这些成分源于外流气体而非活动星系核宽线区。恒星反馈的动能注入率比外流高一个数量级，辐射压率与外流动量率相当。获得低质量加载因子(η=0.16)和低电离光子逃逸分数(f_esc=0.021±0.014)，高电子密度(n_e=2200cm^{-3})表明大部分气体仍被限制在星系内。
+Result: 参考模型精确再现观测图像位置。预测SN Encore将在2032年5-9月重现（延迟3177天），SN Requiem将在2027年2-7月重现（延迟3938天）。得到H0=67.0_{-7.8}^{+9.3} km/s/Mpc，与先前独立透镜模型结果一致，当前误差主要受时间延迟测量相对不确定性（>10%）支配。
 
-Conclusion: 恒星反馈足以驱动观测到的外流，辐射压可能提供所需的动量转移。发射线比率分析支持恒星形成驱动的电离场景，排除了活动星系核辐射的激发。未检测到沃尔夫-拉叶特征表明需要其他机制来解释该星系的高N/O比。
+Conclusion: M0138被确立为高精度星系团尺度时间延迟宇宙学的优先锚点。SN Requiem即将于2027年重现，为显著改进H0约束提供了直接机遇，前提是控制透镜模型系统误差。
 
-Abstract: Understanding the physical conditions and feedback mechanisms in early massive galaxies is essential to uncover how they formed and evolved during the first billion years of the Universe. In this context, the galaxy EGSY8p7/CEERS-1019 at z=8.6 provides an excellent benchmark, given its stellar mass of $10^{9.3}M_\odot$ and elevated N/O abundance despite its sub-solar metallicity. In this study, we present new JWST/NIRSpec observations offering the first spatially resolved spectroscopy of this galaxy, with higher sensitivity and spectral resolution than previous studies. We identify broad (FWHM=650km/s) H$β$ and [OIII] emission components whose emission is located between the two rest-frame UV clumps of the galaxy and extended over a distance of $\sim1kpc$. The morphology and kinematics of these components indicate that the broad emission arises from outflowing gas rather than from an AGN broad-line region. The kinetic energy injection rate from stellar feedback is an order of magnitude higher than that of the outflow, while the radiation pressure rate is comparable to the outflow momentum rate. These results suggest that stellar feedback alone can drive the outflow, with radiation pressure potentially providing the required momentum transfer. We derive a low mass-loading factor ($η=0.16$) and ionizing photon escape fraction ($f_{esc}=0.021\pm0.014$). Together with the high electron density measured ($n_e=2200cm^{-3}$), these results support the interpretation that most of the gas remains confined within the galaxy. Comparisons of diagnostic emission-line ratios with photoionization and shock models support a star-formation-driven ionization scenario, ruling out any excitation by AGN radiation. Finally, the absence of detectable Wolf-Rayet features suggests that alternative mechanisms must be considered to explain the high N/O ratio in this galaxy.
+Abstract: We present a strong-lensing (SL) analysis of the galaxy cluster MACS J0138.0-2155 (z=0.336), the first known lens cluster discovered to host two distinct multiply imaged Type Ia supernovae (SNe): SN Requiem and SN Encore. Both transients are located in the massive, multiply imaged red galaxy MRG-M0138 at z=1.949. The projected total mass of this cluster has been investigated with several independent lens models (Suyu+26; Pierel+26), using a sample of 23 spectroscopically confirmed multiple images from 8 background sources (0.767<z<3.420), identified from the HST and the JWST imaging data, and VLT/MUSE spectroscopy. In this work, we develop a new SL model based on a novel Bayesian parametric lens-modelling framework Gravity.jl, exploiting the same SL dataset. Our reference mass model accurately reproduces the observed image positions, with an image-plane rms image position residual of 0.24''. Assuming H0 = 70 km/s/Mpc, we predict the future reappearances of highly delayed SNe counter-images, finding Dt(1d,1a) = 3177_{-59}^{+78} d (May-September, 2032) for SN Encore and Dt(2d,2a) = 3938_{-77}^{+90} d (February-July, 2027) for SN Requiem. By allowing H0 to vary, and using the measured time delays of both SN Encore and SN Requiem together with their statistical uncertainties as observables, we infer the value of H0 jointly with the other lens-model free parameters. From this analysis, we obtain a new measurement of H0 = 67.0_{-7.8}^{+9.3} km/s/Mpc, consistent with the value inferred from the aforementioned independent lens models. This error is currently dominated by the large relative uncertainty on the measured time delays (>10%). The forthcoming reappearance of SN Requiem offers an immediate opportunity to significantly improve constraints on H0, provided that lens-model systematics are controlled. These results establish M0138 as a premier anchor for high-precision cluster-scale TDC.
 
 Abstract Translation:
-理解早期大质量星系的物理条件和反馈机制对于揭示它们在宇宙最初十亿年内如何形成和演化至关重要。在此背景下，红移z=8.6的星系EGSY8p7/CEERS-1019提供了一个极好的基准，其恒星质量为10^9.3太阳质量，尽管金属丰度低于太阳，但具有较高的N/O丰度比。在本研究中，我们展示了新的JWST/NIRSpec观测数据，首次提供了该星系的空间分辨光谱，其灵敏度和光谱分辨率均高于以往研究。我们识别出宽（FWHM=650 km/s）的Hβ和[OIII]发射成分，其发射位于星系两个静止框架紫外团块之间，并延伸约1千秒差距。这些成分的形态和运动学表明，宽发射来自外流气体，而非活动星系核的宽线区。恒星反馈的动能注入率比外流高一个数量级，而辐射压速率与外流动量率相当。这些结果表明，仅恒星反馈就能驱动外流，辐射压可能提供了所需的动量转移。我们推导出低质量负载因子（η=0.16）和电离光子逃逸分数（f_esc=0.021±0.014）。结合测得的高电子密度（n_e=2200 cm^{-3}），这些结果支持大部分气体仍被限制在星系内的解释。发射线比率诊断与光致电离和激波模型的比较支持恒星形成驱动的电离场景，排除了活动星系核辐射的任何激发。最后，未检测到沃尔夫-拉叶特征表明，必须考虑其他机制来解释该星系的高N/O比。
+我们呈现了对星系团MACS J0138.0-2155（z=0.336）的强透镜（SL）分析，这是已知首个被发现有两次不同多重成像Ia型超新星（SNe）的透镜星系团：SN Requiem和SN Encore。这两个瞬变现象均位于z=1.949的大质量多重成像红色星系MRG-M0138中。该星系团的投影总质量已通过几个独立的透镜模型（Suyu+26; Pierel+26）进行了研究，这些模型使用了来自8个背景源（0.767<z<3.420）的23个光谱确认的多重图像样本，这些图像来自HST和JWST成像数据以及VLT/MUSE光谱。在这项工作中，我们基于一种新颖的贝叶斯参数透镜建模框架Gravity.jl开发了一个新的SL模型，利用了相同的SL数据集。我们的参考质量模型精确地再现了观测到的图像位置，图像平面均方根位置残差为0.24角秒。假设H0 = 70 km/s/Mpc，我们预测了高度延迟的SNe对应像的未来重现，发现SN Encore的Dt(1d,1a) = 3177_{-59}^{+78} 天（2032年5月至9月），SN Requiem的Dt(2d,2a) = 3938_{-77}^{+90} 天（2027年2月至7月）。通过允许H0变化，并利用SN Encore和SN Requiem的测量时间延迟及其统计不确定性作为观测量，我们联合推断出H0的值以及其他透镜模型自由参数。从这一分析中，我们得到了H0 = 67.0_{-7.8}^{+9.3} km/s/Mpc的新测量值，与前述独立透镜模型推断的值一致。该误差目前主要由测量时间延迟的大相对不确定性（>10%）主导。SN Requiem即将到来的重现为显著改进H0约束提供了直接机遇，前提是控制透镜模型系统误差。这些结果确立了M0138作为高精度星系团尺度时间延迟宇宙学的首要锚点。
 
 Conclusion Translation:
-基于现有摘要的结论：恒星反馈足以驱动观测到的外流，辐射压可能提供所需的动量转移。发射线比率分析支持恒星形成驱动的电离场景，排除了活动星系核辐射的激发。未检测到沃尔夫-拉叶特征表明需要其他机制来解释该星系的高N/O比。
+基于可用摘要，M0138被确立为高精度星系团尺度时间延迟宇宙学的优先锚点。SN Requiem即将于2027年重现，为显著改进H0约束提供了直接机遇，前提是控制透镜模型系统误差。
 
 Key Figures:
 
 #### Figure 1
-![Figure 1](https://arxiv.org/html/Figure/shutter_on_ifs_cont_PRISM.png)
+![Figure 1](https://arxiv.org/html/2606.25205v1/x1.png)
 
-图1：上图：来自低分辨率PRISM数据立方体中连续谱发射（2.2微米<λ<2.4微米）的JWST NIRSpec图像。来自Larson2023和Marques-Chaves2024使用的ERS 1345项目的中央NIRSpec/MOS快门以红色实线矩形叠加，而JWST/NIRCam F150W等值线以蓝色实线显示。后续章节中使用的提取孔径中心点以黑色十字标记。下图：从与MOS快门大小相同的矩形区域提取的NIRSpec/MOS数据（蓝色）和NIRSpec/IFS光谱（黑色）。底部面板显示了每条线的最佳IFS拟合模型，包含两个成分（速度和速度色散绑定）。
+图1：使用JWST观测的M0138。彩色合成图像由以下滤光片组合构建：F115W \(+\) F150W（蓝色）、F200W \(+\) F277W（绿色）和F356W \(+\) F444W（红色）。“金色”多重图像系统的位置用圆圈标记（Ertl等人，2025；Suyu等人，2026）。SN Encore对应系统1，SN Requiem对应系统2。前景（FG）和背景（BG）星系用绿色圆圈表示。三个水母星系用青色圆圈标记，并标注为JF1、JF2和JF3。
 
-<small>Figure 1: Top: JWST NIRSpec images from collapsed continuum emission (2.2 μ \mu m ¡ λ \lambda ¡ 2.4 μ \mu m) in the low-resolution PRISM data cube. The central NIRSpec/MOS shutter from program ERS 1345 used by Larson2023 and Marques-Chaves2024 is overlaid as a red solid rectangle, while the JWST/NIRCam F150W contours are shown with blue solid lines. The central point of the extraction aperture used in the following sections is marked with a black cross. Bottom: NIRSpec/MOS data (blue) and NIRSpec/IFS spectrum (black) extracted from a rectangle region as large as the MOS shutter (see text). A best IFS fit-model with two component (tied in velocity and velocity dispersion) for each line is shown in the bottom panel.</small>
+<small>Figure 1 : M0138 observed with the JWST. The colour composite is constructed from the following filter combinations: F115W \(+\) F150W in blue, F200W \(+\) F277W in green, and F356W \(+\) F444W in red. The locations of the “gold” multiple-image systems are marked with circles (Ertl et al., 2025 ; Suyu et al., 2026 ) . SN Encore corresponds to System 1, while SN Requiem corresponds to System 2. The foreground (FG) and background (BG) galaxies are indicated by green circles. The three jellyfish galaxies are marked with cyan circles and labelled JF1, JF2, and JF3.</small>
 
 #### Figure 2
-![Figure 2](https://arxiv.org/html/Figure/Integrated_spectrum_PRISM.png)
+![Figure 2](https://arxiv.org/html/2606.25205v1/x2.png)
 
-图2：从半径为0.25角秒的孔径提取的星系JWST/NIRSpec PRISM和G395H/F290LP光谱（分别位于上图和下图）。在上图中，灰色阴影区域是连续谱拟合中排除的部分（见正文），红色虚线显示为再现连续谱发射而拟合的幂律连续谱模型，橙色实线是Marques-Chaves2024提出的模型。最亮的星云线已标记。
+图2：来自Acebron等人（2025）的星系团成员Faber–Jackson关系校准。圆圈显示了14个明亮星系团星系的测量恒星速度弥散度，作为其总HST F160W星等的函数。点根据Granata等人（2025）报告的平均光谱信噪比进行颜色编码。标度关系中使用的参考星系是BCG（\(\sigma_{{BCG}}=322^{+16}_{-16}\,{km}\,{s}^{-1}\)，\(m_{{F160W}}=15.30\)）。橙色线和阴影区域显示了根据第3.4.2节所述程序，从恒星运动学测量推导出的中位数\(\sigma_{0}\) – \({F160W}\)关系及其\(68\%\)置信区间。蓝色线和阴影区域显示了SL模型预测的相应关系。
 
-<small>Figure 2: JWST/NIRSpec PRISM and G395H/F290LP spectra of the galaxy (top and bottom panels respectively) extracted from an aperture of R= 0.25 arcsec. In the top panel, the gray shading areas are those excluded in the continuum fitting (see text), the red dashed line shows the power-law continuum model fitted to reproduce the continuum emission, and the solid orange line is the one proposed by Marques-Chaves2024 . The brightest nebular lines are marked.</small>
-
-#### Figure 3
-表1：从星系高光谱分辨率积分光谱（G395H光栅）得到的发射线通量和速度色散。
-
-<small>Table 1: Emission line fluxes and velocity dispersions from the high spectral resolution integrated spectrum of the galaxy (G395H grating).</small>
+<small>Figure 2 : Calibration of the Faber–Jackson relation for cluster members from Acebron et al. ( 2025 ) . The circles show the measured stellar velocity dispersions of 14 bright cluster galaxies as a function of their total HST F160W magnitude. Points are colour-coded by the average spectral signal-to-noise ratio reported by Granata et al. ( 2025 ) . The reference galaxy used in the scaling relation is the BCG ( \(\sigma_{{BCG}}=322^{+16}_{-16}\,{km}\,{s}^{-1}\) , \(m_{{F160W}}=15.30\) ). The orange line and shaded region show the median \(\sigma_{0}\) – \({F160W}\) relation and its \(68\%\) confidence interval derived from the stellar kinematic measurements, following the procedure described in Sect. 3.4.2 . The blue line and shaded region show the corresponding relation predicted by the SL model.</small>
 
 #### Figure 3
-![Figure 3](https://arxiv.org/html/Figure/shutter_on_ifs_oiii5007_narrow.png)
+表1：M0138的最佳拟合SL模型总结。4 4 4 SL模型及其整体性能总结。列报告了模型名称、透镜模型中显式变化的自由参数数量\(N_{par}\)、观测约束数量\(N_{const}\)、自由度数量d.o.f.、最小总卡方值\(\chi^{2}_{{min,\,tot}}=\chi_{{min,\,pos}}^{2}+\chi_{{min,\,td}}^{2}\)、总卡方中的位置贡献\(\chi_{{min,\,pos}}^{2}\)、总卡方中的时间延迟贡献\(\chi_{{min,\,td}}^{2}=\chi_{{min,\,td\,(E)}}^{2}+\chi_{{min,\,td\,(R)}}^{2}\)（其中两项分别表示来自SN Encore和SN Requiem的贡献）、每自由度最小卡方值\(\tilde{\chi}^{2}_{{min}}\)、\(\Delta_{{rms}}\)值以及MCMC链的平均Gelman–Rubin收敛统计量\(\langle\hat{R}\rangle\)。自由度计算为\({d.o.f.}=N_{const}-N_{par}-2N_{src}\)，其中\(N_{src}=8\)是独立源族的数量，每个源族贡献两个作为 nuisance 参数被边缘化的源平面坐标。
 
-图3：高分辨率数据立方体（G395H）中[OIII] λ5007埃发射线的空间分辨拟合。窄和宽发射线通量图分别显示在上图和下图。JWST/NIRCam F150W和发射图显示的等值线分别以蓝色和白色实线表示。
+<small>Table 1: Summary of the best-fit SL models for M0138. 4 4 4 Summary of the SL models and their overall performance. The columns report the model name, the number of free parameters explicitly varied in the lens model, \(N_{par}\) , the number of observational constraints, \(N_{const}\) , the number of degrees of freedom, d.o.f., the minimum total chi-square value, \(\chi^{2}_{{min,\,tot}}=\chi_{{min,\,pos}}^{2}+\chi_{{min,\,td}}^{2}\) , the positional contribution to the total chi-square, \(\chi_{{min,\,pos}}^{2}\) , the time-delay contribution to the total chi-square, \(\chi_{{min,\,td}}^{2}=\chi_{{min,\,td\,(E)}}^{2}+\chi_{{min,\,td\,(R)}}^{2}\) (where the two terms denote the contributions from SN Encore and SN Requiem, respectively), the minimum chi-square value per degree-of-freedom \(\tilde{\chi}^{2}_{{min}}\) , the \(\Delta_{{rms}}\) value, and the mean Gelman–Rubin convergence statistic, \(\langle\hat{R}\rangle\) , of the MCMC chains. The number of degrees of freedom is computed as \({d.o.f.}=N_{const}-N_{par}-2N_{src}\) , where \(N_{src}=8\) is the number of independent source families, each contributing two source-plane coordinates that are marginalised over as nuisance parameters.</small>
 
-<small>Figure 3: Spatially resolved fitting of the [OIII] λ \lambda 5007 Å emission line in the high-resolution data cube (G395H). The narrow and broad emission line flux maps are shown in the top and bottom panels, respectively. The JWST/NIRCam F150W and the emmision map shown contours are shown with blue and white solid lines respectively.</small>
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2606.25205v1/x3.png)
+
+图3：MACS J0138中观测到的和模型预测的多重图像之间的位置偏移。圆圈标记观测到的图像位置，箭头指示朝向相应模型预测位置的偏移方向和大小。为视觉清晰起见，箭头长度相对于真实位置偏移放大了十倍。\((0,0)\)点对应BCG的位置。背景等高线显示了从最佳拟合透镜模型获得的总投影质量分布。
+
+<small>Figure 3 : Positional offsets between the observed and model-predicted multiple images in MACS J0138. The circles mark the observed image positions, while the arrows indicate the direction and magnitude of the offsets toward the corresponding model-predicted positions. For visual clarity, the arrow lengths have been magnified by a factor of ten relative to the true positional offsets. The \((0,0)\) point corresponds to the position of the BCG. The background contours show the total projected mass distribution obtained from the best-fitting lens model.</small>
 
 #### Figure 4
-![Figure 4](https://arxiv.org/html/Figure/Legend.png)
+![Figure 4](https://arxiv.org/html/2606.25205v1/x4.png)
 
-图4：发射线诊断图，以及专门针对该源星云性质计算的理论模型。采用Salpeter1955和顶重IMF（Kauffmann2024）的光致电离模型分别以蓝点和粉红三角形显示，对应两个电离参数。两种不同磁场的激波模型以紫色菱形显示。在恒星形成和激波模型中，颜色透明度分别随年龄和速度增加而降低。最后，不同幂律和吸收AGN的电离模型以黄色和灰色符号显示。来自Backhaus2022和Mazzolari2024的AGN与恒星形成光致电离的分界线在各面板中以虚线显示。
+图4：观测到的和模型预测的多重成像宿主星系MRG-M0138的面亮度分布比较。左图显示了观测到的BCG减除后的JWST F200W图像，而右图显示了通过将背景源的最佳拟合Sérsic模型通过参考H0_fixed质量模型进行透镜成像得到的图像平面预测。Sérsic源光参数是使用与多重图像3c相关的弧的像素进行优化的，而其余对应像是事后预测的，并未包含在光分布优化中。右图上的两个插图显示了归一化残差，裁剪到范围\([-20\,\sigma,+20\,\sigma]\)，对应于模型预测面板中虚线蓝色框突出的两个区域。由于BCG的污染，省略了与宿主星系图像3d和3e相关的残差。红色圆圈标记了MRG-M0138的观测多重图像（左图），列于Ertl等人（2025）的表4中，而右图中的红色方框对应于预测位置。右图中的蓝色十字显示了宿主星系在源平面中的预测位置。坐标以相对于BCG的角秒给出（\({RA}=24.51570318\)度，\({Dec}=-21.92547911\)度）。
 
-<small>Figure 4: Emission-line diagnostic diagrams together with theoretical models specifically computed for the nebular properties derived for this source. Photoionization models with a salpeter1955 and a top-heavy IMF ( kauffmann2024 ) are shown with blue dots and pink triangles, respectively, for two ionization parameters. Shock models for two different magnetic fields are shown with purple diamonds. The transparency of the colors decreases with age and velocity in the SF and shock models, respectively. Finally, different ionization models with power laws and absorbed AGNs are shown with yellow and grey symbols. Division lines between AGN and SF photoionization from Backhaus2022 and Mazzolari2024 are shown with dashed lines in the panels.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/Figure/z-ne.png)
-
-图5：电子密度n_e随红移的变化。虚线和点线分别表示n_e∼(1+z)^1和∼(1+z)^2。为比较，显示了JWST/NIRSpec GLASS、早期释放观测和CEERS项目观测的红移z=4–9的恒星形成星系样本（Isobe2023）。还显示了Kaasinen2017和Sanders2016在较低红移的平均值。最后，显示了GA-NIFS恒星形成星系样本（Scholtz2025；Lamperti2024；Marconcini2024；delpino2024）。
-
-<small>Figure 5: Electron density n e n_{e} as a function of redshift. The dotted and dashed curves represent n e n_{e} ∼ \sim (1+z) 1 and ∼ \sim (1+z) 2 respectively. A sample of star-forming galaxies at z = 4–9 observed by the JWST/NIRSpec GLASS, Early Release Observations, and CEERS programs are shown for comparison purposes ( Isobe2023 ) . Also the means values from Kaasinen2017 and Sanders2016 at lower redshifts. Finally, a sample of GA-NIFS star-forming galaxies is shown ( Scholtz2025 ; Lamperti2024 ; Marconcini2024 ; delpino2024 ) .</small>
+<small>Figure 4 : Comparison between the observed and model-predicted SB distribution of the multiply imaged host galaxy MRG-M0138. The left panel shows the observed BCG-subtracted JWST F200W image, while the right panel shows the image-plane prediction obtained by lensing the best-fitting Sérsic model of the background source through the reference H0_fixed mass model. The Sérsic source-light parameters were optimised using the pixels associated with the arc hosting multiple image 3c, while the remaining counter-images were predicted a posteriori and were not included in the light-profile optimisation. The two insets on the right show the normalised residuals, clipped to the range \([-20\,\sigma,+20\,\sigma]\) , for the two regions highlighted by the dashed blue boxes in the model-prediction panel. Residuals associated with host-galaxy images 3d and 3e are omitted because of the contamination from the BCG. Red circles mark the observed multiple images of MRG-M0138 (left panel), listed in Table 4 in Ertl et al. ( 2025 ) , while the red boxes in the right panel correspond to the predicted positions. The blue cross in the right panel shows the predicted position of the host galaxy in the source plane. Coordinates are given in arcseconds relative to the BCG ( \({RA}=24.51570318\) deg, \({Dec}=-21.92547911\) deg).</small>
 
 #### Figure 6
-![Figure 6](https://arxiv.org/html/Figure/Curti-data.png)
+表2：SN Encore和SN Requiem多重图像的预测时间延迟和放大率（H0_fixed质量模型）。5 5 5 值报告为来自\(1000\)个采样链的中位数，不确定性对应于\(16\)和\(84\)百分位数。标有*的图像是迄今为止尚未检测到的模型预测图像，要么是因为它们的光度暗淡（如图像1c），要么是因为它们预测的时间延迟较长（如图像1d、1e、2d和2e）。SN Encore的图像1e和SN Requiem的图像2e（标有†）分别在后验样本的\(47\%\)和\(34\%\)中被预测；所有其他图像在所有样本中都被预测。参考锚点历元\(t=0\)对于SN Requiem的图像2a设置为2016-07-18（Rodney等人，2021），对于SN Encore的图像1a设置为2023-11-17（Pierel等人，2024）。
 
-图6：激发图。作为比较，展示了高红移星系样本，这些星系具有极光[OIII] λ4364埃发射线的直接测量，且丰度与我们的源相似（Curti2023；Schaerer2024；arellano-cordova2022；Topping2024；cameron2023；Heintz2024；Curti2025；sanders2024）。还显示了本地低金属HII星系、绿豌豆和EELG样本（Izotov2006；Jaskot2013；Amorin2015）。Lamareille2004在本地宇宙中定义的区分恒星形成星系和AGN的经验分界线，以及Flury2022提出的LyC泄漏阈值，分别以灰色虚线和点线表示。
+<small>Table 2 : Predicted time delays and magnifications of multiple images of SN Encore and SN Requiem ( H0_fixed mass model). 5 5 5 Values are reported as the median from the \(1000\) sampled chains, with uncertainties corresponding to the \(16\) th and \(84\) th percentiles. Images marked with * are model-predicted images that have not been detected to date, either because of their faintness, as for image 1c, or because of their long predicted time delays, as for images 1d, 1e, 2d, and 2e. Image 1e of SN Encore and image 2e of SN Requiem, marked with † , are predicted in \(47\%\) and \(34\%\) of the posterior samples, respectively; all other images are predicted in all samples. The reference anchor epoch \(t=0\) is set to 2016-07-18 for image 2a of SN Requiem (Rodney et al., 2021 ) , and to 2023-11-17 for image 1a of SN Encore (Pierel et al., 2024 ) .</small>
 
-<small>Figure 6: Excitation diagrams. A compilation of high redshift galaxies with direct measurements of the auroral [OIII] λ \lambda 4364 Å emission line and similar abundances as our source are presented as a comparison ( Curti2023 ; Schaerer2024 ; arellano-cordova2022 ; Topping2024 ; cameron2023 ; Heintz2024 ; Curti2025 ; sanders2024 ) . Samples of local low-metal HII galaxies, Green peas and EELGs ( Izotov2006 ; Jaskot2013 ; Amorin2015 ) are also shown. The empirical divisions defined by Lamareille2004 in the local Universe to separate star-forming galaxies from AGNs, as well as the LyC leakage threshold proposed by Flury2022 , are shown with grey dashed and dotted lines, respectively.</small>
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2606.25205v1/x5.png)
 
-#### Figure 7
-![Figure 7](https://arxiv.org/html/Figure/12_logOH_M.png)
+图5：SN Requiem图像2d的预测重现时间，表示为相对于图像2a的时间延迟\(\Delta t_{2d,2a}\)。蓝色点显示了本文提出的Gravity.jl模型的预测，而其他点显示了Suyu等人（2026）分析的独立透镜模型的预测。水平误差条表示相应的\(68\%\)置信区间。对于我们的模型，该区间是从H0_fixed MCMC链中随机抽取的\(1000\)个后验样本推导出的。
 
-图7：上图显示了不同红移校准下的质量-金属丰度关系（berg2022；Curti2024；Curti2020；Langeroodi2023）。下图显示了低红移和高红移的恒星形成率与恒星质量关系（Clarke2024；berg2022）。图6中使用的高红移星系编译也以相同符号显示。我们星系中单个团块的值（空心星）及其恒星质量取自Marques-Chaves2024。
+<small>Figure 5 : Predicted reappearance time of image 2d of SN Requiem, expressed as the time delay relative to image 2a, \(\Delta t_{2d,2a}\) . The blue point shows the prediction from the Gravity.jl model presented in this work, while the other points show the predictions from the independent lens models analysed by Suyu et al. ( 2026 ) . Horizontal error bars indicate the corresponding \(68\%\) credible intervals. For our model, the interval is derived from \(1000\) posterior samples randomly drawn from the H0_fixed MCMC chains.</small>
 
-<small>Figure 7: The upper panel shows the mass metallicity relation with calibrations at different redshifts ( berg2022 ; Curti2024 ; Curti2020 ; Langeroodi2023 ) . The lower panel shows the SFR versus stellar mass relations found at low and high redshift ( Clarke2024 ; berg2022 ) . The high-redshift galaxy compilation used in Fig. 6 is also shown using the same symbols. The values for the individual clumps in our galaxy (open stars), as well as their stellar masses, are taken from Marques-Chaves2024 .</small>
+#### Figure 6
+![Figure 6](https://arxiv.org/html/2606.25205v1/x6.png)
+
+图6：来自Gravity.jl模型的SN Encore多重图像预测位置与Suyu等人（2026）分析的独立透镜模型获得的预测位置的比较。每个面板显示SN Encore的一个图像：观测图像1a和1b，以及模型预测图像1c和1d。不同的符号和颜色对应不同的透镜模型，如图例所示。Gravity.jl预测以蓝色显示。阴影带显示了与Gravity.jl预测相关的投影不确定性区域。灰色圆圈表示观测到的测量值（Pierel等人，2024）。
+
+<small>Figure 6 : Comparison of the predicted positions of the multiple images of SN Encore from the Gravity.jl model with those obtained from the independent lens models analysed by Suyu et al. ( 2026 ) . Each panel shows one image of SN Encore: the observed images 1a and 1b, and the model-predicted images 1c and 1d. Different symbols and colours correspond to different lens models, as indicated in the legend. The Gravity.jl predictions are shown in blue. The shaded bands show the projected uncertainty region associated with the Gravity.jl prediction. Grey circles denote the observed measured values (Pierel et al., 2024 ) .</small>
 
 </details>
 
-
-<div id='astro-ph.CO'></div>
-
-# astro-ph.CO [[Back]](#toc)
 
 ### [71] [TDCOSMO XXV: A "soup-to-nuts" 6.5% $H_0$ measurement $-$ strong lensing and dynamics with a maximally flexible mass sheet](https://arxiv.org/abs/2604.14145)
 *William Sheu,Tommaso Treu,Martin Millon,Frédéric Dux,Devon Williams,Shawn Knabel,Simon Birrer,Pritom Mozumdar,Giacomo Queirolo,Anowar J. Shajib,Michele Cappellari,Kenneth C. Wong,Ildar M. Asfandiyarov,Otabek A. Burkhonov,Frédéric Courbin,Shuhrat A. Ehgamberdiev,Sofía Rojas-Ruiz,Asadulla M. Shaymanov,Talat A. Akhunov*

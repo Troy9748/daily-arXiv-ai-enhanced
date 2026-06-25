@@ -9,6 +9,16 @@ on:
     - cron: "15 20 * * 0-4"
       timezone: "America/New_York"
   workflow_dispatch:
+    inputs:
+      backfill_date:
+        description: "Optional historical date to backfill, e.g. 2026-06-22. Leave empty for today's normal run."
+        required: false
+        type: string
+      force_backfill:
+        description: "Regenerate the selected date even if complete files already exist."
+        required: false
+        default: false
+        type: boolean
 
 
 jobs:
@@ -33,13 +43,27 @@ jobs:
     - name: Crawl arXiv papers
       id: crawl_step
       if: steps.schedule_guard.outputs.should_run == 'true'
+      env:
+        BACKFILL_DATE: ${{ github.event.inputs.backfill_date || '' }}
+        FORCE_BACKFILL: ${{ github.event.inputs.force_backfill || 'false' }}
       run: |
         source .venv/bin/activate
-        today=$(date -u "+%Y-%m-%d")
         language="${{ vars.LANGUAGE || 'Chinese' }}"
-        echo "开始爬取 $today 的arXiv论文... / Starting to crawl $today arXiv papers..."
+        if [ -n "$BACKFILL_DATE" ]; then
+            if ! [[ "$BACKFILL_DATE" =~ ^[0-9]{4}-[0-9]{2}-[0-9]{2}$ ]]; then
+                echo "❌ backfill_date 必须是 YYYY-MM-DD 格式 / backfill_date must use YYYY-MM-DD"
+                exit 1
+            fi
+            today="$BACKFILL_DATE"
+            echo "is_backfill=true" >> $GITHUB_OUTPUT
+            echo "开始一次性补跑 $today 的arXiv论文... / Starting one-off backfill for $today arXiv papers..."
+        else
+            today=$(date -u "+%Y-%m-%d")
+            echo "is_backfill=false" >> $GITHUB_OUTPUT
+            echo "开始爬取 $today 的arXiv论文... / Starting to crawl $today arXiv papers..."
+        fi
 
-        if [ -s "data/${today}.jsonl" ] && [ -s "data/${today}_AI_enhanced_${language}.jsonl" ] && [ -s "data/${today}.md" ]; then
+        if [ "$FORCE_BACKFILL" != "true" ] && [ -s "data/${today}.jsonl" ] && [ -s "data/${today}_AI_enhanced_${language}.jsonl" ] && [ -s "data/${today}.md" ]; then
             echo "✅ 今日完整文件已存在，跳过本次运行 / Today's complete output already exists, skipping"
             echo "crawl_date=$today" >> $GITHUB_OUTPUT
             echo "already_generated=true" >> $GITHUB_OUTPUT
@@ -48,9 +72,23 @@ jobs:
         
         echo "already_generated=false" >> $GITHUB_OUTPUT
 
+        if [ "$FORCE_BACKFILL" = "true" ]; then
+            echo "强制重新生成 ${today} / Force-regenerating ${today}"
+            rm -f \
+              "data/${today}.jsonl" \
+              "data/${today}_AI_enhanced_${language}.jsonl" \
+              "data/${today}.md" \
+              "data/${today}_archive.jsonl" \
+              "data/${today}_selection_report.json"
+        fi
+
         # 检查今日原始文件是否已存在，如存在则复用 / Reuse today's raw file if it already exists
         if [ -f "data/${today}.jsonl" ]; then
             echo "📝 发现今日原始文件已存在，复用并继续后续步骤... / Found existing today's raw file, reusing it..."
+        elif [ -n "$BACKFILL_DATE" ]; then
+            echo "📝 历史日期原始文件不存在，使用 arXiv API 补抓... / Historical raw file missing, fetching via arXiv API..."
+            export CATEGORIES="${{ vars.CATEGORIES }}"
+            python scripts/fetch_arxiv_by_date.py "$today" --force
         else
             echo "📝 今日文件不存在，准备新建... / Today's file doesn't exist, ready to create new one..."
             rm -f "data/${today}_archive.jsonl" "data/${today}_selection_report.json"
@@ -84,6 +122,13 @@ jobs:
       if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         source .venv/bin/activate
+        if [ "${{ steps.crawl_step.outputs.is_backfill }}" = "true" ]; then
+          echo "历史日期补跑跳过去重检查 / Skipping today's deduplication for historical backfill"
+          echo "dedup_exit_code=0" >> $GITHUB_OUTPUT
+          echo "has_new_content=true" >> $GITHUB_OUTPUT
+          exit 0
+        fi
+
         echo "执行去重检查... / Performing intelligent deduplication check..."
         
         cd daily_arxiv
@@ -242,7 +287,7 @@ jobs:
         echo "Markdown转换完成 / Markdown conversion completed"
 
     - name: Backfill Historical Recommendation and Artifacts
-      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true' && steps.crawl_step.outputs.is_backfill != 'true'
       run: |
         source .venv/bin/activate
         echo "检查历史文件格式并补齐旧推荐/详情字段... / Backfilling outdated historical schemas..."
@@ -340,6 +385,8 @@ jobs:
       run: |
         if [ "${{ steps.crawl_step.outputs.already_generated }}" = "true" ]; then
           echo "ℹ️ 工作流跳过：今日完整文件已存在 / Workflow skipped: today's complete output already exists"
+        elif [ "${{ steps.crawl_step.outputs.is_backfill }}" = "true" ]; then
+          echo "✅ 历史日期补跑完成：${{ steps.crawl_step.outputs.crawl_date }} / Historical backfill completed"
         elif [ "${{ steps.dedup_check.outputs.has_new_content }}" = "true" ]; then
           echo "✅ 工作流完成：去重发现新内容并成功处理 / Workflow completed: Smart deduplication found new content and processed successfully"
         else
@@ -371,6 +418,9 @@ jobs:
           exit 0
         fi
         git commit -m "update: $(date -u '+%Y-%m-%d') arXiv papers"
+        if [ "${{ steps.crawl_step.outputs.is_backfill }}" = "true" ]; then
+          git commit --amend -m "backfill: ${{ steps.crawl_step.outputs.crawl_date }} arXiv papers"
+        fi
         echo "变更已提交 / Changes committed"
         
     - name: Pull latest changes and push

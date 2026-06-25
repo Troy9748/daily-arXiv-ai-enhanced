@@ -36,33 +36,42 @@ jobs:
       run: |
         source .venv/bin/activate
         today=$(date -u "+%Y-%m-%d")
+        language="${{ vars.LANGUAGE || 'Chinese' }}"
         echo "开始爬取 $today 的arXiv论文... / Starting to crawl $today arXiv papers..."
+
+        if [ -s "data/${today}.jsonl" ] && [ -s "data/${today}_AI_enhanced_${language}.jsonl" ] && [ -s "data/${today}.md" ]; then
+            echo "✅ 今日完整文件已存在，跳过本次运行 / Today's complete output already exists, skipping"
+            echo "crawl_date=$today" >> $GITHUB_OUTPUT
+            echo "already_generated=true" >> $GITHUB_OUTPUT
+            exit 0
+        fi
         
-        # 检查今日文件是否已存在，如存在则删除 / Check if today's file exists, delete if found
+        echo "already_generated=false" >> $GITHUB_OUTPUT
+
+        # 检查今日原始文件是否已存在，如存在则复用 / Reuse today's raw file if it already exists
         if [ -f "data/${today}.jsonl" ]; then
-            echo "🗑️ 发现今日文件已存在，正在删除重新生成... / Found existing today's file, deleting for fresh start..."
-            rm "data/${today}.jsonl"
-            echo "✅ 已删除现有文件：data/${today}.jsonl / Deleted existing file: data/${today}.jsonl"
+            echo "📝 发现今日原始文件已存在，复用并继续后续步骤... / Found existing today's raw file, reusing it..."
         else
             echo "📝 今日文件不存在，准备新建... / Today's file doesn't exist, ready to create new one..."
+            rm -f "data/${today}_archive.jsonl" "data/${today}_selection_report.json"
+
+            cd daily_arxiv
+            export OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
+            export OPENAI_BASE_URL=${{ secrets.OPENAI_BASE_URL }}
+            export LANGUAGE="${{ vars.LANGUAGE }}"
+            export CATEGORIES="${{ vars.CATEGORIES }}"
+            export MODEL_NAME="${{ vars.MODEL_NAME }}"
+            export ENABLE_KEYWORD_FILTER="${{ vars.ENABLE_KEYWORD_FILTER }}"
+            export ARXIV_KEYWORDS="${{ vars.ARXIV_KEYWORDS }}"
+
+            # 使用Scrapy爬取
+            # Use Scrapy to crawl
+            scrapy crawl arxiv -o ../data/${today}.jsonl
+            cd ..
         fi
-        rm -f "data/${today}_archive.jsonl" "data/${today}_selection_report.json"
-        
-        cd daily_arxiv
-        export OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
-        export OPENAI_BASE_URL=${{ secrets.OPENAI_BASE_URL }}
-        export LANGUAGE="${{ vars.LANGUAGE }}"
-        export CATEGORIES="${{ vars.CATEGORIES }}"
-        export MODEL_NAME="${{ vars.MODEL_NAME }}"
-        export ENABLE_KEYWORD_FILTER="${{ vars.ENABLE_KEYWORD_FILTER }}"
-        export ARXIV_KEYWORDS="${{ vars.ARXIV_KEYWORDS }}"
-        
-        # 使用Scrapy爬取
-        # Use Scrapy to crawl
-        scrapy crawl arxiv -o ../data/${today}.jsonl
         
         # 检查爬取是否成功 / Check if crawling was successful
-        if [ ! -f "../data/${today}.jsonl" ]; then
+        if [ ! -f "data/${today}.jsonl" ]; then
             echo "爬取失败，未生成数据文件 / Crawling failed, no data file generated"
             exit 1
         fi
@@ -72,7 +81,7 @@ jobs:
         
     - name: Check for duplicates
       id: dedup_check
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         source .venv/bin/activate
         echo "执行去重检查... / Performing intelligent deduplication check..."
@@ -233,7 +242,7 @@ jobs:
         echo "Markdown转换完成 / Markdown conversion completed"
 
     - name: Backfill Historical Recommendation and Artifacts
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         source .venv/bin/activate
         echo "检查历史文件格式并补齐旧推荐/详情字段... / Backfilling outdated historical schemas..."
@@ -263,7 +272,7 @@ jobs:
           --current-file "${CURRENT_DAILY_FILE}"
 
     - name: Generate Historical Top Lists
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         source .venv/bin/activate
         echo "生成最近一年/月/周高推荐榜单... / Generating recent year/month/week top recommendation lists..."
@@ -279,21 +288,21 @@ jobs:
         echo "历史高推荐榜单生成完成 / Historical top list generation completed"
         
     - name: Update file list
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         echo "更新文件列表... / Updating file list..."
         find data -maxdepth 1 -name '*.jsonl' ! -name '*_archive.jsonl' -print | sed 's|data/||' | sort > assets/file-list.txt
         echo "文件列表更新完成 / File list updated"
 
     - name: Generate Research Statistics and Weekly Digest
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         source .venv/bin/activate
         python ai/generate_statistics.py
         echo "年度/全库统计与周报已生成 / Statistics and weekly digest generated"
 
     - name: Generate password hash and inject into config
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         echo "🔐 Generating password hash for authentication..."
 
@@ -329,7 +338,9 @@ jobs:
     - name: Summary
       if: steps.schedule_guard.outputs.should_run == 'true'
       run: |
-        if [ "${{ steps.dedup_check.outputs.has_new_content }}" = "true" ]; then
+        if [ "${{ steps.crawl_step.outputs.already_generated }}" = "true" ]; then
+          echo "ℹ️ 工作流跳过：今日完整文件已存在 / Workflow skipped: today's complete output already exists"
+        elif [ "${{ steps.dedup_check.outputs.has_new_content }}" = "true" ]; then
           echo "✅ 工作流完成：去重发现新内容并成功处理 / Workflow completed: Smart deduplication found new content and processed successfully"
         else
           case "${{ steps.dedup_check.outputs.skip_reason }}" in
@@ -349,7 +360,7 @@ jobs:
         fi
         
     - name: Commit changes
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         git config --global user.email "${{ vars.EMAIL }}"
         git config --global user.name "${{ vars.NAME }}"
@@ -363,7 +374,7 @@ jobs:
         echo "变更已提交 / Changes committed"
         
     - name: Pull latest changes and push
-      if: steps.schedule_guard.outputs.should_run == 'true'
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true'
       run: |
         # 设置Git配置以处理自动合并 / Set Git config for automatic merging
         git config pull.rebase true

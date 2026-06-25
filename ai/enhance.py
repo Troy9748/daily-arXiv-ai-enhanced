@@ -52,10 +52,10 @@ def process_single_item(chain, item: Dict, language: str) -> Dict:
             else:
                 # 如果接口异常，默认不触发敏感词
                 print(f"Sensitive check failed with status {resp.status_code}", file=sys.stderr)
-                return True
+                return False
         except Exception as e:
             print(f"Sensitive check error: {e}", file=sys.stderr)
-            return True
+            return False
 
     # 检查 summary 字段
     if is_sensitive(item.get("summary", "")):
@@ -162,11 +162,8 @@ def main():
     model_name = os.environ.get("MODEL_NAME", 'deepseek-chat')
     language = os.environ.get("LANGUAGE", 'Chinese')
 
-    # 检查并删除目标文件
     target_file = args.data.replace('.jsonl', f'_AI_enhanced_{language}.jsonl')
-    if os.path.exists(target_file):
-        os.remove(target_file)
-        print(f'Removed existing file: {target_file}', file=sys.stderr)
+    temp_file = f"{target_file}.tmp"
 
     # 读取数据
     data = []
@@ -193,11 +190,21 @@ def main():
         args.max_workers
     )
     
-    # 保存结果
-    with open(target_file, "w") as f:
+    written_count = 0
+    with open(temp_file, "w") as f:
         for item in processed_data:
             if item is not None:
-                f.write(json.dumps(item) + "\n")
+                f.write(json.dumps(item, ensure_ascii=False) + "\n")
+                written_count += 1
+
+    if data and written_count == 0:
+        if os.path.exists(temp_file):
+            os.remove(temp_file)
+        print(f"No AI-enhanced rows were produced; keeping existing file: {target_file}", file=sys.stderr)
+        sys.exit(1)
+
+    os.replace(temp_file, target_file)
+    print(f"Wrote {written_count} AI-enhanced rows to {target_file}", file=sys.stderr)
 
 if __name__ == "__main__":
     main()

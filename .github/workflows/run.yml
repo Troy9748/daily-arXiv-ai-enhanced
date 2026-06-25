@@ -11,12 +11,12 @@ on:
   workflow_dispatch:
     inputs:
       backfill_date:
-        description: "Optional historical date to backfill, e.g. 2026-06-22. Leave empty for today's normal run."
+        description: 2026-06-18
         required: false
         type: string
       force_backfill:
         description: "Regenerate the selected date even if complete files already exist."
-        required: false
+        required: true
         default: false
         type: boolean
 

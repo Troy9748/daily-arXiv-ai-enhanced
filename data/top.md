@@ -2,8 +2,8 @@
 
 # Table of Contents
 
-- [astro-ph.GA](#astro-ph.GA) [Total: 68]
-- [astro-ph.CO](#astro-ph.CO) [Total: 32]
+- [astro-ph.GA](#astro-ph.GA) [Total: 67]
+- [astro-ph.CO](#astro-ph.CO) [Total: 33]
 
 
 <div id='astro-ph.GA'></div>
@@ -4010,7 +4010,94 @@ Key Figures:
 </details>
 
 
-### [55] [MSA-3D: Rotation Curves and Dark Matter Fractions at z~0.5-1.7 with JWST/NIRSpec](https://arxiv.org/abs/2606.27853)
+### [55] [How can we finally see the first light? Status and perspective in the search for Population III stars](https://arxiv.org/abs/2607.00167)
+*Alessandra Venditti,Daniel Schaerer,Erik Zackrisson,Yoshihisa Asada,Harley Katz,Stefania Salvadori,Eros Vanzella,Julian B. Muñoz,Anatole Storck,Andrew J. Bunker,Alessandro Trinca,Dirk Scholte,Fabio Pacucci,Pablo G. Pérez-González,Seiji Fujimoto,Corinne Charbonnel,Roberto Maiolino,Andrea Ferrara,Mauro Giavalisco,Raffaella Schneider,Josephine Baggen,Hakim Atek,Volker Bromm,Karina Caputi,Laure Ciesla,Pratika Dayal,Chiaki Kobayashi,Marco Castellano,Paola Santini*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★★ (88/100) - 该论文综述了寻找第一代恒星（Pop III）的多种观测策略，其中明确包含引力透镜巡天（lensing surveys）和JWST光谱，与用户Zotero画像中的核心关键词'jwst'、'lensing'、'initial mass function'高度匹配。作者列表中包含用户核心作者Seiji Fujimoto和Roberto Maiolino，进一步增强了相关性。虽然论文主题并非直接聚焦于强引力透镜，但引力透镜作为关键观测手段被重点讨论，且论文涉及高红移天体物理，符合用户对高红移研究的偏好。
+
+TL;DR: 本文综述了第一代恒星（Pop III）形成的理论预期、观测策略及未来展望，指出结合JWST光谱、时域搜索、引力透镜、恒星考古和吸收线研究等多手段正在缩小参数空间，迎来Pop III搜寻的“黄金时代”。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 寻找第一代恒星是理解早期宇宙恒星形成关键环节的核心科学问题，但目前其初始质量函数、形成位点、反馈机制以及向富金属恒星过渡的时标与拓扑结构仍高度不确定。
+
+Method: 综述了理论模型对Pop III恒星形成的预期，并系统梳理了多种观测策略：近场宇宙学、直接搜寻极贫金属星形成复合体/硬电离谱线特征（高/中红移）、以及追踪至宇宙黎明的Pop III活动信号。
+
+Result: JWST光谱、时域巡天、引力透镜巡天、恒星考古、吸收线研究及改进的模拟正在产生越来越多的观测候选体，收窄了第一代恒星的允许参数空间。
+
+Conclusion: 多手段协同观测与理论模拟的结合正推动Pop III搜寻进入“黄金时代”，有望揭示宇宙第一批恒星的奥秘。
+
+Abstract: Finding the first (Population III or Pop III) stars is one of the fundamental quests of astronomy, aiming to deliver the missing link in how stars form at early cosmic times. Yet their initial mass function, formation sites and feedback remain highly uncertain, as well as the timing and topology of the transition to metal-enriched star formation. The observability of their peculiar spectral features is also debated, due to their short lifetime and faintness. This review summarizes current theoretical expectations for Pop III star formation, and the main observational strategies that have been adopted to constrain their properties across cosmic time, including near-field cosmology studies, direct searches for extremely metal-poor star-forming complexes and/or hard-ionizing spectral signatures at high and intermediate redshifts, and prospects for identifying Pop III activity up to Cosmic Dawn. The combination of JWST spectroscopy, time-domain searches, lensing surveys, stellar archaeology, absorption-line studies, as well as improved simulations, is yielding a growing number of observational candidates and narrowing the allowed parameter space for the first stars, setting the stage for a ``golden era'' of Pop III searches.
+
+Abstract Translation:
+寻找第一代（第三族或Pop III）恒星是天文学的基本任务之一，旨在揭示早期宇宙恒星形成过程中缺失的环节。然而，它们的初始质量函数、形成位置和反馈机制，以及向富金属恒星形成过渡的时间和拓扑结构，仍然高度不确定。由于它们寿命短且光度暗淡，其特殊光谱特征的可观测性也存在争议。本综述总结了当前对Pop III恒星形成的理论预期，以及为限制其在整个宇宙时间内的性质而采用的主要观测策略，包括近场宇宙学研究、对高红移和中等红移处极端贫金属恒星形成复合体和/或强电离光谱特征的直接搜索，以及识别直至宇宙黎明时期Pop III活动的可能性。结合JWST光谱学、时域搜索、引力透镜巡天、恒星考古学、吸收线研究以及改进的模拟，正在产生越来越多的观测候选体，并缩小了第一代恒星允许的参数空间，为Pop III搜寻的“黄金时代”奠定了基础。
+
+Conclusion Translation:
+基于现有总结：多手段协同观测与理论模拟的结合正推动Pop III搜寻进入“黄金时代”，有望揭示宇宙第一批恒星的奥秘。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2607.00167v1/x1.png)
+
+图1：来自Klessen and Glover (2023)的模拟对Pop III IMF的预测汇编（[1] Wollenberg et al. 2020, [2] Prole et al. 2022, [3] Jaura et al. 2022, [4] Stacy and Bromm 2013, [5] Hirano et al. 2015, [6] Hirano et al. 2014，彩色实线）。包含中心原恒星反馈的模型（例如[3], [5], [6]）平均预测更大的恒星质量。然而，结果也敏感地依赖于所达到的空间分辨率/时间跨度以及数值实现的细节：较低分辨率（例如[4], [5], [6]）和二维模拟（例如[5], [6]）表现出较少的碎裂——可能是由于对内部吸积盘的建模不够详细——而高分辨率三维模拟（例如[1], [2], [3]）仅覆盖了整个吸积历史的一小部分，留下了关于剩余气体储库和现有原恒星最终命运的问题。关于模拟及其比较的更多细节，请参见Klessen and Glover (2023)。尽管质量范围变化很大，但所有这些预测的IMF近似对数平坦，即与典型的Pop II/I恒星（Chabrier 2003，黑色虚线）的标准“底部重型”Chabrier IMF相比，更加“顶部重型”。
+
+<small>Figure 1: Compilation of predictions on the Pop III IMF from simulations ( [1] Wollenberg et al. 2020 , [2] Prole et al. 2022 , [3] Jaura et al. 2022 , [4] Stacy and Bromm 2013 , [5] Hirano et al. 2015 , [6] Hirano et al. 2014 , colored, solid lines ), from Klessen and Glover ( 2023 ) . Models that include stellar feedback from the central proto-star (e.g. [3] , [5] , [6] ) predict larger stellar masses on average. However results also sensitively depend on the spatial resolution/time span achieved, and on details of the numerical implementation: lower-resolution (e.g. [4] , [5] , [6] ) and 2D simulations (e.g. [5] , [6] ) exhibit less fragmentation – possibly due to a less detailed modelling of the inner accretion disk –, while high-resolution, 3D simulations (e.g. [1] , [2] , [3] ) only cover a small fraction of the full accretion history, leaving the question open on the final fate of the remaining gas reservoir and of existing proto-stars. See Klessen and Glover ( 2023 ) for more details on the simulations and their comparison. Despite the large variation in mass range, however, all these predicted IMFs are approximately logarithmically flat, i.e. much more “top-heavy” compared to a standard “bottom-heavy” Chabrier IMF, typical of Pop II/I stars ( Chabrier 2003 , black, dashed line ).</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2607.00167v1/figures/CEMPs_PopIII_signature.png)
+
+图2：当考虑来自后续Pop II恒星世代（从黄色到紫色）的递增污染水平时，由Pop III超新星增丰事件（爆炸能量从左到右增加）产生的碳增强（[C/Fe]）与金属丰度（[Fe/H]）的关系，改编自Vanni et al. (2023a)。
+
+<small>Figure 2: Carbon enhancement ([C/Fe]) vs metallicity ([Fe/H]) resulting from Pop III SN enrichment episodes with an increasing explosion energy (from left to right ), when considering an incremental level of contamination from subsequent generations of Pop II stars (from yellow to purple ), adapted from Vanni et al. ( 2023a ) .</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2607.00167v1/x2.png)
+
+图3：基于(i)在SAGA星表（Suda et al., 2008, 2017）中未检测到单一增丰的PISN后裔（红色等高线），以及(ii)假设J1010+2358恒星（在15000颗极贫金属LAMOST恒星中发现）的PISN起源解释（蓝色/绿色等高线），可以排除具有给定峰值质量和斜率的Pop III IMF的置信水平，该结果源自与宇宙学星系形成模型NEFERTITI预测的统计比较（改编自Koutsouridou et al. 2024b）。蓝色等高线表明，即使在银河系晕中探测到单个PISN后裔，也能对较低特征质量和/或较陡斜率范围内的Pop III IMF施加强约束。
+
+<small>Figure 3: Confidence levels at which a Pop III IMF with given peak mass and slope can be excluded based on (i) the non-detection of mono-enriched PISNe descendants in the SAGA catalog (Suda et al. , 2008 , 2017 ) at \({[Fe/H]} red contours ), and (ii) the assumption of a PISN origin interpretation for the J1010+2358 star, discovered among 15000 very-metal-poor LAMOST stars ( blue/green contours ), derived from a statistical comparison with predictions of the cosmological galaxy formation model NEFERTITI (adapted from Koutsouridou et al. 2024b ). The blue contours demonstrate how detecting even a single PISN descendant in the Galactic halo will enable strong constraints on the Pop III IMF in the regime corresponding to lower characteristic masses and/or steeper slopes.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2607.00167v1/x3.png)
+
+图4：来自LAMOST巡天（Zhao et al., 2012）的J1010+2358恒星表面的化学丰度模式，最初由Xing et al. (2023)测量（上/下面板中的黄色方块），以及后来由Skúladóttir et al. (2024)进行的高分辨率观测（红色星号）（改编自Xing et al. 2023和Skúladóttir et al. 2024）。与上面板中\(260~{M_{\odot}}\) PISN模型的一致性未得到新测量的确认。
+
+<small>Figure 4: Chemical abundance pattern at the surface of the J1010+2358 star from the LAMOST survey (Zhao et al. , 2012 ) , as originally measured by Xing et al. ( 2023 ) ( yellow squares in the top/bottom panels ), and from later, high-resolution observations from Skúladóttir et al. ( 2024 ) ( red stars ) (adapted from Xing et al. 2023 and Skúladóttir et al. 2024 ). The agreement with the top-panel \(260~{M_{\odot}}\) PISN model was not confirmed by the new measures.</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2607.00167v1/x4.png)
+
+图5：11个\(z\approx 1.3-7.7\)的恒星形成星系（星形）和两个\(z\approx 4.5\)的候选AGN宿主（圆圈）的Log(O/Ar)与\(12+{Log(Ar/H)}\)的关系，按红移着色。绿色和蓝色线分别显示了低红移（\(z < 0.1\)）星暴星系（Bhattacharya et al., 2025b）的平均值序列，改编自Bhattacharya et al. (2025a)。来自Kobayashi et al. (2020)的MW太阳邻域银河化学演化（GCE）模型也作为参考显示（黑线）。其中四个\(z\sim 3.5-7.7\)的天体（以橙色/红色边缘颜色标记）的Log(O/Ar)值低于MW GCE模型，甚至低于低质量、低红移星暴星系所追踪的序列，这可能表明存在替代的增丰情景，包括快速的PISN增丰通道（特别是红移\(z=7.66\)的ERO 10612，红色边缘颜色，其估计的恒星形成时标较低——尽管不确定——为\(4.37^{+4.13}_{-2.13}\) Myr）。
+
+<small>Figure 5: Log(O/Ar) vs \(12+{Log(Ar/H)}\) for 11 star-forming galaxies at \(z\approx 1.3-7.7\) ( stars ) and two candidate AGN hosts at \(z\approx 4.5\) ( circles ), colored by their redshift. The green and blue lines respectively show the sequence of mean values of low-redshift ( \(z (Bhattacharya et al. , 2025b ) , adopted from Bhattacharya et al. ( 2025a ) . The MW solar neighborhood Galactic chemical evolution (GCE) model from Kobayashi et al. ( 2020 ) is also shown as a reference ( black line ). Four of these objects at \(z\sim 3.5-7.7\) (marked by orange/red edgecolors ) have Log(O/Ar) values below the MW GCE model, and even below the sequence traced by lower-mass, low- \(z\) starbursts, possibly indicative of alternative enrichment scenarios, including a rapid PISN enrichment channel (particularly for the ERO 10612 at \(z=7.66\) , red edgecolor , with a low – albeit uncertain – estimated star-formation timescale of \(4.37^{+4.13}_{-2.13}\) Myr).</small>
+
+#### Figure 6
+![Figure 6](https://arxiv.org/html/2607.00167v1/figures/mass-metallicity+PopIII_candidates.png)
+
+图6：来自Bolamperti et al. (2026)的\(z>3\)处质量-金属丰度关系，包括低质量、恒星形成复合体，其未探测到的金属线表明金属丰度\(\lesssim 8\times 10^{-3}~{Z_{\odot}}\)（LAP2, Vanzella et al. 2026, AMORE6, Morishita et al. 2025; Messa et al. 2026, Hebe Maiolino et al. 2026; Übler et al. 2026和MPG-CR3, Cai et al. 2025，来自表1）。
+
+<small>Figure 6: Mass-metallicity relation at \(z>3\) from Bolamperti et al. ( 2026 ) , including low-mass, star-forming complexes with undetected metal lines that indicate metallicities \(\lesssim 8\times 10^{-3}~{Z_{\odot}}\) (LAP2, Vanzella et al. 2026 , AMORE6, Morishita et al. 2025 ; Messa et al. 2026 , Hebe Maiolino et al. 2026 ; Übler et al. 2026 and MPG-CR3, Cai et al. 2025 from Table 1 ).</small>
+
+#### Figure 7
+表1：观测到的低质量、极端贫金属候选Pop III系统的性质。
+
+<small>Table 1: Properties of observed low-mass, EMP candidate Pop III systems.</small>
+
+#### Figure 8
+![Figure 8](https://arxiv.org/html/2607.00167v1/x6.png)
+
+图8：根据各种模型和模拟（列于表8），Pop III恒星形成速率密度（SFRD）随红移的演化。来自Nagao et al. (2008)、Cassata et al. (2013)和Fujimoto et al. (2025a)的暂定观测约束也显示用于比较（详见第4.3节）。
+
+<small>Figure 8: Pop III SFRD evolution as a function of redshift according to various models and simulations (listed in Table 8 ). Tentative observational constraints from Nagao et al. ( 2008 ) , Cassata et al. ( 2013 ) and Fujimoto et al. ( 2025a ) are also shown for comparison (see Section 4.3 for further details).</small>
+
+</details>
+
+
+### [56] [MSA-3D: Rotation Curves and Dark Matter Fractions at z~0.5-1.7 with JWST/NIRSpec](https://arxiv.org/abs/2606.27853)
 *Juan M. Espejo Salcedo,Danail Obreschkow,Karl Glazebrook,Tucker Jones,Ivana Barišić,Natascha M. Förster Schreiber,Takafumi Tsukui,Xin Wang,Mengting Ju,Qianqiao Zhou,Amit Nestor-Schachar,Ryan L. Sanders,Stavros Pastras,Namrata Roy,Alaina Henry,Kyle Westfall,Themiya Nanayakkara,Matthew Malkan,Fahmi M. Al Farisy,Isaac Kanowski*
 
 Main category: astro-ph.GA
@@ -4045,7 +4132,7 @@ Key Figures:
 </details>
 
 
-### [56] [Cm-wavelength Studies of Molecular Gas and Star Formation at High Redshift with the SKA](https://arxiv.org/abs/2606.26640)
+### [57] [Cm-wavelength Studies of Molecular Gas and Star Formation at High Redshift with the SKA](https://arxiv.org/abs/2606.26640)
 *Ran Wang,Jeff Wagg,Mark T. Sargent,Manuel Aravena,Mamta Pandey-Pommier,Elisabete da Cunha,Eric Murphy,Dominik Riechers,Jacqueline Hodge*
 
 Main category: astro-ph.GA
@@ -4099,7 +4186,7 @@ Key Figures:
 </details>
 
 
-### [57] [Little Red Dots on FIRE: Exploring the formation and observational signatures of ultra-compact early galaxies](https://arxiv.org/abs/2606.23683)
+### [58] [Little Red Dots on FIRE: Exploring the formation and observational signatures of ultra-compact early galaxies](https://arxiv.org/abs/2606.23683)
 *Niranjan Chandra Roy,Daniel Anglés-Alcázar,Rachel K. Cochrane,Alexander J. Richings,Jonathan Mercedes-Feliz,Christopher C. Hayward,Claude-André Faucher-Giguère,Erini Lambrides,Robert Feldmann,Boon Kiat Oh,Andrew Marszewski,Guochao Sun,Kelcey Davis,Jed McKinney,Caitlin M. Casey,Tanio Díaz-Santos,Madisyn Brooks,Grace Farrell*
 
 Main category: astro-ph.GA
@@ -4134,7 +4221,7 @@ Key Figures:
 </details>
 
 
-### [58] [LEGGOS III: Mapping Star Formation and Dust in Gravitationally Lensed Galaxies with $\textit{SUMAC}$, a UMAP and Clustering Framework](https://arxiv.org/abs/2606.20801)
+### [59] [LEGGOS III: Mapping Star Formation and Dust in Gravitationally Lensed Galaxies with $\textit{SUMAC}$, a UMAP and Clustering Framework](https://arxiv.org/abs/2606.20801)
 *Alex Ross,Gourav Khullar,Taylor Hutchison,Dylan Berry,Aritra Ghosh,T. Emil Rivera-Thorsen,Guillaume Mahler,Brian Welch,Pedram Abedi,Cole Panzer,Michael Florian,Julissa Sarmiento,the JWST LEGGOS Collaboration*
 
 Main category: astro-ph.GA
@@ -4174,7 +4261,7 @@ Key Figures:
 </details>
 
 
-### [59] [Early Results from GLASS-JWST. XXVI. Spatially Resolved Star Formation and Balmer Decrements at $1.1<z<2.3$ from NIRISS Slitless Spectroscopy](https://arxiv.org/abs/2606.05887)
+### [60] [Early Results from GLASS-JWST. XXVI. Spatially Resolved Star Formation and Balmer Decrements at $1.1<z<2.3$ from NIRISS Slitless Spectroscopy](https://arxiv.org/abs/2606.05887)
 *Pengfei Ren,Xin Wang,Yuxuan Pang,Mengting Ju,Tucker Jones,Karl Glazebrook,Matthew A. Malkan,Gabriel Brammer,Victoria Strait,Themiya Nanayakkara,Tommaso Treu,Benedetta Vulcani,Peter J. Watson*
 
 Main category: astro-ph.GA
@@ -4240,7 +4327,7 @@ Key Figures:
 </details>
 
 
-### [60] [Massive Galaxies Form Early and Gray: Stellar Assembly and Dust Attenuation at $\mathbf{z>3.5}$ from CAPERS](https://arxiv.org/abs/2605.13966)
+### [61] [Massive Galaxies Form Early and Gray: Stellar Assembly and Dust Attenuation at $\mathbf{z>3.5}$ from CAPERS](https://arxiv.org/abs/2605.13966)
 *Katherine Chworowsky,Steven L. Finkelstein,Anthony J. Taylor,Alexa M. Morales,Mark Dickinson,L. Y. Aaron Yung,Pablo Arrabal Haro,Bren E. Backhaus,Davide Bevacqua,Óscar Chávez Ortiz,Adam C. Carnall,Callum T. Donnan,Mauro Giavalisco,Michaela Hirschmann,Kartheik G. Iyer,Anton M. Koekemoer,Rebecca L. Larson,Ray A. Lucas,Jed McKinney,Derek J. McLeod,Casey Papovich,Pablo G. Pérez-González,Lu Shen,Rachel S. Somerville,Laura Sommovigo,Thomas M. Stanton,Xin Wang,Stephen M. Wilkins,Jorge A. Zavala,the CAPERS Collaboration*
 
 Main category: astro-ph.GA
@@ -4327,7 +4414,7 @@ Key Figures:
 </details>
 
 
-### [61] [The galaxy-halo connection and the dynamical evolution of a giant disc in a massive node of the Cosmic Web at z~3](https://arxiv.org/abs/2605.04144)
+### [62] [The galaxy-halo connection and the dynamical evolution of a giant disc in a massive node of the Cosmic Web at z~3](https://arxiv.org/abs/2605.04144)
 *G. Quadri,S. Cantalupo,C. Bacchini,A. Pensabene,A. Lupi,G. Pezzulli,W. Wang,M. Galbiati,T. Lazeyras,N. Ledos,H. Mao,A. Travascio*
 
 Main category: astro-ph.GA
@@ -4412,7 +4499,7 @@ Key Figures:
 </details>
 
 
-### [62] [Resolved Maps of Gas and Dust in a Massive Quiescent Galaxy at z=2 from INQUEST-JWST: Evidence of Accretion and Rejuvenation](https://arxiv.org/abs/2604.26195)
+### [63] [Resolved Maps of Gas and Dust in a Massive Quiescent Galaxy at z=2 from INQUEST-JWST: Evidence of Accretion and Rejuvenation](https://arxiv.org/abs/2604.26195)
 *Sai Gangula,Andrew B. Newman,Meng Gu,Sirio Belli,Katherine E. Whitaker,Tania M. Barone,Aliza Beverage,Andrea Bolamperti,Letizia Bugiani,Richard S. Ellis,Mariska Kriek,Allison Matthews,Themiya Nanayakkara*
 
 Main category: astro-ph.GA
@@ -4501,7 +4588,7 @@ Key Figures:
 </details>
 
 
-### [63] [Metal Mayhem at $\rm z \sim 7-10$: Diversity and Evolution of Gas-Phase Metallicity Gradients](https://arxiv.org/abs/2604.07076)
+### [64] [Metal Mayhem at $\rm z \sim 7-10$: Diversity and Evolution of Gas-Phase Metallicity Gradients](https://arxiv.org/abs/2604.07076)
 *Maria Koller,Roberto Maiolino,Hannah Übler,Qiao Duan,Jan Scholtz,Santiago Arribas,William M. Baker,Stefano Carniani,Stephane Charlot,Mirko Curti,Luca Graziani,Gareth Jones,William McClymont,Michele Perna,Bruno Rodríguez Del Pino,Sandro Tacchella,Alessandra Venditti,Giacomo Venturi,Joris Witstok*
 
 Main category: astro-ph.GA
@@ -4586,7 +4673,7 @@ Key Figures:
 </details>
 
 
-### [64] [Survival of the most compact: the life and death of satellite halos in self-interacting dark matter](https://arxiv.org/abs/2603.19362)
+### [65] [Survival of the most compact: the life and death of satellite halos in self-interacting dark matter](https://arxiv.org/abs/2603.19362)
 *David Klemmer,Moritz S. Fischer,Kimberly K. Boddy,Manoj Kaplinghat,Laura Sagunski*
 
 Main category: astro-ph.GA
@@ -4673,7 +4760,7 @@ Key Figures:
 </details>
 
 
-### [65] [JWST's PEARLS: A clumpy ring galaxy at $z = 4.0148$](https://arxiv.org/abs/2603.11575)
+### [66] [JWST's PEARLS: A clumpy ring galaxy at $z = 4.0148$](https://arxiv.org/abs/2603.11575)
 *David Vizgan,Ming-Yang Zhuang,Ian Smail,Rogier Windhorst,Gibson Bowling,Cheng Cheng,Seth Cohen,Christopher Conselice,Jose Diego,Brenda Frye,Norman Grogin,Rolf Jansen,Patrick Kamieneski,Anton Koekemoer,Rafael Ortiz,Massimo Ricotti,Bangzheng Sun,Hayley Williams,S. P. Willner,Aadya Agrawal,Manuel Solimano,Zachary Stone,Joaquin Vieira,Chentao Yang*
 
 Main category: astro-ph.GA
@@ -4760,7 +4847,7 @@ Key Figures:
 </details>
 
 
-### [66] [AGN Feedback and the Development of Dusty Multiphase Gas in X-ray Emitting Elliptical Galaxies](https://arxiv.org/abs/2602.22415)
+### [67] [AGN Feedback and the Development of Dusty Multiphase Gas in X-ray Emitting Elliptical Galaxies](https://arxiv.org/abs/2602.22415)
 *Pasquale Temi,Francesco Ubertosi,Fabrizio Brighenti,Alexandros Maragkoudakis,Valeria Olivares,Alexandre Amblard,Massimo Gaspari,Myriam Gitti,Pamela M. Marcum,Kevin Fogarty,Alejandro S. Borlaff,William G. Mathews*
 
 Main category: astro-ph.GA
@@ -4845,182 +4932,11 @@ Key Figures:
 </details>
 
 
-### [67] [A tight relation between the distribution of globular clusters and dark matter in AS1063](https://arxiv.org/abs/2602.12332)
-*J. M. Diego,C. Goolsby,C. J. Conselice,J. M. Palencia*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (88/100) - 该论文研究星系团AS1063中球状星团分布与暗物质分布的关系，核心主题为引力透镜建模和暗物质示踪，与用户画像中的dark matter、gravitational lensing、lens、lensing、lensed高度匹配。用户明确优先强引力透镜研究，且论文使用JWST数据，与用户画像中的jwst关键词一致。虽然论文聚焦星系团而非用户偏好的星系-星系强透镜，但强透镜建模方法直接相关，且用户画像中dark matter权重很高。论文未涉及高红移星系动力学、运动学、偏振或多相气体等用户优先主题，但无负面因素。作者无匹配，但主题和方法契合度极高。
-
-TL;DR: 基于JWST对AS1063星系团的深度高分辨率图像，研究人员识别出数万个点源，主要是球状星团和卫星星系核心，发现球状星团分布与引力透镜质量分布高度相关但更集中，提出球状星团可作为暗物质分布的示踪剂。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 研究星系团中球状星团的分布特征，探索其与暗物质分布的关系，为在缺乏引力透镜约束的星系团中利用球状星团作为暗物质示踪剂提供可能性。
-
-Method: 使用JWST深度高分辨率图像，仔细掩蔽伪影、扩展特征和背景星系后，在星系团中心区域识别数万个未分辨点源，扩展到1.18 Mpc范围；将球状星团分布与同一JWST数据推导的透镜模型质量分布进行比较分析。
-
-Result: 发现球状星团分布与透镜质量分布存在非常紧密的相关性，但球状星团分布比暗物质更集中；通过简单平滑核可将离散点源分布转换为连续二维分布，与透镜收敛度匹配良好。
-
-Conclusion: 球状星团可作为暗物质分布的示踪剂，特别是在引力透镜约束稀缺但球状星团易于探测的低红移星系团中，为研究暗物质分布提供了新方法。
-
-Abstract: Based on deep high resolution JWST images of AS1063, and after a careful masking of artifacts, extended features in the cluster, and background galaxies (including known lensed ones), we have identified tens of thousands of unresolved point sources in the central region of the galaxy cluster. We extended the identification of these point sources up to 1.18 Mpc from the center of the cluster using data in the second module. Most of these sources are expected to be globular clusters orbiting in the deep potential well of the cluster, but also the surviving compact cores of satellite galaxies. We study the distribution of the globular clusters and compared it with the distribution of mass from a lens model derived from the same JWST data. We find a very tight correlation between the two distributions, but also some differences, including a more concentrated distribution for the globular clusters than for dark matter. We explored the possibility of using the distribution of globular clusters as a proxy for the lensing mass. We find that a simple smoothing kernel can transform the discrete distribution of point sources into a continuous two-dimensional distribution that matches well the lensing convergence. This suggests that globular clusters can be used as tracers of the dark matter distribution in other massive clusters where gravitational lensing constraints are scarce but globular clusters can be detected more easily, for instance in low redshift galaxy clusters.
-
-Abstract Translation:
-基于AS1063的深场高分辨率JWST图像，在仔细掩蔽伪影、星系团扩展特征以及背景星系（包括已知的透镜星系）后，我们在星系团中心区域识别了数万个未分辨的点源。利用第二个模块的数据，我们将这些点源的识别范围扩展到距星系团中心1.18 Mpc。这些源中大部分预计是在星系团深势阱中运行的球状星团，但也包括卫星星系幸存下来的致密核。我们研究了球状星团的分布，并将其与基于相同JWST数据推导的透镜模型的质量分布进行了比较。我们发现这两个分布之间存在非常紧密的相关性，但也存在一些差异，包括球状星团的分布比暗物质更集中。我们探索了利用球状星团分布作为透镜质量代理的可能性。我们发现，一个简单的平滑核可以将点源的离散分布转换为一个与透镜会聚度匹配良好的连续二维分布。这表明，在其他大质量星系团中，当引力透镜约束稀缺但球状星团更容易被探测到时（例如在低红移星系团中），球状星团可以作为暗物质分布的示踪剂。
-
-Conclusion Translation:
-基于现有摘要，球状星团可作为暗物质分布的示踪剂，特别是在引力透镜约束稀缺但球状星团易于探测的低红移星系团中，为研究暗物质分布提供了新方法。
-
-Key Figures:
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/x1.png)
-
-图1：结合12个HST和JWST滤光片（范围0.4–5微米）的AS1063彩色图像。来自我们透镜模型的三条临界曲线显示在\(z=0.73\)（青色）、\(z=1.23\)（黄色）和\(z=3\)（红色）。黄色箭头标记了在\(z\approx 1.23\)处被该红移临界曲线相交的两组透镜星系，而青色箭头标记了来自\(z=0.73\)处一个星系的一组透镜图像，被青色临界曲线相交。白色圆圈标记了显著椭圆星系的位置。小图A、B、D和E显示了JWST短波滤光片之和的滤波版本的放大区域。黄色圆圈标记了滤波图像中自动检测到的点源位置。白色轮廓线表示不进行点源检测的掩蔽区域，除了最中心区域（图D），在该区域内在1角秒半径的掩蔽区域内通过目视识别点源。包含明亮和/或延展源以及伪影的整个区域的掩模显示在图C（右下角）。
-
-<small>Figure 1: Color image of AS1063 combining 12 HST and JWST filters (range 0.4–5 micron). Three critical curves from our lens model are shown at \(z=0.73\) (cyan), \(z=1.23\) (yellow), and \(z=3\) (red). The yellow arrows mark two families of lensed galaxies at \(z\approx 1.23\) intersected by the critical curve at that redshift, while the cyan arrows mark one family of lensed images from a galaxy at \(z=0.73\) intersected by the cyan critical curve. White circles mark the position of prominent elliptical galaxies. The small panels A, B, D and E show zoomed-in regions of a filtered version of the sum of JWST’s SW filters. Yellow circles mark the position of automatically detected point sources in the filtered images. The white contours show the masked regions where no point source detection is performed except for the very central region (panel D) where identification of point sources is done visually inside the 1” radius masked region. The mask of the full region containing bright and/or extended sources as well as artifacts is shown in panel C (bottom right).</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/Figs/GC_distribution.png)
-
-图2：从数据（红点，28026个）和掩蔽区域内的修补（黑点，3501个）获得的球状星团分布图。一些伪影（衍射尖峰）和大型透镜星系（巨弧）在修补点的分布中很明显。大蓝色圆圈标记了显著成员的位置（图1中的白色圆圈）。
-
-<small>Figure 2: Map of GC distribution obtained from the data (red points, 28026) and inpainted (black points, 3501) in the masked regions. Some artifacts (diffraction spikes) and large lensed galaxies (giant arcs) are obvious in the distribution of inpainted points. Big blue circles mark the position of prominent members (white circles in Fig. 1).</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/x2.png)
-
-图3：球状星团数密度与在\(3\) 的盒子内计算的平均会聚度的关系。虚线对应\(y=0.4x^{0.7}\)，与观测到的相关性拟合得相当好。
-
-<small>Figure 3: Number density of GCs vs mean convergence computed in boxes of \(3\) . The dashed line corresponds to \(y=0.4x^{0.7}\) and fits reasonably well the observed correlation.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/Figs/DensityContoursYellow_KappaContoursCyan.png)
-
-图4：修补掩蔽区域后的球状星团密度图（灰色）。绿色等值线对应球状星团密度图（灰度图像），而青色等值线对应来自论文I的透镜模型会聚度图。两条较粗的青色等值线对应\(\kappa=0.3\) 和\(\kappa=1.8\) 。
-
-<small>Figure 4: Map of GC density after inpainting the masked regions (gray). The green contours are for the GC density map (gray scale image) while the cyan contours are for the lens model convergence map from paper-I. The two thicker cyan contours correspond to \(\kappa=0.3\) and \(\kappa=1.8\) .</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/Figs/kappa_vs_density.png)
-
-图5：会聚度与球状星团密度图的散点图。实线是\(x=y\) 模型。球状星团密度\(\rho_{gc}\) 已按因子\(\beta\) 重新缩放，该因子使差异图\(r=\kappa-\beta\times\rho_{gc}\) 的方差最小化。
-
-<small>Figure 5: Scatter plot of convergence vs GC density maps. The solid line is the \(x=y\) model. The GC density, \(\rho_{gc}\) has been re-scaled by the factor \(\beta\) that minimizes the variance of the difference map \(r=\kappa-\beta\times\rho_{gc}\) .</small>
-
-#### Figure 6
-![Figure 6](https://arxiv.org/html/Figs/AS1063_GC_Mask_Paralell.png)
-
-图6：第二个模块中的掩模（黑色）和检测到的球状星团（红点，5327个）。青色点是掩蔽区域中修补的球状星团（804个）。方向与图1相同。
-
-<small>Figure 6: Mask (black) and detected GC (red dots, 5327) in the second module. The cyan dots are the inpainted GCs in the masked region (804). The orientation is the same as in Fig. 1 .</small>
-
-#### Figure 7
-![Figure 7](https://arxiv.org/html/x3.png)
-
-图7：以最亮星系团星系为中心的AS1063的轮廓。来自透镜模型的投影质量绘制为深蓝色（单位为\(\Sigma/\Sigma_{crit}\) ），两条蓝色垂直虚线标记了具有透镜约束的距离范围。滤光片F444W中的光轮廓（包括星系团内光）显示为橙色线。光图被掩蔽，仅使用未掩蔽的像素绘制轮廓。被掩蔽的最亮星系团星系导致中心处的光轮廓为零。球状星团数密度显示为粗黑线，为便于比较，已按因子四重新缩放以匹配会聚度轮廓。轮廓中的间隙对应于两个模块之间的间隙，其中未检测到球状星团。大半径（ \(100\) ）处的球状星团数密度轮廓在第二个模块中计算。在减去估计的背景天体污染水平（水平虚线）后，得到的校正后轮廓以黑色细实线显示。
-
-<small>Figure 7: Profiles of AS1063 centered on the BCG. The projected mass from the lens model is plotted as dark blue (in units of \(\Sigma/\Sigma_{crit}\) ) with the two blue vertical dotted lines marking the range of distances with lensing constraints. The light profile (including the intracluster light) in the filter F444W is shown as an orange line. The map of the light is masked and only the unamasked pixels are used for the profile. The masked BCG results in a nil light profile at the very center. The number density of GCs is shown as a thick black line that is re-scaled by a factor four to match the convergence profile for easier comparison. The gap in the profile corresponds to the gap between the two modules where no GCs are detected. The GC number density profile at large radii ( \(100\) ), is computed in the second module. After subtracting the estimated level of contamination from background objects (horizontal dotted line), the resulting corrected profile is shown in black as a thin solid line.</small>
-
-</details>
-
-
-### [68] [Characterising Ly$α$ damping wings at the onset of reionisation: Evidence for highly efficient star formation driven by dense, neutral gas in UV-bright galaxies at $z>9$](https://arxiv.org/abs/2602.11783)
-*Clara L. Pollock,Kasper E. Heintz,Joris Witstok,Rashmi Gottumukkala,Gabriel Brammer,Sownak Bose,Alex J. Cameron,Pratika Dayal,Pieter van Dokkum,Johan Fynbo,Viola Gelli,Matthew J. Hayes,Akio K. Inoue,Claudia del P. Lagos,Peter Laursen,Romain A. Meyer,Rohan Naidu,Pascal Oesch,Lucie E. Rowland,Nial R. Tanvir,Sandro Tacchella,Chamilla Terp,Francesco Valentino,Fabian Walter,John Weaver,Callum Witten*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (88/100) - 该论文聚焦于z>9高红移星系的中性氢气体与恒星形成效率，直接涉及用户核心兴趣中的高红移星系动力学、多相气体及恒星形成。方法上使用JWST/NIRSpec光谱分析阻尼莱曼α吸收，与用户关注的强引力透镜观测手段高度互补。作者中包含用户核心作者claudia del p. lagos，且主题与用户高频关键词（jwst、dust、formation rate、dense gas）高度匹配。论文探讨的早期星系组装与恒星形成效率问题，与用户对高红移星系物理的强烈兴趣一致。
-
-TL;DR: JWST观测发现z>9的高红移星系中，中性氢气体密度极高，导致恒星形成效率远超本地宇宙和模拟预测，这解释了早期宇宙中紫外明亮星系的成因。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 研究高红移(z>9)紫外明亮星系的成因，特别是中性氢气体在早期星系组装中的作用，以及这些星系为何具有异常高的恒星形成效率。
-
-Method: 使用JWST/NIRSpec Prism光谱仪观测z>9的星系，分析其阻尼莱曼α吸收特征，测量中性氢柱密度和恒星形成率表面密度，并与本地宇宙的Kennicutt-Schmidt关系及星系形成模拟进行比较。
-
-Result: 所有观测星系都表现出极高的恒星形成效率（10-100 Myr的耗尽时间尺度），远超本地宇宙关系和模拟预测；高密度中性氢气体导致这些星系偏离基本金属丰度关系；尘埃-气体比与本地星系基本一致（最低金属丰度视线除外）。
-
-Conclusion: 高密度中性氢气体驱动了早期星系的高效恒星形成，结合低尘埃消光，可以解释宇宙黎明时期紫外明亮星系的成因，为早期星系组装提供了首个观测约束。
-
-Abstract: One of the major conundrums in contemporary extragalactic astrophysics is the apparent overabundance of a remarkable population of UV-bright galaxies at redshifts $z\gtrsim 9$. We analyse galaxies spectroscopically observed by JWST/NIRSpec Prism and confirmed to lie at $z>9$, with sufficient signal-to-noise to carefully model their rest-frame UV to optical continua and line emission. In particular, we model the damped Lyman-$α$ (Ly$α$) absorption (DLA) features of each galaxy to place observational constraints on the gas assembly of neutral atomic hydrogen (HI) onto the galaxy halos at the onset of cosmic reionisation. Based on the derived HI column densities and star-formation rate (SFR) surface densities, we show that all galaxies are highly efficient at forming stars on rapid $\sim 10-100\,$Myr depletion timescales, greatly in excess compared to the canonical local universe Kennicutt-Schmidt relation and predictions from state-of-the-art galaxy formation simulations. The dense HI gas appears to also drive the offset from the fundamental-metallicity relation of these galaxies though its dust-to-gas ratio is seemingly consistent with values derived for local galaxies except for the lowest metallicity sight-lines. Our results provide the first robust observational constraints on the impact of pristine HI gas on early galaxy assembly, and imply that a combination of highly efficient star formation and low dust obscuration can likely explain the UV-brightness of galaxies at cosmic dawn.
-
-Abstract Translation:
-当代河外天体物理学中的一个主要难题是在红移 \(z\gtrsim 9\) 处存在一个显著且数量过多的紫外明亮星系群。我们分析了由 JWST/NIRSpec Prism 光谱观测并确认位于 \(z>9\) 的星系，这些星系具有足够的信噪比，可以仔细建模其静止框架紫外到光学连续谱和发射线。特别是，我们对每个星系的阻尼莱曼-α (Lyα) 吸收 (DLA) 特征进行建模，以对宇宙再电离开始时期中性原子氢 (HI) 在星系晕上的气体聚集施加观测约束。基于推导出的 HI 柱密度和恒星形成率 (SFR) 面密度，我们表明所有星系在快速的 \(\sim 10-100\,\)Myr 消耗时标上都极其高效地形成恒星，其效率远超典型的本地宇宙 Kennicutt-Schmidt 关系和最先进的星系形成模拟的预测。致密的 HI 气体似乎也驱动了这些星系偏离基本金属丰度关系，尽管其尘埃与气体比率看似与本地星系的值一致，但最低金属丰度视线方向除外。我们的结果为原始 HI 气体对早期星系聚集的影响提供了首个稳健的观测约束，并表明高效恒星形成与低尘埃消光的结合很可能可以解释宇宙黎明时期星系的紫外亮度。
-
-Conclusion Translation:
-基于可用摘要，高密度中性氢气体驱动了早期星系的高效恒星形成，结合低尘埃消光，可以解释宇宙黎明时期紫外明亮星系的成因，为早期星系组装提供了首个观测约束。
-
-Key Figures:
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/Figs/Example_and_corner.png)
-
-图 1：左图：对 \(z=12.85\) 处的 JADES-GS-z13-0 (DJA ID 3215_20128771) 的紫外发射线和 DLA 拟合示例。NIRSpec/Prism 光谱及相关误差以绿色显示。标记的紫外发射线被建模，然后在建模 DLA（黑色实线）之前叠加到本征光谱上。插图中，我们展示了 Ly \(\alpha\) 区域的放大图，其中 DLA+IGM 模型为实线，仅 100% 中性 IGM ( \({x_{HI}}=1.0\) ) 为虚线。右图：DLA+IGM 模型后验分布的角点图，标记了中位数、第 16 和第 84 百分位数。
-
-<small>Figure 1: Left: Example of UV emission line and DLA fitting for JADES-GS-z13-0 (DJA ID 3215_20128771) at \(z=12.85\) . The NIRSpec/Prism spectrum and associated error are shown in green. The marked UV emission lines were modelled and then superimposed on the intrinsic spectrum before modelling the DLA (solid black line). In the inset, we show a zoom on the Ly \(\alpha\) region, with the DLA+IGM model as a solid line, and with 100% neutral IGM only ( \({x_{HI}}=1.0\) ) as a dashed line. Right: Corner plot of the posterior distributions for the DLA+IGM model, with median, 16th and 84th percentiles marked.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/x1.png)
-
-图 2：样本红移范围内计算的柱密度，深绿色方块是约束良好的柱密度，其值 \(N_{HI}>10^{21}\,cm^{-2}\) 。上限以三角形绘制，源自后验分布的第 95 百分位数。不同的阴影区域代表低柱密度 ( \(N_{HI} 10^{21-22}\,cm^{-2}\) )，其中中性氢超过完全中性 IGM 的丰度，以及非常强的 DLA ( \(N_{HI}>10^{22}\,cm^{-2}\) )，具有极端过量的中性气体。无论柱密度如何，所有天体在莱曼限处都具有光学厚度 \(\tau>10^{3}\) ，最高的柱密度 \(N_{HI}=10^{22}\,{cm^{-2}}\) 对应光学深度 \(\tau\approx 10^{5}\) 。按红移分箱（ \(z 12\) ）的约束良好柱密度中位数以黑色三角形显示（值分别为 \(N_{HI}=10^{21.71},10^{22.24}\) 和 \(10^{22.37}\,{cm^{-2}}\) ）。这些本质上是上限，因为每个分箱中 IGM 主导星系/上限（未包含在中位数中）的比例分别为 0.42、0.50 和 0.29。
-
-<small>Figure 2: Calculated column densities across the redshift range of the sample, dark green squares are well-constrained column densities with values \(N_{HI}>10^{21}\,cm^{-2}\) . Upper limits are plotted as triangles, derived from the 95th percentile of the posterior distribution. The different shaded regions represent low column density ( \(N_{HI} 10^{21-22}\,cm^{-2}\) ) where neutral hydrogen exceeds abundance from a fully neutral IGM, and very strong DLAs ( \(N_{HI}>10^{22}\,cm^{-2}\) ) with an extreme over-abundance of neutral gas. Regardless of column density, all objects are optically thick with optical depths at the Lyman limit \(\tau>10^{3}\) , with the highest column densities \(N_{HI}=10^{22}\,{cm^{-2}}\) corresponding to optical depths \(\tau\approx 10^{5}\) . Medians of well-constrained column density binned in redshift ( \(z 12\) ) are shown as black triangles (with values \(N_{HI}=10^{21.71},10^{22.24}\) , and \(10^{22.37}\,{cm^{-2}}\) respectively). These are essentially upper limits, as the fraction of IGM-dominated galaxies/upper limits (which were not included in the median) in each bin is 0.42, 0.50, and 0.29 respectively.</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/x2.png)
-
-图 3：星系样本的测量 \(\beta_{UV}\) 斜率和柱密度 \({log}(N_{HI}/cm^{-2})\) 。绿色方块和三角形再次分别代表柱密度的约束良好值和上限，灰色阴影区域代表可能存在的高星云连续谱，其中双光子发射可能伪装成 DLA（Katz et al. , 2025）。
-
-<small>Figure 3: Measured \(\beta_{UV}\) slope and column density \({log}(N_{HI}/cm^{-2})\) for the galaxy sample. The green squares and triangles again represent the well-constrained and upper limits for column density respectively, with the grey shaded region representing possible high nebular continuum where two-photon emission may be masquerading as a DLA (Katz et al. , 2025 ) .</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/x3.png)
-
-图 4：上图：我们样本推导柱密度的累积直方图，以绿色阴影显示；按 \(z=9-10\) 和 \(z>10\) 分为非 DLA（柱密度 \( 10^{21}\,{cm^{-2}}\) ）。完整样本以灰色阴影区域显示，直接与 SERRA 模拟星系 \(z=6-9.5\) 的平均值（蓝色，Gelli et al. , 2025）进行比较，表明虽然观测到的 DLA 分布大致一致，但存在一个极端 DLA ( \(>10^{22}\,{cm^{-2}}\) ) 的峰值，这在模拟的平均值中并未体现，特别是对于 \(z>10\) 的星系。下图：与上图类似，但针对归一化概率密度函数，同时将具有未约束 DLA 的星系比例显示为 IGM 极限。
-
-<small>Figure 4: Top : Cumulative histogram of derived column densities for our sample in shades of green; separated for non-DLAs (column densities \( 10^{21}\,{cm^{-2}}\) ) for \(z=9-10\) and \(z>10\) . The full sample is shown as grey shaded region, comparing directly to the averages of SERRA -simulated galaxies \(z=6-9.5\) in blue (Gelli et al. , 2025 ) , showing that while the spread of observed DLAs is broadly consistent, there is a peak of extreme-DLAs ( \(>10^{22}\,{cm^{-2}}\) ) that are not represented in the averages of simulations, particularly for those \(z>10\) . Bottom: Similar to top panel, but for a normalised PDF, along with the fraction of galaxies with unconstrained DLAs shown as an IGM limit.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/x4.png)
-
-图 5：测量的紫外星等和柱密度。我们天体的晕质量源自紫外星等（Mason et al. , 2023，无尘埃模型）。我们样本的约束良好柱密度与 SERRA 模拟的结果一致（Gelli et al. , 2025）。灰色等高线代表 100 个星系在随机视线方向上的平均柱密度，同时显示了 1 \(\sigma\) 误差区域，代表模拟中不同视线方向的弥散。
-
-<small>Figure 5: Measured UV magnitude and column density. Halo masses for our objects are derived from UV magnitudes (Mason et al. , 2023 , no dust model) . The well-constrained column densities of our sample are consistent with results from SERRA simulations (Gelli et al. , 2025 ) . The grey contours represent the average column density of 100 galaxies over random sight-lines, with the 1 \(\sigma\) error region also shown, representing the scatter across sightlines in simulations.</small>
-
-#### Figure 6
-![Figure 6](https://arxiv.org/html/x5.png)
-
-图 6：左图：对于 \(N_{HI}>10^{21}\) cm \(^{-2}\) 的 DLA 子样本，尘埃与气体比率 \(A_{V}/N_{HI}\) 随红移变化的上限。此处，\(A_{V}\) 源自 \(\beta_{UV}\) 斜率假定的红化，因此被视为上限。样本中的大多数天体与贫尘埃一致，低于 10% 太阳金属丰度。右图：\(A_{V}/N_{HI}\) 随气相金属丰度 12+log(O/H) 的变化趋势，与银河系、大麦哲伦云、小麦哲伦云以及 10%、5% 和 1% 金属丰度（每种金属丰度用星形表示）的值进行比较。黑线显示了本地星系和伽马射线暴 (GRB) 的关系（Heintz et al. , 2023a）。每个天体金属丰度的计算方法用不同符号表示；每个符号仍代表 \(A_{V}/N_{HI}\) 的上限，并根据透镜修正的紫外星等着色。
-
-<small>Figure 6: Left : Upper limits for the dust-to-gas ratio \(A_{V}/N_{HI}\) against redshift, for the subsample of DLAs with \(N_{HI}>10^{21}\) cm -2 . Here, \(A_{V}\) are derived from the assumed reddening of the \(\beta_{UV}\) slope, and so are taken to be upper limits. The majority of the sample are consistent with being dust-poor, lying below 10% solar metallicity. Right : The trend of \(A_{V}/N_{HI}\) against gas-phase metallicity 12+log(O/H), compared to values from the Milky Way, Large and Small Magellanic Clouds, and 10%, 5%, and 1% metallicities (metallicity for each represented with a star). The black line shows the relation for local galaxies and gamma-ray bursts (GRBs) (Heintz et al. , 2023a ) . The method for calculating metallicity for each object is represented by different symbols; each still represents an upper limit in \(A_{V}/N_{HI}\) , and is colour-coded with lensing-corrected UV magnitude.</small>
-
-#### Figure 7
-![Figure 7](https://arxiv.org/html/x6.png)
-
-图 7：对于受约束 DLA 样本，偏离基本金属丰度关系 (FMR, Curti et al. , 2020) 的程度作为 H i 柱密度的函数。\(N_{{HI}}=10^{21-22}\) cm \(^{-2}\) 和 \(N_{{HI}}>10^{22}\) cm \(^{-2}\) 的分箱平均值以黑色菱形显示，并带有 \(1\sigma\) 误差棒。\(z=9-10\) 处金属丰度测量的平均偏移（Pollock et al. , 2025）以浅绿色显示。仅存在中等相关性，Spearman 等级相关系数 \(\rho\approx-0.4\) ，然而最强的 DLA 往往显示出与 FMR 的较大偏移，正如原始气体流入稀释所预期的那样。
-
-<small>Figure 7: Offset from the Fundamental Metallicity Relation (FMR, Curti et al. , 2020 ) as a function of the H i column density for the sample of constrained DLAs. Binned averages for \(N_{{HI}}=10^{21-22}\) cm -2 and \(N_{{HI}}>10^{22}\) cm -2 are shown as black diamonds, with \(1\sigma\) error bars. The average offset from metallicity measurements at \(z=9-10\) (Pollock et al. , 2025 ) is shown in light green. There is only a moderate correlation, with Spearman rank \(\rho\approx-0.4\) , however the strongest DLAs tend to show large offsets from the FMR, as would be expected from pristine gas inflow dilution.</small>
-
-#### Figure 8
-![Figure 8](https://arxiv.org/html/x7.png)
-
-图 8：原子 Kennicutt-Schmidt 关系 \({log}(\Sigma_{HI})\) 和 \({log}(\Sigma_{SFR})\) ，按柱密度值着色。如前所述，我们将未约束值绘制为上限 (95%)。我们与典型的 Kennicutt and De Los Reyes (2021) (K21) 星暴星系和主序星系关系进行比较，以及与对应于全球恒星形成效率的各种气体消耗消耗时标（灰色，Kennicutt, 1998, \(N=1.0\)）。所有星系都位于经验定律之上，存在一些弥散，低柱密度（非 DLA）天体即使绘制为上限也极度偏移。\(\Sigma_{gas}=10^{1}-10^{2}\) 和 \(10^{2}-10^{3}\,M_{\odot}\,pc^{-2}\) 的分箱平均值以黑色菱形显示，两者均与 \(\sim 10\,\) Myr 一致。以蓝色阴影显示，我们与来自 THESAN-ZOOM 在 \(z=10-12\) 的模拟预测（Shen et al. , 2026；Kannan et al. , 2025）、SERRA 在 \(z=7\) 的模拟预测（Pallottini et al. , 2022）以及 COLIBRE 在 \(z=8\) 的仅 H i 气体面密度模拟预测（Lagos et al. , 2025）进行比较。各种文献测量值以灰色显示：来自 ALMA 探测到的 [O iii] 88 \(\mu\) m 和 [C ii] 158 \(\mu\) m（Vallini et al. , 2024）在 \(z\approx 7\) 处，基于 CO 的测量值用于 \(z\sim 0\) 的星暴 ULIRG（Bouché et al. , 2007），以及 \(z\sim 2\) 的 SMG（Bothwell et al. , 2010；Tacconi et al. , 2008）。
-
-<small>Figure 8: Atomic Kennicutt-Schmidt relation of \({log}(\Sigma_{HI})\) and \({log}(\Sigma_{SFR})\) , coloured with column density values. As previously, we plot non-constrained values as upper limits (95%). We compare to the canonical Kennicutt and De Los Reyes ( 2021 ) (K21) relations for starburst and main sequence galaxies, as well as various gas consumption depletion times corresponding to global star-formation efficiency in grey (Kennicutt, 1998 , \(N=1.0\) ) . All galaxies lie above the empirical law, with some scatter, and the low column density (non-DLA) objects are extremely offset, even when plotted as upper limits. The binned means for \(\Sigma_{gas}=10^{1}-10^{2}\) , and \(10^{2}-10^{3}\,M_{\odot}\,pc^{-2}\) are shown as black diamonds, both consistent with \(\sim 10\,\) Myr. In shades of blue we compare to simulation predictions from THESAN-ZOOM at \(z=10-12\) (Shen et al. , 2026 ; Kannan et al. , 2025 ) , SERRA at \(z=7\) (Pallottini et al. , 2022 ) , and H i -only gas surface density from COLIBRE at \(z=8\) (Lagos et al. , 2025 ) . Various literature measurements are shown in grey: from ALMA detections of [O iii ] 88 \(\mu\) m and [C ii ] 158 \(\mu\) m (Vallini et al. , 2024 ) at \(z\approx 7\) , CO-based measurements for starburst ULIRGs at \(z\sim 0\) (Bouché et al. , 2007 ) , and SMGs at \(z\sim 2\) (Bothwell et al. , 2010 ; Tacconi et al. , 2008 ) .</small>
-
-</details>
-
-
 <div id='astro-ph.CO'></div>
 
 # astro-ph.CO [[Back]](#toc)
 
-### [69] [A new $H_0$ measurement with SNe Requiem and Encore using Gravity.jl](https://arxiv.org/abs/2606.25205)
+### [68] [A new $H_0$ measurement with SNe Requiem and Encore using Gravity.jl](https://arxiv.org/abs/2606.25205)
 *L. Bazzanini,G. Di Rosa,A. Acebron,P. Bergamini,M. Lombardi,P. Rosati,G. Angora,G. B. Caminha,S. Ertl,G. Granata,A. M. Koekemoer,S. H. Suyu,J. Pierel,A. B. Newman,C. Grillo,S. Schuldt,M. Bulla,S. Cha,M. D'Addona,J. M. Diego,M. Fogliardi,B. L. Frye,M. J. Jee,P. S. Kamieneski,M. Meneghetti,A. Mercurio,E. Vanzella*
 
 Main category: astro-ph.CO
@@ -5105,7 +5021,7 @@ Key Figures:
 </details>
 
 
-### [70] [TDCOSMO XXV: A "soup-to-nuts" 6.5% $H_0$ measurement $-$ strong lensing and dynamics with a maximally flexible mass sheet](https://arxiv.org/abs/2604.14145)
+### [69] [TDCOSMO XXV: A "soup-to-nuts" 6.5% $H_0$ measurement $-$ strong lensing and dynamics with a maximally flexible mass sheet](https://arxiv.org/abs/2604.14145)
 *William Sheu,Tommaso Treu,Martin Millon,Frédéric Dux,Devon Williams,Shawn Knabel,Simon Birrer,Pritom Mozumdar,Giacomo Queirolo,Anowar J. Shajib,Michele Cappellari,Kenneth C. Wong,Ildar M. Asfandiyarov,Otabek A. Burkhonov,Frédéric Courbin,Shuhrat A. Ehgamberdiev,Sofía Rojas-Ruiz,Asadulla M. Shaymanov,Talat A. Akhunov*
 
 Main category: astro-ph.CO
@@ -5192,7 +5108,7 @@ Key Figures:
 </details>
 
 
-### [71] [LSST Strong Lensing Systems Dark Matter Sensitivity Analysis with Neural Ratio Estimators](https://arxiv.org/abs/2604.07438)
+### [70] [LSST Strong Lensing Systems Dark Matter Sensitivity Analysis with Neural Ratio Estimators](https://arxiv.org/abs/2604.07438)
 *Andreas Filipp,Yashar Hezaveh,Laurence Perreault-Levasseur,Daniel Gilman,LSST Dark Energy Science Collaboration*
 
 Main category: astro-ph.CO
@@ -5277,7 +5193,7 @@ Key Figures:
 </details>
 
 
-### [72] [JWST Lensed Quasar Dark Matter Survey V: Measuring the minimum halo mass with strong gravitational lensing](https://arxiv.org/abs/2604.05237)
+### [71] [JWST Lensed Quasar Dark Matter Survey V: Measuring the minimum halo mass with strong gravitational lensing](https://arxiv.org/abs/2604.05237)
 *A. M. Nierenberg,D. Gilman,T. Treu,X. Du,C. Gannon,H. Paugnat,S. Birrer,A. J. Benson,K. N. Abazajian,T. Anguita,S. G. Djorgovski,S. F. Hoenig,R. E. Keeley,A. Kusenko,H. R. Larsson,L. A. Moustakas,P. Mozumdar,W. Sheu,D. Sluse,D. Stern,D. Williams,K. C. Wong*
 
 Main category: astro-ph.CO
@@ -5336,7 +5252,7 @@ Key Figures:
 </details>
 
 
-### [73] [Consistency relations of amplitude and phase fluctuations of gravitational waves magnified by strong gravitational lensing](https://arxiv.org/abs/2604.02216)
+### [72] [Consistency relations of amplitude and phase fluctuations of gravitational waves magnified by strong gravitational lensing](https://arxiv.org/abs/2604.02216)
 *Yuta Nakazono,Teruaki Suyama*
 
 Main category: astro-ph.CO
@@ -5383,7 +5299,7 @@ Key Figures:
 </details>
 
 
-### [74] [Wave-Optics Imprints of Dark Matter Subhalos on Strongly Lensed Gravitational Waves](https://arxiv.org/abs/2603.04267)
+### [73] [Wave-Optics Imprints of Dark Matter Subhalos on Strongly Lensed Gravitational Waves](https://arxiv.org/abs/2603.04267)
 *Shin'ichiro Ando*
 
 Main category: astro-ph.CO
@@ -5465,7 +5381,7 @@ Key Figures:
 </details>
 
 
-### [75] [Cosmology with the line-of-sight shear of strong gravitational lenses](https://arxiv.org/abs/2603.03441)
+### [74] [Cosmology with the line-of-sight shear of strong gravitational lenses](https://arxiv.org/abs/2603.03441)
 *Pierre Fleury,Daniel Johnson,Théo Duboscq,Natalie B. Hogg,Julien Larena*
 
 Main category: astro-ph.CO
@@ -5552,7 +5468,7 @@ Key Figures:
 </details>
 
 
-### [76] [VENUS: Strong-lensing model of MACS J1931.8-2635 -- revealing the farthest multiply imaged supernova](https://arxiv.org/abs/2602.14074)
+### [75] [VENUS: Strong-lensing model of MACS J1931.8-2635 -- revealing the farthest multiply imaged supernova](https://arxiv.org/abs/2602.14074)
 *Joseph F. V. Allingham,Adi Zitrin,Vasily Kokorev,Hiroto Yanagisawa,Jose M. Diego,Lukas J. Furtak,Yoshihisa Asada,Dan Coe,David A. Coulter,Seiji Fujimoto,Conor Larison,Masamune Oguri,Justin D. R. Pierel,Fengwu Sun,Marusa Bradac,Pratika Dayal,Paulo A. A. Lopes,Ashish K. Meena,Massimo Pascale,Hollis B. Akins,Franz E. Bauer,Larry D. Bradley,Gabriel Brammer,John Chisholm,Guillaume Desprez,Qinyue Fei,Henry C. Ferguson,Steven L. Finkelstein,Brenda Frye,Miriam Golubchik,Kohei Inayoshi,Anton M. Koekemoer,Ray A. Lucas,Georgios E. Magdis,Nicholas S. Martis,Richard Pan,Johan Richard,Massimo Ricotti,Gregor Rihtarsic,Luke Robbins,William Sheu,Brian Welch,Chris Willott,Rogier A. Windhorst*
 
 Main category: astro-ph.CO
@@ -5635,7 +5551,7 @@ Key Figures:
 </details>
 
 
-### [77] [CSST Strong Lensing Preparation: Cosmological constraints from double-source-plane strong lensing systems in era of CSST](https://arxiv.org/abs/2601.14675)
+### [76] [CSST Strong Lensing Preparation: Cosmological constraints from double-source-plane strong lensing systems in era of CSST](https://arxiv.org/abs/2601.14675)
 *Bei-Chen Wu,Xiaoyue Cao,Nan Li,Yan Gong,Shenzhe Cui,Di Wu,Tong Zhao,Junhui Yan*
 
 Main category: astro-ph.CO
@@ -5706,7 +5622,7 @@ Key Figures:
 </details>
 
 
-### [78] [Cooling, conduction, compact objects: Gravothermal evolution of dissipative self-interacting dark matter halos](https://arxiv.org/abs/2606.19428)
+### [77] [Cooling, conduction, compact objects: Gravothermal evolution of dissipative self-interacting dark matter halos](https://arxiv.org/abs/2606.19428)
 *Ludwig D. Schmidt,Moritz S. Fischer,Mathias Garny*
 
 Main category: astro-ph.CO
@@ -5789,6 +5705,89 @@ Key Figures:
 图7：与图4相同的密度（上行）和速度弥散剖面（下行），但在固定初始冷却速率下改变截面。随着截面增加，某些趋势发生逆转，我们将其归因于热传导的非单调行为。
 
 <small>Figure 7: Density (upper row) and velocity dispersion profiles (lower row) as in Fig. 4 , but varying the cross section at a fixed initial cooling rate. Some trends reverse with increasing cross section, which we attribute to the non-monotonic behavior of the heat conduction.</small>
+
+</details>
+
+
+### [78] [Strong Lensing Tomography: Double and pseudo multi-source plane strong gravitational lensing to constrain dark energy](https://arxiv.org/abs/2607.01005)
+*Paras Sharma,Simon Birrer,Narayan Khadka,Timo Anguita,Adam Bolton,Sydney Erickson,Phil Holloway,Tian Li,Phil Marshall,Dieu D. Nguyen,Graham P. Smith,Crescenzo Tortora,Bryce Wedig,the Strong Lensing Science Collaboration,the LSST Dark Energy Science Collaboration*
+
+Main category: astro-ph.CO
+
+Recommendation: ★★★★★ (95/100) - 该论文聚焦于强引力透镜的宇宙学应用，特别是利用大规模样本（如LSST）约束暗能量，与用户Zotero画像中'gravitational lensing: strong'、'dark matter'、'lensing'等核心主题高度吻合。论文提出的伪双源平面透镜（PDSPLs）方法直接针对强透镜领域的关键问题（质量片简并和样本稀缺性），属于用户明确优先的强透镜研究。虽然用户画像中未出现本文作者，但论文主题和方法与用户兴趣高度一致，且未涉及用户不感兴趣的领域。
+
+TL;DR: 本文提出“伪双源平面透镜”（PDSPLs），通过配对独立单源平面透镜克服传统双源平面透镜（DSPLs）稀少且受质量片简并（MSD）限制的问题。基于LSST等巡天预计的~10^5个星系-星系透镜，结合层次化预测框架，在Flat w0waCDM宇宙学下实现对暗能量状态方程参数的约束（σ(w0)~0.45，加入外部先验后~0.29），并证明统计样本量优于单对精度。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 传统强透镜暗能量测量依赖极罕见的双源平面透镜（DSPLs），其数量稀少且受质量片简并（MSD）这一系统性不确定性的严重影响，限制了宇宙学约束能力。亟需一种可扩展、统计性强的替代方法。
+
+Method: 提出伪双源平面透镜（PDSPLs）概念，即配对具有自相似偏转体的独立单源平面透镜；将偏转星系的MSD纳入层次化贝叶斯预测框架；利用LSST十年测光样本进行统计推断，并结合外部先验（Ωm）进行联合约束。
+
+Result: LSST测光样本单独可实现σ(w0)~0.45的约束精度；加入Ωm先验后提升至σ(w0)~0.29，与当前Stage III弱透镜分析相当；同时可约束MSD参数和偏转体幂律斜率至~2%；大规模测光样本优于带精确光谱跟进的子样本。
+
+Conclusion: PDSPLs为克服DSPLs的稀有性和MSD问题提供了可行路径，利用即将到来的大规模巡天数据，有望实现有竞争力的暗能量约束，并证明统计样本量比单对测量精度更重要。
+
+Abstract: Tomographic measurements of gravitational lensing with different lens and source redshift distributions contain crucial information about the universe's relative expansion rate, and hence dark energy. While this technique is well-established in weak lensing, its application to strong lensing has traditionally focused on Double Source Plane Lenses (DSPLs). However, DSPLs are exceedingly rare and fundamentally limited by the Mass-Sheet Degeneracy (MSD), a systematic uncertainty underexplored in previous literature. To overcome these challenges, we introduce Pseudo Double-Source Plane Lenses (PDSPLs): pairs of independent single-source plane lenses with self-similar deflectors. This generalizes the DSPL formalism to the $\sim 10^5$ galaxy-galaxy lenses expected from upcoming surveys like LSST, Euclid, and Roman. Unlike true DSPLs, PDSPLs are free from the intermediate source mass problem by construction, eliminating the associated secondary MSD and the need for multi-plane ray tracing. We incorporate the deflector galaxy's MSD into a hierarchical forecasting framework, demonstrating that this degeneracy severely degrades constraints from small DSPL samples, thus motivating our PDSPL statistical approach. We forecast constraints on the dark energy equation of state under a Flat $w_0w_a$CDM cosmology. The LSST 10-year photometric sample alone achieves $σ(w_0) \sim 0.45$, while simultaneously constraining the MSD parameter and deflector power-law slope to $\sim 2\%$. Adding a prior $\mathcal{N}(0.3, 0.05)$ on $Ω_{\rm m}$ -- simulating combination with external probes like CMB, BAO, or SNe Ia -- tightens this to $σ(w_0) \sim 0.29$, competitive with current Stage III weak lensing analyses. Notably, this massive photometric sample outperforms smaller subsets with precise spectroscopic follow-up (e.g., from 4MOST), confirming statistical volume dominates over per-pair precision.
+
+Abstract Translation:
+具有不同透镜和源红移分布的引力透镜层析测量包含了关于宇宙相对膨胀速率以及暗能量的关键信息。虽然该技术在弱透镜中已得到充分确立，但其在强透镜中的应用传统上集中于双源面透镜（DSPL）。然而，DSPL极为罕见，并且从根本上受到质量片简并（MSD）的限制，这是一种在以往文献中未被充分探索的系统性不确定性。为克服这些挑战，我们引入了伪双源面透镜（PDSPL）：即具有自相似偏转体的独立单源面透镜对。这将DSPL形式推广到即将到来的巡天（如LSST、Euclid和Roman）预期的约10^5个星系-星系透镜。与真正的DSPL不同，PDSPL在构造上不存在中间源质量问题，从而消除了相关的次级MSD以及多面光线追踪的需求。我们将偏转星系的MSD纳入一个分层预测框架，证明这种简并会严重削弱小样本DSPL的约束能力，从而激励我们的PDSPL统计方法。我们在平坦的w0waCDM宇宙学下预测了对暗能量状态方程的约束。仅LSST 10年测光样本就实现了σ(w0) ~ 0.45，同时将MSD参数和偏转体幂律斜率约束到约2%。添加一个关于Ωm的先验N(0.3, 0.05)——模拟与外部探针（如CMB、BAO或SNe Ia）的结合——将这一约束收紧至σ(w0) ~ 0.29，与当前第三阶段弱透镜分析具有竞争力。值得注意的是，这一庞大的测光样本优于具有精确光谱后续观测（例如来自4MOST）的较小子集，证实了统计体量优于单对测量精度。
+
+Conclusion Translation:
+基于现有摘要的总结：PDSPL为克服DSPL的稀有性和MSD问题提供了可行路径，利用即将到来的大规模巡天数据，有望实现有竞争力的暗能量约束，并证明统计样本量比单对测量精度更重要。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2607.01005v1/x1.png)
+
+图1：两个独立透镜的示意图，它们具有近乎相同的偏转体和不同红移的源。近乎相同的偏转体对可用作伪双源面透镜。
+
+<small>Figure 1 : Illustration of two separate lenses with near-identical deflectors and sources at different redshifts. Near-identical pairs of deflectors can be used as pseudo double source plane lenses.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2607.01005v1/x2.png)
+
+图2：通过将一个源放置在另一个透镜系统的偏转体后方而获得的两种可能的DSPL配置示意图。在“DSPL 1”配置中，除了现有源S1外，一个虚拟源S2被放置在偏转体D1后方。相反，在“DSPL 2”配置中，除了现有源S2外，一个虚拟源S1被放置在偏转体D2后方。图中标出了每种配置对应的爱因斯坦半径。
+
+<small>Figure 2 : Illustration of the two possible DSPL configurations obtained by placing one source behind the deflector of the other lensing system. In the “DSPL 1” configuration, a virtual source S2 is positioned behind deflector D1 in addition to the existing source S1. Conversely, in the “DSPL 2” configuration, a virtual source S1 is placed behind deflector D2 along with the existing source S2. The corresponding Einstein radii for each configuration are indicated in the figure.</small>
+
+#### Figure 3
+表1：使用SLSim生成的星系-星系透镜样本描述，这些样本在20000 deg²区域内通过施加适当的可观测性切割获得。每个样本的配对参数也在下方给出。
+
+<small>Table 1 : Description of the galaxy-galaxy lens samples generated with SLSim , drawn over an area of 20000 deg 2 by placing appropriate observability cuts on the lens systems. Pairing parameters for each sample are also provided below.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2607.01005v1/x3.png)
+
+图3：使用SLSim模拟的星系-星系透镜群体，在20000 deg²天区内，以椭圆（红色）星系作为偏转体，旋涡（蓝色）星系作为源。\(\sigma_{v,D}\)、\(z_{D}\)、\(q_{mass,D}\)和\(m_{D,i}\)分别表示偏转星系的速散度、红移、质量椭率和i波段星等，而\(z_{S}\)和\(m_{S,i}^{lensed}\)表示透镜化源的红移和i波段星等。\(\theta_{E}\)表示透镜系统的爱因斯坦半径。
+
+<small>Figure 3 : Population of galaxy-galaxy lenses simulated using SLSim with elliptical (red) galaxies as deflectors and spiral (blue) galaxies as sources within a sky area of 20000 deg 2 . \(\sigma_{v,D}\) , \(z_{D}\) , \(q_{mass,D}\) , and \(m_{D,i}\) represent the velocity dispersion, redshift, mass ellipticity, and i-band magnitude of the deflector galaxies, respectively, while \(z_{S}\) and \(m_{S,i}^{lensed}\) denote the redshift and i-band magnitude of the lensed sources. \(\theta_{E}\) represents the Einstein radius of the lens system.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2607.01005v1/x4.png)
+
+图4：透镜样本间偏转体属性的配对保真度。对于每个参数/属性：左侧面板比较配对偏转体之间的值（灰色虚线为1:1线）；右侧面板显示相对分数差异\(\Delta X/\langle X\rangle=2(X_{2}-X_{1})/(X_{2}+X_{1})\)的分布。第1-3行显示配对参数：\(z_{D}\)、\(R_{e}\)、\(f_{D,i}\)、流量比和\(\sigma_{v,D}\)。底行显示\(\gamma_{pl}\)和恒星质量的残差，这些不用于配对，但用于说明物理质量模型的匹配保真度。运动学约束显著缩小了\(\sigma_{v,D}\)的分布。结果代表一个单一的蒙特卡罗实现，类似于图5左图所示。
+
+<small>Figure 4 : Pairing fidelity of deflector properties across lens samples. For each parameter/property: left panels compare values between paired deflectors (dashed gray 1:1 line); right panels show the distribution of relative fractional differences, \(\Delta X/\langle X\rangle=2(X_{2}-X_{1})/(X_{2}+X_{1})\) . Rows 1–3 display pairing parameters: \(z_{D}\) , \(R_{e}\) , \(f_{D,i}\) , flux ratios, and \(\sigma_{v,D}\) . The bottom row shows residuals for \(\gamma_{pl}\) and stellar mass, which are not used for pairing but illustrate the matching fidelity of the physical mass models. Kinematic constraints significantly narrow the \(\sigma_{v,D}\) distribution. Results represent a single representative Monte Carlo realization, similar to what’s shown in left panel of Figure 5 .</small>
+
+#### Figure 6
+表2：不同样本的偏转体配对统计摘要。中间三列列出了在20,000 deg²上获得的总透镜数和由此产生的偏转体对，以及所有对中\(\beta_{E}\)的相应分数弥散。参数\(\sigma_{\beta_{E},\mathcal{D}}^{(0)}\)和\(\sigma_{\beta_{E},\mathcal{D}}^{(1)}\)描述了方程4.10中关系的线性拟合，该关系量化了\(\beta_{E}\)的分数弥散如何随偏转体对不相似性\(\mathcal{D}_{deflector}\)变化。
+
+<small>Table 2 : Summary of deflector pairing statistics for different samples. The middle three columns list the total number of lenses and resulting deflector pairs obtained over 20,000 deg 2 , along with the corresponding fractional scatter in \(\beta_{E}\) from all the pairs. The parameters \(\sigma_{\beta_{E},\mathcal{D}}^{(0)}\) and \(\sigma_{\beta_{E},\mathcal{D}}^{(1)}\) describe a linear fit to the relation given in Equation 4.10 which quantifies how the fractional scatter in \(\beta_{E}\) varies with deflector pair dissimilarity, \(\mathcal{D}_{deflector}\) .</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2607.01005v1/figs/beta_E_vs_D_MC.png)
+
+图5：使用SLSim生成的不同样本中PDSPL的\(\beta_{E}\)弥散随偏转体对不相似性参数\(\mathcal{D}_{deflector}\)变化的模拟结果。结果总结了500次蒙特卡罗实现，考虑了\(z_{D}\)、\(R_{e}\)、\(\sigma_{v,D}\)、星等/流量以及颜色/流量比的测量不确定性。左图：单个代表性实现的个体数据点和分箱平均值（误差棒显示每个箱内的标准差）。边缘直方图显示该单次运行的分布。右图：在每10个百分位对应的箱中计算的平均弥散（\(\sigma_{\beta_{E},\mathcal{D}}\)），取500次实现的平均值。阴影区域表示各次实现间弥散的标准差。显示了这些平均弥散值的加权拟合，拟合方程包含在图例中。尽管\(\mathcal{D}_{deflector}\)的定义（见方程4.8和4.9）因样本配对参数而异，但它有效地表示了配对偏转体之间的百分比不相似性。
+
+<small>Figure 5 : Simulated scatter in \(\beta_{E}\) as a function of the deflector pair dissimilarity parameter \(\mathcal{D}_{deflector}\) for PDSPLs across different samples, generated with SLSim . The results summarize 500 Monte Carlo realizations accounting for measurement uncertainties on \(z_{D}\) , \(R_{e}\) , \(\sigma_{v,D}\) , magnitudes/fluxes, and colors/flux-ratios. Left panel: Individual data points and binned averages (with error bars showing the standard deviation within each bin) corresponding to a single representative realization. The marginal histograms show the distributions for this single run. Right panel: The mean scatter ( \(\sigma_{\beta_{E},\mathcal{D}}\) ) calculated in bins corresponding to every 10 th percentile, averaged over the 500 realizations. The shaded regions represent the standard deviation of the scatter across the realizations. Weighted fits to these mean scatter values are shown, with the fitted equations included in the legend. Although the definition of \(\mathcal{D}_{deflector}\) (see Equation 4.8 and 4.9 ) varies by sample depending on the pairing parameters, it effectively represents the percentage dissimilarity between the paired deflectors.</small>
+
+#### Figure 8
+表3：分层模型的参数及其先验。
+
+<small>Table 3 : Parameters and their priors for the hierarchical model.</small>
 
 </details>
 

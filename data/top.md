@@ -4616,7 +4616,90 @@ Key Figures:
 </details>
 
 
-### [63] [Speeding up Gravitational Lens Mass Models with Machine Learning: Applications in X-ray Astronomy](https://arxiv.org/abs/2607.22812)
+### [63] [REBELS-25: multi-phase morphology and kinematics at z = 7.31](https://arxiv.org/abs/2608.25982)
+*Lucie E. Rowland,Hiddo S. B. Algera,Jacqueline Hodge,Mauro Stefanon,Rychard Bouwens,Manuel Aravena,Lucy Astles,Karin Cescon,Elisabete da Cunha,Ilse de Looze,Andrea Ferrara,Rebecca Fisher,Yoshinobu Fudamoto,Thomas Herard-Demanche,Hanae Inami,Mahsa Kohandel,Lena Komarova,Andrés Laza Ramos,Themiya Nanayakkara,Katherine Ormerod,Andrea Pallottini,Siân Phillips,Sander Schouws,Piyush Sharda,Renske Smit,Paul van der Werf*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★★ (88/100) - 该论文对z=7.31的REBELS-25星系进行多波段空间分辨研究，结合ALMA和JWST数据，分析形态、尘埃遮蔽、电离气体与中性气体的运动学，与用户对高红移星系动力学、多相气体和强引力透镜的兴趣高度契合。作者Manuel Aravena是用户核心作者，且研究主题与用户关键词（如dust、molecular gas、cosmic noon）紧密相关。
+
+TL;DR: 本文对红移z=7.31的大质量恒星形成星系REBELS-25进行了亚千秒差距分辨率的空间分辨多波段研究，结合ALMA [O III]88μm、[C II]、尘埃连续谱和JWST/NIRSpec IFU光谱数据，发现其UV/光学形态呈团块状不规则，而远红外发射呈近指数盘状；遮蔽恒星形成占总恒星形成率的55%-98%；电离线和中性气体共享同一大尺度旋转结构且动力学上冷（V/σ分别为~11和4.5），支持该星系在再电离时代已拥有尘埃丰富、化学增丰且动力学冷的星际介质。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 在再电离时代（z~7）研究最成熟的大质量星系，理解其形态、星际介质条件和多示踪气体运动学，以揭示早期星系中尘埃遮蔽、恒星形成分布和盘结构演化之谜。
+
+Method: 使用高分辨率ALMA [O III]88μm观测，与分辨率匹配的[C II]、尘埃连续谱和JWST/NIRSpec IFU光谱相结合，实现~1 kpc空间分辨率的形态分析、电离线诊断以及运动学建模。
+
+Result: 发现UV/光学呈团块状不规则而FIR呈近指数盘状；遮蔽恒星形成贡献55%-98%；电离线诊断在~1 kpc分辨率下无显著空间变化；[O III]与[C II]共享同一旋转结构，V/σ分别为~11和4.5，但存在不能用简单旋转盘描述的non-circular运动。
+
+Conclusion: REBELS-25在z=7.31时已拥有尘埃丰富、化学增丰且动力学冷的星际介质，支持早期星系快速成熟演化的图景。
+
+Abstract: We present a spatially resolved, multi-wavelength study of the massive, star-forming galaxy REBELS-25 at a redshift of $z=7.31$. We combine new high-resolution ALMA [O III]88$μ$m observations with resolution-matched [C II], dust continuum, and JWST/NIRSpec IFU spectroscopy, providing a $\lesssim1$ kpc view of the morphology, interstellar medium (ISM) conditions, and multi-tracer gas kinematics of one of the most mature galaxies known in the reionisation era. We find differing morphologies from the rest-frame UV to far-infrared (FIR) emission, with the UV and optical emission appearing clumpy and irregular, whereas the FIR emission is well-described by near-exponential disc profiles, with [C II] being the most extended. Comparing the resolved UV and FIR emission, we find that obscured star formation contributes $\sim55$-$98$% of the total star formation rate across the galaxy, demonstrating that dust obscuration strongly shapes the observed UV and optical morphology. Resolved ionisation-line diagnostics show no significant variation across the source at $\sim1$ kpc resolution, consistent with broadly similar ISM conditions among the identified regions. Kinematic modelling reveals that both the warm ionised gas, traced by [O III]88$μ$m, and the colder neutral gas, traced by [C II], share the same large-scale rotating structure and are dynamically cold, with ratios of ordered-to-random motion, $V/σ$, of $\sim11$ and 4.5, respectively, although we find evidence for non-circular motions that are not well-described by a simple rotating disc. Overall, these results further support a picture in which REBELS-25 hosts a dusty, chemically enriched, and dynamically cold ISM already in place at $z=7.31$.
+
+Abstract Translation:
+我们展示了对红移 $z=7.31$ 的大质量恒星形成星系 REBELS-25 进行空间分辨的多波段研究。我们结合了新的高分辨率 ALMA [O III]88$\mu$m 观测与分辨率匹配的 [C II]、尘埃连续谱和 JWST/NIRSpec IFU 光谱，提供了对再电离时代已知最成熟星系之一的形态、星际介质（ISM）条件和多示踪气体运动学的 $\lesssim1$ kpc 尺度视图。我们发现从静止系紫外到远红外（FIR）发射的形态不同，紫外和光学发射呈现团块状和不规则状，而 FIR 发射则很好地由近指数盘轮廓描述，其中 [C II] 最为延展。通过比较分辨的紫外和 FIR 发射，我们发现被遮蔽的恒星形成贡献了星系总恒星形成率的 $\sim55$-$98$%，表明尘埃消光强烈地塑造了观测到的紫外和光学形态。分辨的电离线诊断显示，在 $\sim1$ kpc 分辨率下，源内没有显著变化，这与所识别区域之间大体相似的 ISM 条件一致。运动学建模揭示，由 [O III]88$\mu$m 示踪的暖电离气体和由 [C II] 示踪的较冷中性气体共享相同的大尺度旋转结构，并且动力学上冷，有序运动与随机运动之比 $V/σ$ 分别约为 $\sim11$ 和 4.5，尽管我们发现了非圆周运动的证据，这些运动不能由简单的旋转盘很好地描述。总体而言，这些结果进一步支持了 REBELS-25 在 $z=7.31$ 时已经拥有尘埃丰富、化学增丰且动力学冷的 ISM 的图景。
+
+Conclusion Translation:
+基于提供的摘要，结论为：REBELS-25 在 $z=7.31$ 时已拥有尘埃丰富、化学增丰且动力学冷的星际介质，支持早期星系快速成熟演化的图景。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2608.25982v1/REBELS-25_2x4_maps.png)
+
+图 1：我们展示了本工作中分析的多波长 ALMA 和 JWST 数据的观测发射图。前两列来自第 2.2 节详述的 JWST/NIRSpec IFU 观测，最右侧两列来自 Band 6 和 Band 8 的高分辨率 ( \(\lesssim 1\) kpc) ALMA 观测。从左到右，顶行分别描绘 H \(\upbeta\) 、[O iii ] \(\lambda\) 5007、[O iii ]88 \(\upmu\) m 和 [C ii ] 发射线图，通过对相应数据立方体中检测到的发射线周围 \(\pm 1\) FWHM 进行积分生成。在底行，从左到右，我们展示了来自塌缩通道的静止系紫外、光学、90 \(\upmu\) m 和 150 \(\upmu\) m 连续谱成像，排除了发射线。紫外图在静止系 1215.67-3700 Å 范围内塌缩，光学图在 3700-6340 Å 范围内塌缩，并掩蔽了任何检测到的发射线。所有这些图均以其观测分辨率呈现，范围从 \(\sim 0.13\) 到 0.22 角秒。相应的 PSF 大小由每张图左下角的灰色椭圆表示。显示的等高线从 ( \(-\) ) \(2\sigma_{{RMS}}\) 开始，并以 \(2\sigma_{{RMS}}\) 的增量（递减）递增。所有图均显示以 [C ii ] 发射质心为中心的 1.75 角秒 \(\times\) 1.75 角秒的切图。从这些数据可以清楚地看出，REBELS-25 的形态在不同波长下显著变化，特别是紫外/光学和 FIR 发射在空间上存在偏移。
+
+<small>Figure 1 : We present observed emission maps from the multi-wavelength ALMA and JWST data analysed in this work. The first two columns are from the JWST /NIRSpec IFU observations detailed in Section 2.2 , and the two right-most columns are from the high resolution ( \(\lesssim 1\) kpc) ALMA observations in Bands 6 and 8. From left-to-right, the top row depicts H \(\upbeta\) , [O iii ] \(\lambda\) 5007, [O iii ]88 \(\upmu\) m and [C ii ] emission line maps, produced by integrating \(\pm 1\) FWHM around the detected emission line in the corresponding cubes. In the bottom row, from left-to-right, we show the rest-frame UV, optical, 90 \(\upmu\) m and 150 \(\upmu\) m continuum imaging from collapsed channels, excluding emission lines. The UV map is collapsed over the range 1215.67-3700 Å in the rest frame and the optical map over the range 3700-6340 Å, masking any detected emission lines. All these maps are presented at their observed resolution, which varies from \(\sim 0.13\) to 0.22 arcsec. The corresponding PSF sizes are depicted by grey ellipses in the bottom left corners of each map. The contours shown start from ( \(-\) ) \(2\sigma_{{RMS}}\) , and (decrease) increase in increments of \(2\sigma_{{RMS}}\) . All maps show a 1.75 arcsec \(\times\) 1.75 arcsec cutout around the centroid of the [C ii ] emission. From these data, it is clear the morphology of REBELS-25 changes significantly across different wavelengths, and in particular the UV/optical and FIR emission are spatially offset.</small>
+
+#### Figure 2
+表 1：本工作中使用的 ALMA Band 6 和 Band 8 数据摘要。
+
+<small>Table 1 : Summary of the ALMA Band 6 and Band 8 data used in this work.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2608.25982v1/all_sersic_fits_native.png)
+
+图 2：对高分辨率 ( \(\lesssim 1\) kpc) ALMA 发射图的二维 Sérsic 拟合。从左到右：观测发射图、最佳拟合 Sérsic 模型、残差图，以及带有 JWST 紫外图蓝色等高线的残差图。等高线显示 \(\pm 2,3,4,...\sigma_{{RMS}}\) 处的发射。在“模型”列中，我们还包含了最佳拟合 Sérsic 指数 \(n\) 和有效半径 \(r_{e}\) 的文本标签。对于所有拟合，我们将形态位置角、椭圆率和质心固定为 Rowland et al. (2024) 中 [C ii ] 发射获得的值。总体而言，REBELS-25 的 FIR 发射很好地由近指数盘形态描述，尽管 FIR 连续谱图可能略微更中心集中，并且可能存在与静止系紫外发射重合的 tentative 团块状子结构。
+
+<small>Figure 2 : Two-dimensional Sérsic fits to the high resolution ( \(\lesssim 1\) kpc) ALMA emission maps. From left-to-right: observed emission map, best-fit Sérsic model, residual map, and residual map with contours from the JWST UV map in blue. The contours show emission at \(\pm 2,3,4,...\sigma_{{RMS}}\) . In the ‘Model’ column, we also include text labels with the best-fit Sérsic indices, \(n\) , and effective radii, \(r_{e}\) . For all fits, we fix the morphological position angle, ellipticity and centroid to the values obtained in Rowland et al. (2024) for the [C ii ] emission. Overall, the FIR emission of REBELS-25 is well-described by a near-exponential disc morphology, although the FIR continuum maps may be slightly more centrally concentrated, and there may be tentative clump-like substructures that could be coincident with rest-UV emission.</small>
+
+#### Figure 4
+表 2：从团块孔径光谱导出的 REBELS-25 的分辨性质。
+
+<small>Table 2 : Resolved properties of REBELS-25 derived from clump aperture spectra.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2608.25982v1/REBELS25_apertures_UV_and_dustSED.png)
+
+图 3：面板 a：我们绘制了来自 NIRSpec IFU 数据立方体的 PSF 匹配紫外图，其中用于提取所谓“团块”光谱的圆形孔径以蓝色显示并标记为 1-4。得到的 PSF 由左下角的灰色椭圆表示。面板 b：对于每个团块，我们对 Band 6 和 Band 8 FIR 连续谱通量密度拟合修正黑体。对于所有拟合，我们假设发射率指数 \(\beta_{{IR}}\) 为 2.5，基于 Algera et al. (2024a) 中六个 ALMA 波段的积分尘埃 SED 拟合。对于团块 2、3 和 4，我们对 Band 8 数据使用 3 \(\sigma_{{RMS}}\) 上限（上限用向下三角形绘制），并将尘埃温度 \(T_{{dust}}\) 固定为 32 \(\pm 10\) K，同样来自 Algera et al. (2024a) 。对于团块 1，由于我们在两个波段中检测到 S/N \(>3\) 的连续谱，我们将 \(T_{{dust}}\) 作为自由参数，并获得 \(T_{{dust}}=41^{+9}_{-7}\) K。我们还用白色星形标记绘制了 Algera et al. (2024a) 中分析的所有六个 ALMA 波段的积分连续谱通量测量值。我们将每个基于团块的尘埃 SED（黑色实线）相加，以确保其与其他 ALMA 波段的积分测量值可比，尽管我们注意到团块孔径有一些重叠像素，并未覆盖尘埃发射的全部范围，因此我们提醒，相加的 SED 不应被视为全球 FIR 发射的真实表示。
+
+<small>Figure 3 : Panel a: We plot the PSF-matched UV map from the NIRSpec IFU cube, with the circular apertures used to extract the so-called ‘clump’ spectra in blue and labelled 1-4. The resulting PSF is indicated by the grey ellipse in the bottom left corner. Panel b: For each clump, we fit a modified blackbody to the Band 6 and Band 8 FIR continuum flux densities. For all fits, we assume an emissivity index, \(\beta_{{IR}}\) , of 2.5, based on the integrated dust SED fit with six ALMA bands from Algera et al. (2024a) . For clumps 2, 3 and 4, we use the 3 \(\sigma_{{RMS}}\) upper limits for the Band 8 data (upper limits plotted with a downwards triangle) and we fix the dust temperature, \(T_{{dust}}\) , to 32 \(\pm 10\) K, also from Algera et al. (2024a) . For clump 1, as we detect the continuum at S/N \(>3\) in both bands, we leave \(T_{{dust}}\) as a free parameter and obtain \(T_{{dust}}=41^{+9}_{-7}\) K. We also plot the integrated continuum flux measurements from all six ALMA bands analysed in Algera et al. (2024a) with white star-shaped markers. We sum each of the clump-based dust SEDs (solid black line) to ensure it is comparable to the integrated measurements from the other ALMA bands, although we note that the clump apertures have some overlapping pixels and do not cover the full extent of the dust emission, and so we caution that the summed SED should not be treated as a true representation of the global FIR emission.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2608.25982v1/REBELS25_all_clumps_JWST_ALMA_two_column_layout.png)
+
+图 4：左：来自 PSF 匹配的 NIRSpec IFU 观测的棱镜光谱，从图 3 所示的四个团块孔径中提取。关键静止系光学发射线的观测波长由垂直灰色虚线表示。右：来自 JvM 校正、连续谱扣除、波束卷积的 ALMA 发射线数据立方体的 [O iii ]88 \(\upmu\) m 和 [C ii ] 光谱，用于相同的圆形孔径。在两个面板中，阴影区域描绘了光谱中的 \(1\sigma_{{RMS}}\) 不确定性。对于应用了 JvM 校正的 ALMA 数据，虚线还显示了 ( \(\sigma_{{RMS}}/\epsilon\) ) 作为每通道不确定性的保守估计。
+
+<small>Figure 4 : Left: Prism spectra from the PSF-matched NIRSpec IFU observations, extracted from the four clump apertures shown in Figure 3 . The observed wavelengths of key rest-frame optical emission lines are indicated by vertical grey dashed lines. Right: [O iii ]88 \(\upmu\) m and [C ii ] spectra from the JvM-corrected, continuum-subtracted, beam-convolved ALMA emission line cubes for the same circular apertures. In both panels, the shaded regions depict the \(1\sigma_{{RMS}}\) uncertainties in the spectra. or the ALMA data, to which we apply the JvM correction, the dotted lines additionally show ( \(\sigma_{{RMS}}/\epsilon\) ) as a conservative estimate of the per-channel uncertainties.</small>
+
+#### Figure 7
+表 3：从 fiducial 3DBAROLO 拟合导出的运动学性质。
+
+<small>Table 3 : Kinematic properties derived from the fiducial 3DBAROLO fitting.</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2608.25982v1/new_rotation_plot.png)
+
+图 5：来自 \(\lesssim 1\) kpc 分辨率 ALMA 观测的 [O iii ]88 \(\upmu\) m（上）和 [C ii ] 发射（下）的速度场图。从左到右，我们展示了通过对每个像素拟合单高斯产生的视线旋转速度图、用作 3DBAROLO 拟合输入的掩蔽数据立方体的一阶矩图、3DBAROLO 模型的一阶矩图，以及掩蔽一阶矩和模型一阶矩图的残差。等速度轮廓从 \(\pm 180\) km s -1 开始，以 45 km s -1 的增量绘制（负速度用黑色虚线，正速度用实线），系统速度轮廓用粗绿线绘制。[O iii ]88 \(\upmu\) m 和 [C ii ] 发射似乎都示踪了类似的旋转盘结构，尽管存在未被盘模型很好捕获的显著残差。
+
+<small>Figure 5 : Velocity field maps from the \(\lesssim 1\) kpc-resolution ALMA observations of [O iii ]88 \(\upmu\) m (upper) and [C ii ] emission (lower). From left-to-right, we show line-of-sight rotation velocity maps produced from fitting single Gaussians to each pixel, moment-1 maps from the masked cube used as an input to the 3DBAROLO fitting, moment-1 map of the 3DBAROLO model, and residuals from the masked moment-1 and model moment-1 maps. Isovelocity contours are plotted from \(\pm 180\) km s -1 in 45 km s -1 increments (black dashed lines for negative velocities, solid for positive) with the systemic velocity contour plotted with a thick green line. The [O iii ]88 \(\upmu\) m and [C ii ] emission both appear to trace a similar rotating disc structure, albeit with significant residuals not well captured by the disc model.</small>
+
+</details>
+
+
+### [64] [Speeding up Gravitational Lens Mass Models with Machine Learning: Applications in X-ray Astronomy](https://arxiv.org/abs/2607.22812)
 *Alex Ostridge,Rafael Martínez-Galarza,Júlia M. Sisk-Reynés,Daniel A. Schwartz,Anna Barnacka*
 
 Main category: astro-ph.GA
@@ -4695,93 +4778,6 @@ Key Figures:
 图7：神经网络对1,000,000个未见源位置预测的质量参数绝对误差，这些源位置从质量参数为5\(\aas@@fstack{\prime\prime}\)5、椭圆率为0.55的SIE透镜配置内尖点上的均匀分布生成。源放置位置距离尖点不超过0\(\aas@@fstack{\prime\prime}\)01，以避免因lensmodel软件限制而产生3个像。
 
 <small>Figure 7: The absolute error on the mass parameter predicted by the neural network for 1,000,000 unseen source positions generated from a uniform distribution across the inner caustic of an SIE lens configuration with a mass parameter of 5 \(\aas@@fstack{\prime\prime}\) 5 and ellipticity 0.55. Sources are placed up to within 0 \(\aas@@fstack{\prime\prime}\) 01 of the caustic to avoid producing 3 images due to lensmodel software limitations.</small>
-
-</details>
-
-
-### [64] [VENUS: an ultra-faint galaxy hosting the metal-poor type II supernova at $z=5.13$ Witnessing the initial metal enrichment with extremely frequent core-collapse supernovae?](https://arxiv.org/abs/2607.14355)
-*Yoshihisa Asada,Seiji Fujimoto,Joseph F. V. Allingham,David A. Coulter,Conor Larison,Matthew R. Siebert,Gabriel Brammer,Dan Coe,Pratika Dayal,Qinyue Fei,Lukas J. Furtak,Vasily Kokorev,Keiichi Maeda,Richard Pan,Johan Richard,Fengwu Sun,Abdurro'uf,Jacqueline Antwi-Danso,Franz E. Bauer,Marusa Bradac,Larry D. Bradley,Volker Bromm,John Chisholm,Christopher J. Conselice,Christa DeCoursey,Anderas L. Faisst,Brenda Frye,Mauro Gonzalez-Otero,Yuichi Harikane,Tiger Y. Y. Hsiao,Kohei Inayoshi,Yolanda Jimenez-Teja,Anton M. Koekemoer,Kotaro Kohno,Paulo A. A. Lopes,Ray A. Lucas,Georgios E. Magdis,Vladan Markov,Nicholas Martis,Jorryt Matthee,Minami Nakane,Rohan P. Naidu,Gael Noirot,Masami Ouchi,Armin Rest,Massimo Ricotti,Louis-Gregory Strolger,Raffaella Schneider,Francesco Valentino,Eros Vanzella,Hayley Williams,Rogier A. Windhorst,Adi Zitrin*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (88/100) - 该论文利用引力透镜效应研究高红移（z=5.13）超新星宿主星系，涉及强引力透镜、高红移星系物理、早期化学增丰等主题，与用户兴趣画像高度吻合。论文作者中包含多位用户核心作者（如Seiji Fujimoto、Kohei Inayoshi、Anton M. Koekemoer、Georgios E. Magdis），且关键词匹配“lensed”、“lensing”、“jwst”。虽然论文主要聚焦超新星而非直接研究星系动力学或分子气体，但其对高红移贫金属环境的研究与用户对高红移星系物理的兴趣高度相关。
-
-TL;DR: 本文首次表征了红移z=5.13的IIP型超新星Eos及其引力透镜主星系，发现该星系是一个极端贫金属（<1%太阳丰度）的紫外超暗Lyman-α发射体，SN Eos的发现表明高红移贫金属环境中超新星发生率可能显著更高，并可能解释JWST巡天中频繁发现的"无宿主"超新星现象。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 对高红移（z=5.13）超新星Eos的宿主星系进行首次表征，以理解早期宇宙中超新星爆发环境及其对星系化学增丰的贡献。
-
-Method: 利用引力透镜效应（总放大率μ~53）对SN Eos及其宿主星系进行高分辨率空间解析，定位核塌缩超新星位置并表征其局域环境；通过光谱观测分析宿主星系的紫外光度、Lyman-α发射线等值宽度、[O III]与Hα谱线强度等特征。
-
-Result: 宿主星系为紫外超暗（M_UV=-14.4±0.3 mag）的Lyman-α发射体，具有高等值宽度但[O III]谱线极弱（[O III]5007/Hβ<0.7），表明气体相金属丰度极低（<1%太阳丰度）。
-
-Conclusion: SN Eos标志着极端贫金属环境中金属贫乏恒星的形成与爆发，推动了宿主星系的早期化学增丰；高红移贫金属环境中超新星发生率可能更高，暗示恒星初始质量函数或大质量恒星爆炸性可能依赖金属丰度，或致密星团中存在 runaway 恒星碰撞；此类超亮星系可作为JWST巡天中"无宿主"超新星的代表性起源。
-
-Abstract: We present the first characterization of the host galaxy of a recently discovered type IIP SN at $z=5.13$ (SN Eos). SN Eos and its host galaxy are gravitationally lensed and multiply imaged. The total magnification $μ\sim53$ enables spatially resolving the system, allowing us to localize the core-collapse supernova (CCSN) position and to characterize its local environment within an early galaxy. Our observation reveals that the host is an ultra-faint ($M_{\rm UV}=-14.4\pm0.3$ mag) Lyman-$α$ emitter with a very high equivalent width. The host galaxy also shows very weak [O iii]4959,5007 lines despite an H$α$ line detection ([O iii]5007/H$β<0.7$ with case B recombination). Assuming that the weak [O iii] is due to low gas-phase metallicity given the low-metallicity of SN Eos itself, SN Eos plausibly marks the formation and explosion of a metal-poor star in an extremely metal-poor environment ($<1\ \%\ Z_\odot$), facilitating the initial stages of the chemical enrichment of the host. Finding the CCSN in such an ultra-faint galaxy at $z=5.13$ also indicates that the SN rate could be considerably higher in high-$z$, metal-poor environments, potentially implying e.g., a $Z$-dependent IMF, $Z$-dependent massive star explodability, or runaway stellar collisions in dense star clusters. Without lensing, only SN Eos would be detectable and the host would be below the detection limit in any NIRCam surveys ever performed. The Eos host galaxy can thus be representative of the origin of {\it hostless} supernovae frequently found in JWST blank field surveys.
-
-Abstract Translation:
-我们首次描述了最近在红移z=5.13处发现的IIP型超新星（SN Eos）的宿主星系。SN Eos及其宿主星系受到引力透镜效应并产生多重成像。总放大率μ~53使我们能够对该系统进行空间分辨，从而定位核坍缩超新星（CCSN）的位置，并表征其在早期星系内的局部环境。我们的观测揭示，该宿主是一个极暗弱（M_UV=-14.4±0.3 mag）的莱曼α发射体，具有非常高的等值宽度。尽管探测到了Hα线，但宿主星系的[O III]4959,5007线非常弱（在B型复合条件下[O III]5007/Hβ<0.7）。假设弱的[O III]是由于低气体相金属丰度（与SN Eos本身的低金属丰度一致），那么SN Eos很可能标志着在极端贫金属环境（<1% Z_⊙）中一颗贫金属恒星的形成与爆发，从而推动了宿主星系化学增丰的初始阶段。在红移z=5.13的极暗弱星系中发现CCSN也表明，在高红移、贫金属环境中，超新星发生率可能相当高，这可能暗示例如依赖于金属丰度的初始质量函数、依赖于金属丰度的大质量恒星可爆炸性，或致密星团中的逃逸恒星碰撞。如果没有引力透镜效应，只有SN Eos本身可被探测到，而宿主星系将低于任何已进行的NIRCam巡天的探测极限。因此，Eos宿主星系可能代表了JWST空白场巡天中频繁发现的“无宿主”超新星的典型起源。
-
-Conclusion Translation:
-基于现有摘要，SN Eos标志着极端贫金属环境中贫金属恒星的形成与爆发，推动了宿主星系的早期化学增丰；高红移贫金属环境中超新星发生率可能更高，暗示恒星初始质量函数或大质量恒星爆炸性可能依赖金属丰度，或致密星团中存在逃逸恒星碰撞；此类极暗弱星系可作为JWST巡天中“无宿主”超新星的代表性起源。
-
-Key Figures:
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/2607.14355v1/x1.png)
-
-图1：SN Eos宿主星系的JWST/NIRCam图像。左图：NIRCam RGB图像（蓝色：F115W+F150W，绿色：F200W+F277W，红色：F356W+F444W）。黄色曲线显示了在\(z=5.13\)处的临界线，来自最新的透镜模型（Allingham等人，2026）。SN Eos表现为明亮且红色的双像源。该源总共被五重成像，靠近临界线的两个最高放大率像（像1和像2）被放大\(\mu\sim 27\)倍。NIRSpec后续观测通过DD-9493项目使用S200A1固定狭缝进行，其狭缝位置由白色矩形标出。剪裁图像宽度为\(4.\!^{\prime\prime}0\)。中图：静止系紫外波段（F090W+F115W+F150W）的NIRCam叠加图像。宿主星系在SN Eos的同一位置被微弱探测到。红色圆圈半径为\(r=0.\!^{\prime\prime}07\)。右图：经过点源减除的强静止光学发射线滤光片NIRCam叠加图像。经过点源减除后，可以看到一个透镜弧结构对称地成像在临界线两侧。蓝色等高线显示了VLT/MUSE拍摄的Ly \(\alpha\)线的零阶矩图。Ly \(\alpha\)线发射在空间上偏离了紫外团块和SN Eos的位置，并与透镜弧结构相关联。
-
-<small>Figure 1: JWST /NIRCam images of the SN Eos host galaxy. Left : the NIRCam RGB image (blue: F115W+F150W, green: F200W+F277W, red: F356W+F444W). The critical curve at \(z=5.13\) is shown in yellow, obtained from the latest lens model (Allingham et al. , 2026 ) . SN Eos stands out as the bright and red, doubly-imaged source. The source is quintuply imaged in total, and the highest two magnification images (image 1 and image 2) near the critical line are magnified by \(\mu\sim 27\) . The NIRSpec follow-up observation was taken with the S200A1 fixed-slit via the program DD-9493, and their slit positions are denoted by the white rectangles. The cutout image is \(4.\!^{\prime\prime}0\) wide. Middle : NIRCam stacked image of the rest-frame UV (F090W+F115W+F150W). The host galaxy is marginally detected at the same position of SN Eos . Red circles have a \(r=0.\!^{\prime\prime}07\) radius. Right : NIRCam stacked image of strong rest-optical emission line filters with point-source subtraction. With point-source subtraction, a lensed arc structure can be seen symmetrically imaged across the critical line. The blue contour presents the moment-zero map of the Ly \(\alpha\) line taken with VLT/MUSE. The Ly \(\alpha\) line emission is spatially offset from the position of the UV clump and SN Eos , and associated with the lensed arc structure.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/2607.14355v1/x2.png)
-
-图2：SN Eos及其宿主星系的JWST/NIRSpec PRISM光谱。(A) SN Eos+宿主的完整一维光谱。显示了像1（蓝色）、像2（红色）和复合光谱（黑色）的光谱。所有光谱均已校正引力透镜效应。橙色曲线显示了NIRSpec PRISM分辨率下红移\(z\sim 5\)处暗弱星系的典型星系光谱（Roberts-Borsani等人，2024），已缩放以匹配SN Eos宿主星系的紫外流量水平。(B) 宿主的静止系紫外光谱。尽管SN Eos在静止光学波段（\(\lambda_{rest}\gtrsim 3700\) Å；灰色阴影）比宿主星系更亮，但宿主星系在静止紫外波段被清晰探测到，且在NIRCam观测历元（红色实心圆）和NIRSpec观测历元之间没有时间变化。(C) 复合光谱（黑色；像1+像2）在（静止系）5000 Å附近的NIRSpec光谱建模。该光谱很好地被IIP型超新星成分（具有宽P-cygni H \(\beta\)线和Fe ii 5169吸收的黑体连续谱；蓝色曲线）建模，仅留下宿主[O III]4959,5007线的最小残差（红色实心阶梯）。[O III]线明显弱于按比例缩放的典型星系光谱（橙色曲线）的预测。(D) H \(\alpha\)线轮廓建模。与[O III]不同，H \(\alpha\)线轮廓可以很好地用宿主星系（即窄）H \(\alpha\)贡献加上来自SN Eos的宽P-cyg H \(\alpha\)线来建模。H \(\alpha\)流量大致与按比例缩放的参考光谱（橙色）的预测一致。
-
-<small>Figure 2: JWST /NIRSpec PRISM spectrum of SN Eos + its host galaxy. (A) the full 1D spectrum of SN Eos + host. The spectrum in image 1 (blue), image 2 (red), and the composite spectrum (black) are shown. All spectra are corrected for the gravitational lensing effect. The orange curve shows the typical galaxy spectrum of faint galaxies at \(z\sim 5\) in the NIRSpec PRISM resolution (Roberts-Borsani et al. , 2024 ) , scaled to match the UV flux level of the SN Eos host galaxy. (B) the rest-UV spectrum of the host. Although SN Eos outshines the host galaxy in rest-frame optical ( \(\lambda_{rest}\gtrsim 3700\) Å; gray shaded), the host galaxy is clearly detected in rest UV, with no time variability between the epoch of the NIRCam observation (red filled circle) and the NIRSpec observation. (C) NIRSpec spectral modeling around (rest-frame) 5000 Å of the combined spectrum (black; image 1 + image 2). The spectrum is well modeled with the type IIP SN component (black body continuum with a broad P-cygni H \(\beta\) and the Fe ii 5169 absorption; blue curve), leaving only minimal residual for the host [O iii ]4959,5007 line (red filled step). The [O iii ] line is considerably weaker than the prediction by the scaled typical galaxy spectrum (orange curve). (D) H \(\alpha\) line profile modeling. Unlike [O iii ], the H \(\alpha\) line profile is well modeled with the host galaxy (i.e., narrow) H \(\alpha\) contribution, on top of the broad P-cyg H \(\alpha\) line from the SN Eos . The H \(\alpha\) flux is roughly consistent with the prediction by the scaled reference spectrum (orange).</small>
-
-#### Figure 3
-表1：SN Eos宿主星系的物理性质† †脚注：(1) SN Eos宿主像。(2) 系统红移，由窄H \(\alpha\)线测量得到。(3) 透镜校正后的绝对紫外星等。(4) 静止系Ly \(\alpha\)等值宽度。(5) 透镜校正后的H \(\alpha\)线流量。(6) 透镜校正后的[O III]5007线流量。(7) 金属丰度。(8) 恒星质量。(9) 透镜放大因子。† †脚注：上限值以2-sigma水平给出。必要时应用引力透镜校正，并传播放大因子不确定性。
-
-<small>Table 1: Physical properties of the SN Eos host galaxy † † footnotetext: (1) SN Eos host images. (2) System redshift, measured from the narrow H \(\alpha\) line. (3) Lens-corrected absolute UV magnitude. (4) Rest-frame Ly \(\alpha\) EW. (5) Lens-corrected H \(\alpha\) line fluxes. (6) Lens-corrected [O iii ]5007 line fluxes. (7) Metallicity. (8) Stellar mass. (9) Lens magnification factor. † † footnotetext: Upper limits are quoted at the 2-sigma level. Gravitational lens corrections are applied when needed, and the magnification factor uncertainties are propagated.</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/2607.14355v1/x3.png)
-
-图3：VLT/MUSE拍摄的Ly \(\alpha\)线轮廓，分别提取自像1（上）、像2（中）和复合光谱（下）。速度偏移量从宿主H \(\alpha\)线红移（\(z_{sys}=5.13\)）测量得到。红色虚线显示了最佳拟合高斯曲线，用于测量线流量。
-
-<small>Figure 3: The Ly \(\alpha\) line profile taken with VLT/MUSE, extracted for image 1 (top), image 2 (middle), and the composite spectrum (bottom). The velocity offset is measured from the host H \(\alpha\) line redshift ( \(z_{sys}=5.13\) ). Red dashed curves show the best-fit Gaussian, with which the line fluxes are measured.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/2607.14355v1/x4.png)
-
-图4：SN Eos宿主的背景。(A) Eos宿主作为贫金属星系候选体。在Eos宿主中发现的极低\(R3\)值表明它是极端贫金属星系候选体（CR3: Cai等人2025，AMORE6: Morishita等人2025，LAP1-B: Vanzella等人2023；Nakajima等人2025，LAP2: Vanzella等人2025）的成员。它们的\(R3\)值显著低于透镜场中通常发现的其他暗弱端星系（UNCOVER: Chemerynska等人2024，GLIMPSE-D: Asada等人2026，黑色虚线显示了Korber等人2026给出的经验关系），并且假设\(R3\)-金属丰度转换关系（\(\lesssim 1\ \%Z_{\odot}\)；紫色虚线由Nakajima等人2022的转换给出），它们可能是极端贫金属星系。(B) 迄今发现的红移\(z>1\)处CCSN宿主星系的\(M_{UV}\)-红移\(z\)图。超亮超新星也包含在内。Eos宿主（红色实心星）是光谱确认的高红移CCSN宿主星系（黑色空心星；Cooke等人，2009，2012；Schulze等人，2018）中红移最高且最暗弱的星系宿主。通过NIRCam巡天发现的光度候选CCSN的宿主也一并绘出（细圆圈：DeCoursey等人，2025a，b；Coulter等人，2026a）。黑色虚线是对应于观测星等28星等（无透镜效应）的\(M_{UV}\)的指导线。
-
-<small>Figure 4: Context of the SN Eos host. (A) Eos host as a metal-poor galaxy candidate. The very low \(R3\) value found in the Eos host implies that it is a member of extremely metal-poor galaxy candidates (CR3: Cai et al. 2025 , AMORE6: Morishita et al. 2025 , LAP1-B: Vanzella et al. 2023 ; Nakajima et al. 2025 , LAP2: Vanzella et al. 2025 ). They have considerably lower \(R3\) values than other faint-end galaxies generally found in lensing fields (UNCOVER: Chemerynska et al. 2024 , GLIMPSE-D: Asada et al. 2026 , the black dashed line presents an empirical relation given by Korber et al. 2026 ), and they are potentially extremely metal-poor galaxies assuming an \(R3\) -metallicity conversion ( \(\lesssim 1\ \%Z_{\odot}\) ; purple dashed line given by Nakajima et al. 2022 conversion). (B) \(M_{UV}\) - \(z\) diagram of CCSN-host galaxies at \(z>1\) found so far. Super Luminous SNe are also included. The Eos host (the red filled star) is the faintest galaxy host at the highest redshift among spectroscopically confirmed high- \(z\) CCSN-host galaxies (black open stars; Cooke et al. , 2009 , 2012 ; Schulze et al. , 2018 ) . Hosts of photometric candidates of CCSNe found with NIRCam surveys are also plotted (thin circles DeCoursey et al. , 2025a , b ; Coulter et al. , 2026a ) . The black dashed curve is a guideline of \(M_{UV}\) corresponding to the observed magnitude of 28 mag (without lensing).</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/2607.14355v1/x5.png)
-
-图5：在高红移发现CCSN时，决定宿主\(M_{UV}\)概率分布的四个关键因素。这四个因素的卷积给出了\(P_{host}(M_{UV})\)的形状（图6右图），因此对单位恒星形成率下的CCSN率采用不同的假设（本图中的红色曲线；另见图6左图）会影响\(P_{host}(M_{UV})\)的整体形状。
-
-<small>Figure 5: Four key factors that determine the host \(M_{UV}\) probability distribution when a CCSN is found at high- \(z\) . The convolution of these four gives the shape of \(P_{host}(M_{UV})\) (Figure 6 right), and thus adopting a different assumption on the CCSN rate per unit SFR (red curve in this plot; see also Figure 6 left) affects the overall shape of \(P_{host}(M_{UV})\) .</small>
-
-#### Figure 6
-![Figure 6](https://arxiv.org/html/2607.14355v1/x6.png)
-
-图6：在极暗弱星系中发现CCSN的含义。左图：单位恒星形成率下的CCSN率随金属丰度的变化，以太阳金属丰度归一化。Pessi等人（2023）发现，在本地宇宙中，单位恒星形成率下的CCSN率在低金属丰度环境中变得更高，直至\(\sim 10\)% \(Z_{\odot}\)。我们探讨了三种情况来推断更低金属丰度下的超新星率：无金属丰度依赖性（黑色）、Pessi等人（2023）导出的二阶多项式的常数外推（黄色）以及对数线性外推（蓝色）。右图：在红移\(z\sim 5\)处发现CCSN时，宿主星系\(M_{UV}\)的概率分布。概率函数通过卷积Bouwens等人（2022）的紫外光度函数、恒星形成率以及红移\(z\sim 5.0\)处M1931星团场中依赖于\(M_{UV}\)的有效体积（另见图5）计算得到。顶部子面板显示了对应于CCSN率金属丰度依赖性的三种假设的三个概率分布。底部子面板显示了累积概率。
-
-<small>Figure 6: Implication of finding of the CCSN in an ultra-faint galaxy. Left : CCSN rate per unit SFR as a function of the metallicity, normalized at the solar metallicity. Pessi et al. ( 2023 ) found that the CCSN rate per unit SFR becomes higher in low-metallicity environments down to \(\sim 10\) % \(Z_{\odot}\) in the local universe. We explore three cases to infer the SN rate at even lower-metallicity: no metallicity-dependency (black), constant extrapolation of the 2nd order polynomial derived in Pessi et al. ( 2023 ) (yellow), and log-linear extrapolation (blue). Right : the probability distribution of the host-galaxy \(M_{UV}\) when a CCSN is found at \(z\sim 5\) . The probability function is computed by convolving the UV LF by Bouwens et al. ( 2022 ) , star-formation rate, and the \(M_{UV}\) -dependent effective volume in the M1931 cluster field at \(z\sim 5.0\) (see also Figure 5 ). The top sub-panel shows the three probability distributions corresponding to the three assumptions of the CCSN rate’s metallicity-dependency. The bottom sub-panel displays the cumulative probability.</small>
-
-#### Figure 7
-![Figure 7](https://arxiv.org/html/2607.14355v1/x7.png)
-
-图7：NIRCam F277W、F300M、F356W、F410M和F444W图像中的点源减除。
-
-<small>Figure 7: Point-source subtractions in NIRCam F277W, F300M, F356W, F410M, and F444W images.</small>
 
 </details>
 

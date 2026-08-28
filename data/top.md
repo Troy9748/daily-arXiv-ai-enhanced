@@ -2,8 +2,8 @@
 
 # Table of Contents
 
-- [astro-ph.GA](#astro-ph.GA) [Total: 64]
-- [astro-ph.CO](#astro-ph.CO) [Total: 36]
+- [astro-ph.GA](#astro-ph.GA) [Total: 63]
+- [astro-ph.CO](#astro-ph.CO) [Total: 37]
 
 
 <div id='astro-ph.GA'></div>
@@ -4699,94 +4699,11 @@ Key Figures:
 </details>
 
 
-### [64] [Speeding up Gravitational Lens Mass Models with Machine Learning: Applications in X-ray Astronomy](https://arxiv.org/abs/2607.22812)
-*Alex Ostridge,Rafael Martínez-Galarza,Júlia M. Sisk-Reynés,Daniel A. Schwartz,Anna Barnacka*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (88/100) - 该论文聚焦于引力透镜质量建模，特别是四重透镜类星体，与用户强引力透镜研究领域高度吻合。论文使用机器学习加速质量模型参数推断，直接服务于暗物质子结构、高红移类星体X射线发射区等用户核心兴趣点。虽然核心作者未匹配，但方法（模拟+神经网络）和科学问题（透镜建模、暗物质）与用户画像高度一致。
-
-TL;DR: 本文提出一种基于模拟的机器学习方法，利用神经网络快速预测四重透镜类星体的质量参数和椭率，将质量建模时间从数天缩短至几分钟，并将该方法应用于七个已知系统，为X射线-光学发射区定位提供支持。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 现有四重透镜类星体的质量建模耗时巨大，难以快速扩展到即将发现的大量新系统，亟需一种加速方法。
-
-Method: 模拟SIE透镜网格，用四个像的投影位置训练全连接神经网络，预测质量参数和椭率，再用该初始值加速传统优化。
-
-Result: 神经网络初始化的质量模型在几分钟内收敛，源位置精度达<0.005角秒；应用于七个透镜类星体，成功预测Gaia DR3中的像位置，支持毫角秒级X射线-光学发射区定位。
-
-Conclusion: 该方法可大幅加速四重透镜系统的质量建模，为后续巡天发现的大量新系统提供高效分析工具。
-
-Abstract: Multi-wavelength observations of quadruply lensed quasars constitute a powerful probe of cosmology, dark matter substructure along the line of sight, and the structure of X-ray emitting regions in high-redshift quasars. These investigations are conditional on acquiring an accurate model for the surface mass density of matter lensing these quasars. We propose a simulation-based machine learning method to accelerate parameter inference in real quadruply lensed systems by several orders of magnitude. We simulate a grid of quadruply lensed sources with Singular Isothermal Ellipsoid (SIE) lenses and use the projected positions of the four lensed images to train two fully connected neural networks that predict the mass parameter and ellipticity. For a large fraction of simulated systems, the neural network-initialised mass models converge in time-scales of a few minutes and recover the source position at the <0.''005 level for a broad range of lens masses and ellipticities. We apply our neural networks to seven quadruply lensed quasars, lensed by isolated galaxies or a galaxy-perturber pair, which have archival Chandra observations. The final optimised mass models for each quasar predict the observed lensed image positions in Gaia Data Release 3. These mass models enable the caustic method, which locates the X-ray-to-optical emission regions to milliarcsecond precision in these otherwise unresolvable systems, improving the effective angular resolution of Chandra at high-z by up to two orders of magnitude. Our approach accelerates this mass modelling by supplying informed initial parameters, enabling application to the many new quadruply lensed systems expected from forthcoming surveys.
-
-Abstract Translation:
-对四重透镜类星体的多波段观测构成了研究宇宙学、视线方向暗物质亚结构以及高红移类星体X射线发射区结构的有力工具。这些研究依赖于获得这些类星体透镜物质表面质量密度的精确模型。我们提出了一种基于模拟的机器学习方法，以将真实四重透镜系统中的参数推断加速数个数量级。我们模拟了具有奇异等温椭球（SIE）透镜的四重透镜源网格，并利用四个透镜像的投影位置训练了两个全连接神经网络，用于预测质量参数和椭圆率。对于大部分模拟系统，神经网络初始化的质量模型在几分钟内收敛，并在广泛的透镜质量和椭圆率范围内以<0.''005的精度恢复源位置。我们将神经网络应用于七个具有存档钱德拉观测数据的四重透镜类星体，这些类星体由孤立星系或星系-扰动体对透镜。每个类星体的最终优化质量模型预测了盖亚数据发布3中观测到的透镜像位置。这些质量模型使得尖点方法得以实现，该方法能够将这些原本不可分辨系统中的X射线到光学发射区定位到毫角秒精度，将钱德拉在高红移处的有效角分辨率提升多达两个数量级。我们的方法通过提供有依据的初始参数加速了这种质量建模，从而能够应用于未来巡天预期发现的众多新四重透镜系统。
-
-Conclusion Translation:
-基于可用摘要，该方法可大幅加速四重透镜系统的质量建模，为后续巡天发现的大量新系统提供高效分析工具。
-
-Key Figures:
-
-#### Figure 1
-图1：本工作中用于推断和优化引力透镜质量模型的端到端方法示意图。
-
-<small>Figure 1: Schematic overview of the end-to-end methodology used in this work to infer and optimise gravitational lens mass models.</small>
-
-#### Figure 2
-图2：神经网络训练工作流程示意图。
-
-<small>Figure 2: Schematic of the neural network training workflow.</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/2607.22812v1/Images/PositionsOf3Images.png)
-
-图3：对于质量参数为2.4、椭圆率为0.15、透镜中心为(0,0)的情况，产生3个像的278个源位置在源平面中以紫色绘制。透镜的内尖点（拟合自lensmodel的输出）以蓝色绘制，lensmodel中计算的尖点以黄色显示。
-
-<small>Figure 3: The 278 source positions that produce 3 images are plotted in the source plane in purple for a mass parameter of 2.4, ellipticity of 0.15, with a lens centre (0,0). The inner caustic of the lens, fitted to the output of lensmodel , is plotted in blue with the caustic points calculated in lensmodel in yellow.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/2607.22812v1/Images/NewlyGriddedCaustics.png)
-
-图4：对于质量参数为2.4、椭圆率为0.15、透镜中心为(0,0)的情况，在源平面中绘制的10,008个源位置。每个距离透镜中心的源数量由截断正态分布决定。
-
-<small>Figure 4: The 10,008 source positions plotted in the source plane for a mass parameter of 2.4, ellipticity of 0.15, with a lens centre (0,0). The number of sources at each distance from the lens centre is decided by a truncated normal distribution.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/2607.22812v1/Images/ErrorEstimationEllipticityAngle.png)
-
-图5：包含30个区间的直方图，显示模拟透镜椭圆率估计角度的绝对误差（以度为单位），针对100个随机透镜配置和源位置的批次。
-
-<small>Figure 5: A histogram with 30 bins, displaying the absolute error (in degrees) in the estimated angle of ellipticity of the simulated lenses, for a batch of 100 random lens configurations and source positions.</small>
-
-#### Figure 6
-表1：联合多输出网络与独立单输出网络在质量参数\(b^{\prime}\)和椭圆率\(\epsilon\)上的预测精度比较。报告了每种配置的均方根误差（RMS），在测试数据集中随机选择的1,000个透镜配置上评估。独立网络在两个参数上均实现了比联合网络更低的RMS误差，这促使我们在最终架构中使用独立回归模型。
-
-<small>Table 1: Comparison of prediction accuracy for a joint multi-output network and separate single-output networks for the mass parameter \(b^{\prime}\) and ellipticity \(\epsilon\) . The root mean squared error (RMS) is reported for each configuration, evaluated on 1,000 randomly selected lens configurations from the test dataset. The separate networks achieve lower RMS errors for both parameters compared to the joint network, motivating the use of independent regression models in our final architecture.</small>
-
-#### Figure 6
-![Figure 6](https://arxiv.org/html/2607.22812v1/Images/SourcePositionsM25E025MassPredError.png)
-
-图6：神经网络对1,000,000个未见源位置预测的质量参数绝对误差，这些源位置从质量参数为2\(\aas@@fstack{\prime\prime}\)5、椭圆率为0.25的SIE透镜配置内尖点上的均匀分布生成。源放置位置距离尖点不超过0\(\aas@@fstack{\prime\prime}\)01，以避免因lensmodel软件限制而产生3个像。
-
-<small>Figure 6: The absolute error on the mass parameter predicted by the neural network for 1,000,000 unseen source positions generated from a uniform distribution across the inner caustic of an SIE lens configuration with a mass parameter of 2 \(\aas@@fstack{\prime\prime}\) 5 and ellipticity 0.25. Sources are placed up to within 0 \(\aas@@fstack{\prime\prime}\) 01 of the caustic to avoid producing 3 images due to lensmodel software limitations.</small>
-
-#### Figure 7
-![Figure 7](https://arxiv.org/html/2607.22812v1/Images/SourcePositionsM55E055MassPredError.png)
-
-图7：神经网络对1,000,000个未见源位置预测的质量参数绝对误差，这些源位置从质量参数为5\(\aas@@fstack{\prime\prime}\)5、椭圆率为0.55的SIE透镜配置内尖点上的均匀分布生成。源放置位置距离尖点不超过0\(\aas@@fstack{\prime\prime}\)01，以避免因lensmodel软件限制而产生3个像。
-
-<small>Figure 7: The absolute error on the mass parameter predicted by the neural network for 1,000,000 unseen source positions generated from a uniform distribution across the inner caustic of an SIE lens configuration with a mass parameter of 5 \(\aas@@fstack{\prime\prime}\) 5 and ellipticity 0.55. Sources are placed up to within 0 \(\aas@@fstack{\prime\prime}\) 01 of the caustic to avoid producing 3 images due to lensmodel software limitations.</small>
-
-</details>
-
-
 <div id='astro-ph.CO'></div>
 
 # astro-ph.CO [[Back]](#toc)
 
-### [65] [Probing Dark Matter Substructure with Wave-Optics Distortions of Strongly Lensed LISA Gravitational Waves](https://arxiv.org/abs/2607.22787)
+### [64] [Probing Dark Matter Substructure with Wave-Optics Distortions of Strongly Lensed LISA Gravitational Waves](https://arxiv.org/abs/2607.22787)
 *Tonghua Liu,Kai Liao,Marek Biesiada,Jieci Wang*
 
 Main category: astro-ph.CO
@@ -4875,7 +4792,7 @@ Key Figures:
 </details>
 
 
-### [66] [A new $H_0$ measurement with SNe Requiem and Encore using Gravity.jl](https://arxiv.org/abs/2606.25205)
+### [65] [A new $H_0$ measurement with SNe Requiem and Encore using Gravity.jl](https://arxiv.org/abs/2606.25205)
 *L. Bazzanini,G. Di Rosa,A. Acebron,P. Bergamini,M. Lombardi,P. Rosati,G. Angora,G. B. Caminha,S. Ertl,G. Granata,A. M. Koekemoer,S. H. Suyu,J. Pierel,A. B. Newman,C. Grillo,S. Schuldt,M. Bulla,S. Cha,M. D'Addona,J. M. Diego,M. Fogliardi,B. L. Frye,M. J. Jee,P. S. Kamieneski,M. Meneghetti,A. Mercurio,E. Vanzella*
 
 Main category: astro-ph.CO
@@ -4960,7 +4877,7 @@ Key Figures:
 </details>
 
 
-### [67] [TDCOSMO XXV: A "soup-to-nuts" 6.5% $H_0$ measurement $-$ strong lensing and dynamics with a maximally flexible mass sheet](https://arxiv.org/abs/2604.14145)
+### [66] [TDCOSMO XXV: A "soup-to-nuts" 6.5% $H_0$ measurement $-$ strong lensing and dynamics with a maximally flexible mass sheet](https://arxiv.org/abs/2604.14145)
 *William Sheu,Tommaso Treu,Martin Millon,Frédéric Dux,Devon Williams,Shawn Knabel,Simon Birrer,Pritom Mozumdar,Giacomo Queirolo,Anowar J. Shajib,Michele Cappellari,Kenneth C. Wong,Ildar M. Asfandiyarov,Otabek A. Burkhonov,Frédéric Courbin,Shuhrat A. Ehgamberdiev,Sofía Rojas-Ruiz,Asadulla M. Shaymanov,Talat A. Akhunov*
 
 Main category: astro-ph.CO
@@ -5047,7 +4964,7 @@ Key Figures:
 </details>
 
 
-### [68] [LSST Strong Lensing Systems Dark Matter Sensitivity Analysis with Neural Ratio Estimators](https://arxiv.org/abs/2604.07438)
+### [67] [LSST Strong Lensing Systems Dark Matter Sensitivity Analysis with Neural Ratio Estimators](https://arxiv.org/abs/2604.07438)
 *Andreas Filipp,Yashar Hezaveh,Laurence Perreault-Levasseur,Daniel Gilman,LSST Dark Energy Science Collaboration*
 
 Main category: astro-ph.CO
@@ -5132,7 +5049,7 @@ Key Figures:
 </details>
 
 
-### [69] [JWST Lensed Quasar Dark Matter Survey V: Measuring the minimum halo mass with strong gravitational lensing](https://arxiv.org/abs/2604.05237)
+### [68] [JWST Lensed Quasar Dark Matter Survey V: Measuring the minimum halo mass with strong gravitational lensing](https://arxiv.org/abs/2604.05237)
 *A. M. Nierenberg,D. Gilman,T. Treu,X. Du,C. Gannon,H. Paugnat,S. Birrer,A. J. Benson,K. N. Abazajian,T. Anguita,S. G. Djorgovski,S. F. Hoenig,R. E. Keeley,A. Kusenko,H. R. Larsson,L. A. Moustakas,P. Mozumdar,W. Sheu,D. Sluse,D. Stern,D. Williams,K. C. Wong*
 
 Main category: astro-ph.CO
@@ -5191,7 +5108,7 @@ Key Figures:
 </details>
 
 
-### [70] [Consistency relations of amplitude and phase fluctuations of gravitational waves magnified by strong gravitational lensing](https://arxiv.org/abs/2604.02216)
+### [69] [Consistency relations of amplitude and phase fluctuations of gravitational waves magnified by strong gravitational lensing](https://arxiv.org/abs/2604.02216)
 *Yuta Nakazono,Teruaki Suyama*
 
 Main category: astro-ph.CO
@@ -5238,7 +5155,7 @@ Key Figures:
 </details>
 
 
-### [71] [Wave-Optics Imprints of Dark Matter Subhalos on Strongly Lensed Gravitational Waves](https://arxiv.org/abs/2603.04267)
+### [70] [Wave-Optics Imprints of Dark Matter Subhalos on Strongly Lensed Gravitational Waves](https://arxiv.org/abs/2603.04267)
 *Shin'ichiro Ando*
 
 Main category: astro-ph.CO
@@ -5320,7 +5237,7 @@ Key Figures:
 </details>
 
 
-### [72] [Cosmology with the line-of-sight shear of strong gravitational lenses](https://arxiv.org/abs/2603.03441)
+### [71] [Cosmology with the line-of-sight shear of strong gravitational lenses](https://arxiv.org/abs/2603.03441)
 *Pierre Fleury,Daniel Johnson,Théo Duboscq,Natalie B. Hogg,Julien Larena*
 
 Main category: astro-ph.CO
@@ -5407,7 +5324,7 @@ Key Figures:
 </details>
 
 
-### [73] [VENUS: Strong-lensing model of MACS J1931.8-2635 -- revealing the farthest multiply imaged supernova](https://arxiv.org/abs/2602.14074)
+### [72] [VENUS: Strong-lensing model of MACS J1931.8-2635 -- revealing the farthest multiply imaged supernova](https://arxiv.org/abs/2602.14074)
 *Joseph F. V. Allingham,Adi Zitrin,Vasily Kokorev,Hiroto Yanagisawa,Jose M. Diego,Lukas J. Furtak,Yoshihisa Asada,Dan Coe,David A. Coulter,Seiji Fujimoto,Conor Larison,Masamune Oguri,Justin D. R. Pierel,Fengwu Sun,Marusa Bradac,Pratika Dayal,Paulo A. A. Lopes,Ashish K. Meena,Massimo Pascale,Hollis B. Akins,Franz E. Bauer,Larry D. Bradley,Gabriel Brammer,John Chisholm,Guillaume Desprez,Qinyue Fei,Henry C. Ferguson,Steven L. Finkelstein,Brenda Frye,Miriam Golubchik,Kohei Inayoshi,Anton M. Koekemoer,Ray A. Lucas,Georgios E. Magdis,Nicholas S. Martis,Richard Pan,Johan Richard,Massimo Ricotti,Gregor Rihtarsic,Luke Robbins,William Sheu,Brian Welch,Chris Willott,Rogier A. Windhorst*
 
 Main category: astro-ph.CO
@@ -5490,7 +5407,7 @@ Key Figures:
 </details>
 
 
-### [74] [CSST Strong Lensing Preparation: Cosmological constraints from double-source-plane strong lensing systems in era of CSST](https://arxiv.org/abs/2601.14675)
+### [73] [CSST Strong Lensing Preparation: Cosmological constraints from double-source-plane strong lensing systems in era of CSST](https://arxiv.org/abs/2601.14675)
 *Bei-Chen Wu,Xiaoyue Cao,Nan Li,Yan Gong,Shenzhe Cui,Di Wu,Tong Zhao,Junhui Yan*
 
 Main category: astro-ph.CO
@@ -5561,7 +5478,7 @@ Key Figures:
 </details>
 
 
-### [75] [Cooling, conduction, compact objects: Gravothermal evolution of dissipative self-interacting dark matter halos](https://arxiv.org/abs/2606.19428)
+### [74] [Cooling, conduction, compact objects: Gravothermal evolution of dissipative self-interacting dark matter halos](https://arxiv.org/abs/2606.19428)
 *Ludwig D. Schmidt,Moritz S. Fischer,Mathias Garny*
 
 Main category: astro-ph.CO
@@ -5648,7 +5565,7 @@ Key Figures:
 </details>
 
 
-### [76] [Model independent lensing sub-structure detection with multiply-imaged star clusters constellations](https://arxiv.org/abs/2608.21253)
+### [75] [Model independent lensing sub-structure detection with multiply-imaged star clusters constellations](https://arxiv.org/abs/2608.21253)
 *Leo W. H. Fung,Tom Broadhurst,Sung Kei Li,Jeremy Lim,Giorgio Manzoni,George F. Smoot*
 
 Main category: astro-ph.CO
@@ -5725,7 +5642,7 @@ Key Figures:
 </details>
 
 
-### [77] [On what scales does strong lensing robustly constrain the mass profile of low-mass perturbers?](https://arxiv.org/abs/2608.20454)
+### [76] [On what scales does strong lensing robustly constrain the mass profile of low-mass perturbers?](https://arxiv.org/abs/2608.20454)
 *Maryam Tajalli,Simona Vegetti*
 
 Main category: astro-ph.CO
@@ -5777,7 +5694,7 @@ Key Figures:
 </details>
 
 
-### [78] [Cosmic CORALS: Timing the Universe with high-z star clusters](https://arxiv.org/abs/2607.19472)
+### [77] [Cosmic CORALS: Timing the Universe with high-z star clusters](https://arxiv.org/abs/2607.19472)
 *Elena Tomasetti,Martin Millon,Licia Verde,Frédéric Courbin,Raul Jimenez,Michele Moresco,Carmela Lardo,Andrea Cimatti*
 
 Main category: astro-ph.CO
@@ -5866,7 +5783,7 @@ Key Figures:
 </details>
 
 
-### [79] [Strong Lensing Tomography: Double and pseudo multi-source plane strong gravitational lensing to constrain dark energy](https://arxiv.org/abs/2607.01005)
+### [78] [Strong Lensing Tomography: Double and pseudo multi-source plane strong gravitational lensing to constrain dark energy](https://arxiv.org/abs/2607.01005)
 *Paras Sharma,Simon Birrer,Narayan Khadka,Timo Anguita,Adam Bolton,Sydney Erickson,Phil Holloway,Tian Li,Phil Marshall,Dieu D. Nguyen,Graham P. Smith,Crescenzo Tortora,Bryce Wedig,the Strong Lensing Science Collaboration,the LSST Dark Energy Science Collaboration*
 
 Main category: astro-ph.CO
@@ -5949,7 +5866,7 @@ Key Figures:
 </details>
 
 
-### [80] [GIGA-Lens 2.0: Strong-Lens Modeling on Multiple GPU Nodes](https://arxiv.org/abs/2606.30633)
+### [79] [GIGA-Lens 2.0: Strong-Lens Modeling on Multiple GPU Nodes](https://arxiv.org/abs/2606.30633)
 *Xiaosheng Huang,Linus Upson,Nicolas Ratier-Werbin,Harry Lu,Sean Xu,Elden Yap,Evan Odell,Ansel Parke,Harsh Ambardekar,Saul Baltasar,Nestor Demeure,Bradley Richardson,Andi Gu,Yuan-Ming Hsu,Junyi Liu*
 
 Main category: astro-ph.CO
@@ -6034,7 +5951,7 @@ Key Figures:
 </details>
 
 
-### [81] [The free-streaming length of dark matter from JWST observations of 28 strong gravitational lenses](https://arxiv.org/abs/2606.05277)
+### [80] [The free-streaming length of dark matter from JWST observations of 28 strong gravitational lenses](https://arxiv.org/abs/2606.05277)
 *D. Gilman,A. M. Nierenberg,T. Treu,K. N. Abazajian,T. Anguita,V. N. Bennert,A. J. Benson,S. Birrer,S. G. Djorgovski,X. Du,C. Gannon,S. F. Hoenig,R. E. Keeley,A. Kusenko,H. R. Larsson,M. Malkan,T. Morishita,V. Motta,L. A. Moustakas,P. Mozumdar,H. Paugnat,W. Sheu,D. Sluse,D. Stern,M. Stiavelli,D. Williams,K. C. Wong*
 
 Main category: astro-ph.CO
@@ -6086,7 +6003,7 @@ Key Figures:
 </details>
 
 
-### [82] [Reassessing the Statistical Necessity of Stellar Velocity Anisotropy in Strong-Lensing Cosmology with Lens-by-Lens Photometric Constraints](https://arxiv.org/abs/2605.19615)
+### [81] [Reassessing the Statistical Necessity of Stellar Velocity Anisotropy in Strong-Lensing Cosmology with Lens-by-Lens Photometric Constraints](https://arxiv.org/abs/2605.19615)
 *Jian Hu,Yi Liu,Jian-Ping Hu,Zhongmu Li*
 
 Main category: astro-ph.CO
@@ -6165,7 +6082,7 @@ Key Figures:
 </details>
 
 
-### [83] [Strong Gravitational Lensing with the James Webb Space Telescope](https://arxiv.org/abs/2605.15189)
+### [82] [Strong Gravitational Lensing with the James Webb Space Telescope](https://arxiv.org/abs/2605.15189)
 *Adi Zitrin*
 
 Main category: astro-ph.CO
@@ -6254,7 +6171,7 @@ Key Figures:
 </details>
 
 
-### [84] [Beyond collective fluctuations: probing micro-image swarms in lensed quasars with intensity interferometry](https://arxiv.org/abs/2605.02181)
+### [83] [Beyond collective fluctuations: probing micro-image swarms in lensed quasars with intensity interferometry](https://arxiv.org/abs/2605.02181)
 *Ashish Kumar Meena,Prasenjit Saha*
 
 Main category: astro-ph.CO
@@ -6343,7 +6260,7 @@ Key Figures:
 </details>
 
 
-### [85] [A Natural $\gtrsim 100\times$ Telescope: Discovery of the Strongly Lensed Type II SN 2025mkn at $z=1.37$](https://arxiv.org/abs/2604.07983)
+### [84] [A Natural $\gtrsim 100\times$ Telescope: Discovery of the Strongly Lensed Type II SN 2025mkn at $z=1.37$](https://arxiv.org/abs/2604.07983)
 *Cameron Lemon,Ariel Goobar,Joel Johansson,Edvard Mörtsell,Steve Schulze,Igor Andreoni,Aleksandra Bochenek,Seán J. Brennan,Malte Busmann,Michael Coughlin,Kaustav K. Das,Suhail Dhawan,Christoffer Fremling,Anjasha Gangopadhyay,Daniel Gruen,Xander J. Hall,Anna Y. Q. Ho,Mansi M. Kasliwal,Daniel A. Perley,Mickael Rigault,Genevieve Schroeder,Mathew Smith,Jesper Sollerman,Jean J. Somalwar,Robert Stein,Stephen Thorp,Alice Townsend,Jacob L. Wise,Lin Yan,Nikki Arendse,Eric C. Bellm,Tracy X. Chen,Andrew Drake,Frank J. Masci,Josiah Purdum,Roger Smith,Jason T. Hinkle,T. Emil Rivera-Thorsen,Benjamin J. Shappee,Michael A. Tucker,Jessica Aguilar,Steven Ahlen,Greg Aldering,Segev Benzvi,Davide Bianchi,David Brooks,Todd Claybaugh,Axel de la Macorra,John Della Costa,Arjun Dey,Peter Doel,Brenna Flaugher,Andreu Font-Ribera,Jaime E. Forero-Romero,Enrique Gaztañaga,Satya Gontcho A. Gontcho,Gaston Gutierrez,Dragan Huterer,Mustapha Ishak,Jorge Jimenez,Dick Joyce,Stephanie Juneau,Robert Kehoe,Alex G. Kim,David Kirkby,Theodore Kisner,Anthony Kremin,Ofer Lahav,Martin Landriau,Laurent Le Guillou,Michael E. Levi,Marc Manera,Aaron Meisner,Ramon Miquel,John Moustakas,Seshadri Nadathur,Brendan O'Connor,Nathalie Palanque-Delabrouille,Antonella Palmese,Will J. Percival,Ignasi Pérez-Ràfols,Claire Poppett,Francisco Prada,Graziano Rossi,Eusebio Sanchez,David Schlegel,Michael Schubnell,Arman Shafieloo,Joseph Silber,David Sprayberry,Gregory Tarlé,Benjamin A. Weaver,Hu Zou*
 
 Main category: astro-ph.CO
@@ -6409,7 +6326,7 @@ Key Figures:
 </details>
 
 
-### [86] [Improved dark matter measurements with flexible modeling of resolved strongly-lensed quasar narrow-line emission](https://arxiv.org/abs/2603.20563)
+### [85] [Improved dark matter measurements with flexible modeling of resolved strongly-lensed quasar narrow-line emission](https://arxiv.org/abs/2603.20563)
 *Maria F. Perez Mendoza,Anna M. Nierenberg,Vardha N. Bennert*
 
 Main category: astro-ph.CO
@@ -6496,7 +6413,7 @@ Key Figures:
 </details>
 
 
-### [87] [SLSim: a strong lensing population simulation package](https://arxiv.org/abs/2603.17138)
+### [86] [SLSim: a strong lensing population simulation package](https://arxiv.org/abs/2603.17138)
 *Narayan Khadka,Simon Birrer,Henry Best,Paras Sharma,Katsuya T. Abe,Xianzhe Tang,Carly Mistick,Felipe Urcelay,Emrecan M. Sonmez,Nikki Arendse,Sydney Erickson,Jacob O. Hjortlund,Phil Holloway,Alan Huang,Rahul Karthik,Mia Lamontagne,Vibhore Negi,Justin R. Pierel,Bruno Sanchez,Aysu Ece Saricaoglu,Anowar Shajib,Yixuan Shao,Padma Venkatraman,Bryce Wedig,Aadya Agrawal,Timo Anguita,Pedro Bessa,Clecio R. Bom,Sofia Castillo,Thomas Collett,Tansu Daylan,Steven Dillmann,Margherita Grespan,Erin E. Hayes,Remy Joseph,Richard Kessler,Tian Li,Phil Marshall,Anupreeta More,Veronica Motta,Gautham Narayan,Matt O'Dowd,Masamune Oguri,Aprajita Verma,Giorgos Vernardos,the Strong Lensing Science Collaboration,the LSST Dark Energy Science Collaboration*
 
 Main category: astro-ph.CO
@@ -6531,7 +6448,7 @@ Key Figures:
 </details>
 
 
-### [88] [Kinematic cosmic dipole from a large sample of strong lenses](https://arxiv.org/abs/2603.11152)
+### [87] [Kinematic cosmic dipole from a large sample of strong lenses](https://arxiv.org/abs/2603.11152)
 *Martin Millon,Charles Dalang,Thomas Collett,Camille Bonvin*
 
 Main category: astro-ph.CO
@@ -6612,7 +6529,7 @@ Key Figures:
 </details>
 
 
-### [89] [Reliable Tests of Faint-end UV Luminosity Functions in Strong Lensing Fields](https://arxiv.org/abs/2603.09308)
+### [88] [Reliable Tests of Faint-end UV Luminosity Functions in Strong Lensing Fields](https://arxiv.org/abs/2603.09308)
 *Jiashuo Zhang*
 
 Main category: astro-ph.CO
@@ -6701,7 +6618,7 @@ Figure 4 : 在给定输入图像（最左面板）用NoiseChisel获得最终检�
 </details>
 
 
-### [90] [Massive stars as gravitationally lensed transients -- Insights on the high-mass initial mass function](https://arxiv.org/abs/2602.10909)
+### [89] [Massive stars as gravitationally lensed transients -- Insights on the high-mass initial mass function](https://arxiv.org/abs/2602.10909)
 *Sung Kei Li*
 
 Main category: astro-ph.CO
@@ -6748,7 +6665,7 @@ Key Figures:
 </details>
 
 
-### [91] [Flux-ratio anomalies in cusp quasars reveal dark matter beyond CDM](https://arxiv.org/abs/2601.16818)
+### [90] [Flux-ratio anomalies in cusp quasars reveal dark matter beyond CDM](https://arxiv.org/abs/2601.16818)
 *Siyuan Hou,Shucheng Xiang,Yue-Lin Sming Tsai,Daneng Yang,Yiping Shu,Nan Li,Jiang Dong,Zizhao He,Guoliang Li,Yizhong Fan*
 
 Main category: astro-ph.CO
@@ -6831,7 +6748,7 @@ Key Figures:
 </details>
 
 
-### [92] [New CDM Crisis Revealed by Multi-Scale Cluster Lensing](https://arxiv.org/abs/2601.07909)
+### [91] [New CDM Crisis Revealed by Multi-Scale Cluster Lensing](https://arxiv.org/abs/2601.07909)
 *Priyamvada Natarajan,Barry T. Chiang,Isaque Dutra*
 
 Main category: astro-ph.CO
@@ -6907,6 +6824,91 @@ Key Figures:
 图A2：从SIDM Concerto套件（Nadler等人，2025）的L-Cluster运行中，假设类卢瑟福速度依赖截面模型（详见正文）的CDM–SIDM匹配对计算的次晕潮汐半径比率。我们展示了在无次晕选择（灰色）以及按瞬时晕心半径（紫色）或束缚质量分数（红色）选择下，每个分布的平均值（菱形）、中心68%（三角形）和中心95%（水平条）范围。此比较针对整个CDM–SIDM匹配次晕样本（左）和通过要求束缚质量分数的质量分辨率限制数值散射小于0.3 dex（右；方程(C1)）过滤的子样本进行。即使在弱碰撞状态或使用速度依赖SIDM模型时，自相互作用驱动的核心形成也会导致显著更高的潮汐质量损失和潮汐截断半径，在统计上与CDM预言不一致，对于内部和/或严重剥离的次晕，差异可达一个数量级。
 
 <small>Figure A2: Ratios of subhalo tidal radii computed from CDM–SIDM-matched pairs of the L-Cluster run of the SIDM Concerto suite (Nadler et al. , 2025 ) that assumes a Rutherford-like velocity-dependent cross-section model (see the text for details). We show the mean (diamonds), central 68% (triangles), and central 95% (horizontal bars) ranges of each distribution under no subhalo selection (gray) and as selected by instantaneous halocentric radius (purple) or bound mass fraction (red). This comparison is done for the entire CDM–SIDM-matched subhalo sample (left) and for the subsample filtered by requiring the mass-resolution-limited numerical scatter in the bound mass fraction to be less than 0.3 dex (right; Equation ( C1 )). Even in the mildly collisional regime or with velocity-dependent SIDM models, self-interaction-driven core formation leads to substantially higher tidal mass loss and tidal truncation radii statistically discrepant from CDM predictions, by up to an order of magnitude for inner and/or heavily stripped subhalos.</small>
+
+</details>
+
+
+### [92] [HOLISMOKES -- XVIII. Cosmology with strongly lensed type II supernovae: Effects of instrumental setups on $H_0$](https://arxiv.org/abs/2608.26331)
+*J. Grupa,S. Taubenberger,S. H. Suyu,D. Sluse,S. Huber,C. Vogl*
+
+Main category: astro-ph.CO
+
+Recommendation: ★★★★★ (92/100) - 该论文聚焦于强引力透镜时间延迟宇宙学，属于用户核心领域（强引力透镜），且涉及高红移超新星观测与H0测定，与用户兴趣高度契合。尽管主题偏向宇宙学而非高红移星系动力学，但强透镜研究被明确优先考虑，且方法（光谱模拟与观测策略）与用户关注的透镜观测和仪器设置相关。
+
+TL;DR: 本文研究了低分辨率光谱对强引力透镜II型超新星（LSNe II）时间延迟测距法测定哈勃常数（H₀）精度的影响，发现时间延迟可无偏确定且不确定性低至1.3天，单个透镜超新星的H₀精度为7.5%-14.2%，约20个透镜超新星即可实现1%的H₀测定。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: Rubin天文台即将投入运行，有望通过时间延迟宇宙学探测更多强引力透镜II型超新星来改进H₀的测定精度。由于此类遥远暗弱天体的光谱观测成本高昂，需要评估低分辨率光谱对时间延迟恢复精度及H₀测定的影响，以优化观测策略和资源配置。
+
+Method: 基于先前开发的从光谱吸收特征确定超新星相位的方法，研究了光谱分辨率R在100至250之间以及信噪比S/N为10、15、20条件下的时间延迟恢复精度；并预测了S/N=10时H₀的测量精度，比较了地面和空间观测设施所需曝光时间。
+
+Result: 在研究的各分辨率和信噪比组合下，通过组合多条吸收线的时间延迟测量，可无偏确定时间延迟且不确定性低至1.3天。对于典型LSN II系统，地面观测需数小时曝光，而JWST空间观测仅需几分钟。单个透镜超新星的H₀精度范围从R=100、S/N=10时的14.2%到R=250、S/N=20时的7.5%，约20个透镜超新星即可实现1%的H₀测定精度。
+
+Conclusion: 低分辨率光谱（R=100-250）足以支持高精度的时间延迟测量，进而实现精确的H₀测定；JWST等空间设施在观测效率上具有显著优势；未来数年有望通过约20个透镜超新星将H₀精度提升至1%水平，为缓解哈勃常数危机提供重要途径。
+
+Abstract: The upcoming Rubin Observatory and subsequent follow-up observations should improve the determination of the Hubble constant ($H_0$) via time-delay cosmography of strongly lensed type II supernovae (LSNe II), by enabling the detection of many more such events. In our previous work, we developed a method for determining the supernova (SN) phase from spectral absorption features. Because obtaining spectra of faint targets such as distant SN II is expensive, we examined how low-resolution spectra influence the precision of time-delay retrieval, and consequently the precision on $H_0$. We considered spectral resolutions $R = \fracλ{Δλ}$ between 100 and 250, and we investigated three signal-to-noise ratio ($S/N$) values of 10, 15, and 20, for each resolution. Furthermore, we forecast the precision on $H_{0}$ achievable with $S/N=10$ and compared the observing time required to reach it with ground-based and space-based facilities. We find that the time delay can be determined without bias and with uncertainties as low as 1.3 days for the investigated resolutions and $S/N$ values when we combine time-delay measurements of multiple absorption lines. For a typical LSN II system (absolute magnitude $\sim-$17 mag in the rest-frame V band, source redshift of \zs = 0.8), the required exposure times range from multiple hours for ground-based observations to a few minutes for space-based observations with the JWST. Our predictions on the precision of $H_0$ for a single lensed SN range from 14.2\% for $R = 100$ and $S/N$ = 10 to 7.5\% for $R = 250$ and $S/N$ = 20, enabling a 1\% determination of $H_0$ from $\sim$20 lensed SNe in the coming years.
+
+Abstract Translation:
+即将开展的鲁宾天文台及其后续的后续观测，应能通过强引力透镜化II型超新星（LSNe II）的时间延迟宇宙学，改进哈勃常数（\(H_0\)）的测定，因为这将能够探测到更多此类事件。在我们先前的工作中，我们开发了一种从光谱吸收特征确定超新星（SN）相位的方法。由于获取遥远SN II等暗弱目标的光谱成本高昂，我们研究了低分辨率光谱如何影响时间延迟恢复的精度，进而影响\(H_0\)的精度。我们考虑了光谱分辨率\(R = \frac{\lambda}{\Delta\lambda}\)在100到250之间，并对每种分辨率研究了信噪比（\(S/N\)）为10、15和20三种情况。此外，我们预测了在\(S/N=10\)时可达到的\(H_0\)精度，并比较了地面和空间设施达到该精度所需的观测时间。我们发现，当结合多条吸收线的时间延迟测量时，在所研究的分辨率和\(S/N\)值下，时间延迟可以无偏地确定，不确定性低至1.3天。对于一个典型的LSN II系统（静止系V波段绝对星等\(\sim -17\)等，源红移\(z_s = 0.8\)），所需的曝光时间从地面观测的数小时到使用JWST的空间观测的几分钟不等。我们对单个透镜化SN的\(H_0\)精度预测范围从\(R = 100\)和\(S/N = 10\)时的14.2%到\(R = 250\)和\(S/N = 20\)时的7.5%，这使得在未来几年内通过约20个透镜化SN实现1%的\(H_0\)测定成为可能。
+
+Conclusion Translation:
+基于现有摘要的AI结论：低分辨率光谱（\(R=100-250\)）足以支持高精度的时间延迟测量，进而实现精确的\(H_0\)测定；JWST等空间设施在观测效率上具有显著优势；未来数年有望通过约20个透镜超新星将\(H_0\)精度提升至1%水平，为缓解哈勃常数危机提供重要途径。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2608.26331v1/plots/micromaps/pos_map_1_sample_1.png)
+
+图1：第一个透镜图像SN-A的微引力透镜放大图，其中会聚度\(\kappa\) = 0.36，剪切\(\gamma\) = 0.35，平滑物质比例\(s\) = 0.50。放大率\(\mu(x,y)\)由右侧的颜色标度显示。图中的两个彩色圆圈标记了用于相位恢复的位置。
+
+<small>Figure 1: Microlensing magnification map for the first lensing image, SN-A, with convergence \(\kappa\) = 0.36, shear \(\gamma\) = 0.35, and smooth matter fraction \(s\) = 0.50. The magnification \(\mu(x,y)\) is shown by the color scale on the right. The two colored circles in the map mark the positions used for phase retrieval.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2608.26331v1/plots/modeled_spectra/spectrum_z0.png)
+
+图2：SN 1999em在爆炸后第22天（静止系）的静止系模型光谱的两种微引力透镜实现，波长箱大小为\(\Delta\lambda_{{bin}}=\) 3 Å。灰色箭头表示该时期的典型吸收特征（24）。
+
+<small>Figure 2: Two microlensing realizations of the rest-frame model spectrum of SN 1999em at day 22 (rest-frame) after the explosion, with a wavelength bin size of \(\Delta\lambda_{{bin}}=\) 3 Å. Gray arrows indicate typical absorption features for this epoch ( 24 ) .</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2608.26331v1/plots/modeled_spectra/gaussian_smoothing.png)
+
+图3：用于模拟光谱分辨率\(R=150\)的高斯平滑过程。蓝线显示红移后的tardis光谱在\({H_{\beta}}\)线附近，该线由垂直黑色箭头在观测波长\(\sim 8525\ \text{\AA}\)处指示。黑色虚线表示用于平滑的高斯核。得到的平滑光谱吸收线以橙色显示。
+
+<small>Figure 3: Gaussian smoothing process used to emulate a spectral resolution \(R=150\) . The blue line shows the redshifted tardis spectrum around the \({H_{\beta}}\) line, which is indicated with a vertical black arrow at an observed wavelength of \(\sim 8525\ \text{\AA}\) . The dashed black line indicates the Gaussian kernel used for smoothing. The resulting smoothed spectral absorption line is shown in orange.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2608.26331v1/plots/modeled_spectra/spectra_R150_R2000.png)
+
+图4：红移\(z_{{s}}\) = 0.8的SN 1999em模型光谱。灰线表示箱大小为3 Å的静止系波长光谱，而彩色线显示所研究的五个时期（图例中以静止系天数表示）的较低分辨率\(R=150\)的光谱。用于相位推断的吸收线用箭头指示。
+
+<small>Figure 4: Model spectra of SN 1999em at redshift \(z_{{s}}\) = 0.8. The gray lines represent the rest-frame wavelength spectra with a bin size of 3 Å, while the colored lines show the spectra with lower resolution \(R=150\) for the five investigated epochs (indicated in the legend in rest-frame days). Absorption lines used in the phase inference are indicated with arrows.</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2608.26331v1/plots/modeled_spectra/noise_spectrum_day_22.png)
+
+图5：爆炸后第22天、红移\(z_{{s}}\) = 0.8、分辨率\(R=150\)的SN 1999em模拟光谱，对应三种不同的\(S/N\)值：10（蓝色）、15（橙色）和20（绿色）。光谱使用Savitzky-Golay滤波器进行平滑。为比较，未平滑的光谱以较浅颜色显示。
+
+<small>Figure 5: Mock spectra of SN 1999em at \(z_{{s}}\) = 0.8 on day 22 post-explosion, at resolution \(R=150\) , for three different \(S/N\) values: 10 (blue), 15 (orange), and 20 (green). The spectra are smoothed with the Savitzky-Golay filter. For comparison, the unsmoothed spectra are shown in lighter colors.</small>
+
+#### Figure 17
+表1：相位恢复的相位和1 \(\sigma\)不确定性。注：数值通过结合Fe ii、H \({\alpha}\)和H \({\beta}\)吸收线计算。我们假设这些线中的噪声和微引力透镜效应不相关。
+
+<small>Table 1: Retrieved phases and 1 \(\sigma\) uncertainties for the phase retrievals. 4 4 4 Notes. The values are computed by combining the Fe ii , H \({\alpha}\) , and H \({\beta}\) absorption lines. We assume that the noise and microlensing in these lines are uncorrelated.</small>
+
+#### Figure 18
+表2：单个透镜化SN IIP的预测\(H_{0}\)精度。
+
+<small>Table 2: Predicted \(H_{0}\) precision for a single lensed SN IIP.</small>
+
+#### Figure 8
+![Figure 8](https://arxiv.org/html/2608.26331v1/plots/H0_prec/H0_precision_plot_revised.png)
+
+图8：每个\(R\)和\(S/N\)情况下单个SN的\(D_{\Delta t}\)和\(H_{0}\)精度。颜色渐变显示精度值。我们包括恒定曝光时间\(t_{0}\)的线，这些线以\(R^{-1/2}\)缩放，以黑色显示。
+
+<small>Figure 8: Precision on \(D_{\Delta t}\) and \(H_{0}\) for a single SN for each \(R\) and \(S/N\) case. The color gradient shows the precision values. We include lines of constant exposure time \(t_{0}\) , which scale with \(R^{-1/2}\) , in black.</small>
 
 </details>
 

@@ -367,6 +367,8 @@
 2026-09-03_AI_enhanced_Chinese.jsonl
 2026-09-04.jsonl
 2026-09-04_AI_enhanced_Chinese.jsonl
+2026-09-07.jsonl
+2026-09-07_AI_enhanced_Chinese.jsonl
 llm_recommendation_cache.jsonl
 paper_artifact_cache.jsonl
 top_100_AI_enhanced.jsonl

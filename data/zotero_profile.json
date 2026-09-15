@@ -1,1372 +1,1372 @@
 {
   "source": "zotero",
   "email": "lxh9748@163.com",
-  "references_count": 323,
+  "references_count": 336,
   "keywords": [
     {
       "term": "daily_arxiv",
-      "weight": 6762.0
+      "weight": 7308.0
     },
     {
       "term": "dark matter",
-      "weight": 918.0
+      "weight": 963.0
     },
     {
       "term": "lensed",
-      "weight": 867.85
+      "weight": 923.95
     },
     {
       "term": "dust",
-      "weight": 842.35
+      "weight": 878.05
     },
     {
       "term": "dark matter subhalo",
-      "weight": 715.4
+      "weight": 757.4
     },
     {
       "term": "strongly lensed",
-      "weight": 700.0
+      "weight": 745.0
     },
     {
       "term": "dense gas",
-      "weight": 567.0
+      "weight": 621.0
     },
     {
       "term": "molecular gas",
-      "weight": 551.0
+      "weight": 593.0
     },
     {
       "term": "massive main-sequence galaxy",
-      "weight": 529.2
+      "weight": 579.6
     },
     {
       "term": "cosmic noon",
-      "weight": 516.0
+      "weight": 561.0
     },
     {
       "term": "matter subhalo",
-      "weight": 511.0
+      "weight": 541.0
     },
     {
       "term": "molecular",
-      "weight": 488.75
-    },
-    {
-      "term": "magnetic",
-      "weight": 487.05
+      "weight": 524.45
     },
     {
       "term": "magnetic fields",
-      "weight": 486.0
+      "weight": 516.0
+    },
+    {
+      "term": "magnetic",
+      "weight": 512.55
     },
     {
       "term": "detection dense gas",
-      "weight": 441.0
+      "weight": 483.0
     },
     {
       "term": "dense gas massive",
-      "weight": 441.0
+      "weight": 483.0
     },
     {
       "term": "gas massive main-sequence",
-      "weight": 441.0
+      "weight": 483.0
     },
     {
       "term": "main-sequence galaxy cosmic",
-      "weight": 441.0
+      "weight": 483.0
     },
     {
       "term": "galaxy cosmic noon",
-      "weight": 441.0
+      "weight": 483.0
     },
     {
       "term": "lensing",
-      "weight": 439.45
+      "weight": 472.6
     },
     {
       "term": "resolving molecular gas",
-      "weight": 427.0
+      "weight": 469.0
     },
     {
       "term": "molecular gas emission",
-      "weight": 427.0
+      "weight": 469.0
     },
     {
       "term": "gas emission starburst",
-      "weight": 427.0
+      "weight": 469.0
     },
     {
       "term": "emission starburst galaxies",
-      "weight": 427.0
+      "weight": 469.0
     },
     {
       "term": "starburst galaxies spt0125-47",
-      "weight": 427.0
+      "weight": 469.0
     },
     {
       "term": "galaxies spt0125-47 spt",
-      "weight": 427.0
+      "weight": 469.0
     },
     {
       "term": "noema3d resolving radial",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "resolving radial gas",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "radial gas flows",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "gas flows disk",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "flows disk galaxies",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "disk galaxies high-resolution",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "galaxies high-resolution observations",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "dust average galaxy",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "average galaxy attenuation",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "galaxy attenuation emission",
-      "weight": 420.0
+      "weight": 441.0
     },
     {
       "term": "attenuation emission opacity",
-      "weight": 420.0
-    },
-    {
-      "term": "detection dark matter",
-      "weight": 399.0
-    },
-    {
-      "term": "matter subhalo strongly",
-      "weight": 399.0
-    },
-    {
-      "term": "subhalo strongly lensed",
-      "weight": 399.0
-    },
-    {
-      "term": "strongly lensed system",
-      "weight": 399.0
-    },
-    {
-      "term": "lensed system pj011646",
-      "weight": 399.0
+      "weight": 441.0
     },
     {
       "term": "starburst",
-      "weight": 398.65
+      "weight": 434.35
     },
     {
-      "term": "lens",
-      "weight": 385.05
+      "term": "detection dark matter",
+      "weight": 420.0
+    },
+    {
+      "term": "matter subhalo strongly",
+      "weight": 420.0
+    },
+    {
+      "term": "subhalo strongly lensed",
+      "weight": 420.0
+    },
+    {
+      "term": "strongly lensed system",
+      "weight": 420.0
+    },
+    {
+      "term": "lensed system pj011646",
+      "weight": 420.0
     },
     {
       "term": "starburst galaxies",
-      "weight": 382.0
+      "weight": 418.0
     },
     {
       "term": "main-sequence galaxy",
-      "weight": 379.0
+      "weight": 415.0
     },
     {
       "term": "massive main-sequence",
-      "weight": 378.0
+      "weight": 414.0
     },
     {
-      "term": "disk galaxies",
-      "weight": 369.0
+      "term": "lens",
+      "weight": 405.45
     },
     {
       "term": "galaxies spt0125-47",
-      "weight": 365.0
+      "weight": 401.0
     },
     {
       "term": "strong gravitational",
-      "weight": 364.0
+      "weight": 388.0
+    },
+    {
+      "term": "disk galaxies",
+      "weight": 387.0
     },
     {
       "term": "magnetic fields around",
-      "weight": 352.8
+      "weight": 378.0
     },
     {
       "term": "fields around galaxies",
-      "weight": 352.8
+      "weight": 378.0
     },
     {
       "term": "system pj011646",
-      "weight": 342.0
+      "weight": 360.0
     },
     {
       "term": "strong gravitational lenses",
-      "weight": 324.8
-    },
-    {
-      "term": "subhalo detection",
-      "weight": 315.0
-    },
-    {
-      "term": "polar coordinate transformations",
-      "weight": 315.0
-    },
-    {
-      "term": "coordinate transformations machine",
-      "weight": 315.0
-    },
-    {
-      "term": "transformations machine learning",
-      "weight": 315.0
-    },
-    {
-      "term": "machine learning based",
-      "weight": 315.0
-    },
-    {
-      "term": "learning based dark",
-      "weight": 315.0
-    },
-    {
-      "term": "based dark matter",
-      "weight": 315.0
-    },
-    {
-      "term": "matter subhalo detection",
-      "weight": 315.0
-    },
-    {
-      "term": "subhalo detection strong",
-      "weight": 315.0
-    },
-    {
-      "term": "detection strong gravitational",
-      "weight": 315.0
+      "weight": 345.8
     },
     {
       "term": "detection dense",
-      "weight": 315.0
+      "weight": 345.0
     },
     {
       "term": "gas massive",
-      "weight": 315.0
+      "weight": 345.0
     },
     {
       "term": "galaxy cosmic",
-      "weight": 315.0
+      "weight": 345.0
+    },
+    {
+      "term": "subhalo detection",
+      "weight": 336.0
+    },
+    {
+      "term": "polar coordinate transformations",
+      "weight": 336.0
+    },
+    {
+      "term": "coordinate transformations machine",
+      "weight": 336.0
+    },
+    {
+      "term": "transformations machine learning",
+      "weight": 336.0
+    },
+    {
+      "term": "machine learning based",
+      "weight": 336.0
+    },
+    {
+      "term": "learning based dark",
+      "weight": 336.0
+    },
+    {
+      "term": "based dark matter",
+      "weight": 336.0
+    },
+    {
+      "term": "matter subhalo detection",
+      "weight": 336.0
+    },
+    {
+      "term": "subhalo detection strong",
+      "weight": 336.0
+    },
+    {
+      "term": "detection strong gravitational",
+      "weight": 336.0
     },
     {
       "term": "gas emission",
-      "weight": 306.0
-    },
-    {
-      "term": "galaxies high-resolution",
-      "weight": 305.0
+      "weight": 336.0
     },
     {
       "term": "resolving molecular",
-      "weight": 305.0
+      "weight": 335.0
     },
     {
       "term": "emission starburst",
-      "weight": 305.0
+      "weight": 335.0
     },
     {
       "term": "spt0125-47 spt",
-      "weight": 305.0
+      "weight": 335.0
     },
     {
       "term": "strong lensing",
-      "weight": 303.0
-    },
-    {
-      "term": "high-resolution observations",
-      "weight": 302.0
+      "weight": 330.0
     },
     {
       "term": "probing magnetic fields",
-      "weight": 301.0
+      "weight": 322.0
     },
     {
-      "term": "noema3d resolving",
-      "weight": 300.0
+      "term": "galaxies high-resolution",
+      "weight": 320.0
     },
     {
-      "term": "resolving radial",
-      "weight": 300.0
-    },
-    {
-      "term": "radial gas",
-      "weight": 300.0
-    },
-    {
-      "term": "gas flows",
-      "weight": 300.0
-    },
-    {
-      "term": "flows disk",
-      "weight": 300.0
-    },
-    {
-      "term": "dust average",
-      "weight": 300.0
-    },
-    {
-      "term": "average galaxy",
-      "weight": 300.0
-    },
-    {
-      "term": "galaxy attenuation",
-      "weight": 300.0
-    },
-    {
-      "term": "attenuation emission",
-      "weight": 300.0
-    },
-    {
-      "term": "emission opacity",
-      "weight": 300.0
+      "term": "high-resolution observations",
+      "weight": 317.0
     },
     {
       "term": "around galaxies near",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "galaxies near far",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "pilot sample planck-selected",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "sample planck-selected strongly",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "planck-selected strongly lensed",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "strongly lensed sub-mm",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "lensed sub-mm galaxies",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "sub-mm galaxies noema",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "galaxies noema observations",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "noema observations physical",
-      "weight": 294.0
+      "weight": 315.0
     },
     {
       "term": "observations physical characterisation",
-      "weight": 294.0
+      "weight": 315.0
+    },
+    {
+      "term": "noema3d resolving",
+      "weight": 315.0
+    },
+    {
+      "term": "resolving radial",
+      "weight": 315.0
+    },
+    {
+      "term": "radial gas",
+      "weight": 315.0
+    },
+    {
+      "term": "gas flows",
+      "weight": 315.0
+    },
+    {
+      "term": "flows disk",
+      "weight": 315.0
+    },
+    {
+      "term": "dust average",
+      "weight": 315.0
+    },
+    {
+      "term": "average galaxy",
+      "weight": 315.0
+    },
+    {
+      "term": "galaxy attenuation",
+      "weight": 315.0
+    },
+    {
+      "term": "attenuation emission",
+      "weight": 315.0
+    },
+    {
+      "term": "emission opacity",
+      "weight": 315.0
     },
     {
       "term": "detection dark",
-      "weight": 285.0
+      "weight": 300.0
     },
     {
       "term": "subhalo strongly",
-      "weight": 285.0
+      "weight": 300.0
     },
     {
       "term": "lensed system",
-      "weight": 285.0
+      "weight": 300.0
     },
     {
       "term": "machine learning",
-      "weight": 275.0
+      "weight": 293.0
     },
     {
       "term": "spt",
-      "weight": 263.5
-    },
-    {
-      "term": "alma",
-      "weight": 258.4
-    },
-    {
-      "term": "around galaxies",
-      "weight": 255.0
+      "weight": 289.0
     },
     {
       "term": "galaxy-lrd strong lenses",
-      "weight": 252.0
+      "weight": 273.0
     },
     {
       "term": "strong lenses missing",
-      "weight": 252.0
+      "weight": 273.0
     },
     {
       "term": "lenses missing population",
-      "weight": 252.0
+      "weight": 273.0
+    },
+    {
+      "term": "around galaxies",
+      "weight": 273.0
+    },
+    {
+      "term": "alma",
+      "weight": 271.15
     },
     {
       "term": "fields around",
-      "weight": 252.0
+      "weight": 270.0
     },
     {
       "term": "source plane",
-      "weight": 245.0
+      "weight": 266.0
     },
     {
       "term": "gravitational lenses",
-      "weight": 237.0
+      "weight": 252.0
     },
     {
       "term": "detection strong",
-      "weight": 226.0
+      "weight": 241.0
     },
     {
       "term": "polar coordinate",
-      "weight": 225.0
+      "weight": 240.0
     },
     {
       "term": "coordinate transformations",
-      "weight": 225.0
+      "weight": 240.0
     },
     {
       "term": "transformations machine",
-      "weight": 225.0
+      "weight": 240.0
     },
     {
       "term": "learning based",
-      "weight": 225.0
+      "weight": 240.0
     },
     {
       "term": "based dark",
-      "weight": 225.0
+      "weight": 240.0
     },
     {
       "term": "probing magnetic",
-      "weight": 215.0
+      "weight": 230.0
     },
     {
       "term": "pilot sample",
-      "weight": 212.0
+      "weight": 227.0
     },
     {
       "term": "noema observations",
-      "weight": 211.0
-    },
-    {
-      "term": "jwst",
-      "weight": 210.8
+      "weight": 226.0
     },
     {
       "term": "galaxies near",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "near far",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "sample planck-selected",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "planck-selected strongly",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "lensed sub-mm",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "sub-mm galaxies",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "galaxies noema",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "observations physical",
-      "weight": 210.0
+      "weight": 225.0
     },
     {
       "term": "physical characterisation",
-      "weight": 210.0
+      "weight": 225.0
+    },
+    {
+      "term": "jwst",
+      "weight": 221.0
     },
     {
       "term": "strong lenses",
-      "weight": 204.0
-    },
-    {
-      "term": "cold gas",
-      "weight": 198.0
-    },
-    {
-      "term": "star formation rate",
-      "weight": 196.0
+      "weight": 219.0
     },
     {
       "term": "lens modeling",
-      "weight": 195.0
+      "weight": 213.0
+    },
+    {
+      "term": "cold gas",
+      "weight": 210.0
+    },
+    {
+      "term": "star formation rate",
+      "weight": 208.6
     },
     {
       "term": "spiral arms",
-      "weight": 191.0
+      "weight": 203.0
     },
     {
       "term": "galaxy-lrd strong",
-      "weight": 180.0
+      "weight": 195.0
     },
     {
       "term": "lenses missing",
-      "weight": 180.0
+      "weight": 195.0
     },
     {
       "term": "missing population",
-      "weight": 180.0
-    },
-    {
-      "term": "star-forming galaxies",
-      "weight": 177.0
+      "weight": 195.0
     },
     {
       "term": "star formation rates",
-      "weight": 176.4
+      "weight": 193.2
     },
     {
       "term": "intense star formation",
-      "weight": 175.0
+      "weight": 191.8
     },
     {
-      "term": "times odot",
-      "weight": 171.0
+      "term": "nonparametric lens modeling",
+      "weight": 187.6
+    },
+    {
+      "term": "star formation triggered",
+      "weight": 186.2
     }
   ],
   "negative_keywords": [],
   "authors": [
     {
       "name": "daizhong liu",
-      "weight": 224.025,
-      "count": 183.0
+      "weight": 234.675,
+      "count": 195.0
     },
     {
       "name": "jianhang chen",
-      "weight": 154.65,
-      "count": 126.0
+      "weight": 163.275,
+      "count": 135.0
     },
     {
       "name": "hannah übler",
-      "weight": 153.65,
-      "count": 125.0
+      "weight": 162.275,
+      "count": 134.0
     },
     {
       "name": "jean-baptiste jolly",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "reinhard genzel",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "natascha m förster schreiber",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "frank eisenhauer",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "stavros pastras",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "giulia tozzi",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "ric davies",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "juan manuel espejo salcedo",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "minju m lee",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "dieter lutz",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "giovanni mazzolari",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "claudia pulsoni",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "alvio renzini",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "richard massey",
-      "weight": 143.05,
-      "count": 118.0
+      "weight": 147.1,
+      "count": 124.0
     },
     {
       "name": "simon dye",
-      "weight": 105.275,
-      "count": 83.0
-    },
-    {
-      "name": "manuel aravena",
-      "weight": 76.375,
-      "count": 64.0
-    },
-    {
-      "name": "seiji fujimoto",
-      "weight": 76.375,
-      "count": 64.0
-    },
-    {
-      "name": "desika narayanan",
-      "weight": 76.375,
-      "count": 64.0
+      "weight": 110.112,
+      "count": 89.0
     },
     {
       "name": "rodrigo herrera camus",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "lilian l lee",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "sebastián arriagada-neira",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "capucine barfety",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "linda tacconi",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "k kade",
-      "weight": 74.075,
-      "count": 62.0
+      "weight": 81.688,
+      "count": 68.0
     },
     {
       "name": "s könig",
-      "weight": 74.075,
-      "count": 62.0
+      "weight": 81.688,
+      "count": 68.0
     },
     {
       "name": "t j l c bakx",
-      "weight": 74.075,
-      "count": 62.0
+      "weight": 81.688,
+      "count": 68.0
     },
     {
-      "name": "linda j tacconi",
-      "weight": 75.25,
-      "count": 61.0
+      "name": "manuel aravena",
+      "weight": 78.4,
+      "count": 67.0
     },
     {
-      "name": "thorsten naab",
-      "weight": 75.25,
-      "count": 61.0
+      "name": "seiji fujimoto",
+      "weight": 78.4,
+      "count": 67.0
     },
     {
-      "name": "amiel sternberg",
-      "weight": 75.25,
-      "count": 61.0
-    },
-    {
-      "name": "stijn wuyts",
-      "weight": 75.25,
-      "count": 61.0
-    },
-    {
-      "name": "caitlin m casey",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "andreas l faisst",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "kohei inayoshi",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "jeyhan s kartaltepe",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "anton m koekemoer",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "claudia del p lagos",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "brant e robertson",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "laura sommovigo",
-      "weight": 73.375,
-      "count": 61.0
+      "name": "desika narayanan",
+      "weight": 78.4,
+      "count": 67.0
     },
     {
       "name": "m bredberg",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
     },
     {
       "name": "k knudsen",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
     },
     {
       "name": "g drouart",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
     },
     {
       "name": "a b romeo",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
+    },
+    {
+      "name": "linda j tacconi",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "thorsten naab",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "amiel sternberg",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "stijn wuyts",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "caitlin m casey",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "andreas l faisst",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "kohei inayoshi",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "jeyhan s kartaltepe",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "anton m koekemoer",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "claudia del p lagos",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "brant e robertson",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "laura sommovigo",
+      "weight": 75.4,
+      "count": 64.0
     },
     {
       "name": "roberto neri",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "karl schuster",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "letizia scaloni",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "capucine barféty",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "alberto bolatto",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "andreas burker",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "françoise combes",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "pierre cox",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "rodrigo herrera-camu",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "santi garcía-burillo",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "tadayuki kodama",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "lilian lee",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "amit nestor shachar",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "monica rubio",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "taro t shimizu",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "eckhard sturm",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "antonio usero",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "carlos s frenk",
-      "weight": 72.675,
-      "count": 60.0
+      "weight": 74.7,
+      "count": 63.0
     },
     {
       "name": "hollis b akins",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "andrew j battisti",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "jed mckinney",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "ezequiel treister",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "jorge a zavala",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "hiddo algera",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "yingjie cheng",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "nicole e drakos",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "maximilien franco",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "ghassem gozaliasl",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "ali hadi",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "santosh harish",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "michaela hirschmann",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "olivier ilbert",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "erini lambrides",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "ronaldo laishram",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "arianna s long",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "georgios e magdis",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "sinclaire m manning",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "crystal l martin",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "felix martinez",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "jacqueline e mccleary",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "henry joy mccracken",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "lauro moscardini",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "louise paquereau",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "jason rhodes",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "rasha m samir",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "claudia scarlata",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "marko shuntov",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "aswin p vijayan",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "wuji wang",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "can xu",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "dhruv zimmerman",
-      "weight": 72.375,
-      "count": 60.0
+      "weight": 74.4,
+      "count": 63.0
     },
     {
       "name": "aristeidis amvrosiadis",
-      "weight": 71.675,
-      "count": 59.0
+      "weight": 73.7,
+      "count": 62.0
     },
     {
       "name": "shaun cole",
-      "weight": 71.675,
-      "count": 59.0
+      "weight": 73.7,
+      "count": 62.0
     },
     {
       "name": "xiaoyue cao",
-      "weight": 71.675,
-      "count": 59.0
+      "weight": 73.7,
+      "count": 62.0
     },
     {
       "name": "ran li",
-      "weight": 71.675,
-      "count": 59.0
+      "weight": 73.7,
+      "count": 62.0
     }
   ],
   "core_authors": [
     {
       "name": "daizhong liu",
-      "weight": 224.025,
-      "count": 183.0
+      "weight": 234.675,
+      "count": 195.0
     },
     {
       "name": "jianhang chen",
-      "weight": 154.65,
-      "count": 126.0
+      "weight": 163.275,
+      "count": 135.0
     },
     {
       "name": "hannah übler",
-      "weight": 153.65,
-      "count": 125.0
+      "weight": 162.275,
+      "count": 134.0
     },
     {
       "name": "jean-baptiste jolly",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "reinhard genzel",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "natascha m förster schreiber",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "frank eisenhauer",
-      "weight": 152.65,
-      "count": 124.0
+      "weight": 161.275,
+      "count": 133.0
     },
     {
       "name": "stavros pastras",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "giulia tozzi",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "ric davies",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "juan manuel espejo salcedo",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "minju m lee",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "dieter lutz",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "giovanni mazzolari",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "claudia pulsoni",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "alvio renzini",
-      "weight": 151.65,
-      "count": 123.0
+      "weight": 160.275,
+      "count": 132.0
     },
     {
       "name": "richard massey",
-      "weight": 143.05,
-      "count": 118.0
+      "weight": 147.1,
+      "count": 124.0
     },
     {
       "name": "simon dye",
-      "weight": 105.275,
-      "count": 83.0
-    },
-    {
-      "name": "manuel aravena",
-      "weight": 76.375,
-      "count": 64.0
-    },
-    {
-      "name": "seiji fujimoto",
-      "weight": 76.375,
-      "count": 64.0
-    },
-    {
-      "name": "desika narayanan",
-      "weight": 76.375,
-      "count": 64.0
+      "weight": 110.112,
+      "count": 89.0
     },
     {
       "name": "rodrigo herrera camus",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "lilian l lee",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "sebastián arriagada-neira",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "capucine barfety",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "linda tacconi",
-      "weight": 77.4,
-      "count": 63.0
+      "weight": 84.487,
+      "count": 69.0
     },
     {
       "name": "k kade",
-      "weight": 74.075,
-      "count": 62.0
+      "weight": 81.688,
+      "count": 68.0
     },
     {
       "name": "s könig",
-      "weight": 74.075,
-      "count": 62.0
+      "weight": 81.688,
+      "count": 68.0
     },
     {
       "name": "t j l c bakx",
-      "weight": 74.075,
-      "count": 62.0
+      "weight": 81.688,
+      "count": 68.0
     },
     {
-      "name": "linda j tacconi",
-      "weight": 75.25,
-      "count": 61.0
+      "name": "manuel aravena",
+      "weight": 78.4,
+      "count": 67.0
     },
     {
-      "name": "thorsten naab",
-      "weight": 75.25,
-      "count": 61.0
+      "name": "seiji fujimoto",
+      "weight": 78.4,
+      "count": 67.0
     },
     {
-      "name": "amiel sternberg",
-      "weight": 75.25,
-      "count": 61.0
-    },
-    {
-      "name": "stijn wuyts",
-      "weight": 75.25,
-      "count": 61.0
-    },
-    {
-      "name": "caitlin m casey",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "andreas l faisst",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "kohei inayoshi",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "jeyhan s kartaltepe",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "anton m koekemoer",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "claudia del p lagos",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "brant e robertson",
-      "weight": 73.375,
-      "count": 61.0
-    },
-    {
-      "name": "laura sommovigo",
-      "weight": 73.375,
-      "count": 61.0
+      "name": "desika narayanan",
+      "weight": 78.4,
+      "count": 67.0
     },
     {
       "name": "m bredberg",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
     },
     {
       "name": "k knudsen",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
     },
     {
       "name": "g drouart",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
     },
     {
       "name": "a b romeo",
-      "weight": 73.075,
-      "count": 61.0
+      "weight": 80.688,
+      "count": 67.0
+    },
+    {
+      "name": "linda j tacconi",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "thorsten naab",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "amiel sternberg",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "stijn wuyts",
+      "weight": 76.787,
+      "count": 64.0
+    },
+    {
+      "name": "caitlin m casey",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "andreas l faisst",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "kohei inayoshi",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "jeyhan s kartaltepe",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "anton m koekemoer",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "claudia del p lagos",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "brant e robertson",
+      "weight": 75.4,
+      "count": 64.0
+    },
+    {
+      "name": "laura sommovigo",
+      "weight": 75.4,
+      "count": 64.0
     },
     {
       "name": "roberto neri",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "karl schuster",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "letizia scaloni",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "capucine barféty",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "alberto bolatto",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "andreas burker",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "françoise combes",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "pierre cox",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "rodrigo herrera-camu",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "santi garcía-burillo",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "tadayuki kodama",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "lilian lee",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "amit nestor shachar",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "monica rubio",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     },
     {
       "name": "taro t shimizu",
-      "weight": 74.25,
-      "count": 60.0
+      "weight": 75.787,
+      "count": 63.0
     }
   ],
   "summary": "Interest profile inferred from Zotero papers. Top topics: daily_arxiv, dark matter, lensed, dust, dark matter subhalo, strongly lensed, dense gas, molecular gas, massive main-sequence galaxy, cosmic noon, matter subhalo, molecular. Core authors: daizhong liu, jianhang chen, hannah übler, jean-baptiste jolly, reinhard genzel, natascha m förster schreiber, frank eisenhauer, stavros pastras"

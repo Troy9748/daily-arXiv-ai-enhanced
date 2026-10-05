@@ -2376,7 +2376,88 @@ Key Figures:
 </details>
 
 
-### [32] [Testing Offsets Between Cluster-Scale Halos and BCGs in Strong Lensing Models Using the Jackknife Method](https://arxiv.org/abs/2609.38310)
+### [32] [Point spread function requirements for dark matter subhalo detection with the Habitable Worlds Observatory](https://arxiv.org/abs/2610.02315)
+*Georgios N. Vassilakis,Susan F. Redmond,Jason D. Rhodes,Richard J. Massey,Qiuhan He*
+
+Main category: astro-ph.CO
+
+Recommendation: ★★★★★ (92/100) - 该论文直接研究强引力透镜星系图像中暗物质子晕的探测能力，核心科学问题（子晕探测）、方法（强透镜模拟、PSF表征）与用户主要兴趣高度一致，且作者Richard J. Massey、Qiuhan He与用户核心作者列表匹配。
+
+TL;DR: 该论文通过模拟HWO高分辨率成像仪对强透镜星系图像的观测，评估其对暗物质子晕的探测能力，发现预选优质透镜可将质量探测阈值降低约十倍，且PSF表征精度是保持该灵敏度的关键。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 不同暗物质理论预测了约10^8太阳质量以下星系子晕的种群和形态差异，而探测这些子晕有助于理解暗物质本质。HWO计划中的角分辨率和光学稳定性有望探测强透镜星系图像中的细微子晕扰动，因此需要评估其实际探测能力及关键影响因素。
+
+Method: 在EAC1设计下模拟HWO高分辨率成像仪2000秒曝光，假设源结构已知并忽略透镜星系光。利用弧信号信噪比和相对梯度功率从965个透镜中预选前50及前12个，评估不同质量阈值下的10%孔径覆盖率。通过非线性拟合验证Fisher预测，并测试波前误差从35到65 nm RMS变化、PSF建模正确与误匹配对探测能力的影响。
+
+Result: 预选前50（5.2%）透镜使10%孔径覆盖的中位质量阈值较全样本降低约十倍；前12（1.2%）达到中位6.6×10^7太阳质量。在最敏感位置，前50和前12的中位阈值分别为3×10^7和1.5×10^7太阳质量。非线性拟合支持Fisher预测。波前误差从35增至65 nm RMS且PSF建模正确时，中位阈值仅上升0.1 dex；但故意误匹配35 nm参考PSF会消除可探测位置，假探测仍罕见。敏感性区域损失对应的可容忍波前失配中位为5 nm RMS（范围2–10 nm）。
+
+Conclusion: 对Euclid或Roman发现的透镜进行选择性HWO跟踪观测，有望革新对暗物质本质的理解，但前提是PSF必须被足够精确地表征以保持这种探测灵敏度。
+
+Abstract: Different theories of dark matter predict different populations and morphologies of galactic subhaloes below about $10^8M_{\odot}$. The planned angular resolution and optical stability of the Habitable Worlds Observatory (HWO) should enable it to detect subtle subhalo perturbations in strongly lensed galaxy images. We simulate 2000-second exposures with its High Resolution Imager (HRI) under the fiducial Exploratory Analytic Case 1 (EAC1) design, assuming known source structure and omitting lens-galaxy light. Pre-selecting the top 50 of 965 lenses (5.2%) using only arc signal-to-noise and relative gradient power lowers the median mass threshold for 10% aperture coverage roughly tenfold relative to the full ensemble. The top 12 (1.2%) reach a median of $6.6\times10^7M_{\odot}$ for the same coverage. At their most sensitive positions, the top 50 and top 12 reach median thresholds of $3\times10^7M_{\odot}$ and $1.5\times10^7M_{\odot}$, respectively. Non-linear fits support the Fisher forecasts at the tested masses and positions. For these 12 lenses, increasing the physical wavefront error from 35 to 65 nm RMS raises the median thresholds by only 0.1 dex when the point spread function (PSF) is modelled correctly. Deliberately mismodelling the 35-nm reference PSF removes detectable positions, although false detections remain rare. Under our illustrative retention criteria, loss of sensitive area sets a median tolerated wavefront mismatch of 5 nm RMS (range 2--10 nm). Selective HWO follow-up of lenses discovered by Euclid or Roman could therefore transform our understanding of the nature of dark matter, provided that the PSF is characterized accurately enough to preserve this sensitivity.
+
+Abstract Translation:
+不同的暗物质理论预测了质量低于约 $10^8M_{\odot}$ 的星系子晕具有不同的数量和形态。宜居世界天文台（HWO）计划中的角分辨率和光学稳定性应使其能够探测强引力透镜星系图像中微妙的子晕扰动。我们在基准探索性分析案例1（EAC1）设计下，使用其高分辨率成像仪（HRI）模拟了2000秒曝光，假设已知源结构并忽略透镜星系的光。仅使用弧线信噪比和相对梯度功率，从965个透镜中预选出前50个（5.2%），可将10%孔径覆盖的中位质量阈值相对于整个集合降低约十倍。前12个（1.2%）在相同覆盖下达到 $6.6\times10^7M_{\odot}$ 的中位数。在其最敏感位置，前50个和前12个分别达到 $3\times10^7M_{\odot}$ 和 $1.5\times10^7M_{\odot}$ 的中位阈值。非线性拟合在测试质量和位置上支持Fisher预测。对于这12个透镜，当点扩散函数（PSF）被正确建模时，将物理波前误差从35 nm RMS增加到65 nm RMS仅使中位阈值提高0.1 dex。故意错误建模35-nm参考PSF会移除可探测位置，尽管虚假探测仍然罕见。在我们的示例性保留标准下，敏感区域的损失设定了中位容忍波前失配为5 nm RMS（范围2--10 nm）。因此，对Euclid或Roman发现的透镜进行选择性HWO跟踪观测，有望改变我们对暗物质本质的理解，前提是PSF被足够精确地表征以保持这种灵敏度。
+
+Conclusion Translation:
+基于可用摘要：对Euclid或Roman发现的透镜进行选择性HWO跟踪观测，有望革新对暗物质本质的理解，但前提是PSF必须被足够精确地表征以保持这种探测灵敏度。
+
+Key Figures:
+
+#### Figure 1
+表1：无前景EAC1/HRI紫外-可见（UVIS）模拟观测的模拟参数。光瞳几何、像素尺度、每次读取噪声和暗电流遵循SEI v0.1.9，而其他值被采用或推导得出。
+
+<small>Table 1: Simulation parameters for the foreground-free EAC1/HRI ultraviolet–visible (UVIS) mock observations. Pupil geometry, pixel scale, per-read noise and dark current follow SEI v0.1.9, while other values are adopted or derived.</small>
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2610.02315v1/source_lensing_gallery.png)
+
+图1：五个COSMOS源模板（上）及其透镜图像（下），使用由初始1000系统池的边缘中位数构建的通用配置显示。透镜图像包括500 nm处具有35 nm RMS波前误差的参考PSF。不包括子晕、透镜星系光或额外的噪声实现。从左到右，模板为COSMOS 159916、48849、162893、127283和62410。
+
+<small>Figure 1: The five COSMOS source templates (top) and their lensed images (bottom), shown using a common configuration constructed from the marginal medians of the initial 1000-system pool. The lensed images include the reference PSF at 500 nm with 35 nm RMS wavefront error. No subhalo, lens-galaxy light, or additional noise realization is included. From left to right, the templates are COSMOS 159916, 48849, 162893, 127283, and 62410.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2610.02315v1/psf_reference.png)
+
+图2：EAC1光瞳的参考波前和所得PSF。左：分段光瞳上的光程差，已去除光瞳均值并将波前缩放至35 nm RMS。右：相应的500 nm光学PSF，在探测器像素积分前显示。强度归一化为无像差PSF的峰值 \(I_{0,{peak}}\) ，并以对数色标显示。插图放大了PSF核心。
+
+<small>Figure 2: Reference wavefront and resulting PSF for the EAC1 pupil. Left: optical path difference across the segmented pupil, with the pupil mean removed and the wavefront scaled to 35 nm RMS. Right: the corresponding optical PSF at 500 nm, shown before detector-pixel integration. The intensity is normalized to the peak of the unaberrated PSF, \(I_{0,{peak}}\) , and displayed on a logarithmic colour scale. The inset enlarges the PSF core.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2610.02315v1/sensitivity_regions.png)
+
+图3：示例透镜的子晕质量阈值说明。左：预期的透镜图像，虚线圆标记半径为 \(2\theta_{E,eff}\) 的孔径。中：在 \(M_{best}\) （红色）、\(M_{10}\) （深蓝色）和 \(M_{50}\) （浅蓝色）下满足 \(q_{{F}}\geq 10\) 的试验子晕位置。右：敏感孔径分数作为子晕质量的函数。彩色标记表示第一个试验位置变得可探测时的质量（红色）以及灵敏度达到孔径的10%和50%时的质量（分别为深蓝色和浅蓝色）。
+
+<small>Figure 3: Illustration of the subhalo mass thresholds for an example lens. Left: expected lensed image, with the dashed circle marking the aperture of radius \(2\theta_{E,eff}\) . Middle: trial subhalo positions satisfying \(q_{{F}}\geq 10\) at \(M_{best}\) (red), \(M_{10}\) (dark blue), and \(M_{50}\) (light blue). Right: sensitive aperture fraction as a function of subhalo mass. The coloured markers indicate the mass at which the first trial position becomes detectable (red) and the masses at which sensitivity reaches 10% and 50% of the aperture (dark and light blue, respectively).</small>
+
+#### Figure 5
+表2：非线性拟合的先验。每个参数在其输入值的所列半宽内均匀分布。子晕质量先验在所列范围内均匀分布。
+
+<small>Table 2: Priors of the non-linear fits. Each parameter is uniform within the listed half-width of its input value. The subhalo mass prior is uniform over the listed range.</small>
+
+#### Figure 4
+图4：965个幸存透镜系统的三个子晕质量阈值的累积分布。从左到右，面板显示 \(M_{best}\) 、\(M_{10}\) 和 \(M_{50}\) 。黑色曲线代表整个集合，而彩色曲线显示按源模板分组的系统。每条曲线给出阈值位于给定质量或以下的系统比例。虚线垂直线标记采样的质量上限 \(10^{9.5}M_{\odot}\) ，质量搜索在此停止。在采样范围内未达到阈值的系统保留在分母中，因此曲线终止于100%以下。
+
+<small>Figure 4: Cumulative distributions of the three subhalo mass thresholds for the 965 surviving lens systems. From left to right, the panels show \(M_{best}\) , \(M_{10}\) , and \(M_{50}\) . The black curves represent the full ensemble, while the coloured curves show systems grouped by source template. Each curve gives the fraction of systems whose threshold lies at or below a given mass. The dotted vertical line marks the upper sampled mass, \(10^{9.5}M_{\odot}\) , where the mass search stops. Systems whose thresholds are not reached within the sampled range remain in the denominators, so the curves end below 100%.</small>
+
+#### Fig. 4
+表3：通过预探测排序 \(\mathcal{R}\) 选择的样本、全部幸存集合以及按源模板定义的组的中位子晕质量阈值。\(N\) 是每个样本中的系统数。在计算中位数时，在采样质量范围内未达到的阈值被视为高于 \(10^{9.5}M_{\odot}\) 。光滑盘 \(M_{50}\) 条目 \({>}9.5\) 表示该组中超过一半的阈值未达到。每组的未达到比例是图4中相应曲线终点的一减去该值。在排序样本中没有未达到的阈值。
+
+<small>Table 3: Median subhalo mass thresholds for samples selected by the pre-detection ranking \(\mathcal{R}\) , the full surviving ensemble, and groups defined by source template. \(N\) is the number of systems in each sample. Thresholds not reached within the sampled mass range are treated as lying above \(10^{9.5}M_{\odot}\) when calculating the medians. The smooth-disc \(M_{50}\) entry of \({>}9.5\) indicates that more than half of the group has an unreached threshold. The unreached fraction for each group is one minus the corresponding curve endpoint in Fig. 4 . No threshold is unreached in the ranked samples.</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2610.02315v1/selection_rank_mass_reach.png)
+
+图5：965系统集合中，子晕质量阈值作为 \(\mathcal{R}\) 预探测选择排名的函数。从左到右，面板显示 \(M_{best}\) 、\(M_{10}\) 和 \(M_{50}\) 。每个点代表一个系统，排名1对应最高的 \(\mathcal{R}\) 分数，显示在对数轴上。菱形标记最高排名的系统，而星号标识每个面板中质量阈值最低的系统。虚线水平线标记采样的质量上限 \(10^{9.5}M_{\odot}\) 。向上三角形表示在采样质量范围内未达到相应灵敏度阈值的系统。
+
+<small>Figure 5: Subhalo mass thresholds as a function of pre-detection selection rank by \(\mathcal{R}\) for the 965-system ensemble. From left to right, the panels show \(M_{best}\) , \(M_{10}\) , and \(M_{50}\) . Each point represents one system, with rank 1 corresponding to the highest \(\mathcal{R}\) score, shown on a logarithmic axis. Diamonds mark the highest-ranked system, while stars identify the system with the lowest mass threshold in each panel. The dotted horizontal line marks the upper sampled mass, \(10^{9.5}M_{\odot}\) . Upward triangles indicate systems that do not reach the corresponding sensitivity threshold within the sampled mass range.</small>
+
+</details>
+
+
+### [33] [Testing Offsets Between Cluster-Scale Halos and BCGs in Strong Lensing Models Using the Jackknife Method](https://arxiv.org/abs/2609.38310)
 *Sangjun Cha,Marceau Limousin,M. James Jee*
 
 Main category: astro-ph.CO
@@ -2452,7 +2533,7 @@ Key Figures:
 </details>
 
 
-### [33] [SLICE: Unveiling the Multi-Component Merging Core of SPT-CLJ1150-2805 Through Strong-Lensing Mass Modelling](https://arxiv.org/abs/2609.31944)
+### [34] [SLICE: Unveiling the Multi-Component Merging Core of SPT-CLJ1150-2805 Through Strong-Lensing Mass Modelling](https://arxiv.org/abs/2609.31944)
 *James R. Betts,Benjamin Beauchesne,Mathilde Jauzac,David Lagattuta,Guillaume Mahler,Jean-Paul Kneib,Gavin Leroy,Marceau Limousin,Priyamvada Natarajan,Sameeksha Saini,Keren Sharon,Stephane V. Werner,Catherine Cerny,Isaque Dutra,Dominique Eckert,Alaina Einsig,Michael D. Gladders,Gourav Khullarm,Manon Regamey*
 
 Main category: astro-ph.CO
@@ -2535,7 +2616,7 @@ Key Figures:
 </details>
 
 
-### [34] [Impact on time delays due to milli-lensing by subhalos on lensed gravitational waves](https://arxiv.org/abs/2609.23428)
+### [35] [Impact on time delays due to milli-lensing by subhalos on lensed gravitational waves](https://arxiv.org/abs/2609.23428)
 *Ishan Swamy,Anupreeta More,Ojas Patil*
 
 Main category: astro-ph.CO
@@ -2620,7 +2701,7 @@ Key Figures:
 </details>
 
 
-### [35] [Lens Modeling and Cosmological Inference from an Impure Sample of Galaxy-Galaxy Strong Lenses](https://arxiv.org/abs/2609.21699)
+### [36] [Lens Modeling and Cosmological Inference from an Impure Sample of Galaxy-Galaxy Strong Lenses](https://arxiv.org/abs/2609.21699)
 *Philip Holloway,Aprajita Verma,Philip J. Marshall,Padmavathi Venkatraman,Sydney Erickson,Tian Li,Simon Birrer,Steven Dillmann,Thomas E. Collett,the LSST Dark Energy Science Collaboration*
 
 Main category: astro-ph.CO
@@ -2697,7 +2778,7 @@ Key Figures:
 </details>
 
 
-### [36] [Follow-up of SN 2025wny VI: The Rate and Detectable Population of Strongly Lensed SLSNe-I in ZTF](https://arxiv.org/abs/2609.18912)
+### [37] [Follow-up of SN 2025wny VI: The Rate and Detectable Population of Strongly Lensed SLSNe-I in ZTF](https://arxiv.org/abs/2609.18912)
 *Jacob O. Hjortlund,Edvard Mörtsell,Ariel Goobar,Joel Johansson,Avinash Singh,Alice Townsend,Erin E. Hayes,Maggie L. Li,Steve Schulze,Suhail Dhawan,Jakob Nordin,Aleksandra Bochenek,Chiara Ventura,Conor M. B. Omand,Jacob L. Wise,Jesper Sollerman*
 
 Main category: astro-ph.CO
@@ -2762,7 +2843,7 @@ Key Figures:
 </details>
 
 
-### [37] [Resolving 3 Exotic Hyperbolic-Umbilic Lensing Configurations in the "Cosmic Mantis": An Exploration of RXJ0437.1+0043 with JWST](https://arxiv.org/abs/2609.17852)
+### [38] [Resolving 3 Exotic Hyperbolic-Umbilic Lensing Configurations in the "Cosmic Mantis": An Exploration of RXJ0437.1+0043 with JWST](https://arxiv.org/abs/2609.17852)
 *Catherine Cerny,David J. Lagattuta,Keren Sharon,Gourav Khullar,Benjamin Beauchesne,Alastair C. Edge,Mathilde Jauzac,Marceau Limousin,Guillaume Mahler,Lukas J. Furtak,Leo Fung,Qiuhan He,Richard J. Massey,Ashish K. Meena,Adi Zitrin*
 
 Main category: astro-ph.CO
@@ -2843,7 +2924,7 @@ Key Figures:
 </details>
 
 
-### [38] [Observation-driven simulations of strong lensing galaxy clusters](https://arxiv.org/abs/2609.07840)
+### [39] [Observation-driven simulations of strong lensing galaxy clusters](https://arxiv.org/abs/2609.07840)
 *L. Leuzzi,M. Meneghetti,A. Adam,L. Moscardini,C. Giocoli,P. Bergamini,Y. Hezaveh,M. Maturi,A. Mercurio,A. Moretti,Andrés A. Plazas Malagón,P. Rosati*
 
 Main category: astro-ph.CO
@@ -2924,7 +3005,7 @@ Key Figures:
 </details>
 
 
-### [39] [Comment on `Measuring the Hubble Constant Using Strongly Lensed Gravitational Wave Signals'](https://arxiv.org/abs/2608.28765)
+### [40] [Comment on `Measuring the Hubble Constant Using Strongly Lensed Gravitational Wave Signals'](https://arxiv.org/abs/2608.28765)
 *Jason S. C. Poon,Otto A. Hannuksela*
 
 Main category: astro-ph.CO
@@ -2959,7 +3040,7 @@ Key Figures:
 </details>
 
 
-### [40] [Follow-up of SN 2025wny V: Lens Modelling and Cosmography of a Strongly Lensed Superluminous Supernova at $z = 2.015$ using Space Data](https://arxiv.org/abs/2608.28430)
+### [41] [Follow-up of SN 2025wny V: Lens Modelling and Cosmography of a Strongly Lensed Superluminous Supernova at $z = 2.015$ using Space Data](https://arxiv.org/abs/2608.28430)
 *Edvard Mörtsell,Joel Johansson,Ariel Goobar,Alice Townsend,Hannah C. Turner,Suhail Dhawan,Cameron Lemon,Peter Nugent,Thomas E. Collett,Stephen Thorp,Jacob Osman Hjortlund,Jakob Nordin,Lin Yan,Graham P. Smith,Christoffer Fremling*
 
 Main category: astro-ph.CO
@@ -3036,7 +3117,7 @@ Key Figures:
 </details>
 
 
-### [41] [Follow-up of SN 2025wny IV: Photometric Time-delay Measurements of a Strongly Lensed Superluminous Supernova](https://arxiv.org/abs/2608.28427)
+### [42] [Follow-up of SN 2025wny IV: Photometric Time-delay Measurements of a Strongly Lensed Superluminous Supernova](https://arxiv.org/abs/2608.28427)
 *Alice Townsend,Suhail Dhawan,Erin E. Hayes,Maggie L. Li,Joel Johansson,Edvard Mörtsell,Ariel Goobar,Lin Yan,Charlotte Ward,Veena Krishnaraj,Steve Schulze,Jacob Osman Hjortlund,Yu-Jing Qin,Hannah C. Turner,Peter Massey,Jakob Nordin,Jule Augustin,Aleksandra Bochenek,Malte Busmann,Christoffer Fremling,Daniel Gruen,Xander J. Hall,K. -R. Hinds,Ezequiel J. Marchesini,Zoë McGrath,Conor M. B. Omand,Eliana Palazzi,Daniel A. Perley,Andrea Rossi,Killa Santer,Jesper Sollerman,Chiara Ventura,Jacob L. Wise,Tracy X. Chen,Steven L. Groom,Mansi M. Kasliwal,Josiah Purdum*
 
 Main category: astro-ph.CO
@@ -3115,7 +3196,7 @@ Key Figures:
 </details>
 
 
-### [42] [HOLISMOKES -- XVIII. Cosmology with strongly lensed type II supernovae: Effects of instrumental setups on $H_0$](https://arxiv.org/abs/2608.26331)
+### [43] [HOLISMOKES -- XVIII. Cosmology with strongly lensed type II supernovae: Effects of instrumental setups on $H_0$](https://arxiv.org/abs/2608.26331)
 *J. Grupa,S. Taubenberger,S. H. Suyu,D. Sluse,S. Huber,C. Vogl*
 
 Main category: astro-ph.CO
@@ -3196,89 +3277,6 @@ Key Figures:
 图8：每个\(R\)和\(S/N\)情况下单个SN的\(D_{\Delta t}\)和\(H_{0}\)精度。颜色渐变显示精度值。我们包括恒定曝光时间\(t_{0}\)的线，这些线以\(R^{-1/2}\)缩放，以黑色显示。
 
 <small>Figure 8: Precision on \(D_{\Delta t}\) and \(H_{0}\) for a single SN for each \(R\) and \(S/N\) case. The color gradient shows the precision values. We include lines of constant exposure time \(t_{0}\) , which scale with \(R^{-1/2}\) , in black.</small>
-
-</details>
-
-
-### [43] [Strong-lensing effects in high-redshift massive black-hole binary population inference](https://arxiv.org/abs/2607.03345)
-*Yan-Heng Jin,Wen-Biao Han*
-
-Main category: astro-ph.CO
-
-Recommendation: ★★★★★ (92/100) - 论文核心研究强引力透镜效应对高红移大质量黑洞双星种群推断的影响，直接涉及用户首要兴趣领域'strong gravitational lensing'，且聚焦高红移（z≥10）天体，与用户对高红移星系动力学和透镜研究高度契合。虽然主题偏向黑洞种子形成而非星系动力学，但透镜效应作为核心方法，且用户画像中'lensing'权重极高，因此给予高分。
-
-TL;DR: 本文研究了强引力透镜效应对LISA探测器在红移10-20处探测大质量黑洞双星并合事件的影响，发现忽略透镜效应会偏差推断的形成通道比例，尤其在高透镜率情况下。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 高红移大质量黑洞双星（MBHB）并合是研究黑洞种子形成和早期星系组装的探针，但星系级强引力透镜可能改变LISA探测到的种群特征，需量化该影响。
-
-Method: 采用轻种子/重种子四种形成通道（延迟/非延迟并合），对比保守的速度弥散函数（VDF）和乐观的暗物质晕质量函数（HMF）两种透镜模型，计算4年LISA可探测事件数，联合推断形成比例和透镜贡献强度。
-
-Result: 强透镜对不同通道影响不均；VDF模型下影响微弱，但HMF高透镜率情况下忽略透镜会导致形成比例推断偏差；透镜贡献的恢复精度在高透镜率时更高。
-
-Conclusion: 利用高红移MBHB探测推断内在形成通道比例时，需纳入星系级强透镜效应和事件计数信息。
-
-Abstract: High-redshift massive black-hole binary (MBHB) mergers provide a probe of black-hole seed formation and early galaxy assembly, but the population detected by LISA can be modified by galaxy-scale strong lensing. We quantify this effect for MBHB mergers at $10\leq z\leq20$ and assess its impact on the inference of intrinsic formation-channel fractions. We use four channels, corresponding to light- and heavy-seed scenarios with delayed and non-delayed mergers, and compute 4-year LISA-detectable event numbers with and without strong lensing. To bracket the uncertain lens population, we compare a conservative velocity-dispersion-function (VDF) prescription with an optimistic halo-mass-function (HMF)-based prescription. We consider a reference mixture with equal seed-channel weights and additional mixtures in which the intrinsic seed population is weighted toward selected formation channels, and jointly infer the formation fractions and the strength of the lensing contribution. Strong lensing does not affect all channels equally: it can change the detected channel mixture as well as the total number of detections. This effect is weak for the conservative VDF prescription, but becomes significant in the high-lensing-rate HMF case, where neglecting strong lensing can bias the recovered formation fractions. The inference precision depends on the underlying intrinsic channel composition, while the lensing contribution is more accurately recovered in the high-lensing-rate case. These results indicate that galaxy-scale strong-lensing effects and event-count information should be included when using high-redshift MBHB detections to infer intrinsic formation-channel fractions.
-
-Abstract Translation:
-高红移大质量黑洞双星（MBHB）并合为研究黑洞种子形成和早期星系组装提供了探针，但LISA探测到的种群可能受到星系级强引力透镜效应的影响。我们量化了这种效应对红移$10\leq z\leq20$的MBHB并合的影响，并评估了其对内在形成通道比例推断的冲击。我们使用了四个通道，分别对应轻种子和重种子场景，并考虑了延迟与非延迟并合，计算了有无强透镜效应下4年LISA可探测事件数。为了涵盖不确定的透镜种群，我们比较了保守的速度色散函数（VDF）描述与乐观的晕质量函数（HMF）描述。我们考虑了一个种子通道权重相等的参考混合模型，以及内在种子种群偏向特定形成通道的其他混合模型，并联合推断形成比例和透镜贡献的强度。强透镜效应并非对所有通道影响相同：它可能改变探测到的通道混合比例以及总探测数。这种效应在保守的VDF描述下较弱，但在高透镜率的HMF情况下变得显著，忽略强透镜效应可能导致恢复的形成比例产生偏差。推断精度取决于内在通道组成，而透镜贡献在高透镜率情况下恢复得更准确。这些结果表明，在利用高红移MBHB探测推断内在形成通道比例时，应纳入星系级强透镜效应和事件计数信息。
-
-Conclusion Translation:
-基于可用摘要：利用高红移MBHB探测推断内在形成通道比例时，需纳入星系级强透镜效应和事件计数信息。
-
-Key Figures:
-
-#### Figure 1
-表1：本工作中使用的内在混合定义。向量\(\bm{a}\)按\((a_{LS\mbox{-}d},a_{LS\mbox{-}nod},a_{HS\mbox{-}d},a_{HS\mbox{-}nod})\)排序。相应的内在比例向量为\((f_{1},f_{2},f_{3})\)。在每个加权族中，温和和中等表示所选通道的权重比其他通道大10倍和100倍，而极端表示所选通道的\(F_{k}\simeq 0.9\)的情况。
-
-<small>Table 1 : Intrinsic mixture definitions used in this work. The vector \(\bm{a}\) is ordered as \((a_{LS\mbox{-}d},a_{LS\mbox{-}nod},a_{HS\mbox{-}d},a_{HS\mbox{-}nod})\) . The corresponding intrinsic-fraction vector is \((f_{1},f_{2},f_{3})\) . In each weighted family, mild and intermediate denote selected-channel weights 10 and 100 times larger than the other weights, while extreme denotes a case with \(F_{k}\simeq 0.9\) for the selected channel.</small>
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/2607.03345v1/x1.png)
-
-图1：四个MBHB源种群在\(10\leq z\leq 20\)的内在红移分布。曲线显示了在应用探测器选择和透镜效应之前，4年观测时间内四个形成通道目录的加权\(dN/dz\)分布。
-
-<small>Figure 1 : Intrinsic redshift distributions of the four MBHB source populations at \(10\leq z\leq 20\) . The curves show the weighted \(dN/dz\) distributions of the four formation-channel catalogues for a 4-year observing time, before detector selection and lensing effects are applied.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/2607.03345v1/x2.png)
-
-图2：本工作中使用的透镜种群描述。左图比较了在代表性透镜红移处，保守的Oguri VDF描述（实线）和乐观的HMF导出的有效VDF描述（虚线）的\(\phi(\sigma,z_{l})\)。在\(z_{l}=15\)处缺少Oguri曲线，反映了在此使用的速度色散范围内，所采用的Oguri VDF描述的上限红移约为\(z_{l}\simeq 14\)。右图显示了两种VDF描述下相应的SIE+剪切强透镜光学深度\(\tau(z_{s})\)作为源红移的函数。
-
-<small>Figure 2 : Lens-population prescriptions used in this work. The left panel compares \(\phi(\sigma,z_{l})\) for the conservative Oguri VDF prescription (solid lines) and the optimistic HMF-derived effective VDF prescription (dashed lines) at representative lens redshifts. The absence of the Oguri curve at \(z_{l}=15\) reflects the \(z_{l}\simeq 14\) upper-redshift limit of the adopted Oguri VDF prescription over the velocity-dispersion range used here. The right panel shows the corresponding SIE+shear strong-lensing optical depth \(\tau(z_{s})\) as a function of source redshift for the two VDF prescriptions.</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/2607.03345v1/x3.png)
-
-图3：LISA和Taiji的特征噪声应变，与代表性的轻种子和重种子MBHB信号进行比较。探测器曲线显示\(h_{n}(f)=\sqrt{fS_{n}(f)}\)，源曲线显示非自旋、正面IMRPhenomD波形的\(h_{c}(f)=2f|\tilde{h}(f)|\)。阴影带和线条分别表示每个种子族中250个权重采样双星的16th–84th百分位范围和中位数。
-
-<small>Figure 3 : Characteristic noise strains of LISA and Taiji, compared with representative light- and heavy-seed MBHB signals. Detector curves show \(h_{n}(f)=\sqrt{fS_{n}(f)}\) , and source curves show \(h_{c}(f)=2f|\tilde{h}(f)|\) for nonspinning, face-on IMRPhenomD waveforms. Shaded bands and lines denote the 16th–84th percentile ranges and medians from 250 weight-sampled binaries in each seed family.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/2607.03345v1/x4.png)
-
-图4：参考混合中MBHB形成通道的种群分布。上行比较了内在分布与未透镜化的LISA可探测分布。下行比较了未透镜化的可探测分布与使用Oguri-VDF和HMF-VDF描述获得的透镜化分布。
-
-<small>Figure 4 : Population distributions for the MBHB formation channels in the reference mixture. The upper row compares the intrinsic distributions with the unlensed LISA-detectable distributions. The lower row compares the unlensed detectable distributions with the lensed distributions obtained with the Oguri-VDF and HMF-VDF prescriptions.</small>
-
-#### Figure 6
-表2：在\(10\leq z\leq 20\)范围内4年期间的单通道内在并合产额和LISA可探测事件数。可探测列给出了未透镜化、Oguri-VDF和HMF-VDF情况。
-
-<small>Table 2 : Single-channel intrinsic merger yields and LISA-detectable event numbers for \(10\leq z\leq 20\) over 4 years. The detectable columns give the unlensed, Oguri-VDF, and HMF-VDF cases.</small>
-
-#### Figure 7
-表3：参考混合的无透镜LISA推断。使用未透镜化的可探测目录作为模拟观测数据，推断使用未透镜化模型。条目给出后验中位数及68%置信区间。
-
-<small>Table 3 : Lensing-free LISA inference for the reference mixture. The unlensed detectable catalogue is used as the mock observed data and the inference uses the unlensed model. Entries give posterior medians with 68% credible intervals.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/2607.03345v1/x6.png)
-
-图5：参考混合的无透镜LISA形成比例推断。模拟观测数据是未透镜化的可探测目录，推断使用未透镜化模型。左图显示条件似然，右图显示已知\(A\)的泊松似然。
-
-<small>Figure 5 : Lensing-free LISA formation-fraction inference for the reference mixture. The mock observed data are the unlensed detectable catalogue, and the inference uses the unlensed model. The left panel shows the conditional likelihood, while the right panel shows the known- \(A\) Poisson likelihood.</small>
 
 </details>
 

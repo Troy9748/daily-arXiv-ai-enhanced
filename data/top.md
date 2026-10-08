@@ -6923,7 +6923,71 @@ Key Figures:
 </details>
 
 
-### [94] [Stacked strong and weak lensing united: Improved measurement of the stellar and dark matter distributions in massive early-type galaxies at $z\sim 0.5$](https://arxiv.org/abs/2609.39040)
+### [94] [A Gravitationally Lensed Low-Luminosity AGN From The Cosmic Noon](https://arxiv.org/abs/2610.10244)
+*Marko Mićić,Olivia Holmes,Xinyu Dai,Kevin Hainline,Haikun Xue,Zijun Gao*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★★ (92/100) - 该论文是典型的强引力透镜研究，利用星系团透镜系统对高红移（宇宙正午z≈2.14）暗弱X射线源进行几何透镜建模与放大率分析，直接契合用户以星系-星系强透镜为核心、并关注宇宙正午高红移天体物理的主线兴趣。方法上结合HST成像、Chandra X射线与既有强透镜模型，属于用户熟悉且重视的透镜分析范式。虽以AGN而非星系动力学/多相气体为核心，但强透镜属性使其不应被降级。
+
+TL;DR: 本文研究星系团SDSS J2243$-$0935三像引力透镜系统中的一个暗弱X射线源，通过结合HST成像、Chandra观测与既有透镜模型，判定其为宇宙正午时期一个被强透镜化的低光度AGN，其宿主星系为低质量星系。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 高红移、本征暗弱的AGN极难观测，而低光度AGN（LLAGN）可用于探测低质量星系中的黑洞增长过程，这是现有X射线巡天难以触及的领域。强引力透镜的放大效应提供了研究这类天体的独特途径。作者希望确认该三像透镜系统背后的暗弱X射线源是否为一个AGN，并厘清其物理性质。
+
+Method: 将哈勃空间望远镜（HST）存档成像与Chandra X射线观测，同已发表的SDSS J2243$-$0935强透镜模型相结合。通过几何透镜分析约束源红移并推导放大率图，据此反推宿主星系的物理性质；同时拟合三个透镜像的X射线对应体的组合能谱，并在校正引力放大后计算内禀X射线光度。
+
+Result: 几何透镜分析给出源红移$z=2.14^{+0.12}_{-0.17}$，与测光红移一致，总放大率$μ=78\pm7$。源呈三像透镜结构，仅在HST F160W波段探测到，内禀星等$m_{\rm AB}=28.2\pm0.2$；静止系光学发射暗示恒星质量$8.6\lesssim\log(M_\star/M_\odot)\lesssim9.4$，未遮蔽的紫外恒星形成率上限为$\mathrm{SFR}_{\rm UV}<0.009\,M_\odot\,\mathrm{yr}^{-1}$（仍可能存在显著尘埃遮蔽）。Chandra在三个HST像位置均探测到X射线点源对应体，组合能谱含$100\pm11$个净计数，符合中度吸收的幂律谱（$Γ\simeq1.48$，$N_{\rm H}=(5.5\pm4.4)\times10^{22}\,\mathrm{cm}^{-2}$）。校正引力放大后，内禀静止系2–10 keV光度为$L_{\rm X}=1.2\pm0.3\times10^{42}\,\mathrm{erg\,s^{-1}}$。
+
+Conclusion: 该X射线辐射很可能由一个位于$z\simeq2.14$、寄宿于低质量星系中的AGN主导，使该系统成为宇宙正午时期一个被强透镜化的低光度AGN。
+
+Abstract: Strong gravitational lensing provides a unique tool of studying intrinsically faint high-redshift active galactic nuclei (AGN). In particular, low-luminosity AGN (LLAGN) can probe black-hole growth in low-mass galaxies that current X-ray surveys cannot otherwise access. We investigate the nature and physical properties of a faint X-ray source triply imaged by the galaxy cluster SDSS J2243$-$0935, and determine whether the source hosts an AGN. We combine archival Hubble Space Telescope imaging and Chandra X-ray observations with the published strong-lensing models of SDSS J2243$-$0935. We constrain the source redshift geometrically, derive magnification maps, and infer the physical properties of the host galaxy. The geometric lensing analysis gives a source redshift of $z=2.14^{+0.12}_{-0.17}$, consistent with the photometric redshift estimate, and a total magnification of $μ=78\pm7$. The source is triply lensed and detected only in the HST F160W band, with an intrinsic magnitude of $m_{\rm AB}=28.2\pm0.2$. The rest-frame optical emission implies a stellar mass of $8.6\lesssim\log(M_\star/M_\odot)\lesssim9.4$. The unobscured star formation rate is constrained to $\mathrm{SFR}_{\rm UV}<0.009\,M_\odot\,\mathrm{yr}^{-1}$, although substantial dust obscuration remains possible. Chandra detects X-ray point-source counterparts to all three HST-detected lensed images. The combined X-ray spectrum contains $100\pm11$ net counts and is consistent with a moderately absorbed power law, with $Γ\simeq 1.48$ and $N_{\rm H}=(5.5\pm4.4)\times10^{22}\,\mathrm{cm}^{-2}$. After correcting for gravitational magnification, we obtain an intrinsic rest-frame $2$--$10$ keV luminosity of $L_{\rm X}=1.2\pm0.3\times10^{42}\,\mathrm{erg\,s^{-1}}$. The X-ray emission is likely dominated by an AGN hosted by a low-mass galaxy at $z\simeq2.14$, making this system a strongly lensed LLAGN at cosmic noon (abridged).
+
+Abstract Translation:
+强引力透镜为研究本征暗弱的高红移活动星系核（AGN）提供了独特工具。特别是，低光度AGN（LLAGN）可以探测当前X射线巡天无法触及的低质量星系中的黑洞生长。我们研究了由星系团SDSS J2243$-$0935三重成像的一个暗弱X射线源的性质和物理特性，并确定该源是否寄宿一个AGN。我们结合了档案哈勃空间望远镜成像和钱德拉X射线观测与已发表的SDSS J2243$-$0935强透镜模型。我们通过几何方法约束源红移，推导放大率图，并推断寄宿星系的物理性质。几何透镜分析给出源红移为$z=2.14^{+0.12}_{-0.17}$，与测光红移估计一致，总放大率为$\mu=78\pm7$。该源被三重透镜化，仅在HST F160W波段探测到，本征星等为$m_{\rm AB}=28.2\pm0.2$。静止系光学发射暗示恒星质量为$8.6\lesssim\log(M_\star/M_\odot)\lesssim9.4$。未遮蔽的恒星形成率被限制为$\mathrm{SFR}_{\rm UV}<0.009\,M_\odot\,\mathrm{yr}^{-1}$，尽管大量尘埃遮蔽仍有可能。钱德拉在所有三个HST探测到的透镜像中探测到X射线点源对应体。合并的X射线谱包含$100\pm11$个净计数，与中等吸收的幂律一致，$\Gamma\simeq 1.48$和$N_{\rm H}=(5.5\pm4.4)\times10^{22}\,\mathrm{cm}^{-2}$。在修正引力放大后，我们得到本征静止系$2$--$10$ keV光度为$L_{\rm X}=1.2\pm0.3\times10^{42}\,\mathrm{erg\,s^{-1}}$。X射线辐射可能由一个位于$z\simeq2.14$、寄宿于低质量星系中的AGN主导，使该系统成为宇宙正午时期一个被强透镜化的LLAGN（节选）。
+
+Conclusion Translation:
+该X射线辐射很可能由一个位于$z\simeq2.14$、寄宿于低质量星系中的AGN主导，使该系统成为宇宙正午时期一个被强透镜化的低光度AGN。（基于可用摘要）
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2610.10244v1/optxray1602.jpg)
+
+图1：背景图像是来自Sharon等人（2020）的星系团SDSS J2243 \(-\) 0935的HST图像。该图像显示了十一个多重透镜像，用彩色圆圈和数字1. \(i\) 到11. \(i\) 标记。左上角的白色矩形显示了感兴趣区域和用绿色圆圈和数字2.1、2.2和2.3标记的三重透镜源。插图是感兴趣区域的放大区域，以X射线和HST F160W滤光片显示。左图显示了\(Chandra\) X射线图像和三个X射线源。紫色圆圈显示1. \(\aas@@fstack{\prime\prime}\) 2半径的源提取区域，而黄色符号显示对应于背景图像中2.1、2.2和2.3的HST探测到的三重透镜像。中图显示了相同区域，但在HST F160W滤光片中。圈出的源是三重透镜像。右图显示了每个图像的放大。
+
+<small>Figure 1 : The background image is an HST image of the cluster SDSS J2243 \(-\) 0935 from Sharon et al. (2020) . The image shows eleven multiply lensed images labeled with colored circles and numbers 1. \(i\) through 11. \(i\) . The white rectangle in the upper left corner shows the region of interest and the triply lensed source labeled with green circles and numbers 2.1, 2.2, and 2.3. The inset image is a zoomed-in region of interest shown in X-ray and HST F160W filters. The left panel shows the \(Chandra\) X-ray image and three X-ray sources. Purple circles show 1. \(\aas@@fstack{\prime\prime}\) 2 radius source extraction regions, while yellow symbols show HST-detected triply lensed images corresponding to 2.1, 2.2, and 2.3 from the background image. The middle panel shows the same region but in the HST F160W filter. The circled sources are triply lensed images. The right panel shows each image zoomed in.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2610.10244v1/fig3_lens2.png)
+
+图2：三重成像背景源的几何红移，源自S20的最佳拟合透镜模型。左：像平面，显示图像1、2和3相对于其质心的位置（东向左，北向上）。灰度显示\(z=2.14\)处的放大率，实线和虚线曲线分别显示\(z=2.14\)和\(z=3\)处的临界曲线。中：源平面。每条轨迹显示当假设源红移从\(z\) = 1增加到10时，一个图像通过透镜方程映射回的位置，按红移着色，并标出选定的红移。大圆圈标记在采用红移\(z=2.14\)处的反向投影位置。在真实源红移处，所有三个图像映射回同一位置。右：最佳拟合模型中三个反向投影位置的rms散射作为源红移的函数。红色虚线标记采用的源红移\(z=2.14^{+0.12}_{-0.17}\)，即所有模型实现的中位数。
+
+<small>Figure 2 : Geometric redshift of the triply imaged background source, derived from the best-fit lens model of S20. Left : Image plane, showing the positions of images 1, 2, and 3 relative to their centroid (east to the left, north up). The grayscale shows the magnification at \(z=2.14\) , and the solid and dashed curves show the critical curves at \(z=2.14\) and \(z=3\) , respectively. Middle : Source plane. Each track shows the position to which one image maps back through the lens equation as the assumed source redshift increases from \(z\) = 1 to 10, color-coded by redshift, with selected redshifts labeled. Large circles mark the back-projected positions at the adopted redshift, \(z=2.14\) . At the true source redshift, all three images map back to the same position. Right : rms scatter of the three back-projected positions as a function of source redshift for the best-fit model. The dashed red line marks the adopted redshift, \(z=2.14^{+0.12}_{-0.17}\) , the median across all model realizations.</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2610.10244v1/magnification_map_z2.14.png)
+
+图3：放大率图。插图显示了感兴趣区域的放大区域，白色星号标记三重透镜源的位置。
+
+<small>Figure 3 : Magnification map. The inset figure shows a zoomed-in region of interest, with white stars labeling locations of a triply lensed source.</small>
+
+#### Figure 4
+表1：透镜源的测光，图像1和3合并。观测通量是两个图像的总和，\(F_{1}+F_{3}\)；去透镜通量为\((F_{1}+F_{3})/(\mu_{1}+\mu_{3})\)，不确定性来自测光误差和\(z=2.14\)处透镜模型实现的蒙特卡洛。通量单位为erg s -1 cm -2 Å -1。AB星等使用每个滤光片的枢轴波长。对于信噪比\(
+
+<small>Table 1 : Photometry of the lensed source, with images 1 and 3 combined. Observed fluxes are the sum of the two images, \(F_{1}+F_{3}\) ; delensed fluxes are \((F_{1}+F_{3})/(\mu_{1}+\mu_{3})\) , with uncertainties from a Monte Carlo over photometric errors and lens-model realizations at \(z=2.14\) . Fluxes are in units of erg s -1 cm -2 Å -1 . AB magnitudes use the pivot wavelength of each filter. For bands with S/N \(</small>
+
+#### Figure 5
+表2：来自静止系UV非探测的未遮蔽恒星形成率的上限（\(3\sigma\)），已修正透镜放大。
+
+<small>Table 2 : Upper limits ( \(3\sigma\) ) on the unobscured star formation rate from the rest-frame UV non-detections, corrected for lensing magnification.</small>
+
+</details>
+
+
+### [95] [Stacked strong and weak lensing united: Improved measurement of the stellar and dark matter distributions in massive early-type galaxies at $z\sim 0.5$](https://arxiv.org/abs/2609.39040)
 *Momoka Fujikawa,Masamune Oguri*
 
 Main category: astro-ph.GA
@@ -6981,7 +7045,7 @@ Key Figures:
 </details>
 
 
-### [95] [Improving Lens Modelling from Ground-Based Imaging with Deconvolution](https://arxiv.org/abs/2609.34305)
+### [96] [Improving Lens Modelling from Ground-Based Imaging with Deconvolution](https://arxiv.org/abs/2609.34305)
 *Eric Paic,Kenneth C. Wong,Anupreeta More,Anton T. Jaelani*
 
 Main category: astro-ph.GA
@@ -7016,7 +7080,7 @@ Key Figures:
 </details>
 
 
-### [96] [Reducing False Positives in Strong-Lens Searches with Generalized-Mean Consensus of Machine-Learning Ensembles in the Kilo-Degree Survey](https://arxiv.org/abs/2609.24891)
+### [97] [Reducing False Positives in Strong-Lens Searches with Generalized-Mean Consensus of Machine-Learning Ensembles in the Kilo-Degree Survey](https://arxiv.org/abs/2609.24891)
 *Ziqi Li,Rui Li,Xu Huang,Hui Li,Pufan Liu,Liang Gao,Crescenzo Tortora,Nicola N. Napolitano,Xiaoyue Cao,Ran Li,Liqing Chen,Kang Jiao,Valerio Busillo,Yue Dong*
 
 Main category: astro-ph.GA
@@ -7095,7 +7159,7 @@ Key Figures:
 </details>
 
 
-### [97] [LenNet: Direct Detection and Localization of Strong Gravitational Lenses in Wide-Field Sky Survey Images](https://arxiv.org/abs/2609.21661)
+### [98] [LenNet: Direct Detection and Localization of Strong Gravitational Lenses in Wide-Field Sky Survey Images](https://arxiv.org/abs/2609.21661)
 *Pufan Liu,Hui Li,Ziqi Li,Xiaoyue Cao,Rui Li,Hao Su,Ran Li,Nicola R. Napolitano,Léon V. E. Koopmans,Valerio Busillo,Crescenzo Tortora,Liang Gao*
 
 Main category: astro-ph.GA
@@ -7178,7 +7242,7 @@ Key Figures:
 </details>
 
 
-### [98] [Galaxy-Galaxy Strong Lensing simulation with the GPU acceleration across surveys and multi-bands](https://arxiv.org/abs/2609.18180)
+### [99] [Galaxy-Galaxy Strong Lensing simulation with the GPU acceleration across surveys and multi-bands](https://arxiv.org/abs/2609.18180)
 *Fucheng Zhong,Ruibiao Luo,Nicola R. Napolitano,Crescenzo Tortora,Valerio Busillo,Rui Li*
 
 Main category: astro-ph.GA
@@ -7259,7 +7323,7 @@ Key Figures:
 </details>
 
 
-### [99] [A pilot submillimeter search for IceCube neutrino counterparts: JCMT follow-up and dusty-galaxy catalog associations](https://arxiv.org/abs/2609.07863)
+### [100] [A pilot submillimeter search for IceCube neutrino counterparts: JCMT follow-up and dusty-galaxy catalog associations](https://arxiv.org/abs/2609.07863)
 *Yuji Urata,Kuiyun Huang*
 
 Main category: astro-ph.GA
@@ -7334,57 +7398,5 @@ Key Figures:
 图4：IC 161125A天区中HerBS-185在\(z_{spec}=4.3238\)（Cox et al., 2023）的ALMA连续谱图像。图像在观测图像平面中显示出显著的弧状结构。显示的视场为\(6^{\prime\prime}\times 6^{\prime\prime}\)。等高线从\(4\sigma\)开始，并以两倍递增，其中\(\sigma=0.115~{mJy\,beam^{-1}}\)为局部rms噪声。左下角的椭圆表示综合束，右下角的比例尺指示\(1^{\prime\prime}\)。
 
 <small>Figure 4: ALMA continuum image of HerBS-185 at \(z_{spec}=4.3238\) ( Cox et al., 2023 ) , in the IC 161125A field. The image shows a prominent arc-like structure in the observed image plane. The displayed field is \(6^{\prime\prime}\times 6^{\prime\prime}\) . Contours start at \(4\sigma\) and increase by factors of two, where \(\sigma=0.115~{mJy\,beam^{-1}}\) is the local rms noise. The ellipse at the lower left represents the synthesized beam, and the scale bar at the lower right indicates \(1^{\prime\prime}\) .</small>
-
-</details>
-
-
-### [100] [A redshift of z=3.20 for the bright arc in eMACSJ2229.9-0808: Comment on Wagner & Falco (2026) "Hamilton's Object revisited: A challenging source redshift of a strong lensing configuration"](https://arxiv.org/abs/2607.06673)
-*Ian Smail,Johan Richard,Harald Ebeling,A. C. Edge*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (92/100) - 该论文直接涉及强引力透镜系统中的高红移星系（z=3.20），与用户Zotero画像中的核心主题'strong lensing'、'lensing'、'high-redshift galaxy kinematics'高度匹配。虽然作者不在核心作者列表中，但论文聚焦于通过光谱确认透镜弧的红移，属于用户明确优先关注的强引力透镜研究。
-
-TL;DR: 重新分析eMACSJ2229.9-0808星系团中强引力弧的光谱数据，确认该星系红移为z=3.20，而非先前某研究声称的z=0.82。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 解决关于该强引力弧星系红移的争议，澄清其真实红移值。
-
-Method: 重新分析来自Subaru、Gemini和Keck望远镜的近红外和光学光谱数据，识别22条最强光谱特征以确定红移。
-
-Result: 识别出22条最强光谱特征，唯一确定该星系红移为z=3.20。
-
-Conclusion: 该星系红移为z=3.20，与Ebeling等人（2025）报告一致，驳斥了Wagner & Falco（2026）声称的z=0.82。
-
-Abstract: We re-analyse near-infrared and optical spectroscopy from the Subaru, Gemini, and Keck telescopes of the bright gravitational arc seen in the z=0.62 X-ray cluster eMACSJ2229.9-0808. The 22 strongest spectral features we identify uniquely determine the redshift of the galaxy as z=3.20, as previously reported by Ebeling et al. (2025), not z=0.82 as claimed by Wagner & Falco (2026).
-
-Abstract Translation:
-我们重新分析了来自Subaru、Gemini和Keck望远镜的近红外和光学光谱，研究对象是红移z=0.62的X射线星系团eMACSJ2229.9-0808中明亮的引力弧。我们识别出的22个最强光谱特征唯一确定了该星系的红移为z=3.20，这与Ebeling等人（2025）先前报告的结果一致，而非Wagner & Falco（2026）声称的z=0.82。
-
-Conclusion Translation:
-基于现有摘要，该星系红移为z=3.20，与Ebeling等人（2025）报告一致，驳斥了Wagner & Falco（2026）声称的z=0.82。
-
-Key Figures:
-
-#### Figure 1
-![Figure 1](https://arxiv.org/html/2607.06673v1/x1.png)
-
-图1：a) eMACS J2229.9的彩色图像，显示了构成主弧（A/B）的两个像、反像（C）以及由Griffiths等人（2021）识别的暗弱弧D的位置。该图像由HST WFC3和ACS成像组成，其中F160W为红色，F140W+F110W为绿色，F814W+F606W为蓝色（主刻度标记为3′′）。左上角面板的插图为A/B的放大图像。我们叠加了一个（粉色）等高线，显示了用KCWI探测到的明亮Lyman-\(\alpha\)发射，Griffiths等人（2021）声称其为LAB，表明该发射来自弧D。我们以白色虚线矩形表示从KCWI IFU立方体中提取A+B光谱所用的孔径，以青色线表示MOIRCS狭缝的位置；GMOS长狭缝的取向经过A和B。虚线曲线显示了来自Ebeling等人（2025）lenstool透镜模型的\(z\) = 3.20处的\(\mu\) = 50放大率等高线。b) 来自Dudzevičiūtė等人（2020）的\(V_{606}-I_{814}\) 与 \(I_{814}-H_{160}\) 分布图，其中\(H\leq\) 26的星系具有\(z_{phot}\) = 0.80–0.85和\(z_{phot}\) = 3.15–3.25的光度红移。我们叠加了这两个星系数密度的等高线，并标记了三个像（A、B和C）的颜色，表明它们与\(z\) ~ 3.2的星族一致，但与\(z\) ~ 0.8的星系颜色存在3.2-\(\sigma\)的差异（参见Wagner and Falco 2026）。
-
-<small>Figure 1 : a) A colour image of eMACS J2229.9 showing the location of the two images comprising the primary arc (A/B), the counter-image (C), and the faint arc D, identified by Griffiths et al. ( 2021 ) . The image comprises HST WFC3 and ACS imaging with F160W as Red, F140W+F110W as Green and F814W+F606W as Blue (the major tick marks are 3 ′′ ). The inset in the top-left panel shows a zoomed image of A/B. We overlay a (pink) contour showing the bright Lyman- \(\alpha\) emission detected with KCWI, claimed to be a LAB by Griffiths et al. ( 2021 ) , demonstrating that this emission arises from arc D. We show the aperture used to extract the A+B spectrum from the KCWI IFU cube as a white dashed rectangle and the position of the MOIRCS slit as a cyan line; the GMOS long-slit was orientated to pass through A and B. The dashed curve shows the \(\mu\) \(=\) 50 magnification contour at \(z\) \(=\) 3.20 from the Ebeling et al. ( 2025 ) lenstool lens model. b) \(V_{606}-I_{814}\) versus \(I_{814}-H_{160}\) distribution of \(H\leq\) 26 galaxies with photometric-redshifts of \(z_{phot}\) \(=\) 0.80–0.85 and \(z_{phot}\) \(=\) 3.15–3.25 from Dudzevičiūtė et al. ( 2020 ) . We overlay contours of the densities of these two populations and mark the colours of the three images (A, B, and C), showing that they are consistent with the \(z\) \(\sim\) 3.2 population, but 3.2- \(\sigma\) discrepant with the colours of \(z\) \(\sim\) 0.8 galaxies (cf. Wagner and Falco 2026 ).</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/2607.06673v1/x6.png)
-
-图3：图2a中的三个光谱经过Wagner and Falco（2026）所用处理后的结果。该处理包括从光谱自身减去一个23.5-Å FWHM平滑版本（滤波器大小以红色显示），然后将残差与一个4.7-Å FWHM高斯函数进行卷积。我们标记了图2a原始光谱中可见的特征。只有其中较窄、最强且最孤立的特征在此过程中得以保留。
-
-<small>Figure 3 : The three spectra from Fig. 2a after applying the processing used in Wagner and Falco ( 2026 ) . This involves subtracting a 23.5-Å FWHM smoothed version of the spectrum from itself (the filter size is shown in red) and then convolving the residuals with a 4.7-Å FWHM Gaussian. We mark the features that were visible in the original spectra in Fig. 2a. Only the narrower, strongest and most isolated of these survive this process.</small>
-
-#### Figure 3
-表1：稳健的谱线识别
-
-<small>Table 1 : Robust line identifications</small>
 
 </details>

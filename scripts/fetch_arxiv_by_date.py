@@ -4,6 +4,7 @@ import json
 import os
 import re
 import time
+import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
@@ -99,9 +100,19 @@ def fetch_query(query: str, start: int, max_results: int) -> ET.Element:
     )
     url = f"https://export.arxiv.org/api/query?{params}"
     request = urllib.request.Request(url, headers={"User-Agent": "daily-arxiv-backfill/1.0"})
-    with urllib.request.urlopen(request, timeout=60) as response:
-        payload = response.read()
-    return ET.fromstring(payload)
+    for attempt in range(5):
+        try:
+            with urllib.request.urlopen(request, timeout=60) as response:
+                return ET.fromstring(response.read())
+        except urllib.error.HTTPError as error:
+            if error.code not in {429, 500, 502, 503, 504} or attempt == 4:
+                raise
+            retry_after = error.headers.get("Retry-After")
+            delay = int(retry_after) if retry_after and retry_after.isdigit() else 5 * 2**attempt
+            print(f"arXiv API returned HTTP {error.code}; retrying in {delay}s")
+            time.sleep(delay)
+
+    raise AssertionError("unreachable")
 
 
 def fetch_day(day: date, categories: Iterable[str], max_results_per_category: int) -> List[Dict]:

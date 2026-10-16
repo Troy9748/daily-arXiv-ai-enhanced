@@ -155,6 +155,8 @@ def main() -> None:
             print(f"skip {day.isoformat()}: {output} already exists")
             continue
         rows = fetch_day(day, categories, args.max_results_per_category)
+        if not rows:
+            raise SystemExit(f"No arXiv papers found for {day.isoformat()}; refusing to write an empty file.")
         write_jsonl(output, rows)
         print(f"wrote {len(rows)} papers for {day.isoformat()} to {output}")
 

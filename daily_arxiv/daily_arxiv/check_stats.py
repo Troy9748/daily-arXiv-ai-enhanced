@@ -96,7 +96,7 @@ def perform_deduplication():
              - "error": 处理错误 / Processing error
     """
 
-    today = datetime.now().strftime("%Y-%m-%d")
+    today = os.environ.get("ARXIV_DATE", datetime.now().strftime("%Y-%m-%d"))
     today_file = f"../data/{today}.jsonl"
 
     if not os.path.exists(today_file):
@@ -156,6 +156,7 @@ def main():
     0: 有新内容，继续处理 / Has new content, continue processing
     1: 无新内容，停止工作流 / No new content, stop workflow
     2: 处理错误 / Processing error
+    3: 输入文件缺失或为空 / Input file missing or empty
     """
     
     print("正在执行去重检查... / Performing intelligent deduplication check...", file=sys.stderr)
@@ -170,8 +171,8 @@ def main():
         print("⏹️ 去重完成，无新内容，停止工作流 / Deduplication completed, no new content, stop workflow", file=sys.stderr)
         sys.exit(1)
     elif dedup_status == "no_data":
-        print("⏹️ 今日无数据，停止工作流 / No data today, stop workflow", file=sys.stderr)
-        sys.exit(1)
+        print("❌ 今日无数据，工作流失败 / No data today, fail workflow", file=sys.stderr)
+        sys.exit(3)
     elif dedup_status == "error":
         print("❌ 去重处理出错，停止工作流 / Deduplication processing error, stop workflow", file=sys.stderr)
         sys.exit(2)

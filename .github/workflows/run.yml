@@ -8,6 +8,11 @@ on:
     # arXiv announces new papers Sunday-Thursday at 20:00 New York time.
     - cron: "15 20 * * 0-4"
       timezone: "America/New_York"
+    # Redundant idempotent runs recover when arXiv or GitHub is delayed.
+    - cron: "15 21 * * 0-4"
+      timezone: "America/New_York"
+    - cron: "15 23 * * 0-4"
+      timezone: "America/New_York"
   workflow_dispatch:
     inputs:
       backfill_date:
@@ -19,6 +24,10 @@ on:
         required: true
         default: false
         type: boolean
+
+concurrency:
+  group: arxiv-daily-${{ github.event.inputs.backfill_date || 'scheduled' }}
+  cancel-in-progress: false
 
 
 jobs:
@@ -63,11 +72,33 @@ jobs:
             echo "开始爬取 $today 的arXiv论文... / Starting to crawl $today arXiv papers..."
         fi
 
-        if [ "$FORCE_BACKFILL" != "true" ] && [ -s "data/${today}.jsonl" ] && [ -s "data/${today}_AI_enhanced_${language}.jsonl" ] && [ -s "data/${today}.md" ]; then
+        if [ "$FORCE_BACKFILL" != "true" ] \
+          && [ -s "data/${today}.jsonl" ] \
+          && [ -s "data/${today}_AI_enhanced_${language}.jsonl" ] \
+          && [ -s "data/${today}.md" ] \
+          && python scripts/validate_daily_data.py "data/${today}.jsonl" \
+          && python scripts/validate_daily_data.py "data/${today}_AI_enhanced_${language}.jsonl"; then
             echo "✅ 今日完整文件已存在，跳过本次运行 / Today's complete output already exists, skipping"
             echo "crawl_date=$today" >> $GITHUB_OUTPUT
             echo "already_generated=true" >> $GITHUB_OUTPUT
             exit 0
+        fi
+
+        # A partially published day cannot be resumed safely because the same-day
+        # AI file participates in deduplication. Rebuild that date atomically.
+        if [ "$FORCE_BACKFILL" != "true" ] && { \
+          [ -e "data/${today}_AI_enhanced_${language}.jsonl" ] \
+          || [ -e "data/${today}.md" ] \
+          || [ -e "data/${today}_archive.jsonl" ] \
+          || [ -e "data/${today}_selection_report.json" ]; \
+        }; then
+            echo "⚠️ 检测到不完整日报，清理后重新生成 / Incomplete daily bundle detected; rebuilding it"
+            rm -f \
+              "data/${today}.jsonl" \
+              "data/${today}_AI_enhanced_${language}.jsonl" \
+              "data/${today}.md" \
+              "data/${today}_archive.jsonl" \
+              "data/${today}_selection_report.json"
         fi
         
         echo "already_generated=false" >> $GITHUB_OUTPUT
@@ -83,10 +114,10 @@ jobs:
         fi
 
         # 检查今日原始文件是否已存在，如存在则复用 / Reuse today's raw file if it already exists
-        if [ -f "data/${today}.jsonl" ]; then
+        if [ -s "data/${today}.jsonl" ] && python scripts/validate_daily_data.py "data/${today}.jsonl"; then
             echo "📝 发现今日原始文件已存在，复用并继续后续步骤... / Found existing today's raw file, reusing it..."
         elif [ -n "$BACKFILL_DATE" ]; then
-            echo "📝 历史日期原始文件不存在，使用 arXiv API 补抓... / Historical raw file missing, fetching via arXiv API..."
+            echo "📝 历史日期原始文件不存在，使用 arXiv OAI-PMH 补抓... / Historical raw file missing, fetching via arXiv OAI-PMH..."
             export CATEGORIES="${{ vars.CATEGORIES }}"
             python scripts/fetch_arxiv_by_date.py "$today" --force
         else
@@ -102,17 +133,28 @@ jobs:
             export ENABLE_KEYWORD_FILTER="${{ vars.ENABLE_KEYWORD_FILTER }}"
             export ARXIV_KEYWORDS="${{ vars.ARXIV_KEYWORDS }}"
 
-            # 使用Scrapy爬取
-            # Use Scrapy to crawl
-            scrapy crawl arxiv -o ../data/${today}.jsonl
+            # arXiv's /new page can lag behind its nominal announcement time.
+            # Retry locally; later redundant schedules provide wider recovery windows.
+            for attempt in 1 2 3; do
+                rm -f "../data/${today}.jsonl"
+                if scrapy crawl arxiv -o "../data/${today}.jsonl" \
+                  && [ -s "../data/${today}.jsonl" ] \
+                  && python ../scripts/validate_daily_data.py "../data/${today}.jsonl"; then
+                    break
+                fi
+                if [ "$attempt" -eq 3 ]; then
+                    echo "❌ arXiv 连续 3 次未返回有效数据 / arXiv returned no valid data after 3 attempts"
+                    exit 1
+                fi
+                delay=$((attempt * 60))
+                echo "⚠️ 本次抓取为空，${delay} 秒后重试 / Empty crawl; retrying in ${delay}s"
+                sleep "$delay"
+            done
             cd ..
         fi
         
-        # 检查爬取是否成功 / Check if crawling was successful
-        if [ ! -f "data/${today}.jsonl" ]; then
-            echo "爬取失败，未生成数据文件 / Crawling failed, no data file generated"
-            exit 1
-        fi
+        # Never accept a zero-byte, malformed, duplicate-ID, or schema-invalid crawl.
+        python scripts/validate_daily_data.py "data/${today}.jsonl"
         
         echo "crawl_date=$today" >> $GITHUB_OUTPUT
         echo "爬取完成 / Crawling completed"
@@ -134,7 +176,7 @@ jobs:
         cd daily_arxiv
         # 执行去重检查脚本 / Execute intelligent deduplication check script
         set +e  # 暂时允许命令失败 / Temporarily allow command failure
-        python daily_arxiv/check_stats.py
+        ARXIV_DATE="${{ steps.crawl_step.outputs.crawl_date }}" python daily_arxiv/check_stats.py
         
         # 获取退出码 / Get exit code
         dedup_exit_code=$?
@@ -150,10 +192,18 @@ jobs:
             1)
                 echo "has_new_content=false" >> $GITHUB_OUTPUT
                 echo "skip_reason=no_new_content" >> $GITHUB_OUTPUT
+                echo "❌ 抓取结果全部是历史重复项；页面可能尚未刷新 / All crawled papers are historical duplicates; the page may be stale"
+                exit 1
                 ;;
             2)
                 echo "has_new_content=false" >> $GITHUB_OUTPUT
                 echo "skip_reason=processing_error" >> $GITHUB_OUTPUT
+                exit 1
+                ;;
+            3)
+                echo "has_new_content=false" >> $GITHUB_OUTPUT
+                echo "skip_reason=no_data" >> $GITHUB_OUTPUT
+                echo "❌ 抓取结果无有效数据 / Crawl produced no valid data"
                 exit 1
                 ;;
             *)
@@ -285,6 +335,19 @@ jobs:
             exit 1
         fi
         echo "Markdown转换完成 / Markdown conversion completed"
+
+    - name: Validate Daily Outputs
+      if: steps.schedule_guard.outputs.should_run == 'true' && steps.dedup_check.outputs.has_new_content == 'true'
+      run: |
+        source .venv/bin/activate
+        today=${{ steps.crawl_step.outputs.crawl_date }}
+        language="${{ vars.LANGUAGE || 'Chinese' }}"
+        python scripts/validate_daily_data.py "data/${today}.jsonl"
+        python scripts/validate_daily_data.py "data/${today}_AI_enhanced_${language}.jsonl"
+        if [ ! -s "data/${today}.md" ]; then
+          echo "❌ Markdown 产物缺失或为空 / Markdown output is missing or empty"
+          exit 1
+        fi
 
     - name: Backfill Historical Recommendation and Artifacts
       if: steps.schedule_guard.outputs.should_run == 'true' && steps.crawl_step.outputs.already_generated != 'true' && steps.crawl_step.outputs.is_backfill != 'true'

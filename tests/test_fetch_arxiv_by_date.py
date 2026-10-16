@@ -32,7 +32,7 @@ class FetchQueryTest(TestCase):
             Response(),
         ]
 
-        MODULE.fetch_query("cat:astro-ph.GA", 0, 1)
+        MODULE.fetch_xml("https://example.test/oai")
 
         self.assertEqual(urlopen.call_count, 2)
         sleep.assert_called_once_with(7)

@@ -49,56 +49,48 @@ def normalize_arxiv_id(value: str) -> str:
     return re.sub(r"v\d+$", "", value)
 
 
-ATOM_NS = {"atom": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
+OAI_NS = {
+    "oai": "http://www.openarchives.org/OAI/2.0/",
+    "arxiv": "http://arxiv.org/OAI/arXiv/",
+}
 
 
 def text_of(entry: ET.Element, path: str) -> str:
-    element = entry.find(path, ATOM_NS)
+    element = entry.find(path, OAI_NS)
     return re.sub(r"\s+", " ", element.text or "").strip() if element is not None else ""
 
 
 def paper_to_row(entry: ET.Element) -> Dict:
-    entry_id = text_of(entry, "atom:id")
-    arxiv_id = normalize_arxiv_id(entry_id)
-    categories = [
-        category.get("term", "")
-        for category in entry.findall("atom:category", ATOM_NS)
-        if category.get("term")
-    ]
-    authors = [
-        text_of(author, "atom:name")
-        for author in entry.findall("atom:author", ATOM_NS)
-        if text_of(author, "atom:name")
-    ]
-    comment = text_of(entry, "arxiv:comment")
+    arxiv_id = normalize_arxiv_id(text_of(entry, "arxiv:id"))
+    categories = text_of(entry, "arxiv:categories").split()
+    authors = []
+    for author in entry.findall("arxiv:authors/arxiv:author", OAI_NS):
+        name = " ".join(
+            filter(
+                None,
+                [
+                    text_of(author, "arxiv:forenames"),
+                    text_of(author, "arxiv:keyname"),
+                    text_of(author, "arxiv:suffix"),
+                ],
+            )
+        )
+        if name:
+            authors.append(name)
+    comment = text_of(entry, "arxiv:comments")
     return {
         "id": arxiv_id,
         "categories": categories,
         "pdf": f"https://arxiv.org/pdf/{arxiv_id}",
         "abs": f"https://arxiv.org/abs/{arxiv_id}",
         "authors": authors,
-        "title": text_of(entry, "atom:title"),
+        "title": text_of(entry, "arxiv:title"),
         "comment": comment or None,
-        "summary": text_of(entry, "atom:summary"),
+        "summary": text_of(entry, "arxiv:abstract"),
     }
 
 
-def query_for(day: date, category: str) -> str:
-    stamp = day.strftime("%Y%m%d")
-    return f"cat:{category} AND submittedDate:[{stamp}0000 TO {stamp}2359]"
-
-
-def fetch_query(query: str, start: int, max_results: int) -> ET.Element:
-    params = urllib.parse.urlencode(
-        {
-            "search_query": query,
-            "start": start,
-            "max_results": max_results,
-            "sortBy": "submittedDate",
-            "sortOrder": "ascending",
-        }
-    )
-    url = f"https://export.arxiv.org/api/query?{params}"
+def fetch_xml(url: str) -> ET.Element:
     request = urllib.request.Request(url, headers={"User-Agent": "daily-arxiv-backfill/1.0"})
     for attempt in range(5):
         try:
@@ -109,19 +101,36 @@ def fetch_query(query: str, start: int, max_results: int) -> ET.Element:
                 raise
             retry_after = error.headers.get("Retry-After")
             delay = int(retry_after) if retry_after and retry_after.isdigit() else 5 * 2**attempt
-            print(f"arXiv API returned HTTP {error.code}; retrying in {delay}s")
+            print(f"arXiv returned HTTP {error.code}; retrying in {delay}s")
             time.sleep(delay)
 
     raise AssertionError("unreachable")
 
 
-def fetch_day(day: date, categories: Iterable[str], max_results_per_category: int) -> List[Dict]:
+def fetch_day(day: date, categories: Iterable[str], _max_results_per_category: int) -> List[Dict]:
+    wanted = set(categories)
     rows_by_id: Dict[str, Dict] = {}
-    for category in categories:
-        root = fetch_query(query_for(day, category), 0, max_results_per_category)
-        for entry in root.findall("atom:entry", ATOM_NS):
+    until = min(day + timedelta(days=4), date.today())
+    params = {
+        "verb": "ListRecords",
+        "from": day.isoformat(),
+        "until": until.isoformat(),
+        "set": "physics:astro-ph",
+        "metadataPrefix": "arXiv",
+    }
+    while True:
+        root = fetch_xml(f"https://oaipmh.arxiv.org/oai?{urllib.parse.urlencode(params)}")
+        for entry in root.findall(".//arxiv:arXiv", OAI_NS):
+            if text_of(entry, "arxiv:created") != day.isoformat():
+                continue
             row = paper_to_row(entry)
+            if not wanted.intersection(row["categories"]):
+                continue
             rows_by_id[row["id"]] = row
+        token = text_of(root, ".//oai:resumptionToken")
+        if not token:
+            break
+        params = {"verb": "ListRecords", "resumptionToken": token}
         time.sleep(3)
     return list(rows_by_id.values())
 

@@ -10,14 +10,19 @@ import json
 import os
 import sys
 from datetime import datetime, timedelta
+from scrapy.exceptions import DropItem
 
 
 class DailyArxivPipeline:
     def __init__(self):
         self.page_size = 100
         self.client = arxiv.Client(self.page_size)
+        self.seen_ids = set()
 
     def process_item(self, item: dict, spider):
+        if item["id"] in self.seen_ids:
+            raise DropItem(f"Duplicate arXiv id: {item['id']}")
+
         item["pdf"] = f"https://arxiv.org/pdf/{item['id']}"
         item["abs"] = f"https://arxiv.org/abs/{item['id']}"
         search = arxiv.Search(
@@ -29,4 +34,5 @@ class DailyArxivPipeline:
         item["categories"] = paper.categories
         item["comment"] = paper.comment
         item["summary"] = paper.summary
+        self.seen_ids.add(item["id"])
         return item

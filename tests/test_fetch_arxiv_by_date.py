@@ -37,6 +37,16 @@ class FetchQueryTest(TestCase):
         self.assertEqual(urlopen.call_count, 2)
         sleep.assert_called_once_with(7)
 
+    @mock.patch.object(MODULE.time, "sleep")
+    @mock.patch.object(MODULE.urllib.request, "urlopen")
+    def test_retries_read_timeout(self, urlopen, sleep):
+        urlopen.side_effect = [TimeoutError("read timed out"), Response()]
+
+        MODULE.fetch_xml("https://example.test/oai")
+
+        self.assertEqual(urlopen.call_count, 2)
+        sleep.assert_called_once_with(5)
+
 
 if __name__ == "__main__":
     main()

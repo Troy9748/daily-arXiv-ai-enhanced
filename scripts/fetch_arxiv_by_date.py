@@ -103,6 +103,12 @@ def fetch_xml(url: str) -> ET.Element:
             delay = int(retry_after) if retry_after and retry_after.isdigit() else 5 * 2**attempt
             print(f"arXiv returned HTTP {error.code}; retrying in {delay}s")
             time.sleep(delay)
+        except (TimeoutError, urllib.error.URLError) as error:
+            if attempt == 4:
+                raise
+            delay = 5 * 2**attempt
+            print(f"arXiv request failed ({error}); retrying in {delay}s")
+            time.sleep(delay)
 
     raise AssertionError("unreachable")
 

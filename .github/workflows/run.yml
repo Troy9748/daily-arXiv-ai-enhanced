@@ -117,7 +117,7 @@ jobs:
         if [ -s "data/${today}.jsonl" ] && python scripts/validate_daily_data.py "data/${today}.jsonl"; then
             echo "📝 发现今日原始文件已存在，复用并继续后续步骤... / Found existing today's raw file, reusing it..."
         elif [ -n "$BACKFILL_DATE" ]; then
-            echo "📝 历史日期原始文件不存在，使用 arXiv OAI-PMH 补抓... / Historical raw file missing, fetching via arXiv OAI-PMH..."
+            echo "📝 历史日期原始文件不存在，使用 arXiv API 补抓... / Historical raw file missing, fetching via arXiv API..."
             export CATEGORIES="${{ vars.CATEGORIES }}"
             python scripts/fetch_arxiv_by_date.py "$today" --force
         else

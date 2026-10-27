@@ -9,6 +9,7 @@ import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
 from datetime import date, timedelta
+from html.parser import HTMLParser
 from pathlib import Path
 from typing import Dict, Iterable, List
 
@@ -77,12 +78,12 @@ def paper_to_row(entry: ET.Element) -> Dict:
     }
 
 
-def fetch_xml(url: str) -> ET.Element:
+def fetch_bytes(url: str) -> bytes:
     request = urllib.request.Request(url, headers={"User-Agent": "daily-arxiv-backfill/1.0"})
     for attempt in range(5):
         try:
             with urllib.request.urlopen(request, timeout=60) as response:
-                return ET.fromstring(response.read())
+                return response.read()
         except urllib.error.HTTPError as error:
             if error.code not in {429, 500, 502, 503, 504} or attempt == 4:
                 raise
@@ -100,15 +101,62 @@ def fetch_xml(url: str) -> ET.Element:
     raise AssertionError("unreachable")
 
 
+def fetch_xml(url: str) -> ET.Element:
+    return ET.fromstring(fetch_bytes(url))
+
+
+class AnnouncementParser(HTMLParser):
+    def __init__(self, heading: str):
+        super().__init__()
+        self.heading = heading
+        self.in_heading = False
+        self.heading_text = []
+        self.active = False
+        self.ids = []
+
+    def handle_starttag(self, tag, attrs):
+        attributes = dict(attrs)
+        if tag == "h3":
+            self.in_heading = True
+            self.heading_text = []
+        elif self.active and tag == "a" and attributes.get("title") == "Abstract":
+            self.ids.append(normalize_arxiv_id(attributes.get("href", "")))
+
+    def handle_data(self, data):
+        if self.in_heading:
+            self.heading_text.append(data)
+
+    def handle_endtag(self, tag):
+        if tag == "h3" and self.in_heading:
+            self.active = self.heading in "".join(self.heading_text)
+            self.in_heading = False
+
+
+def announcement_ids(day: date, categories: Iterable[str]) -> set[str]:
+    weekdays = ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun")
+    months = ("Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec")
+    heading = f"{weekdays[day.weekday()]}, {day.day} {months[day.month - 1]} {day.year}"
+    ids = set()
+    for category in categories:
+        parser = AnnouncementParser(heading)
+        parser.feed(fetch_bytes(f"https://arxiv.org/list/{category}/pastweek?show=2000").decode())
+        ids.update(filter(None, parser.ids))
+    return ids
+
+
 def fetch_day(day: date, categories: Iterable[str], max_results_per_category: int) -> List[Dict]:
     wanted = set(categories)
-    stamp = day.strftime("%Y%m%d")
-    category_query = " OR ".join(f"cat:{category}" for category in wanted)
-    params = {
-        "search_query": f"({category_query}) AND submittedDate:[{stamp}0000 TO {stamp}2359]",
-        "start": 0,
-        "max_results": max_results_per_category * len(wanted),
-    }
+    ids = announcement_ids(day, wanted)
+    if ids:
+        params = {"id_list": ",".join(sorted(ids)), "max_results": len(ids)}
+    else:
+        stamp = day.strftime("%Y%m%d")
+        category_query = " OR ".join(f"cat:{category}" for category in wanted)
+        params = {
+            "search_query": f"({category_query}) AND submittedDate:[{stamp}0000 TO {stamp}2359]",
+            "start": 0,
+            "max_results": max_results_per_category * len(wanted),
+        }
     root = fetch_xml(f"https://export.arxiv.org/api/query?{urllib.parse.urlencode(params)}")
     rows_by_id = {row["id"]: row for row in map(paper_to_row, root.findall("atom:entry", ATOM_NS))}
     return list(rows_by_id.values())

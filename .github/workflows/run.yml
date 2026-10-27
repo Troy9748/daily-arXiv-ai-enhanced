@@ -6,12 +6,9 @@ name: arXiv-daily-ai-enhanced
 on:
   schedule:
     # arXiv announces new papers Sunday-Thursday at 20:00 New York time.
-    - cron: "15 20 * * 0-4"
-      timezone: "America/New_York"
-    # Redundant idempotent runs recover when arXiv or GitHub is delayed.
-    - cron: "15 21 * * 0-4"
-      timezone: "America/New_York"
-    - cron: "15 23 * * 0-4"
+    # GitHub may delay or discard individual scheduled events, so retry every
+    # 30 minutes during the announcement window. Completed days exit early.
+    - cron: "17,47 20-23 * * 0-4"
       timezone: "America/New_York"
   workflow_dispatch:
     inputs:

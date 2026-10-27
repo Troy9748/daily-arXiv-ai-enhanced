@@ -47,6 +47,17 @@ class FetchQueryTest(TestCase):
         self.assertEqual(urlopen.call_count, 2)
         sleep.assert_called_once_with(5)
 
+    def test_extracts_only_requested_announcement_date(self):
+        parser = MODULE.AnnouncementParser("Tue, 27 Oct 2026")
+        parser.feed(
+            '<h3>Tue, 27 Oct 2026 (showing 1 entry)</h3>'
+            '<a href="/abs/2610.33154" title="Abstract">arXiv:2610.33154</a>'
+            '<h3>Mon, 26 Oct 2026 (showing 1 entry)</h3>'
+            '<a href="/abs/2610.32837" title="Abstract">arXiv:2610.32837</a>'
+        )
+
+        self.assertEqual(parser.ids, ["2610.33154"])
+
 
 if __name__ == "__main__":
     main()

@@ -23,7 +23,8 @@ on:
         type: boolean
 
 concurrency:
-  group: arxiv-daily-${{ github.event.inputs.backfill_date || 'scheduled' }}
+  # Every run updates shared indexes, caches, statistics, and top lists.
+  group: arxiv-daily-main
   cancel-in-progress: false
 
 

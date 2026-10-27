@@ -35,6 +35,9 @@ jobs:
 
     steps:
     - uses: actions/checkout@v4
+      with:
+        # Queued runs must start from changes pushed by the preceding run.
+        ref: main
     - name: Check arXiv announcement window
       id: schedule_guard
       run: |

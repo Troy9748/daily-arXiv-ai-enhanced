@@ -2,89 +2,83 @@
 
 # Table of Contents
 
-- [astro-ph.HE](#astro-ph.HE) [Total: 1]
-- [astro-ph.CO](#astro-ph.CO) [Total: 42]
-- [astro-ph.GA](#astro-ph.GA) [Total: 56]
 - [astro-ph.IM](#astro-ph.IM) [Total: 1]
+- [astro-ph.CO](#astro-ph.CO) [Total: 41]
+- [astro-ph.HE](#astro-ph.HE) [Total: 1]
+- [astro-ph.GA](#astro-ph.GA) [Total: 57]
 
 
-<div id='astro-ph.HE'></div>
+<div id='astro-ph.IM'></div>
 
-# astro-ph.HE [[Back]](#toc)
+# astro-ph.IM [[Back]](#toc)
 
-### [1] [SN Ares: A Strongly Lensed Type IIb Supernova at $\mathbf{z=1.276}$ with a Predicted 70-Year Time Delay](https://arxiv.org/abs/2610.33161)
-*Conor Larison,Justin D. R. Pierel,Matthew Siebert,Tom Resseguier,Lukas J. Furtak,Masamune Oguri,Gavin S. Farley,Hollis B. Akins,Yoshihisa Asada,Rachel Bezanson,Maruša Bradač,Gabriel Brammer,John Chisholm,Dan Coe,Pratika Dayal,Henry C. Ferguson,Steven L. Finkelstein,Seiji Fujimoto,Tomokazu Kiyota,Anton M. Koekemoer,Vasily Kokorev,Minami Nakane,Masami Ouchi,Richard Pan,Casey Papovich,Johan Richard,Luke Robbins,Fengwu Sun,Kana Takechi,Tommaso Treu,Chris Willott,Hiroto Yanagisawa,Abdurro'uf,Joseph F. V. Allingham,Ricardo O. Amorín,Franz E. Bauer,Larry Bradley,Mateusz Bronikowski,Christopher J. Conselice,David A. Coulter,James M. DerKacy,José M. Diego,Eiichi Egami,Andreas L. Faisst,Ori D. Fox,Brenda L. Frye,Yoshinobu Fudamoto,Mauro González-Otero,Massimo Griggio,Nimish P. Hathi,Tiger Yu-Yang Hsiao,Saurabh W. Jha,Y. Jiménez-Teja,Jeyhan S. Kartaltepe,Gourav Khullar,Zachary G. Lane,Paulo A. A. Lopes,Ray A. Lucas,Georgios E. Magdis,Matteo Messa,Rohan P. Naidu,Rafael Ortiz,Massimo Pascale,Armin Rest,Massimo Ricotti,Melissa Shahbandeh,William Sheu,Koji Shukawa,Rogier A. Windhorst,Anita Zanella,Yossef Zenati,Adi Zitrin*
+### [1] [Tracing small-scale structure formation through cosmic time with strong gravitational lensing: A case for a next-generation sub-millimetre/millimetre interferometer](https://arxiv.org/abs/2610.20710)
+*Hannah R. Stacey,John P. McKean,Mamta Pandey-Pommier,Carla Cornil-Baïotto,Simona Vegetti,Aristeidis Amvrosiadis,Françoise Combes,Giulia Despali,Andreas L. Faisst,Giovanni Ferrami,Davide Massari,Dieu D. Nguyen,James W. Nightingale,Antti Rantala,Cristiana Spingola*
 
-Main category: astro-ph.HE
+Main category: astro-ph.IM
 
-Recommendation: ★★★★★ (92/100) - 该文是强引力透镜超新星发现与透镜建模研究，直接命中用户核心方向（强引力透镜、透镜系统、透镜建模），且多位作者（Faisst、Akins、Fujimoto、Koekemoer、Kartaltepe、Magdis）与库中核心作者重合。虽主体为超新星而非高红移星系动力学/多相气体，但强透镜属性使其不应被降权，属高相关必读。
+Recommendation: ★★★★★ (92/100) - 该论文核心是利用强引力透镜探测低质量暗物质晕和游荡黑洞，直接契合用户的主要研究领域（强引力透镜，尤其是星系-星系强透镜）以及暗物质子晕、强透镜等核心主题；同时涉及高红移尘埃恒星形成星系（DSFG）作为背景源，与用户对高红移星系动力学、多相气体和尘埃的兴趣一致。作者中包含 Andreas L. Faisst 等用户核心作者，方法上结合亚毫米波/毫米波干涉仪与 ELT 表征，属于用户关注的前沿观测方向。
 
-TL;DR: 该文报道了在红移z=1.276处发现的强引力透镜超新星SN Ares，并基于JWST/NIRSpec光谱将其分类为迄今光谱证认的最高红移Type IIb超新星，同时给出透镜模型与未来重现图像的时间延迟预测。
+TL;DR: 本文提出利用255单元亚毫米波/毫米波干涉仪，通过对强引力透镜化尘埃恒星形成星系的引力扰动探测，来探索$<10^7$ M$_{\odot}$暗晕及游荡黑洞这一重叠且尚未充分探索的质量区间。
 
 
 <details>
   <summary>Details</summary>
-Motivation: 高红移剥离包层超新星观测样本稀少，尤其是处于晚期光球演化阶段的样本几乎缺失；强引力透镜系统可提供多像与时间延迟，为研究高红移超新星物理及宇宙学提供独特机会。作者希望借助星系团透镜发现并刻画这类罕见天体。
+Motivation: 暗物质本质与超大质量黑洞（SMBH）成长是现代天体物理两大未解之谜，二者都在$<10^7$ M$_{\odot}$暗晕和游荡黑洞这一重叠质量区间留下关键印记。该区间难以直接探测，但可通过强透镜图像的引力扰动间接探测，并有望仅凭透镜数据将两者部分或完全区分。
 
-Method: 利用JWST/NIRSpec对位于星系团MACS J0308.9+2645后方、三重成像宿主星系中的超新星SN Ares进行静止光学至近红外光谱观测，探测到He 5876、7065、10830 Å以及Hα和Paβ等谱线；将光谱与光变曲线同本地核塌缩超新星样本比对以分类并估计相位；再利用最新JWST数据构建星系团透镜模型，预测像的位置、放大率与时间延迟。
+Method: 通过逼真的模拟，研究255单元亚毫米波/毫米波干涉仪对强引力透镜化尘埃恒星形成星系（DSFG）中引力扰动的探测能力，并结合欧洲极大望远镜（ELT）对透镜星系的性质刻画。
 
-Result: SN Ares被分类为Type IIb超新星，是迄今光谱证认的该类中红移最高者；与本地IIb光变比较给出相位为放射性峰值后34_{-9}^{+10}天（静止系），揭示其晚期光球演化。透镜模型表明SN Ares为最先到达的像，将在约70年后于星系团平面中心附近出现两个后续像，预测放大率约5倍和1.5倍。
+Result: 模拟显示该干涉仪可探测到强透镜化DSFG中低至至少$10^5$ M$_{\odot}$天体的引力扰动，从而探测这一关键质量区间。
 
-Conclusion: 该发现将光谱证认的IIb型超新星红移纪录推至z≈1.28，并展示强透镜超新星在晚期光球阶段研究的独特价值；计划中的JWST/NIRSpec多目标光谱观测将进一步优化透镜建模，对时间延迟与放大率给出更紧约束，并提供SN Ares位置处的模板光谱。
+Conclusion: 结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
 
-Abstract: We present the discovery of supernova (SN) Ares, a strongly lensed supernova at $z_{\rm spec}=1.276\pm0.002$ in a massive, triply imaged host galaxy behind the MACS J0308.9+2645 galaxy cluster. JWST/NIRSpec spectroscopy spanning the rest-frame optical to NIR of Ares reveals helium features at $5876\,\mathring{\mathrm{A}}$, $7065\,\mathring{\mathrm{A}}$, and $10830\,\mathring{\mathrm{A}}$, as well as H$α$ and Pa$β$. A comparison to local core-collapse SN spectra and light curves leads to a classification of SN Ares as a Type IIb supernova, the highest-redshift member of its class spectroscopically identified. A comparison to local SN IIb light curves provides a phase estimate for the spectrum of $34_{-9}^{+10}$ rest-frame days post-radioactive peak, providing a unique view into a high-redshift stripped-envelope supernova in its late-photospheric evolution. A lens model of the cluster constructed using recent JWST data indicates that SN Ares is the first image to arrive and will reappear in two future images near the center of the cluster plane in $\gtrsim 70$ years, with predicted magnifications of $\sim5\times$ and $\sim1.5\times$. Planned JWST/NIRSpec Multi-Object Spectroscopy of the cluster will allow for more detailed modeling of the lensed system for tighter constraints on the time delay and magnifications, as well as a template spectrum at the location of SN Ares.
+Abstract: The nature of dark matter and the growth of supermassive black holes (SMBHs) remain major open questions in modern astrophysics. Both leave a key signature in an overlapping, largely unexplored mass range: $<10^7$ M$_{\odot}$ dark haloes and wandering black holes. These may be undetectable directly, but detectable through gravitational perturbation of strongly lensed images, and partly or entirely distinguishable from one another through lensing data alone. We demonstrate through realistic simulations that a 255-element sub-mm/mm interferometer could probe this critical mass regime, detecting gravitational perturbations in strongly lensed dusty star-forming galaxies (DSFGs) from objects down to at least $10^5$ M$_{\odot}$. Combined with lens-galaxy characterisation from the European Extremely Large Telescope (ELT), which strengthens the physical interpretation of detected perturbers, and the unprecedented lens samples expected from Euclid and the Square Kilometre Array (SKA), this facility could deliver a census of low-mass dark matter haloes and wandering massive black holes across cosmic time.
 
 Abstract Translation:
-我们报告了超新星（SN）Ares的发现，这是一颗位于红移 $z_{\rm spec}=1.276\pm0.002$ 的强透镜超新星，其宿主星系位于星系团 MACS J0308.9+2645 后方，呈三重成像。JWST/NIRSpec 光谱覆盖了 Ares 的静止系光学至近红外波段，揭示了 $5876\,\mathring{\mathrm{A}}$、$7065\,\mathring{\mathrm{A}}$ 和 $10830\,\mathring{\mathrm{A}}$ 处的氦特征，以及 H$\alpha$ 和 Pa$\beta$。通过与本地核坍缩超新星光谱和光变曲线的比较，SN Ares 被分类为 IIb 型超新星，是光谱证认的该类超新星中红移最高的成员。与本地 SN IIb 光变曲线的比较给出了该光谱的相位估计为放射性峰值后 $34_{-9}^{+10}$ 静止系天，为研究高红移剥离包层超新星晚期光球层演化提供了独特视角。利用最新 JWST 数据构建的星系团透镜模型表明，SN Ares 是最先到达的像，并将在 $\gtrsim 70$ 年后于星系团平面中心附近以两个未来像重新出现，预测放大率分别为 $\sim5\times$ 和 $\sim1.5\times$。计划中的 JWST/NIRSpec 多目标光谱观测将允许对透镜系统进行更详细的建模，以对时间延迟和放大率给出更紧的约束，并提供 SN Ares 位置处的模板光谱。
+暗物质的本质和超大质量黑洞（SMBHs）的生长仍然是现代天体物理学中的主要未解问题。两者都在一个重叠且很大程度上未被探索的质量范围内留下了关键特征：$<10^7$ M$_{\odot}$ 暗晕和游荡黑洞。这些可能无法直接探测，但可以通过强透镜图像的引力扰动来探测，并且仅通过透镜数据就可以部分或完全区分彼此。我们通过现实模拟证明，一个255单元亚毫米/毫米干涉仪可以探测这个关键质量范围，从至少$10^5$ M$_{\odot}$的天体探测到强透镜尘埃恒星形成星系（DSFGs）中的引力扰动。结合欧洲极大望远镜（ELT）对透镜星系的表征，这增强了对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
 
 Conclusion Translation:
-该发现将光谱证认的IIb型超新星红移纪录推至z≈1.28，并展示强透镜超新星在晚期光球阶段研究的独特价值；计划中的JWST/NIRSpec多目标光谱观测将进一步优化透镜建模，对时间延迟与放大率给出更紧约束，并提供SN Ares位置处的模板光谱。
+结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
 
 Key Figures:
 
 #### Figure 1
-![Figure 1](https://arxiv.org/html/2610.33161v1/ares_mj0308.png)
+图1：替代暗物质模型中低质量晕的数量与CDM中的比率。曲线显示了WDM模型（Lovell et al. 2014；对于各种半模质量）和ETHOS-4 SIDM模拟（Vogelsberger et al. 2016；Lovell 2020）。下一代亚毫米/毫米干涉仪，如ALMA2040，可以通过探测低质量晕来对暗物质进行决定性测试。
 
-图1：MACS J0308.9+2645 的彩色图像，展示了在其多重成像宿主星系中探测到的 SN Ares。左上角标明了各颜色通道对应的滤光片，右下角显示了图像的方向和比例尺。图中提供了 SN Ares 宿主星系三个像的裁剪图，并标注了到像 1.1 和 1.2 的预测时间延迟。像 1.3 包含了发现的 SN Ares 图像，突出了其巨大的恒星形成宿主星系和附近明亮的前景恒星。
-
-<small>Figure 1: Color image of MACS J0308.9+2645 showing the detection of SN Ares in its multiply imaged host galaxy. A label describing the filters that contribute to each color channel are shown on the upper left, while orientation and scale of the image is shown on the bottom right. Cutouts are provided for the three images of the SN Ares host galaxy, with the predicted time delays to images 1.1 and 1.2 labeled. Image 1.3 contains the discovered image of SN Ares, highlighting its large star-forming host and the bright, nearby foreground star.</small>
+<small>Figure 1 : Ratio of the number of low-mass haloes in alternative dark matter models to that in CDM. The curves show WDM models ( Lovell et al. 2014 ; for various half-mode masses) and ETHOS-4 SIDM simulations ( Vogelsberger et al. 2016 ; Lovell 2020 ) . A next-generation sub-mm/mm interferometer, such as ALMA2040, could make decisive tests of dark matter by probing low-mass haloes.</small>
 
 #### Figure 2
-![Figure 2](https://arxiv.org/html/2610.33161v1/diff_fig_labeled.png)
+![Figure 2](https://arxiv.org/html/2610.20710v1/powell2025.png)
 
-图2：SN Ares 发现时期的 JWST 成像，顶部为科学图像，中部为模板图像，底部为差值图像。左下角面板显示了罗盘和角比例尺标记。由于高分辨率成像，明亮前景恒星的污染被大大减轻。F444W 图像没有可用的模板图像，因此仅显示了科学图像面板。
+图2：使用cm-VLBI观测在引力透镜弧中检测到一个\((1.13\pm 0.04)\times 10^{6}\) M ⊙天体，角分辨率约为\(\approx 5\)毫角秒（McKean et al. 2025；Powell et al. 2025）。左：由扰动源（\(\nu\)）引起的透镜弧中的不连续性。右：像素化表面质量密度校正揭示了致密扰动源。需要毫角秒角分辨率和高表面亮度灵敏度的组合来探测这个很大程度上未被探索的质量范围内的天体。图改编自Powell et al. (2025)。
 
-<small>Figure 2: Discovery-epoch JWST imaging of SN Ares, with the science images shown at the top, template images in the middle, and differences on the bottom. A compass and angular scale marker are shown on the bottom left panel. Due to the high-resolution imaging, contamination by the bright foreground star is greatly mitigated. Template images were unavailable for the F444W image, so only the science image panel is shown.</small>
-
-#### Figure 3
-表1：SN Ares 的 JWST/NIRCam 测光。
-
-<small>Table 1: JWST /NIRCam photometry of SN Ares.</small>
+<small>Figure 2 : Detection of a \((1.13\pm 0.04)\times 10^{6}\) M ⊙ object in a gravitationally lensed arc with \(\approx 5\) milliarcsecond angular resolution using cm-VLBI observations ( McKean et al. 2025 ; Powell et al. 2025 ) . Left: discontinuity in the lensed arc caused by the perturber ( \(\nu\) ). Right: pixelated surface mass density corrections revealing the compact perturber. A combination of milliarcsecond angular resolution and high surface brightness sensitivity is required to probe objects in this largely unexplored mass regime. Figures adapted from Powell et al. (2025) .</small>
 
 #### Figure 3
-图3：SN Ares 的 JWST/NIRSpec 光谱，叠加了 \(1\sigma\) 不确定度。我们展示了诊断特征的谱线证认，包括 He I \(5876\)、\(7065\) 和 \(10830\) Å 线、H \(\alpha\) 和 Pa \(\beta\)。\(5876\) 和 \(10830\) Å 氦线以高显著性被探测到，而 \(7065\) Å He 线的探测显著性为 \(2.6-3.2\sigma\)，具体取决于连续谱区域的界定。我们注意到，蓝端连续谱以及可能的 H \(\alpha\) 特征仍有相当大的宿主星系贡献；然而，更弱的氢特征将更强烈地支持 SN IIb 分类。
+![Figure 3](https://arxiv.org/html/2610.20710v1/mock_ngc1566_subhalo_diff_c10.png)
 
-<small>Figure 3: JWST /NIRSpec spectrum of SN Ares with \(1\sigma\) uncertainties overplotted. We show line identifications for the diagnostic features, including the He I \(5876\) , \(7065\) , and \(10830\) Å lines, H \(\alpha\) , and Pa \(\beta\) . The \(5876\) and \(10830\) Å helium lines are detected at high significance, while we find a \(2.6-3.2\sigma\) detection of the \(7065\) Å He line depending on the definition of the continuum region. We note that there remains substantial host contribution to the blue continuum and likely to the H \(\alpha\) feature; however, a weaker hydrogen feature would even more strongly favor an SN IIb classification.</small>
+图3：ALMA C-10和ALMA2040对透镜的模拟观测，透镜红移\(z=0.5\)处有一个\(10^{6}\) M ⊙暗物质晕和一个\(10^{5}\) M ⊙黑洞放置在弧上。左：自然加权下的放大去卷积图像；圆圈显示了扰动源位置。中和右：有和没有扰动源的模拟数据的脏图之间的差异，以rms噪声（\(\sigma\)）为单位。第2.2节给出了我们如何生成模拟数据的细节。
 
-#### Figure 5
-表2：NGSF 分析中使用的 OSC IIb 型光谱。
-
-<small>Table 2: Type IIb spectra from the OSC used in the NGSF analysis.</small>
+<small>Figure 3 : Simulated observations for ALMA C-10 and ALMA2040 of a lens with a \(10^{6}\) M ⊙ dark matter halo and a \(10^{5}\) M ⊙ black hole placed on an arc at the lens redshift, \(z=0.5\) . Left: zoomed-in deconvolved image with natural weighting; the circle shows the perturber location. Middle and right: differences between dirty images of mock data with and without the perturber in units of the rms noise ( \(\sigma\) ). section 2.2 gives details on how we generated the mock data.</small>
 
 #### Figure 4
-图4：匹配良好的光谱比较，比较对象的选择来自 NGSF 对 SN Ares 与观测最佳的本地 SN IIb 的比较。每颗超新星均归一化至其静止系 \(7400-7650\) Å 处的连续谱。该光谱包含局部背景扣除；残余宿主污染可能是 SN Ares 与比较超新星之间蓝端连续谱差异的原因。每颗超新星在 He I 5876、7065 Å 和 H \(\alpha\) 发射线之间显示出不同的比值。SN Ares 似乎具有略强的 H \(\alpha\) 和较弱的 Ca II 三重线（8498 Å、8542 Å 和 8662 Å），与比较的 SN IIb 相比，最可比的是 SN 1993J。这与看似更强的 H \(\alpha\) 轮廓一起，可能指向 SN Ares 的前身星氢包层剥离程度较低，尽管这些谱线的强度与相位存在简并。
+![Figure 4](https://arxiv.org/html/2610.20710v1/ngc1566_clean_uniform.png)
 
-<small>Figure 4: Comparison of well-matching spectra, choices of comparison for which are from an NGSF comparison of SN Ares to the best-observed local SNe IIb. The SNe are each normalized to their continuua at \(7400-7650\) Å rest-frame. The spectrum includes a local background subtraction; residual host contamination is likely the cause of the divergent blue continuum between SN Ares and the comparison SNe. Each SN shows a different ratio between the He I 5876, 7065 Å and H \(\alpha\) emission lines. SN Ares appears to have both a slightly stronger H \(\alpha\) and weaker Ca II triplet (8498 Å, 8542 Å, and 8662 Å) than the comparison SNe IIb, with the most comparable being SN 1993J. This, along with a seemingly stronger H \(\alpha\) profile may point to a less-stripped progenitor hydrogen envelope for SN Ares, although the strengths of these lines are degenerate with phase.</small>
+图4：使用当前ALMA C–10配置（顶行）和使用255个天线的潜在ALMA2040配置（底行）对引力透镜模拟数据的去卷积图像。两个模拟都是1小时的源上积分。颜色图使用平方根拉伸。波束大小显示在左下角的框中。
+
+<small>Figure 4 : Deconvolved images of simulated data of a gravitational lens using the current ALMA C–10 configuration (top row) and using a potential ALMA2040 configuration of 255 antennas (bottom row). Both simulations are one hour of on-source integration. The colour maps use a square-root stretch. The beam size is shown in the box in the lower-left corner.</small>
 
 #### Figure 5
-图5：左侧为 SN Ares 与 Shahbandeh 等人 [96] 的富氦 CSP SESN 样本近红外模板的比较，右侧为与 Davis 等人 [26] 的 SN II 样本的比较。SN Ares 明显优先匹配 SESN 模板，He I 特征的一致性最为突出。即使更晚期的 SN II 模板仍与 SN Ares 光谱显示出强烈不一致。Pa \(\beta\) 特征的相对强度似乎与 SN II 匹配得更好，这可能表明 SN Ares 比低红移 SESN 类似物保留了更多的氢包层。
+![Figure 5](https://arxiv.org/html/2610.20710v1/ngc1566_real.png)
 
-<small>Figure 5: Comparison of SN Ares versus the NIR templates from the helium-rich CSP SESN sample from Shahbandeh et al. [96] on the left and the SN II sample from Davis et al. [26] on the right. SN Ares clearly matches preferentially to the SESN templates, most starkly accentuated by the agreement in the He I feature. Even later time SN II templates still show strong disagreement with the SN Ares spectrum. The Pa \(\beta\) feature does seem to match the SN II relative strength better, possibly indicating that SN Ares retained more of its hydrogen envelope than the low-redshift SESN analogs.</small>
+图5：用于透镜源的附近星系NGC 1566的积分CO线发射图像（Leroy et al. 2021）。以对数拉伸显示。波束显示在左下角。
 
-#### Figure 8
-表3：用于 SN Ares 的测光模板。
+<small>Figure 5 : Image of integrated CO line emission from nearby galaxy NGC 1566 used for the lensed source ( Leroy et al. 2021 ) . Shown with log-stretch. Beam is shown in the lower-left corner.</small>
 
-<small>Table 3: Photometric templates used for SN Ares</small>
+#### Figure 6
+表1：模拟连续谱数据的总结。
+
+<small>Table 1 : Summary of the simulated continuum data.</small>
 
 </details>
 
@@ -3195,85 +3189,83 @@ Key Figures:
 </details>
 
 
-### [43] [SLICE: Unveiling the Multi-Component Merging Core of SPT-CLJ1150-2805 Through Strong-Lensing Mass Modelling](https://arxiv.org/abs/2609.31944)
-*James R. Betts,Benjamin Beauchesne,Mathilde Jauzac,David Lagattuta,Guillaume Mahler,Jean-Paul Kneib,Gavin Leroy,Marceau Limousin,Priyamvada Natarajan,Sameeksha Saini,Keren Sharon,Stephane V. Werner,Catherine Cerny,Isaque Dutra,Dominique Eckert,Alaina Einsig,Michael D. Gladders,Gourav Khullarm,Manon Regamey*
+<div id='astro-ph.HE'></div>
 
-Main category: astro-ph.CO
+# astro-ph.HE [[Back]](#toc)
 
-Recommendation: ★★★★★ (92/100) - 该文是强引力透镜质量建模研究，直接契合用户核心领域（强引力透镜）。虽为星系团尺度而非星系-星系透镜，但涉及暗物质晕分解、多波段透镜建模、高红移放大率宇宙望远镜应用，与用户对暗物质子晕、强透镜及高红移研究的兴趣高度一致。
+### [43] [SN Ares: A Strongly Lensed Type IIb Supernova at $\mathbf{z=1.276}$ with a Predicted 70-Year Time Delay](https://arxiv.org/abs/2610.33161)
+*Conor Larison,Justin D. R. Pierel,Matthew Siebert,Tom Resseguier,Lukas J. Furtak,Masamune Oguri,Gavin S. Farley,Hollis B. Akins,Yoshihisa Asada,Rachel Bezanson,Maruša Bradač,Gabriel Brammer,John Chisholm,Dan Coe,Pratika Dayal,Henry C. Ferguson,Steven L. Finkelstein,Seiji Fujimoto,Tomokazu Kiyota,Anton M. Koekemoer,Vasily Kokorev,Minami Nakane,Masami Ouchi,Richard Pan,Casey Papovich,Johan Richard,Luke Robbins,Fengwu Sun,Kana Takechi,Tommaso Treu,Chris Willott,Hiroto Yanagisawa,Abdurro'uf,Joseph F. V. Allingham,Ricardo O. Amorín,Franz E. Bauer,Larry Bradley,Mateusz Bronikowski,Christopher J. Conselice,David A. Coulter,James M. DerKacy,José M. Diego,Eiichi Egami,Andreas L. Faisst,Ori D. Fox,Brenda L. Frye,Yoshinobu Fudamoto,Mauro González-Otero,Massimo Griggio,Nimish P. Hathi,Tiger Yu-Yang Hsiao,Saurabh W. Jha,Y. Jiménez-Teja,Jeyhan S. Kartaltepe,Gourav Khullar,Zachary G. Lane,Paulo A. A. Lopes,Ray A. Lucas,Georgios E. Magdis,Matteo Messa,Rohan P. Naidu,Rafael Ortiz,Massimo Pascale,Armin Rest,Massimo Ricotti,Melissa Shahbandeh,William Sheu,Koji Shukawa,Rogier A. Windhorst,Anita Zanella,Yossef Zenati,Adi Zitrin*
 
-TL;DR: 本文结合JWST、HST、Chandra和VLT/MUSE数据，构建了合并星系团SPT-CLJ1150-2805的强透镜与X射线质量模型，揭示其五重暗物质晕结构，并确认其为迄今透镜能力最强的星系团之一。
+Main category: astro-ph.HE
+
+Recommendation: ★★★★★ (92/100) - 该文是强引力透镜超新星发现与透镜建模研究，直接命中用户核心方向（强引力透镜、透镜系统、透镜建模），且多位作者（Faisst、Akins、Fujimoto、Koekemoer、Kartaltepe、Magdis）与库中核心作者重合。虽主体为超新星而非高红移星系动力学/多相气体，但强透镜属性使其不应被降权，属高相关必读。
+
+TL;DR: 该文报道了在红移z=1.276处发现的强引力透镜超新星SN Ares，并基于JWST/NIRSpec光谱将其分类为迄今光谱证认的最高红移Type IIb超新星，同时给出透镜模型与未来重现图像的时间延迟预测。
 
 
 <details>
   <summary>Details</summary>
-Motivation: 高红移星系研究中，引力透镜放大率误差主要受不同质量模型间系统误差支配。因此，构建稳定、可靠的质量模型对于利用星系团作为"宇宙望远镜"至关重要。本文旨在通过多波段数据对合并星系团SPT-CLJ1150-2805进行稳健的质量分解。
+Motivation: 高红移剥离包层超新星观测样本稀少，尤其是处于晚期光球演化阶段的样本几乎缺失；强引力透镜系统可提供多像与时间延迟，为研究高红移超新星物理及宇宙学提供独特机会。作者希望借助星系团透镜发现并刻画这类罕见天体。
 
-Method: 联合JWST NIRCam、HST、Chandra和VLT/MUSE数据；利用JWST扩充多重像目录（新增66个像，含6个新系统）；基线模型使用20个系统118个光谱确认像；扩充模型加入8个系统31个光度像；结合291个星系成员的运动学（σ_v=1960 km/s）独立约束质量成分。
+Method: 利用JWST/NIRSpec对位于星系团MACS J0308.9+2645后方、三重成像宿主星系中的超新星SN Ares进行静止光学至近红外光谱观测，探测到He 5876、7065、10830 Å以及Hα和Paβ等谱线；将光谱与光变曲线同本地核塌缩超新星样本比对以分类并估计相位；再利用最新JWST数据构建星系团透镜模型，预测像的位置、放大率与时间延迟。
 
-Result: 基线模型像平面RMS偏移0.56''；扩充模型质量分布几乎一致，模型稳定性极佳；解析出需五个星系团尺度暗物质晕的复杂多轴后合并系统，含双峰核心；发现两个新星系子结构，最北者可能对应第五暗物质晕的重子对应体；有效爱因斯坦半径θ_E=42.41''，M(<θ_E)=3.35×10^14 M_⊙（z_s=2）；z_s=9时A(>10)≈0.15 arcmin²，A(>30)≈0.020 arcmin²。
+Result: SN Ares被分类为Type IIb超新星，是迄今光谱证认的该类中红移最高者；与本地IIb光变比较给出相位为放射性峰值后34_{-9}^{+10}天（静止系），揭示其晚期光球演化。透镜模型表明SN Ares为最先到达的像，将在约70年后于星系团平面中心附近出现两个后续像，预测放大率约5倍和1.5倍。
 
-Conclusion: SPT-CLJ1150-2805的全球透镜能力超过所有Hubble Frontier Fields星系团。在系统误差主导高红移放大率误差的背景下，其重建稳定性使其脱颖而出。极端透镜能力与稳健质量模型的结合，确立了其作为高红移研究首选"宇宙望远镜"的地位。
+Conclusion: 该发现将光谱证认的IIb型超新星红移纪录推至z≈1.28，并展示强透镜超新星在晚期光球阶段研究的独特价值；计划中的JWST/NIRSpec多目标光谱观测将进一步优化透镜建模，对时间延迟与放大率给出更紧约束，并提供SN Ares位置处的模板光谱。
 
-Abstract: We present a new strong-lensing and X-ray mass model of the merging galaxy cluster SPT-CLJ1150-2805 ($z=0.383$), combining JWST NIRCam, HST, Chandra, and VLT/MUSE data to robustly decompose its collisionless and collisional components. Exploiting JWST, we expand the multiple-image catalogue with 66 new images (30 comprising 6 new systems). Our baseline model uses 118 spectroscopically confirmed images from 20 systems, achieving an image-plane root-mean-square offset of $0.56''$. An expanded model incorporating 31 additional photometric images from 8 additional systems yields a near-identical mass distribution, confirming excellent model stability. We resolve a complex multi-axis post-merger system requiring five cluster-scale dark matter haloes, including a bimodal core with distinct haloes coincident with each brightest cluster galaxy. The remaining mass components are independently supported by kinematics of 291 cluster members ($σ_v=1960^{+84}_{-92}$ km s$^{-1}$), which reveal two new galaxy substructures - the northernmost of which we tentatively identify as the baryonic counterpart to our fifth dark matter halo. The cluster is an extraordinarily efficient lens, possessing an effective Einstein radius $θ_E=42.41^{+0.05}_{-0.04}{''}$ and an enclosed mass $M(<θ_E)=3.35^{+0.04}_{-0.03}\times10^{14}M_\odot$ for a source at $z_s=2$. For a high-redshift source at $z_s=9$, it produces a magnification cross-section of $A(>10)\simeq0.15$ arcmin$^2$ and $A(>30)\simeq0.020$ arcmin$^2$. This global lensing power surpasses all Hubble Frontier Fields clusters. In a regime where systematic uncertainties between mass models dominate high-redshift magnification errors, the stability of our reconstruction sets this lens apart. This combination of extreme lensing power and a robust mass model establishes SPT-CLJ1150-2805 as a premier cosmic telescope for high-redshift studies.
+Abstract: We present the discovery of supernova (SN) Ares, a strongly lensed supernova at $z_{\rm spec}=1.276\pm0.002$ in a massive, triply imaged host galaxy behind the MACS J0308.9+2645 galaxy cluster. JWST/NIRSpec spectroscopy spanning the rest-frame optical to NIR of Ares reveals helium features at $5876\,\mathring{\mathrm{A}}$, $7065\,\mathring{\mathrm{A}}$, and $10830\,\mathring{\mathrm{A}}$, as well as H$α$ and Pa$β$. A comparison to local core-collapse SN spectra and light curves leads to a classification of SN Ares as a Type IIb supernova, the highest-redshift member of its class spectroscopically identified. A comparison to local SN IIb light curves provides a phase estimate for the spectrum of $34_{-9}^{+10}$ rest-frame days post-radioactive peak, providing a unique view into a high-redshift stripped-envelope supernova in its late-photospheric evolution. A lens model of the cluster constructed using recent JWST data indicates that SN Ares is the first image to arrive and will reappear in two future images near the center of the cluster plane in $\gtrsim 70$ years, with predicted magnifications of $\sim5\times$ and $\sim1.5\times$. Planned JWST/NIRSpec Multi-Object Spectroscopy of the cluster will allow for more detailed modeling of the lensed system for tighter constraints on the time delay and magnifications, as well as a template spectrum at the location of SN Ares.
 
 Abstract Translation:
-我们提出了一个关于并合星系团 SPT-CLJ1150-2805（$z=0.383$）的新的强透镜和 X 射线质量模型，结合 JWST NIRCam、HST、Chandra 和 VLT/MUSE 数据，以稳健地分解其无碰撞和碰撞成分。利用 JWST，我们将多重像目录扩展了 66 个新像（其中 30 个构成 6 个新系统）。我们的基线模型使用来自 20 个系统的 118 个光谱确认像，实现了 $0.56''$ 的像平面均方根偏移。一个包含来自 8 个额外系统的 31 个额外测光像的扩展模型产生了几乎相同的质量分布，证实了极好的模型稳定性。我们分辨出一个复杂的多轴后并合系统，需要五个星系团尺度暗物质晕，包括一个双峰核心，其不同的晕与每个最亮星系团星系重合。其余质量成分由 291 个星系团成员的运动学独立支持（$σ_v=1960^{+84}_{-92}$ km s$^{-1}$），这揭示了两个新的星系子结构——其中最北的一个我们初步认定为我们第五个暗物质晕的重子对应物。该星系团是一个极其高效的透镜，对于 $z_s=2$ 的源，具有有效爱因斯坦半径 $θ_E=42.41^{+0.05}_{-0.04}{''}$ 和包围质量 $M(<θ_E)=3.35^{+0.04}_{-0.03}\times10^{14}M_\odot$。对于 $z_s=9$ 的高红移源，它产生 $A(>10)\simeq0.15$ arcmin$^2$ 和 $A(>30)\simeq0.020$ arcmin$^2$ 的放大截面。这种全局透镜能力超过了所有 Hubble Frontier Fields 星系团。在质量模型之间的系统不确定性主导高红移放大误差的情况下，我们重建的稳定性使这个透镜与众不同。极端透镜能力和稳健质量模型的结合确立了 SPT-CLJ1150-2805 作为高红移研究的首要宇宙望远镜。
+我们报告了超新星（SN）Ares的发现，这是一颗位于红移 $z_{\rm spec}=1.276\pm0.002$ 的强透镜超新星，其宿主星系位于星系团 MACS J0308.9+2645 后方，呈三重成像。JWST/NIRSpec 光谱覆盖了 Ares 的静止系光学至近红外波段，揭示了 $5876\,\mathring{\mathrm{A}}$、$7065\,\mathring{\mathrm{A}}$ 和 $10830\,\mathring{\mathrm{A}}$ 处的氦特征，以及 H$\alpha$ 和 Pa$\beta$。通过与本地核坍缩超新星光谱和光变曲线的比较，SN Ares 被分类为 IIb 型超新星，是光谱证认的该类超新星中红移最高的成员。与本地 SN IIb 光变曲线的比较给出了该光谱的相位估计为放射性峰值后 $34_{-9}^{+10}$ 静止系天，为研究高红移剥离包层超新星晚期光球层演化提供了独特视角。利用最新 JWST 数据构建的星系团透镜模型表明，SN Ares 是最先到达的像，并将在 $\gtrsim 70$ 年后于星系团平面中心附近以两个未来像重新出现，预测放大率分别为 $\sim5\times$ 和 $\sim1.5\times$。计划中的 JWST/NIRSpec 多目标光谱观测将允许对透镜系统进行更详细的建模，以对时间延迟和放大率给出更紧的约束，并提供 SN Ares 位置处的模板光谱。
 
 Conclusion Translation:
-基于可用摘要：SPT-CLJ1150-2805的全球透镜能力超过所有Hubble Frontier Fields星系团。在系统误差主导高红移放大率误差的背景下，其重建稳定性使其脱颖而出。极端透镜能力与稳健质量模型的结合，确立了其作为高红移研究首选"宇宙望远镜"的地位。
+该发现将光谱证认的IIb型超新星红移纪录推至z≈1.28，并展示强透镜超新星在晚期光球阶段研究的独特价值；计划中的JWST/NIRSpec多目标光谱观测将进一步优化透镜建模，对时间延迟与放大率给出更紧约束，并提供SN Ares位置处的模板光谱。
 
 Key Figures:
 
 #### Figure 1
-表 1：SPT-CLJ1150 \(-\) 2805 可用的观测列表。在这项工作中，我们使用 JWST /NIRCam F 150 W 2 和 F 322 W 2 成像、档案 HST F 475 W、F 606 W 和 F 814 W 成像、VLT/MUSE 积分场光谱和 Chandra X 射线成像。第 1 列和第 2 列给出观测场的赤经和赤纬，单位为度。第 3 列列出仪器和滤光片（或仪器配置）。第 4 列和第 5 列分别给出总曝光时间（秒）和观测日期；如果某个波段在多个历元观测，第 5 列给出第一个和最后一个日期。对于 VLT/MUSE 指向，第 5 列给出第一个观测块的日期；每个指向由四个 2760 秒的观测块（最西指向为五个）组成，观测时间在 2019 年 3 月 8 日至 5 月 3 日之间，第 4 列给出目标上的总积分时间。最后，第 6 列和第 7 列分别提供项目 ID 和 PI。对于 Chandra 观测，第 6 列列出 ObsID。
+![Figure 1](https://arxiv.org/html/2610.33161v1/ares_mj0308.png)
 
-<small>Table 1: List of observations of SPT-CLJ1150 \(-\) 2805 available. In this work, we use the JWST /NIRCam F 150 W 2 and F 322 W 2 imaging, the archival HST F 475 W , F 606 W and F 814 W imaging, the VLT/MUSE integral field spectroscopy and the Chandra X-ray imaging. Columns 1 and 2 give the right ascension and declination of the observed field in degrees. Column 3 lists the instruments and filters (or instrument configurations). Columns 4 and 5 give the total exposure time in seconds and the observation date, respectively; where a band was observed at more than one epoch, column 5 gives the first and last dates. For the VLT/MUSE pointings column 5 gives the date of the first observing block; each pointing was built from four observing blocks of 2760 s (five for the westernmost pointing) obtained between March 8th and May 3rd 2019, and column 4 gives the total integration time on target. Finally, columns 6 and 7 provide the programme ID and the PI respectively. For the Chandra observations, column 6 lists the ObsID.</small>
+图1：MACS J0308.9+2645 的彩色图像，展示了在其多重成像宿主星系中探测到的 SN Ares。左上角标明了各颜色通道对应的滤光片，右下角显示了图像的方向和比例尺。图中提供了 SN Ares 宿主星系三个像的裁剪图，并标注了到像 1.1 和 1.2 的预测时间延迟。像 1.3 包含了发现的 SN Ares 图像，突出了其巨大的恒星形成宿主星系和附近明亮的前景恒星。
 
-#### Figure 1
-![Figure 1](https://arxiv.org/html/2609.31944v1/plots/RGB_data_plot.png)
-
-图 1：J1150 \(-\) 2805 星系团核心的彩色合成图像，使用 JWST F322W2（红）、F150W2（绿）和 HST F814W（蓝）滤光片创建。彩色圆圈标记多重像的观测位置。黄色点表示我们 Spec 模型中使用的约束（光谱确认），品红色点表示纳入我们 Phot 模型的补充像（未光谱确认但通过其他方式确认——见第 3.2 节），青色点表示当前建模中排除的额外多重像候选。白色虚线轮廓显示 Chandra X 射线天文台观测到的 X 射线表面亮度（为可视化使用 SAOimage DS9 level 13 平滑因子平滑）。红色虚线多边形突出显示 MUSE 光谱数据立方体的覆盖范围。两个 BCG 被标记，其中 BCG-1 在 F322W2 中最亮。
-
-<small>Figure 1: Colour-composite image of the J1150 \(-\) 2805 galaxy cluster core, created using JWST F322W2 (red), F150W2 (green), and HST F814W (blue) filters. The coloured circles mark the observed positions of multiple images. Yellow points denote the constraints used in our Spec model (spectroscopically confirmed), magenta points represent the supplementary images incorporated into our Phot model (not spectroscopically confirmed but confirmed through other means - see Section 3.2 ), and cyan points indicate additional multiple image candidates that are excluded from the current modelling. White dashed contours display the X-ray surface brightness (smoothed over for visualisation using SAOimage DS9 level 13 smoothing factor) as observed by the Chandra X-ray Observatory . The red dashed polygon highlights the footprint of the MUSE spectral data cubes. The two BCGs are labelled with BCG-1 being the brightest in F322W2.</small>
+<small>Figure 1: Color image of MACS J0308.9+2645 showing the detection of SN Ares in its multiply imaged host galaxy. A label describing the filters that contribute to each color channel are shown on the upper left, while orientation and scale of the image is shown on the bottom right. Cutouts are provided for the three images of the SN Ares host galaxy, with the predicted time delays to images 1.1 and 1.2 labeled. Image 1.3 contains the discovered image of SN Ares, highlighting its large star-forming host and the bright, nearby foreground star.</small>
 
 #### Figure 2
-![Figure 2](https://arxiv.org/html/2609.31944v1/red_sequence_cmd.png)
+![Figure 2](https://arxiv.org/html/2610.33161v1/diff_fig_labeled.png)
 
-图 2：左面板：( \(m_{{F475W}}-m_{{F606W}}\) ) 对 \(m_{{F814W}}\) 的色-星等图。绿色方块代表光谱确认的星系团成员样本，橙色大圆圈显示红序选出的星系（不包括光谱样本）。小蓝点代表由 SExtractor 生成的完整测光数据集。黄色阴影区域标记了围绕拟合红序斜率（实黑线）的 \(\pm 3\sigma\) 选择边界，来自 sigma-clipping 算法的最终迭代，垂直虚线黑线表示 \(m_{{F814W}}=23\) 的视星等极限。右面板：与左面板相同，但为 ( \(m_{{F475W}}-m_{{F814W}}\) ) 对 \(m_{{F814W}}\) 的色-星等图。
+图2：SN Ares 发现时期的 JWST 成像，顶部为科学图像，中部为模板图像，底部为差值图像。左下角面板显示了罗盘和角比例尺标记。由于高分辨率成像，明亮前景恒星的污染被大大减轻。F444W 图像没有可用的模板图像，因此仅显示了科学图像面板。
 
-<small>Figure 2: Left panel: colour-magnitude diagram of ( \(m_{{F475W}}-m_{{F606W}}\) ) versus \(m_{{F814W}}\) . Green squares represent the spectroscopically confirmed sample of cluster members while the orange large circles show the red-sequence selected galaxies (excluding the spectroscopic sample). Small blue points represent the full photometric dataset generated from SExtractor . The yellow shaded region marks the \(\pm 3\sigma\) selection boundaries around the fitted red-sequence slope (solid black line) from the final iteration of the sigma-clipping algorithm, and the vertical dashed black line indicates the apparent magnitude limit of \(m_{{F814W}}=23\) . Right panel: the same as the left panel but for the colour-magnitude diagram of ( \(m_{{F475W}}-m_{{F814W}}\) ) versus \(m_{{F814W}}\) .</small>
+<small>Figure 2: Discovery-epoch JWST imaging of SN Ares, with the science images shown at the top, template images in the middle, and differences on the bottom. A compass and angular scale marker are shown on the bottom left panel. Due to the high-resolution imaging, contamination by the bright foreground star is greatly mitigated. Template images were unavailable for the F444W image, so only the science image panel is shown.</small>
 
 #### Figure 3
-![Figure 3](https://arxiv.org/html/2609.31944v1/plots/x-ray_model.png)
+表1：SN Ares 的 JWST/NIRCam 测光。
 
-图 3：从左到右：观测 X 射线计数的 2D 图、我们最佳拟合模型的计数模型，以及前两个图之间的归一化残差（即观测减去模型）。在观测和模型中，X 射线点源均已被掩蔽并从拟合中排除。
+<small>Table 1: JWST /NIRCam photometry of SN Ares.</small>
 
-<small>Figure 3: From left to right: 2D maps of the observed X-ray counts, the counts model from our best-fitting model, and the normalised residuals between the two previous maps (i.e. observation minus model). In both the observation and the model, the X-ray point sources have been masked out and excluded from the fit.</small>
+#### Figure 3
+图3：SN Ares 的 JWST/NIRSpec 光谱，叠加了 \(1\sigma\) 不确定度。我们展示了诊断特征的谱线证认，包括 He I \(5876\)、\(7065\) 和 \(10830\) Å 线、H \(\alpha\) 和 Pa \(\beta\)。\(5876\) 和 \(10830\) Å 氦线以高显著性被探测到，而 \(7065\) Å He 线的探测显著性为 \(2.6-3.2\sigma\)，具体取决于连续谱区域的界定。我们注意到，蓝端连续谱以及可能的 H \(\alpha\) 特征仍有相当大的宿主星系贡献；然而，更弱的氢特征将更强烈地支持 SN IIb 分类。
+
+<small>Figure 3: JWST /NIRSpec spectrum of SN Ares with \(1\sigma\) uncertainties overplotted. We show line identifications for the diagnostic features, including the He I \(5876\) , \(7065\) , and \(10830\) Å lines, H \(\alpha\) , and Pa \(\beta\) . The \(5876\) and \(10830\) Å helium lines are detected at high significance, while we find a \(2.6-3.2\sigma\) detection of the \(7065\) Å He line depending on the definition of the continuum region. We note that there remains substantial host contribution to the blue continuum and likely to the H \(\alpha\) feature; however, a weaker hydrogen feature would even more strongly favor an SN IIb classification.</small>
 
 #### Figure 5
-表 2：dPIE 质量模型配置及其对 X 射线似然可信区间（CI）标准的性能总结。对勾（✓）表示优化模型似然落在指定的 CI 界限内，叉号（ \(\times\) ）表示不在。
+表2：NGSF 分析中使用的 OSC IIb 型光谱。
 
-<small>Table 2: Summary of the dPIE mass model configurations and their performance against the X-ray likelihood credible interval (CI) criteria. A checkmark (✓) indicates the optimised model likelihood falls within the specified CI bound, while a cross ( \(\times\) ) indicates it does not.</small>
+<small>Table 2: Type IIb spectra from the OSC used in the NGSF analysis.</small>
 
 #### Figure 4
-![Figure 4](https://arxiv.org/html/2609.31944v1/plots/image_scatter_plot.png)
+图4：匹配良好的光谱比较，比较对象的选择来自 NGSF 对 SN Ares 与观测最佳的本地 SN IIb 的比较。每颗超新星均归一化至其静止系 \(7400-7650\) Å 处的连续谱。该光谱包含局部背景扣除；残余宿主污染可能是 SN Ares 与比较超新星之间蓝端连续谱差异的原因。每颗超新星在 He I 5876、7065 Å 和 H \(\alpha\) 发射线之间显示出不同的比值。SN Ares 似乎具有略强的 H \(\alpha\) 和较弱的 Ca II 三重线（8498 Å、8542 Å 和 8662 Å），与比较的 SN IIb 相比，最可比的是 SN 1993J。这与看似更强的 H \(\alpha\) 轮廓一起，可能指向 SN Ares 的前身星氢包层剥离程度较低，尽管这些谱线的强度与相位存在简并。
 
-图 4：Spec 模型（左）和 Phot 模型（右）中模型预测的多重像位置与其各自观测位置之间的像平面位移（ \(\Delta_{x},\Delta_{y}\) ）分布。每个数据点代表一个单独的多重像，按其各自的红移（ \(z_{s}\) ）着色。红色虚线圆圈表示恒定的总径向偏移 \(0.5″\)、\(1.0″\) 和 \(2.0″\)。顶部和右侧面板分别显示沿 \(x\) 和 \(y\) 轴位移的 1D 直方图，并叠加了最佳拟合高斯概率密度函数（实黑线）。每个最佳拟合模型的总体均方根误差在左上角给出。
-
-<small>Figure 4: Distribution of image-plane displacements ( \(\Delta_{x},\Delta_{y}\) ) between the model-predicted multiple image positions and their respective observed locations for the Spec model ( left ) and the Phot model ( right ). Each data point represents an individual multiple image, colour-coded by its respective redshift ( \(z_{s}\) ). The red dashed circles denote constant total radial offsets of \(0.5″\) , \(1.0″\) , and \(2.0″\) . The top and right panels display 1D histograms of the displacements along the \(x\) and \(y\) axes, respectively, overlaid with best-fit Gaussian probability density functions (solid black lines). The overall root-mean-square error of each best-fit model is given in the top left.</small>
+<small>Figure 4: Comparison of well-matching spectra, choices of comparison for which are from an NGSF comparison of SN Ares to the best-observed local SNe IIb. The SNe are each normalized to their continuua at \(7400-7650\) Å rest-frame. The spectrum includes a local background subtraction; residual host contamination is likely the cause of the divergent blue continuum between SN Ares and the comparison SNe. Each SN shows a different ratio between the He I 5876, 7065 Å and H \(\alpha\) emission lines. SN Ares appears to have both a slightly stronger H \(\alpha\) and weaker Ca II triplet (8498 Å, 8542 Å, and 8662 Å) than the comparison SNe IIb, with the most comparable being SN 1993J. This, along with a seemingly stronger H \(\alpha\) profile may point to a less-stripped progenitor hydrogen envelope for SN Ares, although the strengths of these lines are degenerate with phase.</small>
 
 #### Figure 5
-![Figure 5](https://arxiv.org/html/2609.31944v1/plots/mass_snr_comparison.png)
+图5：左侧为 SN Ares 与 Shahbandeh 等人 [96] 的富氦 CSP SESN 样本近红外模板的比较，右侧为与 Davis 等人 [26] 的 SN II 样本的比较。SN Ares 明显优先匹配 SESN 模板，He I 特征的一致性最为突出。即使更晚期的 SN II 模板仍与 SN Ares 光谱显示出强烈不一致。Pa \(\beta\) 特征的相对强度似乎与 SN II 匹配得更好，这可能表明 SN Ares 比低红移 SESN 类似物保留了更多的氢包层。
 
-图 5：J1150 \(-\) 2805 的 2D 表面质量密度重建。左面板和右面板：分别来自 Spec 和 Phot 模型的质量分布。白色轮廓表示对数质量密度水平。叠加符号表示每个模型中暗物质晕（蓝色编号星）、ICM 气体势（橙色圆圈）和前景星系（红色空心菱形）的优化位置。中央面板：两个图之间差异的显著性（ \(\mathcal{S}\) ），突出局部张力。灰色轮廓提供模型之间的平均质量密度，而粗黑轮廓（实线和虚线）描绘显著张力区域（ \(\mathcal{S}=\pm 2,3\) ）。\(\times\) 符号表示添加到 Phot 模型的 Silver 多重像约束的位置——每种颜色代表一个单独的系统。
+<small>Figure 5: Comparison of SN Ares versus the NIR templates from the helium-rich CSP SESN sample from Shahbandeh et al. [96] on the left and the SN II sample from Davis et al. [26] on the right. SN Ares clearly matches preferentially to the SESN templates, most starkly accentuated by the agreement in the He I feature. Even later time SN II templates still show strong disagreement with the SN Ares spectrum. The Pa \(\beta\) feature does seem to match the SN II relative strength better, possibly indicating that SN Ares retained more of its hydrogen envelope than the low-redshift SESN analogs.</small>
 
-<small>Figure 5: 2D surface mass density reconstructions for J1150 \(-\) 2805. Left and right panels: The mass distributions derived from the Spec and Phot models, respectively. White contours indicate logarithmic mass density levels. Overlaid symbols denote the optimised positions of the dark matter haloes (blue numbered stars), ICM gas potentials (orange circles) and foreground galaxies (red open diamonds) for each model. Central panel: The significance ( \(\mathcal{S}\) ) of the difference between the two maps, highlighting localised tensions. Grey contours provide the mean mass density between the models, while bold black contours (solid and dashed) delineate regions of significant tension ( \(\mathcal{S}=\pm 2,3\) ). The \(\times\) symbols indicate the locations of the Silver multiple image constraints added to the Phot model - each colour representing a separate system.</small>
+#### Figure 8
+表3：用于 SN Ares 的测光模板。
 
-#### Fig. 5
-表 3：使用贝叶斯信息准则（BIC）、赤池信息准则（AICc）、最小化 \(\chi^{2}_{min}\) 统计量、贝叶斯证据（ \(\ln(E)\) ）和像平面均方根（RMS）偏移评估的强透镜和 X 射线质量模型配置总结。\({H}_{{t}}\) 表示星系团尺度 DM 晕的总数，其中基线模型由三个晕组成。对勾（✓）表示在优化中包含额外的 DM 晕（如图 5 中标记的 Halo 4 或 Halo 5），而叉号（ \(\times\) ）表示排除。
-
-<small>Table 3: Summary of the strong lensing and X-ray mass model configurations evaluated using the Bayesian Information Criterion (BIC), the Akaike Information Criterion (AICc), the minimised \(\chi^{2}_{min}\) statistic, the Bayesian evidence ( \(\ln(E)\) ), and the image-plane root-mean-square (RMS) offset. \({H}_{{t}}\) denotes the total number of cluster-scale DM haloes, where the baseline model consists of three haloes. A checkmark (✓) indicates the inclusion of an additional DM halo (Halo 4 or Halo 5 as labeled in Fig. 5 ) in the optimisation, while a cross ( \(\times\) ) denotes its exclusion.</small>
+<small>Table 3: Photometric templates used for SN Ares</small>
 
 </details>
 
@@ -6920,7 +6912,88 @@ Key Figures:
 </details>
 
 
-### [94] [Statistical Strong Lensing V. Inference with Microlensed Quasars](https://arxiv.org/abs/2610.24423)
+### [94] [Euclid Quick Data Release (Q1). Refining the strong lens sample with Space Warps crowd-sourced science](https://arxiv.org/abs/2611.06667)
+*Euclid Collaboration,P. Holloway,A. Verma,T. E. Collett,N. E. P. Lines,T. Li,P. J. Marshall,A. More,M. Walmsley,K. Rojas,A. Manjón-García,C. Tortora,D. Sluse,J. A. Acevedo Barroso,L. R. Ecker,S. Schuldt,S. H. Vincken,J. Wilde,H. J. Dickinson,C. Scarlata,F. Courbin,G. Despali,R. B. Metcalf,R. Gavazzi,S. Serjeant,K. Jahnke,T. T. Thai,B. Altieri,L. Amendola,S. Andreon,N. Auricchio,C. Baccigalupi,M. Baldi,S. Bardelli,P. Battaglia,R. Bender,A. Biviano,M. Bolzonella,E. Branchini,M. Brescia,S. Camera,G. Cañas-Herrera,V. Capobianco,C. Carbone,J. Carretero,M. Castellano,G. Castignani,S. Cavuoti,A. Cimatti,C. Colodro-Conde,G. Congedo,C. J. Conselice,L. Conversi,Y. Copin,H. M. Courtois,M. Cropper,H. Degaudenzi,G. De Lucia,H. Dole,F. Dubath,X. Dupac,S. Dusini,S. Escoffier,M. Fabricius,M. Farina,R. Farinelli,S. Ferriol,F. Finelli,S. Fotopoulou,M. Frailis,E. Franceschi,M. Fumana,S. Galeotta,K. George,B. Gillis,C. Giocoli,J. Gracia-Carpio,A. Grazian,F. Grupp,L. Guzzo,W. G. Hartley,S. V. H. Haugan,W. Holmes,I. M. Hook,F. Hormuth,A. Hornstrup,M. Jhabvala,B. Joachimi,S. Kermiche,A. Kiessling,B. Kubik,M. Kümmel,M. Kunz,H. Kurki-Suonio,A. M. C. Le Brun,S. Ligori,P. B. Lilje,V. Lindholm,I. Lloro,M. Magliocchetti,G. Mainetti,O. Mansutti,S. Marcin,O. Marggraf,M. Martinelli,N. Martinet,F. Marulli,R. J. Massey,N. Mauri,E. Medinaceli,S. Mei,M. Meneghetti,E. Merlin,G. Meylan,P. Monaco,A. Mora,M. Moresco,C. Moretti,L. Moscardini,C. Neissner,R. C. Nichol,S. -M. Niemi,J. W. Nightingale,C. Padilla,S. Paltani,F. Pasian,K. Pedersen,V. Pettorino,A. Pezzotta,S. Pires,G. Polenta,M. Poncet,L. A. Popa,F. Raison,A. Renzi,J. Rhodes,G. Riccio,I. Risso,E. Romelli,M. Roncarelli,B. Rusholme,R. Saglia,Z. Sakr,A. G. Sánchez,D. Sapone,B. Sartoris,P. Schneider,A. Secroun,P. Simon,C. Sirignano,G. Sirri,L. Stanco,P. Tallada-Crespí,A. N. Taylor,H. I. Teplitz,I. Tereno,S. Toft,R. Toledo-Moreo,F. Torradeflot,I. Tutusaus,J. Valiviita,T. Vassallo,A. Veropalumbo,Y. Wang,J. Weller,A. Zacchei,G. Zamorani,F. M. Zerbi,E. Zucca,M. Ballardini,P. Bergamini,S. Borgani,E. Bozzo,C. Burigana,R. Cabanac,A. Cappi,T. Castro,J. A. Escartin Vigo,J. García-Bellido,T. Gasparetto,A. Loureiro,J. Macias-Perez,R. Maoli,M. Pöntinen,E. Sarpa,V. Scottez,M. Sereno,M. Tenti,M. Tucci,M. Wiesmann,Y. Akrami,I. T. Andika,G. Angora,S. Anselmi,M. Archidiacono,G. Arico,F. Atrio-Barandela,M. Baes,L. Bazzanini,D. Bertacca,M. Bethermin,F. Beutler,A. Blanchard,L. Blot,M. L. Brown,S. Bruton,A. Calabro,B. Camacho Quevedo,F. Caro,C. S. Carvalho,F. Cogato,S. Conseil,A. R. Cooray,P. Corcho-Caballero,B. Csizi,O. Cucciati,H. Dannerbauer,T. de Boer,F. De Paolis,G. Desprez,A. Díaz-Sánchez,S. Di Domizio,J. M. Diego,V. Duret,M. Y. Elkhashab,A. Enia,Y. Fang,A. Farina,A. G. Ferrari,A. Finoguenov,A. Franco,K. Ganga,E. Gaztanaga,Z. Ghaffari,F. Giacomini,F. Gianotti,E. J. Gonzalez,G. Gozaliasl,A. Gruppuso,M. Guidi,C. M. Gutierrez,A. Hall,N. A. Hatch,H. Hildebrandt,J. Hjorth,J. J. E. Kajava,Y. Kang,V. Kansal,D. Karagiannis,J. Kim,C. C. Kirkpatrick,A. Kovács,I. Kovačić,K. Koyama,S. Kruk,M. C. Lam,M. Lattanzi,F. Lepori,G. Leroy,J. Lesgourgues,T. I. Liaudat,L. Linke,G. Maggio,F. Mannucci,F. R. Marleau,C. J. A. P. Martins,M. Miluzio,G. Morgante,S. Nadathur,K. Naidoo,A. Navarro-Alsina,A. Nersesian,S. Nesseris,L. Nicastro,F. Oppizzi,F. Pace,D. Paoletti,F. Passalacqua,K. Paterson,L. Patrizii,C. Pattison,A. Pisani,D. Potter,G. W. Pratt,S. Quai,M. Radovich,G. Rodighiero,W. Roster,S. Sacquegna,M. Sahlén,D. B. Sanders,A. Schneider,D. Sciotti,L. C. Smith,J. G. Sorce,I. Szapudi,M. Talia,K. Tanidis,C. Tao,F. Tarsitano,G. Testera,R. Teyssier,S. Tosi,A. Troja,C. Uhlemann,C. Valieri,A. Venhola,D. Vergani,G. Vernardos,G. Verza,P. Vielzeuf,E. Vilenius,S. Vinciguerra,M. von Wietersheim-Kramsta,N. A. Walton,L. Wang,A. H. Wright,D. Scott*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★★ (92/100) - 该论文直接面向强引力透镜候选体样本的筛选与分级，属于用户核心研究方向（强引力透镜）的关键基础工作；结合 Euclid Q1 数据与众包分级，涉及透镜搜寻完备度/纯度及后续样本发布，与用户对强透镜、暗物质子结构等研究高度契合。
+
+TL;DR: 该论文证明公民科学家可对强引力透镜候选体进行分级（确定/可能/疑似/非透镜），其分级结果经校准后可与非专业研究者相当，并估算了Q1检索重跑后的完备度与纯度。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 强引力透镜样本发布前需对候选体进行分级，传统上由小型研究者团队完成，成本高且难以扩展；此前公民科学仅做过二元分类，尚不清楚志愿者能否胜任更细的多级分级及如何与研究者结果校准。
+
+Method: 组织公民科学家对强引力透镜候选体进行四级（definite/probable/possible/non-lens）分级，将志愿者与强透镜研究者的判定进行对比，考察各级别的后验收敛情况以及志愿者与研究者判定之间的等效换算关系，并讨论未来透镜搜寻的最佳分级策略。
+
+Result: 志愿者能正确识别各等级系统，其响应经校准后与研究者相当；非透镜系统的等级后验收敛最快；一次研究者分级约等效于1.9次志愿者分级；中等等级候选体在志愿者与研究者内部均存在显著分歧。若Q1检索由志愿者分级并校准，Grade A+B完备度达79%时纯度约41%（研究者检查前），对应Euclid DR1中预期约12500个真实透镜。
+
+Conclusion: 众包多级分级可有效替代或补充小型研究者团队的初筛工作，但中间等级存在主观性，未来透镜搜寻应转向校准后的透镜概率以吸收此类主观差异。
+
+Abstract: We demonstrate the efficacy of crowd-sourced refinement of strong gravitational lens candidate samples by citizen scientists. Binary (lens/non-lens) classification by citizen scientists has been conducted previously, and here we extend such categorisation into `definite', `probable', `possible', and `non-lenses'. This grading is a required stage ahead of any strong lens sample publication and is usually carried out by (small) teams of researchers. We compare the responses of the volunteers to those of strong lens researchers and discuss the optimal strategy for lens classification and grading in future strong lens searches. Volunteers are found to be able to correctly identify systems of each grade, and their responses can be calibrated to be comparable to those of researchers. Grade posteriors, defined as the probability that a strong lens system classified by the volunteers is a certain grade, converge most rapidly for non-lens systems. We find that one researcher classification is equivalent to only 1.9 volunteer classifications when grading such systems. There is significant disagreement in the grading of intermediate-grade lens candidates amongst both volunteers and researchers. Moving towards calibrated lens probabilities for future lens searches would help to account for such subjectivity. If the Q1 lens search was rerun with volunteers performing lens grading (and corresponding calibration), a completeness of 79% for Grades A+B (corresponding to definite + probable lenses respectively) could be achieved with 41% purity prior to researcher inspection - this would correspond to an expected 12500 true lenses (i.e. excluding contaminants) in Euclid DR1.
+
+Abstract Translation:
+我们展示了公民科学家对强引力透镜候选样本进行众包精炼的有效性。此前已开展过公民科学家的二元（透镜/非透镜）分类，在此我们将这种分类扩展为“确定”、“可能”、“疑似”和“非透镜”。这种分级是任何强透镜样本发布之前必需的阶段，通常由（小规模）研究团队完成。我们比较了志愿者与强透镜研究人员的响应，并讨论了未来强透镜搜寻中透镜分类和分级的最优策略。研究发现，志愿者能够正确识别各个等级的系統，并且他们的响应可以被校准到与研究人员相当的水平。等级后验概率，定义为志愿者分类的强透镜系统属于某一等级的概率，对于非透镜系统收敛最快。我们发现，在对这类系统进行分级时，一位研究人员的分类仅相当于1.9次志愿者分类。在中间等级透镜候选体的分级上，志愿者和研究人员之间都存在显著分歧。在未来透镜搜寻中转向校准后的透镜概率将有助于解释这种主观性。如果Q1透镜搜寻重新运行，由志愿者进行透镜分级（并进行相应校准），那么在研究人员检查之前，A+B级（分别对应确定+可能透镜）的完整度可达到79%，纯度为41%——这相当于在Euclid DR1中预期有12500个真实透镜（即排除污染体）。
+
+Conclusion Translation:
+基于现有摘要的结论：众包多级分级可有效替代或补充小型研究者团队的初筛工作，但中间等级存在主观性，未来透镜搜寻应转向校准后的透镜概率以吸收此类主观差异。
+
+Key Figures:
+
+#### Figure 1
+表1：展示给Space Warps志愿者的数据集组成。4 4 4 注：此处提供的等级指从Galaxy Judges研究人员分级阶段（SLDE-A）获得的等级，但未应用SLDE-A中的加权方案（第3.1节）。A+B级测试系统在工作流中被重复，因此与其他测试系统相比，志愿者对其进行的分类次数大约翻倍。志愿者获得了针对每个系统的训练图像反馈信息——这些信息涵盖所有可能的等级，以使志愿者能够学习需要寻找的关键透镜特征。
+
+<small>Table 1 : Composition of the data set shown to the Space Warps volunteers. 4 4 4 Notes. The grades provided here refer to those received from the Galaxy Judges researcher-grading phase (SLDE-A), but without the weighting scheme applied in SLDE-A (Sect. 3.1 ). The Grade A+B test systems were duplicated within the workflow, and thus received roughly twice the number of classifications from the volunteers compared to the other test systems. The volunteers were provided with feedback messages to the training images specific to each system – these spanned all possible grades to enable the volunteers to learn key lens features to look for.</small>
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2611.06667v1/Images/Feedback_examples.png)
+
+图1：展示给SW-Refine志愿者的训练系统示例，以及向他们显示的反馈信息。图像按其各自的研究人员等级高亮显示：\(\{\) A：绿色，B：橙色，C：红色，X：黑色 \(\}\) 。
+
+<small>Figure 1 : Examples of the training systems shown to SW-Refine volunteers, along with the feedback messages they were shown. The images are highlighted by their respective researcher grade: \(\{\) A: green, B: orange, C: red, X: black \(\}\) .</small>
+
+#### Figure 2
+图2：分别在SW-Classify、SW-Refine和GJ（从左到右）中的用户技能。我们将选择限制在用户（志愿者或研究人员）至少检查了100个具有研究人员等级的系统的情况下。在SW-Refine和GJ的情况下，我们将透镜定义为A+B级系统，并将“透镜”分类定义为对A级或B级的分类。红色十字表示总体人群的中位数和\(68\%\)置信区间，而圆形散点表示单个用户，误差棒对应于有限分类次数带来的统计不确定性（如第3.1节所定义）。
+
+<small>Figure 2 : User skill across SW-Classify, SW-Refine, and GJ (left to right), respectively. We have restricted the selection to where users (either volunteers or researchers) have inspected at least 100 systems with researcher grades. In the cases of SW-Refine and GJ, we define lenses to be Grade A+B systems, and a ‘Lens’ classification to be a classification of Grade A or Grade B. The red crosses indicate the median and \(68\%\) confidence intervals on the population as a whole, while the circular scatter points indicate individual users, with error bars corresponding to the statistical uncertainty from a finite number of classifications (as defined in Sect. 3.1 ).</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2611.06667v1/Confusion_Matrix_Full.png)
+
+图3：分别在SW-Classify、SW-Refine和GJ（从左到右）中用户响应的混淆矩阵。我们发现等级之间存在显著重叠；B级系统很可能被至少一些研究人员和志愿者给予C级。个别研究人员与共识研究人员等级（当排除该研究人员的响应时）显示出更高的一致性，并且更愿意给出更确定的等级（A或X）。矩阵经过归一化，使得列之和为1。
+
+<small>Figure 3 : Confusion matrices for the user responses across SW-Classify, SW-Refine, and GJ (left-right). We find there is significant overlap between grades; a Grade B system is likely to be given a grade of C by at least some researchers and volunteers. The individual researchers show more agreement with the consensus researcher grade (when excluding that researchers response), and are more willing to give more definitive grades (A or X). The matrices are normalised such that the columns sum to 1.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2611.06667v1/Images/Raw_Grade_Bar_Chart.png)
+
+图4：上：SW-Refine志愿者为每个系统分配的等级分布。每个堆叠条代表单个系统，条被归一化为高度1。系统按其GJ分数排名降序显示。水平条表示GJ等级边界，{A：绿色，B：橙色，C：红色，X：黑色}，而实线显示滑动平均值。SW-Refine分数与GJ排名之间存在广泛相关性，尽管志愿者比研究人员更不可能分配A级。下：同上，但每个堆叠条的长度代表等级后验概率\(p(G_{i}|\{C_{j}\})\)，而不是为每个系统分配的等级的原始比例。给定系统的等级后验概率之和为1；因此，当堆叠时，条达到\(y=1\)。这种贝叶斯校准使分级更加自信——排名最高的A级系统相对于原始等级比例被上调权重，而排名低的X级系统即使收到一些C级分类，也获得\(p(G_{i}=X|\{C_{j}\})\approx 0\)。
+
+<small>Figure 4 : Top: Distribution of the grades assigned by the SW-Refine volunteers to each system. Each stacked bar represents a single system, and the bars have been normalised to have a height of 1. The systems are shown in decreasing order of their GJ score ranking. The horizontal bars indicate the GJ grade boundaries, {A: green, B: orange, C: red, X: black}, while the solid lines show running averages. There is broad correlation between the SW-Refine score and GJ ranking, although the volunteers are less likely to assign a Grade A than the researchers. Bottom: As above, but where the length of each of the stacked bars represents the grade posterior \(p(G_{i}|\{C_{j}\})\) rather than the raw proportion of grades assigned for each system. The grade posteriors for a given system sum up to unity; hence, when stacked, the bars reach \(y=1\) . This Bayesian calibration makes the grading more confident – the highest ranked Grade A systems are upweighted relative to the raw grade proportions, while the low ranking Grade X systems receive \(p(G_{i}=X|\{C_{j}\})\approx 0\) even if they received a few Grade C classifications.</small>
+
+#### Figure 5
+图5：在所有可用测试系统上，随着它们从SW-Refine、SW-Classify和GJ成员获得越来越多的分类，等级后验概率的演变。面板显示了获得研究人员A–X级（从左到右）的系统的后验概率。GJ后验概率收敛最快，这是预期的，因为GJ共识等级被定义为真实基准。SW-Refine后验概率比SW-Classify收敛更快，并且对于A级和X级系统最快。误差棒包含\(68\%\)的等级后验概率；其大小指示分级的主观性。绿色曲线显示使用SW-Refine分类的等级后验概率，已使用每个单独用户的技能校准志愿者响应，而紫色曲线将志愿者群体视为具有单一技能矩阵的单一超级用户。在SW-Classify中，低分系统在六次分类后从平台移除，因此在此点之后显示的系统选择发生显著变化（橙色虚线）。用于校准的每个用户分类中位数对于SW-Classify（橙色）为6，相比之下SW-Refine（绿色）为13，GJ（蓝色）为327。使用2000次分类（500次/等级）来校准SW-Refine超级用户（紫色）。
+
+<small>Figure 5 : Evolution of the grade posteriors across all available test systems as they receive an increasing number of classifications from SW-Refine, SW-Classify, and GJ members. The panels show the posteriors for systems that received researcher Grades A–X (left to right). The GJ posteriors converge the fastest, as expected since the GJ consensus grade is defined as the ground truth. SW-Refine posteriors converge faster than those of SW-Classify, and the fastest for Grade A and Grade X systems. The error bars include \(68\%\) of the grade posteriors; their size is indicative of the subjective nature of grading. The green curves show the grade posteriors using SW-Refine classifications, having calibrated the volunteer responses using each individual user’s skill, whereas the purple curves treat the volunteer crowd as a single super-user with a single skill matrix. In SW-Classify, low-scoring systems were removed from the platform after six classifications, hence the selection of systems shown changes significantly beyond this point (dashed orange line). The median number of classifications per user used for calibration for SW-Classify (orange) was 6, compared to 13 for SW-Refine (green) and 327 for GJ (blue). 2000 classifications (500/grade) were used to calibrate the SW-Refine super-user (purple).</small>
+
+#### Figure 6
+![Figure 6](https://arxiv.org/html/2611.06667v1/Information_Content_Equivalent_Strategies.png)
+
+图6：SW-Refine与GJ分类的信息量比较。始终包含来自SW-Classify的六次分类，因为这是GJ和SW-Refine的前驱阶段。每个面板中的阴影表示在从SW-Refine和GJ获得给定数量的分类后的中位等级后验概率。例如，左侧面板显示了为从GJ获得A级共识的系统计算的中位后验概率\(p(G_{i}=A|\{C_{k}\}_{{SWC}},\{C_{j}\}_{{SWR}},\{C_{l}\}_{{GJ}})\)。X级系统的后验概率在收敛之前需要来自GJ或SW-Refine的最少分类。
+
+<small>Figure 6 : Comparison of the information content of SW-Refine versus GJ classifications. Six classifications from SW-Classify are included throughout, as this is the pre-cursor stage to both GJ and SW-Refine. The shading in each panel represents the median grade posterior having received a given number of classifications from SW-Refine and GJ. For example, the left-hand panel shows the median posterior probability \(p(G_{i}=A|\{C_{k}\}_{{SWC}},\{C_{j}\}_{{SWR}},\{C_{l}\}_{{GJ}})\) calculated for systems that received a Grade A consensus from GJ. The posteriors for Grade X systems require the fewest classifications from either GJ or SW-Refine before convergence.</small>
+
+#### Figure 7
+图7：通过检查来自一系列分类方法的最高排名系统，将识别出的透镜候选体（分别为研究人员A级和A+B级）的数量。按SW-Refine等级后验概率排序的系统以绿色绘制，限制在前\(1000\)个Zoobot候选体（虚线），并与完整SW-Refine样本（实线）进行比较。还显示了Zoobot的等效曲线，使用Q1 Zoobot模型（SLDE-C，紫色，虚线）和在Q1透镜上重新训练的Zoobot模型（Euclid Collaboration: Lines et al. 2026a，紫色，实线）。置信区域通过自举法确定，并显示\(\pm 1\sigma\)不确定性。重新训练的Zoobot的曲线在Q1数据上使用\(k\)折交叉验证进行评估，以避免在训练集上评估性能；我们随后对该曲线的\(y\)轴值进行了缩放，以匹配SW-Refine样本中的透镜总数。
+
+<small>Figure 7 : Number of lens candidates (of researcher Grade A and A+B respectively) that would be identified from inspecting the highest-ranked systems from a range of classification methods. Systems ordered by their SW-Refine grade posterior are plotted in green, restricted to the top \(1000\) Zoobot candidates (dashed) and compared to the full SW-Refine sample (solid). The equivalent curves for Zoobot are also shown, using the Q1 Zoobot model (SLDE-C, purple, dashed) and a Zoobot model retrained on Q1 lenses ( Euclid Collaboration: Lines et al. 2026a , purple, solid). The confidence regions were determined by bootstrapping and show \(\pm 1\sigma\) uncertainties. The curve for the retrained Zoobot was evaluated on Q1 data using \(k\) -fold cross-validation so as to not evaluate performance on the training set; we have subsequently scaled the \(y\) -axis values for this curve to match the total number of lenses in the SW-Refine sample.</small>
+
+</details>
+
+
+### [95] [Statistical Strong Lensing V. Inference with Microlensed Quasars](https://arxiv.org/abs/2610.24423)
 *Shuo Zhang,Alessandro Sonnenfeld*
 
 Main category: astro-ph.GA
@@ -7001,7 +7074,7 @@ Key Figures:
 </details>
 
 
-### [95] [Strong gravitational lensing with Euclid](https://arxiv.org/abs/2610.19835)
+### [96] [Strong gravitational lensing with Euclid](https://arxiv.org/abs/2610.19835)
 *Alessandro Sonnenfeld*
 
 Main category: astro-ph.GA
@@ -7048,7 +7121,7 @@ Key Figures:
 </details>
 
 
-### [96] [Microcaustics: Fast GPU-Accelerated Dynamical Microlensing of Time-Dependent Extended Sources](https://arxiv.org/abs/2610.19703)
+### [97] [Microcaustics: Fast GPU-Accelerated Dynamical Microlensing of Time-Dependent Extended Sources](https://arxiv.org/abs/2610.19703)
 *Joshua Fagin,Connor Stone,James Hung-Hsu Chan,Sophia Miskiewicz,Henry Best,Paras Sharma,Matthew O'Dowd,Laurence Perreault-Levasseur,Yashar Hezaveh,Simon Birrer*
 
 Main category: astro-ph.GA
@@ -7131,7 +7204,7 @@ Key Figures:
 </details>
 
 
-### [97] [A Gravitationally Lensed Low-Luminosity AGN From The Cosmic Noon](https://arxiv.org/abs/2610.10244)
+### [98] [A Gravitationally Lensed Low-Luminosity AGN From The Cosmic Noon](https://arxiv.org/abs/2610.10244)
 *Marko Mićić,Olivia Holmes,Xinyu Dai,Kevin Hainline,Haikun Xue,Zijun Gao*
 
 Main category: astro-ph.GA
@@ -7195,7 +7268,7 @@ Key Figures:
 </details>
 
 
-### [98] [Stacked strong and weak lensing united: Improved measurement of the stellar and dark matter distributions in massive early-type galaxies at $z\sim 0.5$](https://arxiv.org/abs/2609.39040)
+### [99] [Stacked strong and weak lensing united: Improved measurement of the stellar and dark matter distributions in massive early-type galaxies at $z\sim 0.5$](https://arxiv.org/abs/2609.39040)
 *Momoka Fujikawa,Masamune Oguri*
 
 Main category: astro-ph.GA
@@ -7253,7 +7326,7 @@ Key Figures:
 </details>
 
 
-### [99] [Improving Lens Modelling from Ground-Based Imaging with Deconvolution](https://arxiv.org/abs/2609.34305)
+### [100] [Improving Lens Modelling from Ground-Based Imaging with Deconvolution](https://arxiv.org/abs/2609.34305)
 *Eric Paic,Kenneth C. Wong,Anupreeta More,Anton T. Jaelani*
 
 Main category: astro-ph.GA
@@ -7334,80 +7407,5 @@ Key Figures:
 表2：使用类HSC和去卷积数据为每个系统测量的\(\Psi_{ext}\)。
 
 <small>Table 2: \(\Psi_{ext}\) measured for every system with HSC-like and deconvolved data.</small>
-
-</details>
-
-
-<div id='astro-ph.IM'></div>
-
-# astro-ph.IM [[Back]](#toc)
-
-### [100] [Tracing small-scale structure formation through cosmic time with strong gravitational lensing: A case for a next-generation sub-millimetre/millimetre interferometer](https://arxiv.org/abs/2610.20710)
-*Hannah R. Stacey,John P. McKean,Mamta Pandey-Pommier,Carla Cornil-Baïotto,Simona Vegetti,Aristeidis Amvrosiadis,Françoise Combes,Giulia Despali,Andreas L. Faisst,Giovanni Ferrami,Davide Massari,Dieu D. Nguyen,James W. Nightingale,Antti Rantala,Cristiana Spingola*
-
-Main category: astro-ph.IM
-
-Recommendation: ★★★★★ (92/100) - 该论文核心是利用强引力透镜探测低质量暗物质晕和游荡黑洞，直接契合用户的主要研究领域（强引力透镜，尤其是星系-星系强透镜）以及暗物质子晕、强透镜等核心主题；同时涉及高红移尘埃恒星形成星系（DSFG）作为背景源，与用户对高红移星系动力学、多相气体和尘埃的兴趣一致。作者中包含 Andreas L. Faisst 等用户核心作者，方法上结合亚毫米波/毫米波干涉仪与 ELT 表征，属于用户关注的前沿观测方向。
-
-TL;DR: 本文提出利用255单元亚毫米波/毫米波干涉仪，通过对强引力透镜化尘埃恒星形成星系的引力扰动探测，来探索$<10^7$ M$_{\odot}$暗晕及游荡黑洞这一重叠且尚未充分探索的质量区间。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 暗物质本质与超大质量黑洞（SMBH）成长是现代天体物理两大未解之谜，二者都在$<10^7$ M$_{\odot}$暗晕和游荡黑洞这一重叠质量区间留下关键印记。该区间难以直接探测，但可通过强透镜图像的引力扰动间接探测，并有望仅凭透镜数据将两者部分或完全区分。
-
-Method: 通过逼真的模拟，研究255单元亚毫米波/毫米波干涉仪对强引力透镜化尘埃恒星形成星系（DSFG）中引力扰动的探测能力，并结合欧洲极大望远镜（ELT）对透镜星系的性质刻画。
-
-Result: 模拟显示该干涉仪可探测到强透镜化DSFG中低至至少$10^5$ M$_{\odot}$天体的引力扰动，从而探测这一关键质量区间。
-
-Conclusion: 结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
-
-Abstract: The nature of dark matter and the growth of supermassive black holes (SMBHs) remain major open questions in modern astrophysics. Both leave a key signature in an overlapping, largely unexplored mass range: $<10^7$ M$_{\odot}$ dark haloes and wandering black holes. These may be undetectable directly, but detectable through gravitational perturbation of strongly lensed images, and partly or entirely distinguishable from one another through lensing data alone. We demonstrate through realistic simulations that a 255-element sub-mm/mm interferometer could probe this critical mass regime, detecting gravitational perturbations in strongly lensed dusty star-forming galaxies (DSFGs) from objects down to at least $10^5$ M$_{\odot}$. Combined with lens-galaxy characterisation from the European Extremely Large Telescope (ELT), which strengthens the physical interpretation of detected perturbers, and the unprecedented lens samples expected from Euclid and the Square Kilometre Array (SKA), this facility could deliver a census of low-mass dark matter haloes and wandering massive black holes across cosmic time.
-
-Abstract Translation:
-暗物质的本质和超大质量黑洞（SMBHs）的生长仍然是现代天体物理学中的主要未解问题。两者都在一个重叠且很大程度上未被探索的质量范围内留下了关键特征：$<10^7$ M$_{\odot}$ 暗晕和游荡黑洞。这些可能无法直接探测，但可以通过强透镜图像的引力扰动来探测，并且仅通过透镜数据就可以部分或完全区分彼此。我们通过现实模拟证明，一个255单元亚毫米/毫米干涉仪可以探测这个关键质量范围，从至少$10^5$ M$_{\odot}$的天体探测到强透镜尘埃恒星形成星系（DSFGs）中的引力扰动。结合欧洲极大望远镜（ELT）对透镜星系的表征，这增强了对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
-
-Conclusion Translation:
-结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
-
-Key Figures:
-
-#### Figure 1
-图1：替代暗物质模型中低质量晕的数量与CDM中的比率。曲线显示了WDM模型（Lovell et al. 2014；对于各种半模质量）和ETHOS-4 SIDM模拟（Vogelsberger et al. 2016；Lovell 2020）。下一代亚毫米/毫米干涉仪，如ALMA2040，可以通过探测低质量晕来对暗物质进行决定性测试。
-
-<small>Figure 1 : Ratio of the number of low-mass haloes in alternative dark matter models to that in CDM. The curves show WDM models ( Lovell et al. 2014 ; for various half-mode masses) and ETHOS-4 SIDM simulations ( Vogelsberger et al. 2016 ; Lovell 2020 ) . A next-generation sub-mm/mm interferometer, such as ALMA2040, could make decisive tests of dark matter by probing low-mass haloes.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/2610.20710v1/powell2025.png)
-
-图2：使用cm-VLBI观测在引力透镜弧中检测到一个\((1.13\pm 0.04)\times 10^{6}\) M ⊙天体，角分辨率约为\(\approx 5\)毫角秒（McKean et al. 2025；Powell et al. 2025）。左：由扰动源（\(\nu\)）引起的透镜弧中的不连续性。右：像素化表面质量密度校正揭示了致密扰动源。需要毫角秒角分辨率和高表面亮度灵敏度的组合来探测这个很大程度上未被探索的质量范围内的天体。图改编自Powell et al. (2025)。
-
-<small>Figure 2 : Detection of a \((1.13\pm 0.04)\times 10^{6}\) M ⊙ object in a gravitationally lensed arc with \(\approx 5\) milliarcsecond angular resolution using cm-VLBI observations ( McKean et al. 2025 ; Powell et al. 2025 ) . Left: discontinuity in the lensed arc caused by the perturber ( \(\nu\) ). Right: pixelated surface mass density corrections revealing the compact perturber. A combination of milliarcsecond angular resolution and high surface brightness sensitivity is required to probe objects in this largely unexplored mass regime. Figures adapted from Powell et al. (2025) .</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/2610.20710v1/mock_ngc1566_subhalo_diff_c10.png)
-
-图3：ALMA C-10和ALMA2040对透镜的模拟观测，透镜红移\(z=0.5\)处有一个\(10^{6}\) M ⊙暗物质晕和一个\(10^{5}\) M ⊙黑洞放置在弧上。左：自然加权下的放大去卷积图像；圆圈显示了扰动源位置。中和右：有和没有扰动源的模拟数据的脏图之间的差异，以rms噪声（\(\sigma\)）为单位。第2.2节给出了我们如何生成模拟数据的细节。
-
-<small>Figure 3 : Simulated observations for ALMA C-10 and ALMA2040 of a lens with a \(10^{6}\) M ⊙ dark matter halo and a \(10^{5}\) M ⊙ black hole placed on an arc at the lens redshift, \(z=0.5\) . Left: zoomed-in deconvolved image with natural weighting; the circle shows the perturber location. Middle and right: differences between dirty images of mock data with and without the perturber in units of the rms noise ( \(\sigma\) ). section 2.2 gives details on how we generated the mock data.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/2610.20710v1/ngc1566_clean_uniform.png)
-
-图4：使用当前ALMA C–10配置（顶行）和使用255个天线的潜在ALMA2040配置（底行）对引力透镜模拟数据的去卷积图像。两个模拟都是1小时的源上积分。颜色图使用平方根拉伸。波束大小显示在左下角的框中。
-
-<small>Figure 4 : Deconvolved images of simulated data of a gravitational lens using the current ALMA C–10 configuration (top row) and using a potential ALMA2040 configuration of 255 antennas (bottom row). Both simulations are one hour of on-source integration. The colour maps use a square-root stretch. The beam size is shown in the box in the lower-left corner.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/2610.20710v1/ngc1566_real.png)
-
-图5：用于透镜源的附近星系NGC 1566的积分CO线发射图像（Leroy et al. 2021）。以对数拉伸显示。波束显示在左下角。
-
-<small>Figure 5 : Image of integrated CO line emission from nearby galaxy NGC 1566 used for the lensed source ( Leroy et al. 2021 ) . Shown with log-stretch. Beam is shown in the lower-left corner.</small>
-
-#### Figure 6
-表1：模拟连续谱数据的总结。
-
-<small>Table 1 : Summary of the simulated continuum data.</small>
 
 </details>

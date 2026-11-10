@@ -27,6 +27,11 @@ def parse_args() -> argparse.Namespace:
     )
     parser.add_argument("--max-results-per-category", type=int, default=300)
     parser.add_argument("--force", action="store_true", help="Overwrite non-empty existing raw JSONL files.")
+    parser.add_argument(
+        "--require-announcement",
+        action="store_true",
+        help="Fail instead of falling back to submission dates when the requested announcement is unavailable.",
+    )
     return parser.parse_args()
 
 
@@ -144,11 +149,20 @@ def announcement_ids(day: date, categories: Iterable[str]) -> set[str]:
     return ids
 
 
-def fetch_day(day: date, categories: Iterable[str], max_results_per_category: int) -> List[Dict]:
+def fetch_day(
+    day: date,
+    categories: Iterable[str],
+    max_results_per_category: int,
+    require_announcement: bool = False,
+) -> List[Dict]:
     wanted = set(categories)
     ids = announcement_ids(day, wanted)
     if ids:
         params = {"id_list": ",".join(sorted(ids)), "max_results": len(ids)}
+    elif require_announcement:
+        raise SystemExit(
+            f"arXiv has not published the {day.isoformat()} announcement yet; refusing stale data."
+        )
     else:
         stamp = day.strftime("%Y%m%d")
         category_query = " OR ".join(f"cat:{category}" for category in wanted)
@@ -181,7 +195,12 @@ def main() -> None:
         if output.exists() and output.stat().st_size > 0 and not args.force:
             print(f"skip {day.isoformat()}: {output} already exists")
             continue
-        rows = fetch_day(day, categories, args.max_results_per_category)
+        rows = fetch_day(
+            day,
+            categories,
+            args.max_results_per_category,
+            require_announcement=args.require_announcement,
+        )
         if not rows:
             raise SystemExit(f"No arXiv papers found for {day.isoformat()}; refusing to write an empty file.")
         write_jsonl(output, rows)

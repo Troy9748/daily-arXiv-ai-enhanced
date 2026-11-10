@@ -1,18 +1,15 @@
 {
-  "generated_at": "2026-11-10T09:19:01.475593Z",
-  "input_count": 74,
-  "selected_count": 6,
-  "archived_count": 68,
+  "generated_at": "2026-11-10T09:43:27.658173Z",
+  "input_count": 42,
+  "selected_count": 3,
+  "archived_count": 39,
   "mandatory_count": 0,
   "limit": 24,
   "minimum_score": 35,
-  "estimated_ai_calls_saved": 204,
+  "estimated_ai_calls_saved": 117,
   "selected_ids": [
-    "2610.39692",
-    "2610.40341",
-    "2610.39752",
-    "2610.39554",
-    "2611.00121",
-    "2610.40788"
+    "2610.37971",
+    "2610.37751",
+    "2610.37747"
   ]
 }

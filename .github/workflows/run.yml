@@ -5,11 +5,9 @@ name: arXiv-daily-ai-enhanced
 
 on:
   schedule:
-    # arXiv announces new papers Sunday-Thursday at 20:00 New York time.
-    # GitHub may delay or discard individual scheduled events, so retry every
-    # 30 minutes during the announcement window. Completed days exit early.
-    - cron: "17,47 20-23 * * 0-4"
-      timezone: "America/New_York"
+    # arXiv sometimes publishes hours after its nominal deadline. Run after the
+    # observed delay window and once more as a fallback; completed days exit early.
+    - cron: "17 11,14 * * 1-5"
   workflow_dispatch:
     inputs:
       backfill_date:
@@ -130,34 +128,23 @@ jobs:
         else
             echo "📝 今日文件不存在，准备新建... / Today's file doesn't exist, ready to create new one..."
             rm -f "data/${today}_archive.jsonl" "data/${today}_selection_report.json"
-
-            cd daily_arxiv
-            export OPENAI_API_KEY=${{ secrets.OPENAI_API_KEY }}
-            export OPENAI_BASE_URL=${{ secrets.OPENAI_BASE_URL }}
-            export LANGUAGE="${{ vars.LANGUAGE }}"
             export CATEGORIES="${{ vars.CATEGORIES }}"
-            export MODEL_NAME="${{ vars.MODEL_NAME }}"
-            export ENABLE_KEYWORD_FILTER="${{ vars.ENABLE_KEYWORD_FILTER }}"
-            export ARXIV_KEYWORDS="${{ vars.ARXIV_KEYWORDS }}"
 
-            # arXiv's /new page can lag behind its nominal announcement time.
-            # Retry locally; later redundant schedules provide wider recovery windows.
+            # Read the exact dated announcement. Never label a stale /new page as today.
             for attempt in 1 2 3; do
-                rm -f "../data/${today}.jsonl"
-                if scrapy crawl arxiv -o "../data/${today}.jsonl" \
-                  && [ -s "../data/${today}.jsonl" ] \
-                  && python ../scripts/validate_daily_data.py "../data/${today}.jsonl"; then
+                rm -f "data/${today}.jsonl"
+                if python scripts/fetch_arxiv_by_date.py "$today" --force --require-announcement \
+                  && python scripts/validate_daily_data.py "data/${today}.jsonl"; then
                     break
                 fi
                 if [ "$attempt" -eq 3 ]; then
-                    echo "❌ arXiv 连续 3 次未返回有效数据 / arXiv returned no valid data after 3 attempts"
+                    echo "❌ arXiv 连续 3 次未发布目标日期公告 / arXiv did not publish the target announcement after 3 attempts"
                     exit 1
                 fi
-                delay=$((attempt * 60))
-                echo "⚠️ 本次抓取为空，${delay} 秒后重试 / Empty crawl; retrying in ${delay}s"
+                delay=$((attempt * 300))
+                echo "⚠️ 公告尚未刷新，${delay} 秒后重试 / Announcement not refreshed; retrying in ${delay}s"
                 sleep "$delay"
             done
-            cd ..
         fi
         
         # Never accept a zero-byte, malformed, duplicate-ID, or schema-invalid crawl.

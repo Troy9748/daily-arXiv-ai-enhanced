@@ -2,92 +2,17 @@
 
 # Table of Contents
 
-- [astro-ph.IM](#astro-ph.IM) [Total: 1]
 - [astro-ph.HE](#astro-ph.HE) [Total: 1]
+- [astro-ph.IM](#astro-ph.IM) [Total: 1]
 - [astro-ph.GA](#astro-ph.GA) [Total: 56]
 - [astro-ph.CO](#astro-ph.CO) [Total: 42]
-
-
-<div id='astro-ph.IM'></div>
-
-# astro-ph.IM [[Back]](#toc)
-
-### [1] [Tracing small-scale structure formation through cosmic time with strong gravitational lensing: A case for a next-generation sub-millimetre/millimetre interferometer](https://arxiv.org/abs/2610.20710)
-*Hannah R. Stacey,John P. McKean,Mamta Pandey-Pommier,Carla Cornil-Baïotto,Simona Vegetti,Aristeidis Amvrosiadis,Françoise Combes,Giulia Despali,Andreas L. Faisst,Giovanni Ferrami,Davide Massari,Dieu D. Nguyen,James W. Nightingale,Antti Rantala,Cristiana Spingola*
-
-Main category: astro-ph.IM
-
-Recommendation: ★★★★★ (92/100) - 该论文核心是利用强引力透镜探测低质量暗物质晕和游荡黑洞，直接契合用户的主要研究领域（强引力透镜，尤其是星系-星系强透镜）以及暗物质子晕、强透镜等核心主题；同时涉及高红移尘埃恒星形成星系（DSFG）作为背景源，与用户对高红移星系动力学、多相气体和尘埃的兴趣一致。作者中包含 Andreas L. Faisst 等用户核心作者，方法上结合亚毫米波/毫米波干涉仪与 ELT 表征，属于用户关注的前沿观测方向。
-
-TL;DR: 本文提出利用255单元亚毫米波/毫米波干涉仪，通过对强引力透镜化尘埃恒星形成星系的引力扰动探测，来探索$<10^7$ M$_{\odot}$暗晕及游荡黑洞这一重叠且尚未充分探索的质量区间。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 暗物质本质与超大质量黑洞（SMBH）成长是现代天体物理两大未解之谜，二者都在$<10^7$ M$_{\odot}$暗晕和游荡黑洞这一重叠质量区间留下关键印记。该区间难以直接探测，但可通过强透镜图像的引力扰动间接探测，并有望仅凭透镜数据将两者部分或完全区分。
-
-Method: 通过逼真的模拟，研究255单元亚毫米波/毫米波干涉仪对强引力透镜化尘埃恒星形成星系（DSFG）中引力扰动的探测能力，并结合欧洲极大望远镜（ELT）对透镜星系的性质刻画。
-
-Result: 模拟显示该干涉仪可探测到强透镜化DSFG中低至至少$10^5$ M$_{\odot}$天体的引力扰动，从而探测这一关键质量区间。
-
-Conclusion: 结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
-
-Abstract: The nature of dark matter and the growth of supermassive black holes (SMBHs) remain major open questions in modern astrophysics. Both leave a key signature in an overlapping, largely unexplored mass range: $<10^7$ M$_{\odot}$ dark haloes and wandering black holes. These may be undetectable directly, but detectable through gravitational perturbation of strongly lensed images, and partly or entirely distinguishable from one another through lensing data alone. We demonstrate through realistic simulations that a 255-element sub-mm/mm interferometer could probe this critical mass regime, detecting gravitational perturbations in strongly lensed dusty star-forming galaxies (DSFGs) from objects down to at least $10^5$ M$_{\odot}$. Combined with lens-galaxy characterisation from the European Extremely Large Telescope (ELT), which strengthens the physical interpretation of detected perturbers, and the unprecedented lens samples expected from Euclid and the Square Kilometre Array (SKA), this facility could deliver a census of low-mass dark matter haloes and wandering massive black holes across cosmic time.
-
-Abstract Translation:
-暗物质的本质和超大质量黑洞（SMBHs）的生长仍然是现代天体物理学中的主要未解问题。两者都在一个重叠且很大程度上未被探索的质量范围内留下了关键特征：$<10^7$ M$_{\odot}$ 暗晕和游荡黑洞。这些可能无法直接探测，但可以通过强透镜图像的引力扰动来探测，并且仅通过透镜数据就可以部分或完全区分彼此。我们通过现实模拟证明，一个255单元亚毫米/毫米干涉仪可以探测这个关键质量范围，从至少$10^5$ M$_{\odot}$的天体探测到强透镜尘埃恒星形成星系（DSFGs）中的引力扰动。结合欧洲极大望远镜（ELT）对透镜星系的表征，这增强了对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
-
-Conclusion Translation:
-结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
-
-Key Figures:
-
-#### Figure 1
-图1：替代暗物质模型中低质量晕的数量与CDM中的比率。曲线显示了WDM模型（Lovell et al. 2014；对于各种半模质量）和ETHOS-4 SIDM模拟（Vogelsberger et al. 2016；Lovell 2020）。下一代亚毫米/毫米干涉仪，如ALMA2040，可以通过探测低质量晕来对暗物质进行决定性测试。
-
-<small>Figure 1 : Ratio of the number of low-mass haloes in alternative dark matter models to that in CDM. The curves show WDM models ( Lovell et al. 2014 ; for various half-mode masses) and ETHOS-4 SIDM simulations ( Vogelsberger et al. 2016 ; Lovell 2020 ) . A next-generation sub-mm/mm interferometer, such as ALMA2040, could make decisive tests of dark matter by probing low-mass haloes.</small>
-
-#### Figure 2
-![Figure 2](https://arxiv.org/html/2610.20710v1/powell2025.png)
-
-图2：使用cm-VLBI观测在引力透镜弧中检测到一个\((1.13\pm 0.04)\times 10^{6}\) M ⊙天体，角分辨率约为\(\approx 5\)毫角秒（McKean et al. 2025；Powell et al. 2025）。左：由扰动源（\(\nu\)）引起的透镜弧中的不连续性。右：像素化表面质量密度校正揭示了致密扰动源。需要毫角秒角分辨率和高表面亮度灵敏度的组合来探测这个很大程度上未被探索的质量范围内的天体。图改编自Powell et al. (2025)。
-
-<small>Figure 2 : Detection of a \((1.13\pm 0.04)\times 10^{6}\) M ⊙ object in a gravitationally lensed arc with \(\approx 5\) milliarcsecond angular resolution using cm-VLBI observations ( McKean et al. 2025 ; Powell et al. 2025 ) . Left: discontinuity in the lensed arc caused by the perturber ( \(\nu\) ). Right: pixelated surface mass density corrections revealing the compact perturber. A combination of milliarcsecond angular resolution and high surface brightness sensitivity is required to probe objects in this largely unexplored mass regime. Figures adapted from Powell et al. (2025) .</small>
-
-#### Figure 3
-![Figure 3](https://arxiv.org/html/2610.20710v1/mock_ngc1566_subhalo_diff_c10.png)
-
-图3：ALMA C-10和ALMA2040对透镜的模拟观测，透镜红移\(z=0.5\)处有一个\(10^{6}\) M ⊙暗物质晕和一个\(10^{5}\) M ⊙黑洞放置在弧上。左：自然加权下的放大去卷积图像；圆圈显示了扰动源位置。中和右：有和没有扰动源的模拟数据的脏图之间的差异，以rms噪声（\(\sigma\)）为单位。第2.2节给出了我们如何生成模拟数据的细节。
-
-<small>Figure 3 : Simulated observations for ALMA C-10 and ALMA2040 of a lens with a \(10^{6}\) M ⊙ dark matter halo and a \(10^{5}\) M ⊙ black hole placed on an arc at the lens redshift, \(z=0.5\) . Left: zoomed-in deconvolved image with natural weighting; the circle shows the perturber location. Middle and right: differences between dirty images of mock data with and without the perturber in units of the rms noise ( \(\sigma\) ). section 2.2 gives details on how we generated the mock data.</small>
-
-#### Figure 4
-![Figure 4](https://arxiv.org/html/2610.20710v1/ngc1566_clean_uniform.png)
-
-图4：使用当前ALMA C–10配置（顶行）和使用255个天线的潜在ALMA2040配置（底行）对引力透镜模拟数据的去卷积图像。两个模拟都是1小时的源上积分。颜色图使用平方根拉伸。波束大小显示在左下角的框中。
-
-<small>Figure 4 : Deconvolved images of simulated data of a gravitational lens using the current ALMA C–10 configuration (top row) and using a potential ALMA2040 configuration of 255 antennas (bottom row). Both simulations are one hour of on-source integration. The colour maps use a square-root stretch. The beam size is shown in the box in the lower-left corner.</small>
-
-#### Figure 5
-![Figure 5](https://arxiv.org/html/2610.20710v1/ngc1566_real.png)
-
-图5：用于透镜源的附近星系NGC 1566的积分CO线发射图像（Leroy et al. 2021）。以对数拉伸显示。波束显示在左下角。
-
-<small>Figure 5 : Image of integrated CO line emission from nearby galaxy NGC 1566 used for the lensed source ( Leroy et al. 2021 ) . Shown with log-stretch. Beam is shown in the lower-left corner.</small>
-
-#### Figure 6
-表1：模拟连续谱数据的总结。
-
-<small>Table 1 : Summary of the simulated continuum data.</small>
-
-</details>
 
 
 <div id='astro-ph.HE'></div>
 
 # astro-ph.HE [[Back]](#toc)
 
-### [2] [SN Ares: A Strongly Lensed Type IIb Supernova at $\mathbf{z=1.276}$ with a Predicted 70-Year Time Delay](https://arxiv.org/abs/2610.33161)
+### [1] [SN Ares: A Strongly Lensed Type IIb Supernova at $\mathbf{z=1.276}$ with a Predicted 70-Year Time Delay](https://arxiv.org/abs/2610.33161)
 *Conor Larison,Justin D. R. Pierel,Matthew Siebert,Tom Resseguier,Lukas J. Furtak,Masamune Oguri,Gavin S. Farley,Hollis B. Akins,Yoshihisa Asada,Rachel Bezanson,Maruša Bradač,Gabriel Brammer,John Chisholm,Dan Coe,Pratika Dayal,Henry C. Ferguson,Steven L. Finkelstein,Seiji Fujimoto,Tomokazu Kiyota,Anton M. Koekemoer,Vasily Kokorev,Minami Nakane,Masami Ouchi,Richard Pan,Casey Papovich,Johan Richard,Luke Robbins,Fengwu Sun,Kana Takechi,Tommaso Treu,Chris Willott,Hiroto Yanagisawa,Abdurro'uf,Joseph F. V. Allingham,Ricardo O. Amorín,Franz E. Bauer,Larry Bradley,Mateusz Bronikowski,Christopher J. Conselice,David A. Coulter,James M. DerKacy,José M. Diego,Eiichi Egami,Andreas L. Faisst,Ori D. Fox,Brenda L. Frye,Yoshinobu Fudamoto,Mauro González-Otero,Massimo Griggio,Nimish P. Hathi,Tiger Yu-Yang Hsiao,Saurabh W. Jha,Y. Jiménez-Teja,Jeyhan S. Kartaltepe,Gourav Khullar,Zachary G. Lane,Paulo A. A. Lopes,Ray A. Lucas,Georgios E. Magdis,Matteo Messa,Rohan P. Naidu,Rafael Ortiz,Massimo Pascale,Armin Rest,Massimo Ricotti,Melissa Shahbandeh,William Sheu,Koji Shukawa,Rogier A. Windhorst,Anita Zanella,Yossef Zenati,Adi Zitrin*
 
 Main category: astro-ph.HE
@@ -160,6 +85,81 @@ Key Figures:
 表3：用于 SN Ares 的测光模板。
 
 <small>Table 3: Photometric templates used for SN Ares</small>
+
+</details>
+
+
+<div id='astro-ph.IM'></div>
+
+# astro-ph.IM [[Back]](#toc)
+
+### [2] [Tracing small-scale structure formation through cosmic time with strong gravitational lensing: A case for a next-generation sub-millimetre/millimetre interferometer](https://arxiv.org/abs/2610.20710)
+*Hannah R. Stacey,John P. McKean,Mamta Pandey-Pommier,Carla Cornil-Baïotto,Simona Vegetti,Aristeidis Amvrosiadis,Françoise Combes,Giulia Despali,Andreas L. Faisst,Giovanni Ferrami,Davide Massari,Dieu D. Nguyen,James W. Nightingale,Antti Rantala,Cristiana Spingola*
+
+Main category: astro-ph.IM
+
+Recommendation: ★★★★★ (92/100) - 该论文核心是利用强引力透镜探测低质量暗物质晕和游荡黑洞，直接契合用户的主要研究领域（强引力透镜，尤其是星系-星系强透镜）以及暗物质子晕、强透镜等核心主题；同时涉及高红移尘埃恒星形成星系（DSFG）作为背景源，与用户对高红移星系动力学、多相气体和尘埃的兴趣一致。作者中包含 Andreas L. Faisst 等用户核心作者，方法上结合亚毫米波/毫米波干涉仪与 ELT 表征，属于用户关注的前沿观测方向。
+
+TL;DR: 本文提出利用255单元亚毫米波/毫米波干涉仪，通过对强引力透镜化尘埃恒星形成星系的引力扰动探测，来探索$<10^7$ M$_{\odot}$暗晕及游荡黑洞这一重叠且尚未充分探索的质量区间。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 暗物质本质与超大质量黑洞（SMBH）成长是现代天体物理两大未解之谜，二者都在$<10^7$ M$_{\odot}$暗晕和游荡黑洞这一重叠质量区间留下关键印记。该区间难以直接探测，但可通过强透镜图像的引力扰动间接探测，并有望仅凭透镜数据将两者部分或完全区分。
+
+Method: 通过逼真的模拟，研究255单元亚毫米波/毫米波干涉仪对强引力透镜化尘埃恒星形成星系（DSFG）中引力扰动的探测能力，并结合欧洲极大望远镜（ELT）对透镜星系的性质刻画。
+
+Result: 模拟显示该干涉仪可探测到强透镜化DSFG中低至至少$10^5$ M$_{\odot}$天体的引力扰动，从而探测这一关键质量区间。
+
+Conclusion: 结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
+
+Abstract: The nature of dark matter and the growth of supermassive black holes (SMBHs) remain major open questions in modern astrophysics. Both leave a key signature in an overlapping, largely unexplored mass range: $<10^7$ M$_{\odot}$ dark haloes and wandering black holes. These may be undetectable directly, but detectable through gravitational perturbation of strongly lensed images, and partly or entirely distinguishable from one another through lensing data alone. We demonstrate through realistic simulations that a 255-element sub-mm/mm interferometer could probe this critical mass regime, detecting gravitational perturbations in strongly lensed dusty star-forming galaxies (DSFGs) from objects down to at least $10^5$ M$_{\odot}$. Combined with lens-galaxy characterisation from the European Extremely Large Telescope (ELT), which strengthens the physical interpretation of detected perturbers, and the unprecedented lens samples expected from Euclid and the Square Kilometre Array (SKA), this facility could deliver a census of low-mass dark matter haloes and wandering massive black holes across cosmic time.
+
+Abstract Translation:
+暗物质的本质和超大质量黑洞（SMBHs）的生长仍然是现代天体物理学中的主要未解问题。两者都在一个重叠且很大程度上未被探索的质量范围内留下了关键特征：$<10^7$ M$_{\odot}$ 暗晕和游荡黑洞。这些可能无法直接探测，但可以通过强透镜图像的引力扰动来探测，并且仅通过透镜数据就可以部分或完全区分彼此。我们通过现实模拟证明，一个255单元亚毫米/毫米干涉仪可以探测这个关键质量范围，从至少$10^5$ M$_{\odot}$的天体探测到强透镜尘埃恒星形成星系（DSFGs）中的引力扰动。结合欧洲极大望远镜（ELT）对透镜星系的表征，这增强了对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
+
+Conclusion Translation:
+结合ELT对透镜星系的刻画以增强对探测到的扰动源的物理解释，以及Euclid和平方公里阵列（SKA）预期提供的空前透镜样本，该设施能够给出跨宇宙时的低质量暗物质晕和游荡大质量黑洞普查。
+
+Key Figures:
+
+#### Figure 1
+图1：替代暗物质模型中低质量晕的数量与CDM中的比率。曲线显示了WDM模型（Lovell et al. 2014；对于各种半模质量）和ETHOS-4 SIDM模拟（Vogelsberger et al. 2016；Lovell 2020）。下一代亚毫米/毫米干涉仪，如ALMA2040，可以通过探测低质量晕来对暗物质进行决定性测试。
+
+<small>Figure 1 : Ratio of the number of low-mass haloes in alternative dark matter models to that in CDM. The curves show WDM models ( Lovell et al. 2014 ; for various half-mode masses) and ETHOS-4 SIDM simulations ( Vogelsberger et al. 2016 ; Lovell 2020 ) . A next-generation sub-mm/mm interferometer, such as ALMA2040, could make decisive tests of dark matter by probing low-mass haloes.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2610.20710v1/powell2025.png)
+
+图2：使用cm-VLBI观测在引力透镜弧中检测到一个\((1.13\pm 0.04)\times 10^{6}\) M ⊙天体，角分辨率约为\(\approx 5\)毫角秒（McKean et al. 2025；Powell et al. 2025）。左：由扰动源（\(\nu\)）引起的透镜弧中的不连续性。右：像素化表面质量密度校正揭示了致密扰动源。需要毫角秒角分辨率和高表面亮度灵敏度的组合来探测这个很大程度上未被探索的质量范围内的天体。图改编自Powell et al. (2025)。
+
+<small>Figure 2 : Detection of a \((1.13\pm 0.04)\times 10^{6}\) M ⊙ object in a gravitationally lensed arc with \(\approx 5\) milliarcsecond angular resolution using cm-VLBI observations ( McKean et al. 2025 ; Powell et al. 2025 ) . Left: discontinuity in the lensed arc caused by the perturber ( \(\nu\) ). Right: pixelated surface mass density corrections revealing the compact perturber. A combination of milliarcsecond angular resolution and high surface brightness sensitivity is required to probe objects in this largely unexplored mass regime. Figures adapted from Powell et al. (2025) .</small>
+
+#### Figure 3
+![Figure 3](https://arxiv.org/html/2610.20710v1/mock_ngc1566_subhalo_diff_c10.png)
+
+图3：ALMA C-10和ALMA2040对透镜的模拟观测，透镜红移\(z=0.5\)处有一个\(10^{6}\) M ⊙暗物质晕和一个\(10^{5}\) M ⊙黑洞放置在弧上。左：自然加权下的放大去卷积图像；圆圈显示了扰动源位置。中和右：有和没有扰动源的模拟数据的脏图之间的差异，以rms噪声（\(\sigma\)）为单位。第2.2节给出了我们如何生成模拟数据的细节。
+
+<small>Figure 3 : Simulated observations for ALMA C-10 and ALMA2040 of a lens with a \(10^{6}\) M ⊙ dark matter halo and a \(10^{5}\) M ⊙ black hole placed on an arc at the lens redshift, \(z=0.5\) . Left: zoomed-in deconvolved image with natural weighting; the circle shows the perturber location. Middle and right: differences between dirty images of mock data with and without the perturber in units of the rms noise ( \(\sigma\) ). section 2.2 gives details on how we generated the mock data.</small>
+
+#### Figure 4
+![Figure 4](https://arxiv.org/html/2610.20710v1/ngc1566_clean_uniform.png)
+
+图4：使用当前ALMA C–10配置（顶行）和使用255个天线的潜在ALMA2040配置（底行）对引力透镜模拟数据的去卷积图像。两个模拟都是1小时的源上积分。颜色图使用平方根拉伸。波束大小显示在左下角的框中。
+
+<small>Figure 4 : Deconvolved images of simulated data of a gravitational lens using the current ALMA C–10 configuration (top row) and using a potential ALMA2040 configuration of 255 antennas (bottom row). Both simulations are one hour of on-source integration. The colour maps use a square-root stretch. The beam size is shown in the box in the lower-left corner.</small>
+
+#### Figure 5
+![Figure 5](https://arxiv.org/html/2610.20710v1/ngc1566_real.png)
+
+图5：用于透镜源的附近星系NGC 1566的积分CO线发射图像（Leroy et al. 2021）。以对数拉伸显示。波束显示在左下角。
+
+<small>Figure 5 : Image of integrated CO line emission from nearby galaxy NGC 1566 used for the lensed source ( Leroy et al. 2021 ) . Shown with log-stretch. Beam is shown in the lower-left corner.</small>
+
+#### Figure 6
+表1：模拟连续谱数据的总结。
+
+<small>Table 1 : Summary of the simulated continuum data.</small>
 
 </details>
 

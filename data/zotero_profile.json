@@ -8,52 +8,52 @@
       "weight": 21000.0
     },
     {
-      "term": "lensed",
-      "weight": 2149.65
+      "term": "dark matter",
+      "weight": 2142.0
     },
     {
-      "term": "dark matter",
-      "weight": 2100.0
+      "term": "lensed",
+      "weight": 2134.35
     },
     {
       "term": "lensing",
-      "weight": 2083.35
+      "weight": 2103.75
     },
     {
       "term": "strong gravitational",
-      "weight": 1998.0
+      "weight": 2049.0
     },
     {
       "term": "magnetic fields",
-      "weight": 1710.0
+      "weight": 1680.0
     },
     {
       "term": "strongly lensed",
-      "weight": 1656.0
+      "weight": 1632.0
     },
     {
       "term": "dark matter subhalo",
-      "weight": 1512.0
+      "weight": 1554.0
+    },
+    {
+      "term": "strong gravitational lensing",
+      "weight": 1507.8
     },
     {
       "term": "dust",
       "weight": 1504.5
     },
     {
-      "term": "strong gravitational lensing",
-      "weight": 1482.6
+      "term": "magnetic",
+      "weight": 1428.0
     },
     {
-      "term": "magnetic",
-      "weight": 1453.5
+      "term": "strong gravitational lenses",
+      "weight": 1360.8
     },
     {
       "term": "dense gas",
       "weight": 1323.0
-    },
-    {
-      "term": "strong gravitational lenses",
-      "weight": 1314.6
     },
     {
       "term": "massive main-sequence galaxy",
@@ -61,7 +61,7 @@
     },
     {
       "term": "strong lensing",
-      "weight": 1227.0
+      "weight": 1233.0
     },
     {
       "term": "cosmic noon",
@@ -69,15 +69,15 @@
     },
     {
       "term": "matter subhalo",
-      "weight": 1080.0
+      "weight": 1110.0
     },
     {
       "term": "gravitational lensing",
-      "weight": 1059.0
+      "weight": 1077.0
     },
     {
       "term": "molecular gas",
-      "weight": 1056.0
+      "weight": 1053.0
     },
     {
       "term": "detection dense gas",
@@ -100,12 +100,12 @@
       "weight": 1029.0
     },
     {
-      "term": "cosmic time",
-      "weight": 963.0
+      "term": "gravitational lenses",
+      "weight": 972.0
     },
     {
-      "term": "gravitational lenses",
-      "weight": 939.0
+      "term": "cosmic time",
+      "weight": 960.0
     },
     {
       "term": "resolving molecular gas",
@@ -133,15 +133,7 @@
     },
     {
       "term": "molecular",
-      "weight": 897.6
-    },
-    {
-      "term": "magnetic fields around",
-      "weight": 882.0
-    },
-    {
-      "term": "fields around galaxies",
-      "weight": 882.0
+      "weight": 895.05
     },
     {
       "term": "massive main-sequence",
@@ -154,6 +146,14 @@
     {
       "term": "detection dark matter",
       "weight": 873.6
+    },
+    {
+      "term": "magnetic fields around",
+      "weight": 856.8
+    },
+    {
+      "term": "fields around galaxies",
+      "weight": 856.8
     },
     {
       "term": "lack evidence shocks",
@@ -188,6 +188,46 @@
       "weight": 792.0
     },
     {
+      "term": "subhalo detection",
+      "weight": 777.0
+    },
+    {
+      "term": "polar coordinate transformations",
+      "weight": 777.0
+    },
+    {
+      "term": "coordinate transformations machine",
+      "weight": 777.0
+    },
+    {
+      "term": "transformations machine learning",
+      "weight": 777.0
+    },
+    {
+      "term": "machine learning based",
+      "weight": 777.0
+    },
+    {
+      "term": "learning based dark",
+      "weight": 777.0
+    },
+    {
+      "term": "based dark matter",
+      "weight": 777.0
+    },
+    {
+      "term": "matter subhalo detection",
+      "weight": 777.0
+    },
+    {
+      "term": "subhalo detection strong",
+      "weight": 777.0
+    },
+    {
+      "term": "detection strong gravitational",
+      "weight": 777.0
+    },
+    {
       "term": "matter subhalo strongly",
       "weight": 777.0
     },
@@ -209,7 +249,7 @@
     },
     {
       "term": "lens",
-      "weight": 744.6
+      "weight": 747.15
     },
     {
       "term": "what scales does",
@@ -248,106 +288,6 @@
       "weight": 735.0
     },
     {
-      "term": "galaxy-lrd strong lenses",
-      "weight": 735.0
-    },
-    {
-      "term": "strong lenses missing",
-      "weight": 735.0
-    },
-    {
-      "term": "lenses missing population",
-      "weight": 735.0
-    },
-    {
-      "term": "probing magnetic fields",
-      "weight": 735.0
-    },
-    {
-      "term": "around galaxies near",
-      "weight": 735.0
-    },
-    {
-      "term": "galaxies near far",
-      "weight": 735.0
-    },
-    {
-      "term": "pilot sample planck-selected",
-      "weight": 735.0
-    },
-    {
-      "term": "sample planck-selected strongly",
-      "weight": 735.0
-    },
-    {
-      "term": "planck-selected strongly lensed",
-      "weight": 735.0
-    },
-    {
-      "term": "strongly lensed sub-mm",
-      "weight": 735.0
-    },
-    {
-      "term": "lensed sub-mm galaxies",
-      "weight": 735.0
-    },
-    {
-      "term": "sub-mm galaxies noema",
-      "weight": 735.0
-    },
-    {
-      "term": "galaxies noema observations",
-      "weight": 735.0
-    },
-    {
-      "term": "noema observations physical",
-      "weight": 735.0
-    },
-    {
-      "term": "observations physical characterisation",
-      "weight": 735.0
-    },
-    {
-      "term": "subhalo detection",
-      "weight": 735.0
-    },
-    {
-      "term": "polar coordinate transformations",
-      "weight": 735.0
-    },
-    {
-      "term": "coordinate transformations machine",
-      "weight": 735.0
-    },
-    {
-      "term": "transformations machine learning",
-      "weight": 735.0
-    },
-    {
-      "term": "machine learning based",
-      "weight": 735.0
-    },
-    {
-      "term": "learning based dark",
-      "weight": 735.0
-    },
-    {
-      "term": "based dark matter",
-      "weight": 735.0
-    },
-    {
-      "term": "matter subhalo detection",
-      "weight": 735.0
-    },
-    {
-      "term": "subhalo detection strong",
-      "weight": 735.0
-    },
-    {
-      "term": "detection strong gravitational",
-      "weight": 735.0
-    },
-    {
       "term": "detection dense",
       "weight": 735.0
     },
@@ -362,6 +302,66 @@
     {
       "term": "lack evidence",
       "weight": 723.0
+    },
+    {
+      "term": "galaxy-lrd strong lenses",
+      "weight": 714.0
+    },
+    {
+      "term": "strong lenses missing",
+      "weight": 714.0
+    },
+    {
+      "term": "lenses missing population",
+      "weight": 714.0
+    },
+    {
+      "term": "probing magnetic fields",
+      "weight": 714.0
+    },
+    {
+      "term": "around galaxies near",
+      "weight": 714.0
+    },
+    {
+      "term": "galaxies near far",
+      "weight": 714.0
+    },
+    {
+      "term": "pilot sample planck-selected",
+      "weight": 714.0
+    },
+    {
+      "term": "sample planck-selected strongly",
+      "weight": 714.0
+    },
+    {
+      "term": "planck-selected strongly lensed",
+      "weight": 714.0
+    },
+    {
+      "term": "strongly lensed sub-mm",
+      "weight": 714.0
+    },
+    {
+      "term": "lensed sub-mm galaxies",
+      "weight": 714.0
+    },
+    {
+      "term": "sub-mm galaxies noema",
+      "weight": 714.0
+    },
+    {
+      "term": "galaxies noema observations",
+      "weight": 714.0
+    },
+    {
+      "term": "noema observations physical",
+      "weight": 714.0
+    },
+    {
+      "term": "observations physical characterisation",
+      "weight": 714.0
     },
     {
       "term": "noema3d resolving radial",
@@ -408,6 +408,10 @@
       "weight": 693.0
     },
     {
+      "term": "machine learning",
+      "weight": 666.0
+    },
+    {
       "term": "system pj011646",
       "weight": 666.0
     },
@@ -432,28 +436,24 @@
       "weight": 645.0
     },
     {
+      "term": "detection dark",
+      "weight": 624.0
+    },
+    {
       "term": "fields around",
-      "weight": 630.0
+      "weight": 612.0
     },
     {
       "term": "around galaxies",
-      "weight": 630.0
-    },
-    {
-      "term": "machine learning",
-      "weight": 630.0
-    },
-    {
-      "term": "detection dark",
-      "weight": 624.0
+      "weight": 612.0
     },
     {
       "term": "disk galaxies",
       "weight": 612.0
     },
     {
-      "term": "strong lenses",
-      "weight": 594.0
+      "term": "euclid",
+      "weight": 604.35
     },
     {
       "term": "dust average",
@@ -476,8 +476,32 @@
       "weight": 585.0
     },
     {
-      "term": "euclid",
-      "weight": 583.95
+      "term": "strong lenses",
+      "weight": 579.0
+    },
+    {
+      "term": "polar coordinate",
+      "weight": 555.0
+    },
+    {
+      "term": "coordinate transformations",
+      "weight": 555.0
+    },
+    {
+      "term": "transformations machine",
+      "weight": 555.0
+    },
+    {
+      "term": "learning based",
+      "weight": 555.0
+    },
+    {
+      "term": "based dark",
+      "weight": 555.0
+    },
+    {
+      "term": "detection strong",
+      "weight": 555.0
     },
     {
       "term": "subhalo strongly",
@@ -529,39 +553,15 @@
     },
     {
       "term": "galaxy-lrd strong",
-      "weight": 525.0
+      "weight": 510.0
     },
     {
       "term": "lenses missing",
-      "weight": 525.0
+      "weight": 510.0
     },
     {
       "term": "missing population",
-      "weight": 525.0
-    },
-    {
-      "term": "probing magnetic",
-      "weight": 525.0
-    },
-    {
-      "term": "galaxies near",
-      "weight": 525.0
-    },
-    {
-      "term": "near far",
-      "weight": 525.0
-    },
-    {
-      "term": "pilot sample",
-      "weight": 525.0
-    },
-    {
-      "term": "sample planck-selected",
-      "weight": 525.0
-    },
-    {
-      "term": "planck-selected strongly",
-      "weight": 525.0
+      "weight": 510.0
     }
   ],
   "negative_keywords": [],
@@ -658,8 +658,8 @@
     },
     {
       "name": "simon dye",
-      "weight": 225.938,
-      "count": 210.0
+      "weight": 228.938,
+      "count": 213.0
     },
     {
       "name": "andreas l faisst",
@@ -677,13 +677,13 @@
       "count": 177.0
     },
     {
-      "name": "rosita paladino",
-      "weight": 188.363,
-      "count": 171.0
-    },
-    {
       "name": "françoise combes",
       "weight": 185.025,
+      "count": 168.0
+    },
+    {
+      "name": "rosita paladino",
+      "weight": 185.363,
       "count": 168.0
     },
     {
@@ -972,6 +972,21 @@
       "count": 117.0
     },
     {
+      "name": "jacob m campbell",
+      "weight": 118.688,
+      "count": 111.0
+    },
+    {
+      "name": "emma chapman",
+      "weight": 118.688,
+      "count": 111.0
+    },
+    {
+      "name": "adam moss",
+      "weight": 118.688,
+      "count": 111.0
+    },
+    {
       "name": "qiuhan he",
       "weight": 118.312,
       "count": 111.0
@@ -1038,33 +1053,18 @@
     },
     {
       "name": "zizhao he",
-      "weight": 113.25,
-      "count": 105.0
+      "weight": 110.25,
+      "count": 102.0
     },
     {
       "name": "nan li",
-      "weight": 113.25,
-      "count": 105.0
+      "weight": 110.25,
+      "count": 102.0
     },
     {
       "name": "xinzhong er",
-      "weight": 113.25,
-      "count": 105.0
-    },
-    {
-      "name": "fuwen shu",
-      "weight": 113.25,
-      "count": 105.0
-    },
-    {
-      "name": "s a mao",
-      "weight": 113.062,
-      "count": 105.0
-    },
-    {
-      "name": "rainer beck",
-      "weight": 113.062,
-      "count": 105.0
+      "weight": 110.25,
+      "count": 102.0
     }
   ],
   "core_authors": [
@@ -1160,8 +1160,8 @@
     },
     {
       "name": "simon dye",
-      "weight": 225.938,
-      "count": 210.0
+      "weight": 228.938,
+      "count": 213.0
     },
     {
       "name": "andreas l faisst",
@@ -1179,13 +1179,13 @@
       "count": 177.0
     },
     {
-      "name": "rosita paladino",
-      "weight": 188.363,
-      "count": 171.0
-    },
-    {
       "name": "françoise combes",
       "weight": 185.025,
+      "count": 168.0
+    },
+    {
+      "name": "rosita paladino",
+      "weight": 185.363,
       "count": 168.0
     },
     {
@@ -1369,5 +1369,5 @@
       "count": 117.0
     }
   ],
-  "summary": "Interest profile inferred from Zotero papers. Top topics: daily_arxiv, lensed, dark matter, lensing, strong gravitational, magnetic fields, strongly lensed, dark matter subhalo, dust, strong gravitational lensing, magnetic, dense gas. Core authors: daizhong liu, jianhang chen, jean-baptiste jolly, reinhard genzel, natascha m förster schreiber, stavros pastras, giulia tozzi, ric davies"
+  "summary": "Interest profile inferred from Zotero papers. Top topics: daily_arxiv, dark matter, lensed, lensing, strong gravitational, magnetic fields, strongly lensed, dark matter subhalo, strong gravitational lensing, dust, magnetic, strong gravitational lenses. Core authors: daizhong liu, jianhang chen, jean-baptiste jolly, reinhard genzel, natascha m förster schreiber, stavros pastras, giulia tozzi, ric davies"
 }

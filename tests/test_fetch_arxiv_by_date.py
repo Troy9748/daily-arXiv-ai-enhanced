@@ -58,6 +58,11 @@ class FetchQueryTest(TestCase):
 
         self.assertEqual(parser.ids, ["2610.33154"])
 
+    @mock.patch.object(MODULE, "announcement_ids", return_value=set())
+    def test_required_announcement_rejects_stale_page(self, _announcement_ids):
+        with self.assertRaisesRegex(SystemExit, "refusing stale data"):
+            MODULE.fetch_day(MODULE.date(2026, 11, 10), ["astro-ph.GA"], 300, True)
+
 
 if __name__ == "__main__":
     main()

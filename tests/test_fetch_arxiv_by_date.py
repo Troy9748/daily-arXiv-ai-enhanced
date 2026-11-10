@@ -63,6 +63,16 @@ class FetchQueryTest(TestCase):
         with self.assertRaisesRegex(SystemExit, "refusing stale data"):
             MODULE.fetch_day(MODULE.date(2026, 11, 10), ["astro-ph.GA"], 300, True)
 
+    def test_submission_window_follows_arxiv_schedule_and_dst(self):
+        self.assertEqual(
+            MODULE.submission_window(MODULE.date(2026, 10, 28)),
+            ("202610261800", "202610271759"),
+        )
+        self.assertEqual(
+            MODULE.submission_window(MODULE.date(2026, 11, 3)),
+            ("202610301800", "202611021859"),
+        )
+
 
 if __name__ == "__main__":
     main()

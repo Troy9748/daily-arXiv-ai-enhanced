@@ -8,10 +8,11 @@ import urllib.error
 import urllib.parse
 import urllib.request
 import xml.etree.ElementTree as ET
-from datetime import date, timedelta
+from datetime import date, datetime, time as datetime_time, timedelta, timezone
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Dict, Iterable, List
+from zoneinfo import ZoneInfo
 
 
 def parse_args() -> argparse.Namespace:
@@ -149,6 +150,28 @@ def announcement_ids(day: date, categories: Iterable[str]) -> set[str]:
     return ids
 
 
+def submission_window(day: date) -> tuple[str, str]:
+    """Return the official arXiv submission window for a dated Mon-Fri listing."""
+    offsets = {
+        0: (4, 3),  # Monday listing: Thursday 14:00 through Friday 13:59 ET.
+        1: (4, 1),  # Tuesday listing: Friday 14:00 through Monday 13:59 ET.
+        2: (2, 1),
+        3: (2, 1),
+        4: (2, 1),
+    }
+    if day.weekday() not in offsets:
+        raise SystemExit(f"arXiv has no dated listing for weekend date {day.isoformat()}.")
+    start_offset, end_offset = offsets[day.weekday()]
+    eastern = ZoneInfo("America/New_York")
+    start = datetime.combine(
+        day - timedelta(days=start_offset), datetime_time(14), eastern
+    ).astimezone(timezone.utc)
+    end = datetime.combine(
+        day - timedelta(days=end_offset), datetime_time(13, 59), eastern
+    ).astimezone(timezone.utc)
+    return start.strftime("%Y%m%d%H%M"), end.strftime("%Y%m%d%H%M")
+
+
 def fetch_day(
     day: date,
     categories: Iterable[str],
@@ -164,10 +187,10 @@ def fetch_day(
             f"arXiv has not published the {day.isoformat()} announcement yet; refusing stale data."
         )
     else:
-        stamp = day.strftime("%Y%m%d")
+        start, end = submission_window(day)
         category_query = " OR ".join(f"cat:{category}" for category in wanted)
         params = {
-            "search_query": f"({category_query}) AND submittedDate:[{stamp}0000 TO {stamp}2359]",
+            "search_query": f"({category_query}) AND submittedDate:[{start} TO {end}]",
             "start": 0,
             "max_results": max_results_per_category * len(wanted),
         }

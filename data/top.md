@@ -3887,7 +3887,84 @@ Key Figures:
 </details>
 
 
-### [54] [Statistical Strong Lensing V. Inference with Microlensed Quasars](https://arxiv.org/abs/2610.24423)
+### [54] [Euclid Quick Data Release (Q1). Mass-to-light ratio of elliptical galaxies: constraints from strong lensing](https://arxiv.org/abs/2611.00224)
+*Euclid Collaboration,A. Sonnenfeld,A. Nersesian,K. Rojas,P. Holloway,J. W. Nightingale,C. Tortora,S. Schuldt,T. Li,C. J. Storfer,R. Gavazzi,D. Sluse,G. Despali,T. E. Collett,S. Serjeant,F. Courbin,R. B. Metcalf,S. Vegetti,B. Altieri,S. Andreon,N. Auricchio,C. Baccigalupi,M. Baldi,A. Balestra,S. Bardelli,P. Battaglia,A. Biviano,M. Bolzonella,E. Branchini,M. Brescia,J. Brinchmann,S. Camera,G. Ca\ nas-Herrera,V. Capobianco,C. Carbone,M. Castellano,G. Castignani,S. Cavuoti,K. C. Chambers,A. Cimatti,C. Colodro-Conde,G. Congedo,C. J. Conselice,L. Conversi,Y. Copin,A. Costille,H. M. Courtois,M. Cropper,H. Degaudenzi,G. De Lucia,C. Dolding,H. Dole,F. Dubath,C. A. J. Duncan,X. Dupac,S. Dusini,S. Escoffier,M. Farina,R. Farinelli,F. Faustini,S. Ferriol,F. Finelli,P. Fosalba,M. Frailis,E. Franceschi,M. Fumana,L. Gabarra,S. Galeotta,K. George,B. Gillis,C. Giocoli,J. Gracia-Carpio,A. Grazian,F. Grupp,W. G. Hartley,S. V. H. Haugan,G. Helou,S. Hemmati,H. Hoekstra,W. Holmes,I. M. Hook,F. Hormuth,A. Hornstrup,K. Jahnke,M. Jhabvala,S. Kermiche,A. Kiessling,B. Kubik,K. Kuijken,M. Kümmel,M. Kunz,H. Kurki-Suonio,A. M. C. Le Brun,D. Le Mignant,S. Ligori,P. B. Lilje,V. Lindholm,I. Lloro,M. Magliocchetti,G. Mainetti,O. Mansutti,S. Marcin,O. Marggraf,M. Martinelli,N. Martinet,F. Marulli,R. J. Massey,N. Mauri,E. Medinaceli,S. Mei,M. Meneghetti,E. Merlin,G. Meylan,P. Monaco,A. Mora,M. Moresco,L. Moscardini,R. Nakajima,C. Neissner,R. C. Nichol,S. -M. Niemi,C. Padilla,S. Paltani,F. Pasian,W. J. Percival,V. Pettorino,S. Pires,G. Polenta,M. Poncet,L. A. Popa,L. Pozzetti,F. Raison,A. Renzi,J. Rhodes,G. Riccio,I. Risso,F. Rizzo,E. Romelli,B. Rusholme,R. Saglia,Z. Sakr,D. Sapone,M. Schirmer,P. Schneider,T. Schrabback,A. Secroun,E. Sihvola,P. Simon,C. Sirignano,G. Sirri,L. Stanco,P. Tallada-Crespí,A. N. Taylor,I. Tereno,N. Tessore,S. Toft,R. Toledo-Moreo,F. Torradeflot,A. Tsyganov,I. Tutusaus,J. Valiviita,T. Vassallo,Y. Wang,J. Weller,A. Zacchei,G. Zamorani,F. M. Zerbi,E. Zucca,I. T. Andika,M. Ballardini,C. Benoist,S. Borgani,E. Bozzo,C. Burigana,R. Cabanac,A. Cappi,F. Caro,T. Castro,J. A. Escartin Vigo,J. García-Bellido,T. Gasparetto,C. M. Gutierrez,A. Hall,Y. Kang,J. Macias-Perez,R. Maoli,M. Pöntinen,E. Sarpa,V. Scottez,M. Sereno,K. Tanidis,M. Tenti,M. Tucci,M. Wiesmann,J. A. Acevedo Barroso,Y. Akrami,G. Angora,M. Archidiacono,G. Aricò,F. Atrio-Barandela,M. Baes,L. Bazzanini,J. R. Bermejo-Climent,D. Bertacca,M. Bethermin,F. Beutler,A. Blanchard,H. Böhringer,F. Bouchè,M. L. Brown,S. Bruton,A. Calabro,C. S. Carvalho,F. Cogato,P. Corcho-Caballero,M. Correnti,B. Csizi,O. Cucciati,T. de Boer,F. De Paolis,G. Desprez,A. Díaz-Sánchez,S. Di Domizio,J. M. Diego,P. -A. Duc,V. Duret,M. Y. Elkhashab,Y. Fang,A. Farina,A. Finoguenov,F. Fontanot,A. Franco,A. Fumagalli,Y. Fu,K. Ganga,E. Gaztanaga,Z. Ghaffari,F. Giacomini,F. Gianotti,G. Gozaliasl,A. Gruppuso,M. Guidi,H. Hildebrandt,J. Hjorth,M. Jauzac,J. J. E. Kajava,V. Kansal,D. Karagiannis,J. Kim,C. C. Kirkpatrick,A. Kovács,I. Kova{č}i{ć},K. Koyama,S. Kruk,M. C. Lam,M. Lattanzi,S. Lee,M. D. Lepinzan,G. Leroy,G. F. Lesci,J. Lesgourgues,L. Linke,G. Maggio,A. Manjón-García,F. Mannucci,F. R. Marleau,C. J. A. P. Martins,M. Miluzio,G. Morgante,K. Naidoo,A. Navarro-Alsina,S. Nesseris,L. Nicastro,F. Oppizzi,F. Pace,D. Paoletti,K. Paterson,L. Patrizii,C. Pattison,A. Pisani,L. Pizzuti,D. Potter,G. W. Pratt,S. Quai,M. Radovich,F. Ricci,W. Roster,M. Sahlén,D. B. Sanders,C. Scarlata,J. Schaye,A. Schneider,D. Sciotti,E. Sellentin,L. C. Smith,J. G. Sorce,I. Szapudi,M. Talia,F. Tarsitano,G. Testera,R. Teyssier,S. Tosi,A. Troja,C. Uhlemann,C. Valieri,A. Venhola,D. Vergani,G. Vernardos,E. Vilenius,S. Vinciguerra,M. von Wietersheim-Kramsta,N. A. Walton,A. H. Wright,H. W. Yeung,D. Scott*
+
+Main category: astro-ph.GA
+
+Recommendation: ★★★★★ (92/100) - 该文利用Euclid Q1强引力透镜数据对95个椭圆星系进行kpc尺度总质量标定，直接属于用户核心领域（强引力透镜），并涉及暗物质分布与星系质量-光度关系；作者含J. W. Nightingale、S. Vegetti、R. J. Massey等用户核心作者，方法为强透镜建模与选择效应校正，契合度高。
+
+TL;DR: 利用Euclid Q1强引力透镜数据，对95个椭圆星系在5 h⁻¹kpc孔径内的总质量进行统计约束，并校正了选择效应。
+
+
+<details>
+  <summary>Details</summary>
+Motivation: 光度与总质量的关系蕴含着恒星形成效率与暗物质分布的信息，需要在kpc尺度上获得可靠的质量标定。
+
+Method: 基于Euclid Quick Data Release 1的强引力透镜数据构建95个透镜星系样本，确保选择函数可复现以校正选择效应，从而拟合M₅与光度、红移的关系。
+
+Result: z=0.5、r波段光度10^10.7 L⊙h⁻²的星系平均log₁₀(M₅ h M⊙⁻¹)=11.30±0.02；M₅随光度标度指数β_L=0.71±0.07，且在固定光度下随红移升高而减小。
+
+Conclusion: 在并合增长与被动演化假设下，上述相关意味着单个星系的M₅随时间增加；该测量为检验星系结构与演化模型提供了基准。
+
+Abstract: Mass is among the most fundamental properties describing a galaxy. The relation between the luminosity and the total mass of a galaxy contains information on the efficiency of the star formation process and on the distribution of dark matter. We used strong gravitational lensing data from the Euclid Quick Data Release 1 (Q1) to constrain the total mass enclosed within an aperture of $5\,h^{-1}$kpc, $M_5$, of elliptical galaxies. Our analysis is based on a sample of 95 lenses, which we built by ensuring that their selection function is reproducible. This enabled us to correct our inference for selection effects. The average $\log_{10}{(M_5\,h\,M_\odot^{-1})}$ for a galaxy with an $r$-band luminosity of $10^{10.7}L_{\odot}\,h^{-2}$ at $z=0.5$ is $11.30\pm0.02$. The mass $M_5$ scales with luminosity to the power $β_\mathrm{L}=0.71\pm0.07$, and decreases with increasing redshift at fixed luminosity. Assuming a scenario in which galaxies grow by mergers and stellar populations evolve passively, these correlations imply that $M_5$ increases with time for individual galaxies. These measurements provide a useful benchmark for testing models of galaxy structure and evolution that make predictions on the distribution of total mass on the scales of $5\,h^{-1}$kpc.
+
+Abstract Translation:
+质量是描述星系最基本属性之一。星系的光度与总质量之间的关系包含了恒星形成过程效率以及暗物质分布的信息。我们利用欧几里得快速数据发布1（Q1）的强引力透镜数据，来约束椭圆星系在 $5\,h^{-1}$kpc 孔径内包含的总质量 $M_5$。我们的分析基于一个包含95个透镜的样本，该样本的构建确保了其选择函数是可重现的。这使我们能够校正选择效应对我们推断的影响。对于在 $z=0.5$ 处 $r$ 波段光度为 $10^{10.7}L_{\odot}\,h^{-2}$ 的星系，其平均 $\log_{10}{(M_5\,h\,M_\odot^{-1})}$ 为 $11.30\pm0.02$。质量 $M_5$ 随光度以幂指数 $\beta_\mathrm{L}=0.71\pm0.07$ 缩放，并且在固定光度下随红移增加而减小。假设星系通过并合增长且恒星种群被动演化，这些相关性意味着对于单个星系，$M_5$ 随时间增加。这些测量为检验在 $5\,h^{-1}$kpc 尺度上预测总质量分布的星系结构和演化模型提供了有用的基准。
+
+Conclusion Translation:
+基于现有摘要：在并合增长与被动演化假设下，上述相关意味着单个星系的 $M_5$ 随时间增加；该测量为检验星系结构与演化模型提供了基准。
+
+Key Figures:
+
+#### Figure 1
+![Figure 1](https://arxiv.org/html/2611.00224v1/figs/golden_collage.png)
+
+图1：本研究中使用的 \(95\) 个黄金透镜的彩色合成图像。来自 \(I_{\scriptscriptstyleE}\)、\(Y_{\scriptscriptstyleE}\) 和 \(J_{\scriptscriptstyleE}\) 波段的数据分别用于图像的蓝、绿、红通道。青色区域（如果存在）是由于 NISP 图像中被掩模的像素所致。对于某些透镜弧来说，这可能是一个严重问题。尽管如此，NISP 数据仅用于表征透镜星系颜色，尽管源光被掩模，这些颜色仍能被很好地测量。每幅图像的边长为 \(10^{\prime\prime}\)。
+
+<small>Figure 1: Colour-composite images of the \(95\) golden lenses used in our study. Data from the \(I_{\scriptscriptstyleE}\) , \(Y_{\scriptscriptstyleE}\) , and \(J_{\scriptscriptstyleE}\) bands are used for the blue, green, and red channels of the images, respectively. Cyan regions, if present, are due to masked pixels in the NISP images. This can be a severe issue for some of the lensed arcs. Nevertheless, NISP data are only used to characterise the colours of the lens galaxy, which are well measured despite the masking of the source light. Each image is \(10^{\prime\prime}\) on the side.</small>
+
+#### Figure 2
+![Figure 2](https://arxiv.org/html/2611.00224v1/figs/example_lensmodel_collage.png)
+
+图2：透镜模型示例。从左到右，每一列分别显示原始图像、完整模型、减去透镜后的图像、仅源模型、原始（透镜前）源平面图像及透镜的焦散线、残差图像，以及按不确定度归一化的 VIS 波段残差。所有彩色图像具有相同的亮度和颜色标度。尽管此处显示的是彩色合成图像，但仅使用 \(I_{\scriptscriptstyleE}\) 数据来优化透镜模型参数。在最后一个面板中，被掩模的像素设为零。每幅图像的边长为 \(10^{\prime\prime}\)。
+
+<small>Figure 2: Example lens models. From left to right, each column shows the original image, the full model, the lens-subtracted image, the source-only model, the original (before lensing) source-plane image along with the caustic lines of the lens, the residual image, and the VIS-band residual normalised by the uncertainty. All colour images have the same brightness and colour scale. Although colour-composite images are shown here, only the \(I_{\scriptscriptstyleE}\) data were used to optimise the lens model parameters. In the last panel, masked pixels are set to zero. Each image is \(10^{\prime\prime}\) on the side.</small>
+
+#### Figure 3
+图3：透镜观测属性的分布。这些属性包括透镜的爱因斯坦半径、流量、半光半径和 \(Y_{\scriptscriptstyleE}\) 与 \(I_{\scriptscriptstyleE}\) 波段的流量比，以及背景源的未透镜流量和半光半径。还显示了非透镜椭圆星系样本（即母群体）的分布。具有光谱红移的透镜散点用绿色圆圈标出。母群体和透镜群体的直方图归一化为1。后者包括具有光谱红移的透镜。光谱红移样本直方图归一化为具有光谱红移的透镜比例。AB 星等标度显示在流量和颜色列的对应位置。
+
+<small>Figure 3: Distribution of observed properties of the lenses. These are the Einstein radius, flux, half-light radius, and \(Y_{\scriptscriptstyleE}\) - to \(I_{\scriptscriptstyleE}\) -band flux ratio of the lenses, and the unlensed flux and half-light radius of the background sources. The distribution of the non-lens elliptical galaxy sample (i.e. the parent population) is also shown. Scatter points of lenses with spectroscopic redshift are circled in green. The histograms of the parent and lens population are normalised to one. The latter include the lenses with spec- \(z\) . The spec- \(z\) sample histogram is normalised to the fraction of lenses with spectroscopic redshift. AB magnitude scales are shown in correspondence to the flux and colour columns.</small>
+
+#### Figure 4
+表1：黄金透镜的选定观测属性。4 4 4 注：透镜星系的光谱红移 \(z_{{g}}\)（如有）、测光红移 \(z_{{g,phot}}\)（来自第4节所述流程）、\(I_{\scriptscriptstyleE}\) 流量、半光半径 \(\theta_{{e}}\) 和爱因斯坦半径 \(\theta_{\scriptscriptstyleE}\)；透镜源的光谱红移（如有）和 \(I_{\scriptscriptstyleE}\) 流量。所有流量均使用 Fitzpatrick (1999) 尘埃消光曲线进行银河系消光校正。透镜流量和大小通过拟合 \(I_{\scriptscriptstyleE}\) 图像的 de Vaucouleurs 轮廓获得。印刷版仅显示前十个透镜。完整表格可在线获取。
+
+<small>Table 1: Selected observables properties of the golden lenses. 4 4 4 Notes. Spectroscopic redshift \(z_{{g}}\) (where available), photometric redshift \(z_{{g,phot}}\) (from the procedure described in Sect. 4 ), \(I_{\scriptscriptstyleE}\) flux, half-light radius \(\theta_{{e}}\) , and Einstein radius \(\theta_{\scriptscriptstyleE}\) of the lens galaxies; \(I_{\scriptscriptstyleE}\) flux and spectroscopic redshift (where available) of the lensed source. All fluxes are corrected by Galactic extinction, using the Fitzpatrick (1999) dust extinction curve. Lens fluxes and sizes were obtained by fitting a de Vaucouleurs profile to the \(I_{\scriptscriptstyleE}\) image. Only the first ten lenses are shown in print. The full table is available online.</small>
+
+#### Figure 4
+图4：椭圆星系的 NISP 与 \(I_{\scriptscriptstyleE}\) 流量比随红移的变化。空心圆：具有 DESI DR1 光谱的 \(252\) 个椭圆星系。实心圆：\(18\) 个黄金透镜（未用于测光红移推断）。虚线表示我们推断的模型 \(\mu_{\lambda}(z_{{g}},F_{{g},I_{\scriptscriptstyleE}})\)，在 \(F_{{g},I_{\scriptscriptstyleE}}=F_{*}(z_{{g}})\) 处评估。右侧轴表示以 AB 星等为单位的颜色。
+
+<small>Figure 4: NISP to \(I_{\scriptscriptstyleE}\) flux ratio of elliptical galaxies as a function of redshift. Empty circles: \(252\) elliptical galaxies with DESI DR1 spectroscopy. Filled circles: \(18\) golden lenses (not used in the inference of the photo- \(z\) ). Dashed lines indicate the model \(\mu_{\lambda}(z_{{g}},F_{{g},I_{\scriptscriptstyleE}})\) , evaluated at \(F_{{g},I_{\scriptscriptstyleE}}=F_{*}(z_{{g}})\) , that we inferred. The right axis indicates colours in units of AB magnitude.</small>
+
+#### Figure 6
+表2：测光红移模型的参数。6 6 6 注：第二列报告边缘后验概率的中位数和 \(68\%\) 可信区间。第三列指示每个参数首次定义的方程。
+
+<small>Table 2: Parameters of the photometric redshift model. 6 6 6 Notes. The second column reports the median and \(68\%\) credible region of the marginal posterior probability. The third column indicates the equation where each parameter is first defined.</small>
+
+#### Figure 5
+图5：测光红移精度测试。对于具有光谱数据的透镜，后验预测红移作为光谱红移的函数。误差棒表示 \(68\%\) 的包含概率。紫色数据点通过简单使用公式 (4) 的模型并假设透镜红移的均匀先验获得。橙色数据点通过使用所有可用信息以及我们完整的透镜群体模型作为先验获得。
+
+<small>Figure 5: Photo- \(z\) accuracy test. Posterior predicted redshift as a function of spectroscopic redshift for the lenses with spectroscopic data. Error bars bracket an enclosed probability of \(68\%\) . Purple data points were obtained by simply using the model of Eq. ( 4 ) and assuming a uniform prior on the lens redshift. Orange data points were obtained by using all available information, and our full model of the lens population as a prior.</small>
+
+#### Figure 6
+图6：样本中透镜的物理属性。这些包括红移、光度、静止系颜色、半光半径和爱因斯坦半径。对于具有光谱红移的透镜，数值用散点表示。对于其余透镜，显示了对应于测光红移 \(68\%\) 可信区间的曲线。金色直方图包括光谱和测光透镜。等高线显示非透镜椭圆星系分布的68%和95%包含概率。黑色虚线曲线显示非透镜椭圆星系的光度-大小关系，在 \(z_{{g}}=0.5\) 处评估。
+
+<small>Figure 6: Physical properties of the lenses in our sample. These include redshift, luminosity, rest-frame colour, half-light radius, and Einstein radius. For the lenses with spectroscopic redshift, values are shown with scatter points. For the remaining lenses, the curve corresponding to the \(68\%\) credible region of the photo- \(z\) is shown. The gold histograms include both spectroscopic and photometric lenses. Contours show the 68% and 95% enclosed probability of the distribution of non-lens elliptical galaxies. The dashed black curve shows the luminosity-size relation of non-lens elliptical galaxies, evaluated at \(z_{{g}}=0.5\) .</small>
+
+</details>
+
+
+### [55] [Statistical Strong Lensing V. Inference with Microlensed Quasars](https://arxiv.org/abs/2610.24423)
 *Shuo Zhang,Alessandro Sonnenfeld*
 
 Main category: astro-ph.GA
@@ -3968,7 +4045,7 @@ Key Figures:
 </details>
 
 
-### [55] [Strong gravitational lensing with Euclid](https://arxiv.org/abs/2610.19835)
+### [56] [Strong gravitational lensing with Euclid](https://arxiv.org/abs/2610.19835)
 *Alessandro Sonnenfeld*
 
 Main category: astro-ph.GA
@@ -4015,7 +4092,7 @@ Key Figures:
 </details>
 
 
-### [56] [Microcaustics: Fast GPU-Accelerated Dynamical Microlensing of Time-Dependent Extended Sources](https://arxiv.org/abs/2610.19703)
+### [57] [Microcaustics: Fast GPU-Accelerated Dynamical Microlensing of Time-Dependent Extended Sources](https://arxiv.org/abs/2610.19703)
 *Joshua Fagin,Connor Stone,James Hung-Hsu Chan,Sophia Miskiewicz,Henry Best,Paras Sharma,Matthew O'Dowd,Laurence Perreault-Levasseur,Yashar Hezaveh,Simon Birrer*
 
 Main category: astro-ph.GA
@@ -4098,7 +4175,7 @@ Key Figures:
 </details>
 
 
-### [57] [A Gravitationally Lensed Low-Luminosity AGN From The Cosmic Noon](https://arxiv.org/abs/2610.10244)
+### [58] [A Gravitationally Lensed Low-Luminosity AGN From The Cosmic Noon](https://arxiv.org/abs/2610.10244)
 *Marko Mićić,Olivia Holmes,Xinyu Dai,Kevin Hainline,Haikun Xue,Zijun Gao*
 
 Main category: astro-ph.GA
@@ -4158,64 +4235,6 @@ Key Figures:
 表2：来自静止系UV非探测的未遮蔽恒星形成率的上限（\(3\sigma\)），已修正透镜放大。
 
 <small>Table 2 : Upper limits ( \(3\sigma\) ) on the unobscured star formation rate from the rest-frame UV non-detections, corrected for lensing magnification.</small>
-
-</details>
-
-
-### [58] [Stacked strong and weak lensing united: Improved measurement of the stellar and dark matter distributions in massive early-type galaxies at $z\sim 0.5$](https://arxiv.org/abs/2609.39040)
-*Momoka Fujikawa,Masamune Oguri*
-
-Main category: astro-ph.GA
-
-Recommendation: ★★★★★ (92/100) - 该论文将堆叠强透镜与弱透镜结合，测量大质量早型星系在z~0.5的恒星与暗物质分布，直接契合用户核心领域（强引力透镜、暗物质分布）。方法上使用13个强透镜系统联合建模，属于强透镜研究的典型手段，且涉及暗物质剖面与IMF，与用户兴趣高度相关。但研究对象为z~0.5早型星系，而非用户更偏好的高红移星系动力学、多相气体或偏振，且未涉及用户核心作者，因此未达最高分。
-
-TL;DR: 结合堆叠强透镜与弱透镜测量，研究红移0.4<z<0.6的大质量早型星系的恒星与暗物质分布。
-
-
-<details>
-  <summary>Details</summary>
-Motivation: 探究大质量早型星系内部（特别是中心区域）的恒星与暗物质密度分布，并检验强透镜约束对改善分布测量精度的作用。
-
-Method: 将Subaru HSC提供的堆叠弱透镜测量（小至0.013 Mpc/h）与13个强透镜系统的堆叠投影质量测量结合，进行联合建模分析。
-
-Result: 中心暗物质剖面与NFW剖面一致；恒星初始质量函数偏重（bottom-heavy）；内区总密度剖面为斜率-1.96±0.07的幂律，并可较好解释至1 Mpc/h的弱透镜信号；内部质量片变换参数λ_c=0.978±0.010。
-
-Conclusion: 堆叠强透镜与弱透镜的结合是研究星系中心密度剖面的有力工具。
-
-Abstract: We present a new measurement of the stellar and dark matter distributions in massive early-type galaxies at redshift $0.4<z<0.6$ by combining stacked strong and weak lensing measurements. The stacked weak lensing measurements down to the small radius of $0.013\,\mathrm{Mpc}/h$ enabled by the Subaru Telescope Hyper Suprime-Cam data are combined with stacked enclosed projected mass measurements from 13 strong lens systems. We find that adding strong lensing constraints improves constraints on the stellar and dark matter distributions. The central dark matter profile is found to be consistent with the standard Navarro-Frenk-White density profile. The stellar initial mass function is found to be bottom-heavy. The total density profile in the inner region is described well by the power-law density profile with the slope of $-1.96\pm 0.07$, which can also explain weak lensing signals out to $1\,\mathrm{Mpc}/h$ reasonably well. The stacked weak lensing profile constrains an internal mass-sheet transformation parameter to $λ_{\mathrm{c}}=0.978\pm0.010$. Our analysis demonstrates that the combination of the stacked strong and weak lensing serves as a powerful tool for studying central density profiles of galaxies.
-
-Abstract Translation:
-我们通过结合堆叠强透镜和弱透镜测量，给出了红移 $0.4<z<0.6$ 处大质量早型星系中恒星和暗物质分布的新测量。由 Subaru Telescope Hyper Suprime-Cam 数据实现的、小至 $0.013\,\mathrm{Mpc}/h$ 半径的堆叠弱透镜测量，与来自 13 个强透镜系统的堆叠包围投影质量测量相结合。我们发现，加入强透镜约束改善了对恒星和暗物质分布的约束。中心暗物质剖面被发现与标准 Navarro-Frenk-White 密度剖面一致。恒星初始质量函数被发现是底部偏重的。内部区域的总密度剖面可由斜率 $-1.96\pm 0.07$ 的幂律密度剖面很好地描述，这也能相当好地解释直至 $1\,\mathrm{Mpc}/h$ 的弱透镜信号。堆叠弱透镜剖面将内部质量片变换参数约束为 $λ_{\mathrm{c}}=0.978\pm0.010$。我们的分析表明，堆叠强透镜与弱透镜的结合是研究星系中心密度剖面的有力工具。
-
-Conclusion Translation:
-基于可用摘要：堆叠强透镜与弱透镜的结合是研究星系中心密度剖面的有力工具。
-
-Key Figures:
-
-#### Figure 1
-图 1：上图：由 Abe et al. (2025) 的模拟星表得到的平均包围投影质量 \(M_{{2D}}( solid )\) 和非透镜（虚线）样本。我们展示了 7 个不同恒星质量分箱的结果，恒星质量分箱越高，包围投影质量越高。底部子图显示了偏差值 \(\Delta M_{{2D}}/M_{{2D}}=\{M_{{2D}}(\mbox{lens})-M_{{2D}}(\mbox{non-lens})\}/M_{{2D}}(\mbox{non-lens})\) 随半径 \(r\) 的变化。下图：与上图类似，但绘制的是包围投影质量的内禀散射 \(\sigma_{\log M_{{2D}}}\)。替代文本：x 轴显示半径，从 0.0005 到 0.08 megaparsec per h。y 轴显示包围质量和内禀散射。
-
-<small>Figure 1: Upper: The average enclosed projected masses \(M_{{2D}}( solid ) and non-lens ( dashed ) samples derived from mock catalogs of Abe et al. (2025) . We show results for 7 different stellar mass bins, with enclosed projected masses being higher for higher stellar mass bins. The sub-panel at the bottom shows bias values \(\Delta M_{{2D}}/M_{{2D}}=\{M_{{2D}}(\mbox{lens})-M_{{2D}}(\mbox{non-lens})\}/M_{{2D}}(\mbox{non-lens})\) as a function of radius \(r\) . Lower: Similar to the upper panel, but intrinsic scatters of enclosed projected masses \(\sigma_{\log M_{{2D}}}\) are plotted. Alt text: The x axis shows the radius from 0.0005 to 0.08 megaparsec per h. The y axis shows the enclosed mass and the intrinsic scatter.</small>
-
-#### Figure 2
-图 2：左上：由弱透镜测量得到的微分表面质量密度剖面，以及使用暗物质分量的核心幂律模型对弱透镜和强透镜数据联合拟合的结果。带误差的绿色点显示堆叠弱透镜测量（ Fujikawa and Oguri, 2026 ）。品红色点划线、橙色虚线和红色实线分别显示恒星物质分量、暗物质分量和总质量的最佳拟合剖面。阴影区域表示弱透镜分析的拟合范围。上中：由强透镜测量得到的包围投影质量剖面，以及使用暗物质分量的核心幂律模型对弱透镜和强透镜数据联合拟合的结果。带误差的绿色点显示从强透镜样本测得的观测包围投影质量，已校正强透镜选择偏差（见第 2.4 节）。其误差棒包括爱因斯坦半径的统计不确定性和内禀散射。浅色点显示校正强透镜选择偏差前的观测值。右上：对包围投影质量剖面的约束。橙色虚线和粉色实线分别显示弱透镜分析和对弱透镜与强透镜测量联合拟合的结果。蓝色点划线表示由外部剖面拟合得到的 NFW 剖面。阴影区域显示 \(1\sigma\) 不确定性。橙色、粉色和蓝色阴影径向区域分别表示弱透镜分析、强透镜分析和外部 NFW 拟合的拟合范围。左下：由对弱透镜和强透镜测量联合拟合约束的、在方程 (15) 中定义的表面质量密度比 \(f_{\Sigma}(r)\)。阴影区域表示 \(1\sigma\) 、 \(2\sigma\) 和 
-
-<small>Figure 2: Upper left: Differential surface mass density profile obtained from the weak lensing measurement and the result from joint fit to the weak and strong lensing data using the cored power-law model for the dark matter component. The green points with errors show the stacked weak lensing measurement ( Fujikawa and Oguri, 2026 ) . The magenta dash-dotted, the orange dashed, and the red solid lines show best-fit profiles of the stellar matter component, the dark matter component, and the total mass, respectively. The shaded region denotes the fitting range of the weak lensing analysis. Upper middle: Enclosed projected mass profile obtained from the strong lensing measurements and the result from joint fit to the weak and strong lensing data, using the cored power-law model for the dark matter component. The green points with errors show the observed enclosed projected masses measured from the strong lens sample, after correcting for the strong-lensing selection bias (see Section 2.4 ). Their error bars include both statistical uncertainties in the Einstein radii and the intrinsic scatter. The light-colored points show observed values before correcting for the strong-lensing selection bias. Upper right: Constraints on the enclosed projected mass profile. The orange dashed and pink solid lines show the results from the weak lensing analysis and the joint fit to the weak and strong lensing measurements, respectively. The blue dash-dotted line indicates the NFW profile obtained from the outer profile fitting. The shaded regions show the \(1\sigma\) uncertainties. The orange, pink, and blue shaded radial regions indicate the fitting ranges of the weak lensing analysis, the strong lensing analysis, and the outer NFW fit, respectively. Lower left: The ratio of the surface mass densities \(f_{\Sigma}(r)\) defined in Equation ( 15 ) constrained from the joint it to the weak and strong lensing measurements. The shaded regions represent the \(1\sigma\) , \(2\sigma\) , and </small>
-
-#### Figure 3
-图 3：与图 2 相同，但针对暗物质分布的折线幂律模型。替代文本：x 轴显示半径。y 轴显示微分表面密度、包围质量和比值。
-
-<small>Figure 3: Same as Figure 2 , but for the broken power-law model for the dark matter distribution. Alt text: The x axis shows the radius. The y axis shows the differential surface density, the enclosed mass and the ratios.</small>
-
-#### Figure 4
-图 4：对 SHMR 的约束。垂直轴和水平轴分别表示由内部剖面拟合得到的恒星质量 \(M_{\star,{fit}}\) 除以由外部剖面拟合得到的晕质量 \(M_{{NFW}}\) ，以及 \(M_{{NFW}}\) 。带误差的橙色点显示 Fujikawa and Oguri (2026) 中仅弱透镜分析的结果，而带误差的粉色和红色点分别显示使用核心幂律和折线幂律模型对弱透镜与强透镜联合分析的结果。实线显示假设 Salpeter IMF 时的预期关系。水平虚线显示 \(\Omega_{{b}}/\Omega_{{m}}\) 。替代文本：x 轴显示晕质量。y 轴显示恒星质量与晕质量的比值。
-
-<small>Figure 4: The constraint on the SHMR. The vertical and horizontal axes indicate the stellar mass \(M_{\star,{fit}}\) obtained from the inner profile fitting normalized by the halo mass \(M_{{NFW}}\) obtained from the outer profile fitting and \(M_{{NFW}}\) , respectively. The orange points with errors show the results from the weak-lensing-only analysis presented in Fujikawa and Oguri (2026) , while the pink and red points with errors show the results from the joint weak and strong lensing analysis using the cored power-law and the broken power-law models, respectively. The solid line shows the expected relation assuming the Salpeter IMF. A horizontal dotted line shows \(\Omega_{{b}}/\Omega_{{m}}\) . Alt text: The x axis shows the halo mass. The y axis shows the ratio of the stellar mass to the halo mass.</small>
-
-#### Figure 5
-图 5：由堆叠弱透镜测得的微分表面质量密度剖面 \(\Delta\Sigma\)（绿色）与最佳拟合斜率为 \(\gamma=-1.96\pm 0.07\) 的幂律拟合结果（红色）进行比较。它基于对强透镜数据以及品红色阴影区域所示内部区域的弱透镜数据的拟合。基于对品红色阴影区域所示内部加外部区域的弱透镜数据拟合得到的核心分量最佳拟合贡献由蓝线显示。替代文本：x 轴显示半径，从 0.003 到 1 megaparsec per h。y 轴显示微分表面质量密度。
-
-<small>Figure 5: The differential surface mass density profile \(\Delta\Sigma\) measured by stacked weak lensing ( green ) is compared with a power-law fitting result with the best-fitting slope of \(\gamma=-1.96\pm 0.07\) ( red ). It is based on fitting to the strong lensing data as well as the weak lensing data in the inner region indicated by the magenta-shaded region. The best-fitting contribution of the cored component based on fitting to the weak lensing data in the inner plus outer regions indicated by the magenta-shaded region is shown by the blue line. Alt text: The x axis shows the radius from 0.003 to 1 megaparsec per h. The y axis shows the differential surface mass density.</small>
 
 </details>
 
